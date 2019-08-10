@@ -8,24 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		9C70644922FEA3AC00E006D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70644822FEA3AC00E006D7 /* AppDelegate.swift */; };
-		9C70644B22FEA3AC00E006D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70644A22FEA3AC00E006D7 /* ViewController.swift */; };
+		9C70644B22FEA3AC00E006D7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70644A22FEA3AC00E006D7 /* LoginViewController.swift */; };
 		9C70644E22FEA3AC00E006D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C70644C22FEA3AC00E006D7 /* Main.storyboard */; };
 		9C70645122FEA3AC00E006D7 /* UniCon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C70644F22FEA3AC00E006D7 /* UniCon.xcdatamodeld */; };
 		9C70645322FEA3AE00E006D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C70645222FEA3AE00E006D7 /* Assets.xcassets */; };
 		9C70645622FEA3AF00E006D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C70645422FEA3AE00E006D7 /* LaunchScreen.storyboard */; };
 		9C70645E22FEA65600E006D7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70645D22FEA65600E006D7 /* Extensions.swift */; };
+		9C70646222FEA9C900E006D7 /* NotoSansCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C70646122FEA9C900E006D7 /* NotoSansCJKkr-Bold.otf */; };
+		9C70646522FEAFE600E006D7 /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C70646422FEAFE600E006D7 /* NotoSansCJKkr-Regular.otf */; };
+		9C70646722FEAFEF00E006D7 /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C70646622FEAFEF00E006D7 /* NotoSansCJKkr-Medium.otf */; };
+		9C70646922FEAFFC00E006D7 /* NotoSansCJKkr-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C70646822FEAFFB00E006D7 /* NotoSansCJKkr-Light.otf */; };
+		9C70646B22FEB00300E006D7 /* NotoSansCJKkr-DemiLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C70646A22FEB00300E006D7 /* NotoSansCJKkr-DemiLight.otf */; };
+		9C70646D22FEB00E00E006D7 /* NotoSansCJKkr-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C70646C22FEB00E00E006D7 /* NotoSansCJKkr-Black.otf */; };
+		9C70646F22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C70646E22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9C70644522FEA3AC00E006D7 /* UniCon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniCon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C70644822FEA3AC00E006D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9C70644A22FEA3AC00E006D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9C70644A22FEA3AC00E006D7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9C70644D22FEA3AC00E006D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C70645022FEA3AC00E006D7 /* UniCon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UniCon.xcdatamodel; sourceTree = "<group>"; };
 		9C70645222FEA3AE00E006D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C70645522FEA3AE00E006D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C70645722FEA3AF00E006D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C70645D22FEA65600E006D7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9C70645F22FEA80B00E006D7 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		9C70646022FEA80B00E006D7 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		9C70646122FEA9C900E006D7 /* NotoSansCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Bold.otf"; sourceTree = "<group>"; };
+		9C70646422FEAFE600E006D7 /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
+		9C70646622FEAFEF00E006D7 /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
+		9C70646822FEAFFB00E006D7 /* NotoSansCJKkr-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Light.otf"; sourceTree = "<group>"; };
+		9C70646A22FEB00300E006D7 /* NotoSansCJKkr-DemiLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-DemiLight.otf"; sourceTree = "<group>"; };
+		9C70646C22FEB00E00E006D7 /* NotoSansCJKkr-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Black.otf"; sourceTree = "<group>"; };
+		9C70646E22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Thin.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,15 +75,30 @@
 			isa = PBXGroup;
 			children = (
 				9C70644822FEA3AC00E006D7 /* AppDelegate.swift */,
-				9C70644A22FEA3AC00E006D7 /* ViewController.swift */,
+				9C70644A22FEA3AC00E006D7 /* LoginViewController.swift */,
 				9C70645D22FEA65600E006D7 /* Extensions.swift */,
 				9C70644C22FEA3AC00E006D7 /* Main.storyboard */,
 				9C70645222FEA3AE00E006D7 /* Assets.xcassets */,
 				9C70645422FEA3AE00E006D7 /* LaunchScreen.storyboard */,
 				9C70645722FEA3AF00E006D7 /* Info.plist */,
 				9C70644F22FEA3AC00E006D7 /* UniCon.xcdatamodeld */,
+				9C70646322FEA9CD00E006D7 /* Custom Fonts */,
 			);
 			path = UniCon;
+			sourceTree = "<group>";
+		};
+		9C70646322FEA9CD00E006D7 /* Custom Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9C70646E22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf */,
+				9C70646C22FEB00E00E006D7 /* NotoSansCJKkr-Black.otf */,
+				9C70646822FEAFFB00E006D7 /* NotoSansCJKkr-Light.otf */,
+				9C70646A22FEB00300E006D7 /* NotoSansCJKkr-DemiLight.otf */,
+				9C70646622FEAFEF00E006D7 /* NotoSansCJKkr-Medium.otf */,
+				9C70646422FEAFE600E006D7 /* NotoSansCJKkr-Regular.otf */,
+				9C70646122FEA9C900E006D7 /* NotoSansCJKkr-Bold.otf */,
+			);
+			path = "Custom Fonts";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,8 +141,8 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				ko,
 			);
 			mainGroup = 9C70643C22FEA3AC00E006D7;
 			productRefGroup = 9C70644622FEA3AC00E006D7 /* Products */;
@@ -128,9 +159,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C70646B22FEB00300E006D7 /* NotoSansCJKkr-DemiLight.otf in Resources */,
+				9C70646522FEAFE600E006D7 /* NotoSansCJKkr-Regular.otf in Resources */,
+				9C70646D22FEB00E00E006D7 /* NotoSansCJKkr-Black.otf in Resources */,
+				9C70646922FEAFFC00E006D7 /* NotoSansCJKkr-Light.otf in Resources */,
 				9C70645622FEA3AF00E006D7 /* LaunchScreen.storyboard in Resources */,
+				9C70646F22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf in Resources */,
+				9C70646222FEA9C900E006D7 /* NotoSansCJKkr-Bold.otf in Resources */,
 				9C70645322FEA3AE00E006D7 /* Assets.xcassets in Resources */,
 				9C70644E22FEA3AC00E006D7 /* Main.storyboard in Resources */,
+				9C70646722FEAFEF00E006D7 /* NotoSansCJKkr-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C70645122FEA3AC00E006D7 /* UniCon.xcdatamodeld in Sources */,
-				9C70644B22FEA3AC00E006D7 /* ViewController.swift in Sources */,
+				9C70644B22FEA3AC00E006D7 /* LoginViewController.swift in Sources */,
 				9C70644922FEA3AC00E006D7 /* AppDelegate.swift in Sources */,
 				9C70645E22FEA65600E006D7 /* Extensions.swift in Sources */,
 			);
@@ -155,6 +193,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				9C70644D22FEA3AC00E006D7 /* Base */,
+				9C70645F22FEA80B00E006D7 /* ko */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -163,6 +202,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				9C70645522FEA3AE00E006D7 /* Base */,
+				9C70646022FEA80B00E006D7 /* ko */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
