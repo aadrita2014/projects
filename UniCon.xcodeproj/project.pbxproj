@@ -21,6 +21,10 @@
 		9C70646B22FEB00300E006D7 /* NotoSansCJKkr-DemiLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C70646A22FEB00300E006D7 /* NotoSansCJKkr-DemiLight.otf */; };
 		9C70646D22FEB00E00E006D7 /* NotoSansCJKkr-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C70646C22FEB00E00E006D7 /* NotoSansCJKkr-Black.otf */; };
 		9C70646F22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C70646E22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf */; };
+		9C70647122FEB5DD00E006D7 /* LoginClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70647022FEB5DD00E006D7 /* LoginClientViewController.swift */; };
+		9C70647322FEC0DC00E006D7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70647222FEC0DC00E006D7 /* Constants.swift */; };
+		9C70647522FECCED00E006D7 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70647422FECCED00E006D7 /* FeedViewController.swift */; };
+		9C70647722FECD0300E006D7 /* ContestCreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70647622FECD0300E006D7 /* ContestCreatorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		9C70646A22FEB00300E006D7 /* NotoSansCJKkr-DemiLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-DemiLight.otf"; sourceTree = "<group>"; };
 		9C70646C22FEB00E00E006D7 /* NotoSansCJKkr-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Black.otf"; sourceTree = "<group>"; };
 		9C70646E22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Thin.otf"; sourceTree = "<group>"; };
+		9C70647022FEB5DD00E006D7 /* LoginClientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClientViewController.swift; sourceTree = "<group>"; };
+		9C70647222FEC0DC00E006D7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9C70647422FECCED00E006D7 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		9C70647622FECD0300E006D7 /* ContestCreatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestCreatorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +84,11 @@
 			children = (
 				9C70644822FEA3AC00E006D7 /* AppDelegate.swift */,
 				9C70644A22FEA3AC00E006D7 /* LoginViewController.swift */,
+				9C70647022FEB5DD00E006D7 /* LoginClientViewController.swift */,
+				9C70647422FECCED00E006D7 /* FeedViewController.swift */,
+				9C70647622FECD0300E006D7 /* ContestCreatorViewController.swift */,
 				9C70645D22FEA65600E006D7 /* Extensions.swift */,
+				9C70647222FEC0DC00E006D7 /* Constants.swift */,
 				9C70644C22FEA3AC00E006D7 /* Main.storyboard */,
 				9C70645222FEA3AE00E006D7 /* Assets.xcassets */,
 				9C70645422FEA3AE00E006D7 /* LaunchScreen.storyboard */,
@@ -183,6 +195,10 @@
 				9C70644B22FEA3AC00E006D7 /* LoginViewController.swift in Sources */,
 				9C70644922FEA3AC00E006D7 /* AppDelegate.swift in Sources */,
 				9C70645E22FEA65600E006D7 /* Extensions.swift in Sources */,
+				9C70647722FECD0300E006D7 /* ContestCreatorViewController.swift in Sources */,
+				9C70647122FEB5DD00E006D7 /* LoginClientViewController.swift in Sources */,
+				9C70647322FEC0DC00E006D7 /* Constants.swift in Sources */,
+				9C70647522FECCED00E006D7 /* FeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

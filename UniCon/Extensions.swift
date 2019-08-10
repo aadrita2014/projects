@@ -22,3 +22,21 @@ extension UIButton {
         self.setAttributedTitle(attributedString, for: .normal)
     }
 }
+
+extension UITextField {
+    
+    
+    func addBottomBorder(color:UIColor = UIColor.white){
+        let bottomLine = CALayer()
+        bottomLine.frame = CGRect.init(x: 0, y: self.frame.size.height - 1, width: self.frame.size.width, height: 1)
+        bottomLine.backgroundColor = color.cgColor
+        self.borderStyle = UITextField.BorderStyle.none
+        self.layer.addSublayer(bottomLine)
+        
+    }
+    func updatePlaceHolder(text:String = "", color:UIColor = AppColors.default_placeholder_color)
+    {
+        self.attributedPlaceholder = NSAttributedString(string: text, attributes: [NSAttributedString.Key.foregroundColor: color])
+
+    }
+}
