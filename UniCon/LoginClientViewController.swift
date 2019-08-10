@@ -48,6 +48,7 @@ class LoginClientViewController: UIViewController, UITextFieldDelegate {
     {
         //TODO: Login Functionality
         print("Login Clicked")
+        self.performSegue(withIdentifier: "Home", sender: nil)
     }
     @IBAction func forgotPasswordClicked()
     {

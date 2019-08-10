@@ -25,6 +25,12 @@
 		9C70647322FEC0DC00E006D7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70647222FEC0DC00E006D7 /* Constants.swift */; };
 		9C70647522FECCED00E006D7 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70647422FECCED00E006D7 /* FeedViewController.swift */; };
 		9C70647722FECD0300E006D7 /* ContestCreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70647622FECD0300E006D7 /* ContestCreatorViewController.swift */; };
+		9C9AC4A822FEDB4B00230522 /* ContestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4A722FEDB4B00230522 /* ContestViewController.swift */; };
+		9C9AC4AA22FEDB5D00230522 /* GeneralVideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4A922FEDB5D00230522 /* GeneralVideosViewController.swift */; };
+		9C9AC4AD22FEE03600230522 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4AC22FEE03600230522 /* MyPageViewController.swift */; };
+		9C9AC4AF22FEE04000230522 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4AE22FEE04000230522 /* ChannelViewController.swift */; };
+		9C9AC4B122FEE04900230522 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4B022FEE04900230522 /* RecordingViewController.swift */; };
+		9C9AC4B322FEE05900230522 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4B222FEE05900230522 /* AlarmViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +56,12 @@
 		9C70647222FEC0DC00E006D7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9C70647422FECCED00E006D7 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		9C70647622FECD0300E006D7 /* ContestCreatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestCreatorViewController.swift; sourceTree = "<group>"; };
+		9C9AC4A722FEDB4B00230522 /* ContestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestViewController.swift; sourceTree = "<group>"; };
+		9C9AC4A922FEDB5D00230522 /* GeneralVideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralVideosViewController.swift; sourceTree = "<group>"; };
+		9C9AC4AC22FEE03600230522 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		9C9AC4AE22FEE04000230522 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
+		9C9AC4B022FEE04900230522 /* RecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
+		9C9AC4B222FEE05900230522 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +97,7 @@
 				9C70644822FEA3AC00E006D7 /* AppDelegate.swift */,
 				9C70644A22FEA3AC00E006D7 /* LoginViewController.swift */,
 				9C70647022FEB5DD00E006D7 /* LoginClientViewController.swift */,
-				9C70647422FECCED00E006D7 /* FeedViewController.swift */,
-				9C70647622FECD0300E006D7 /* ContestCreatorViewController.swift */,
+				9C9AC4AB22FEE00B00230522 /* TabView Controller */,
 				9C70645D22FEA65600E006D7 /* Extensions.swift */,
 				9C70647222FEC0DC00E006D7 /* Constants.swift */,
 				9C70644C22FEA3AC00E006D7 /* Main.storyboard */,
@@ -111,6 +122,21 @@
 				9C70646122FEA9C900E006D7 /* NotoSansCJKkr-Bold.otf */,
 			);
 			path = "Custom Fonts";
+			sourceTree = "<group>";
+		};
+		9C9AC4AB22FEE00B00230522 /* TabView Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9C70647422FECCED00E006D7 /* FeedViewController.swift */,
+				9C70647622FECD0300E006D7 /* ContestCreatorViewController.swift */,
+				9C9AC4A722FEDB4B00230522 /* ContestViewController.swift */,
+				9C9AC4A922FEDB5D00230522 /* GeneralVideosViewController.swift */,
+				9C9AC4AC22FEE03600230522 /* MyPageViewController.swift */,
+				9C9AC4AE22FEE04000230522 /* ChannelViewController.swift */,
+				9C9AC4B022FEE04900230522 /* RecordingViewController.swift */,
+				9C9AC4B222FEE05900230522 /* AlarmViewController.swift */,
+			);
+			path = "TabView Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +179,7 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				en,
 				Base,
 				ko,
 			);
@@ -193,11 +220,17 @@
 			files = (
 				9C70645122FEA3AC00E006D7 /* UniCon.xcdatamodeld in Sources */,
 				9C70644B22FEA3AC00E006D7 /* LoginViewController.swift in Sources */,
+				9C9AC4B322FEE05900230522 /* AlarmViewController.swift in Sources */,
+				9C9AC4B122FEE04900230522 /* RecordingViewController.swift in Sources */,
 				9C70644922FEA3AC00E006D7 /* AppDelegate.swift in Sources */,
+				9C9AC4AA22FEDB5D00230522 /* GeneralVideosViewController.swift in Sources */,
 				9C70645E22FEA65600E006D7 /* Extensions.swift in Sources */,
 				9C70647722FECD0300E006D7 /* ContestCreatorViewController.swift in Sources */,
+				9C9AC4AD22FEE03600230522 /* MyPageViewController.swift in Sources */,
 				9C70647122FEB5DD00E006D7 /* LoginClientViewController.swift in Sources */,
 				9C70647322FEC0DC00E006D7 /* Constants.swift in Sources */,
+				9C9AC4A822FEDB4B00230522 /* ContestViewController.swift in Sources */,
+				9C9AC4AF22FEE04000230522 /* ChannelViewController.swift in Sources */,
 				9C70647522FECCED00E006D7 /* FeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

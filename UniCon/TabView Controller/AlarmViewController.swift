@@ -1,5 +1,5 @@
 //
-//  FeedViewController.swift
+//  AlarmViewController.swift
 //  UniCon
 //
 //  Created by Ricky on 8/10/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FeedViewController: UIViewController {
+class AlarmViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
