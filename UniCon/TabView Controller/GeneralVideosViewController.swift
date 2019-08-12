@@ -12,7 +12,9 @@ class GeneralVideosViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //Add Default Background Color to the view
+        self.view.addDefaultBackgroundColor()
         // Do any additional setup after loading the view.
     }
     
