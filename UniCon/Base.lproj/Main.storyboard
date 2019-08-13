@@ -411,11 +411,14 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Nc-q7-LvF">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fXf-N1-lc5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="검색" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fXf-N1-lc5">
+                                                        <rect key="frame" x="8" y="0.0" width="335" height="43"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="bTK-EY-f45" id="j3m-He-2kb"/>
+                                                        </connections>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jj5-bd-zbZ">
                                                         <rect key="frame" x="347" y="10" width="20" height="22"/>
@@ -430,19 +433,19 @@
                                                     <constraint firstItem="Jj5-bd-zbZ" firstAttribute="leading" secondItem="fXf-N1-lc5" secondAttribute="trailing" constant="4" id="Ohx-Td-5az"/>
                                                     <constraint firstAttribute="trailing" secondItem="Jj5-bd-zbZ" secondAttribute="trailing" constant="8" id="TkB-x1-aqE"/>
                                                     <constraint firstItem="fXf-N1-lc5" firstAttribute="top" secondItem="7Nc-q7-LvF" secondAttribute="top" id="iuH-6A-eGE"/>
-                                                    <constraint firstItem="fXf-N1-lc5" firstAttribute="leading" secondItem="7Nc-q7-LvF" secondAttribute="leading" id="ydD-7D-yEU"/>
+                                                    <constraint firstItem="fXf-N1-lc5" firstAttribute="leading" secondItem="7Nc-q7-LvF" secondAttribute="leading" constant="8" id="ydD-7D-yEU"/>
                                                 </constraints>
                                             </view>
-                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="zoE-IW-FQY">
+                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="zoE-IW-FQY">
                                                 <rect key="frame" x="168" y="245" width="39" height="37"/>
                                             </pageControl>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="7Nc-q7-LvF" secondAttribute="trailing" id="Bps-OT-xoK"/>
+                                            <constraint firstItem="zoE-IW-FQY" firstAttribute="centerX" secondItem="dNT-TS-w8o" secondAttribute="centerX" id="CND-Na-dRY"/>
                                             <constraint firstItem="zoE-IW-FQY" firstAttribute="bottom" secondItem="zUA-tm-Chx" secondAttribute="bottom" id="Vmp-bx-xVK"/>
                                             <constraint firstItem="7Nc-q7-LvF" firstAttribute="leading" secondItem="dNT-TS-w8o" secondAttribute="leading" id="gq4-Yo-jUi"/>
-                                            <constraint firstItem="zoE-IW-FQY" firstAttribute="centerX" secondItem="zUA-tm-Chx" secondAttribute="centerX" id="id8-G9-T2X"/>
                                             <constraint firstAttribute="trailing" secondItem="zUA-tm-Chx" secondAttribute="trailing" id="ifR-hP-dZE"/>
                                             <constraint firstItem="zUA-tm-Chx" firstAttribute="height" secondItem="dNT-TS-w8o" secondAttribute="height" multiplier="0.4" id="lHQ-ve-6ER"/>
                                             <constraint firstItem="zUA-tm-Chx" firstAttribute="leading" secondItem="dNT-TS-w8o" secondAttribute="leading" id="nyQ-xO-dgz"/>
@@ -477,6 +480,7 @@
                         <outlet property="containerHeightConstraint" destination="spA-oE-eoF" id="6aq-lb-ufO"/>
                         <outlet property="containerView" destination="dNT-TS-w8o" id="UmG-CB-m9D"/>
                         <outlet property="pageControl" destination="zoE-IW-FQY" id="Iz2-Lq-5y9"/>
+                        <outlet property="searchTf" destination="fXf-N1-lc5" id="XKI-39-MmW"/>
                         <outlet property="topSliderView" destination="zUA-tm-Chx" id="f5P-H6-O9m"/>
                     </connections>
                 </viewController>
@@ -606,7 +610,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51u-Qu-ItA">
                                                 <rect key="frame" x="0.0" y="0.0" width="27" height="22"/>
-                                                <state key="normal" image="bookmark_24px"/>
+                                                <state key="normal" image="bookmark"/>
                                                 <connections>
                                                     <action selector="bookmarkClicked" destination="Czi-iQ-fV2" eventType="touchUpInside" id="eT4-EN-5dM"/>
                                                 </connections>
@@ -881,7 +885,7 @@
         <image name="app_logo_text" width="118.5" height="28"/>
         <image name="back" width="18" height="18"/>
         <image name="background_gradient" width="375" height="180"/>
-        <image name="bookmark_24px" width="18" height="21.5"/>
+        <image name="bookmark" width="18" height="21.5"/>
         <image name="channel" width="28" height="28"/>
         <image name="channel-selected" width="28" height="34"/>
         <image name="comment" width="25" height="24.5"/>

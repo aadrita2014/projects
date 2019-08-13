@@ -36,7 +36,11 @@ class ContestViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        //Set Bookmark selected non selected states
+        bookmarkButton.setImage(UIImage(named: "bookmark"), for: .normal)
+        bookmarkButton.setImage(UIImage(named: "bookmark_selected"), for: .selected)
     }
     
     //MARK: IBAction Declarations
@@ -58,5 +62,10 @@ class ContestViewController: UIViewController {
     @IBAction func bookmarkClicked()
     {
         print("Bookmark Clicked")
+        bookmarkButton.isSelected = !bookmarkButton.isSelected
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }

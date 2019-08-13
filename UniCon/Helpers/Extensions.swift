@@ -12,6 +12,7 @@ extension UIView {
     func addDefaultBackgroundColor()
     {
         self.backgroundColor = UIColor(red: 3.0/255.0, green: 15.0/255.0, blue: 18.0/255.0, alpha: 1)
+        
     }
     func addCornerRadius(radius:CGFloat = 5.0)
     {
@@ -44,6 +45,5 @@ extension UITextField {
     func updatePlaceHolder(text:String = "", color:UIColor = AppColors.default_placeholder_color)
     {
         self.attributedPlaceholder = NSAttributedString(string: text, attributes: [NSAttributedString.Key.foregroundColor: color])
-
     }
 }

@@ -23,6 +23,10 @@ class LoginClientViewController: UIViewController, UITextFieldDelegate {
         //Add Default Background Color to the view
         self.view.addDefaultBackgroundColor()
         
+       
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         //Add Bottom Border for Textfields
         emailTf.addBottomBorder(color: UIColor.red)
         passwordTf.addBottomBorder(color: UIColor.red)
@@ -33,11 +37,10 @@ class LoginClientViewController: UIViewController, UITextFieldDelegate {
         
         //Register for keyboard notifications
         registerNotifications()
-    
+        
         //Tap to dismiss the keyboard
         tapToDismiss()
     }
-    
     //MARK: IBActions Defined
     @IBAction func backClicked()
     {
@@ -108,6 +111,10 @@ class LoginClientViewController: UIViewController, UITextFieldDelegate {
     //MARK: Deinitialisations
     deinit {
         unregisterNotifications()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 
 }

@@ -64,5 +64,10 @@ class LoginViewController: UIViewController {
         //TODO: Add Google Login Functionality
         print("Google Login Clicked")
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
+
 

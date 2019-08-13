@@ -36,13 +36,11 @@ class OngoingContestCell: UICollectionViewCell {
         respondButton.setTitle("참여중", for: .selected)
         respondButton.setTitleColor(AppColors.default_red_color, for: .selected)
         
-        respondButton.backgroundColor = UIColor.white
-        
+        updateButtonStatus()
         
     }
     
     @IBAction func respondToEventClicked(_ sender: UIButton) {
-        
         
         respondButton.isSelected = !respondButton.isSelected
         updateButtonStatus()
