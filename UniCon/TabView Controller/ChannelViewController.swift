@@ -104,21 +104,16 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         }
         topSliderView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(images.count), height: topSliderView.bounds.height)
         pageControl.numberOfPages = images.count
+        pageControl.currentPage = 0
         containerView.bringSubviewToFront(pageControl)
     }
     //MARK: ScrollView Delegate
-    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
         if scrollView == topSliderView
         {
-            if scrollView.contentOffset.x > 0
-            {
-                let index = Int (scrollView.contentOffset.x / scrollView.bounds.width)
-                pageControl.currentPage = index + 1
-            }
-            else
-            {
-                pageControl.currentPage = 0
-            }
+            let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
+            pageControl.currentPage = Int(pageNumber)
         }
         self.view.endEditing(true)
     }
@@ -193,7 +188,10 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         
         //Init & Setup Ongoing Contest Collection View
         ongoingContestLayout.scrollDirection = .horizontal
-        ongoingContestCollView = UICollectionView(frame: CGRect(x: 8, y: ongoingContestLabel.frame.origin.y + ongoingContestLabel.frame.height + 8, width: self.view.frame.width, height: self.view.frame.height/2.5), collectionViewLayout: ongoingContestLayout)
+        var collViewHeight = self.view.frame.height/2.5
+        if collViewHeight < 250 { collViewHeight = 250 }
+        ongoingContestCollView = UICollectionView(frame: CGRect(x: 8, y: ongoingContestLabel.frame.origin.y + ongoingContestLabel.frame.height + 8, width: self.view.frame.width, height: collViewHeight), collectionViewLayout: ongoingContestLayout)
+        
         ongoingContestCollView.register(UINib(nibName: "OngoingContestCell", bundle: nil), forCellWithReuseIdentifier: "OngoingContestCell")
         ongoingContestCollView.showsHorizontalScrollIndicator = false
         //Set the delegate to self
@@ -221,7 +219,9 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         
         // Init & Setup Judging Contest Category Label
         contestJudgingLayout.scrollDirection = .horizontal
-        contestJudgingCollView = UICollectionView(frame: CGRect(x: 8, y: contestJudgingLabel.frame.origin.y + contestJudgingLabel.frame.height + 8, width: self.view.frame.width, height: self.view.frame.height/2.5), collectionViewLayout: contestJudgingLayout)
+        var collViewHeight = self.view.frame.height/2.5
+        if collViewHeight < 250 { collViewHeight = 250 }
+        contestJudgingCollView = UICollectionView(frame: CGRect(x: 8, y: contestJudgingLabel.frame.origin.y + contestJudgingLabel.frame.height + 8, width: self.view.frame.width, height: collViewHeight), collectionViewLayout: contestJudgingLayout)
         contestJudgingCollView.register(UINib(nibName: "ContestJudgingCell", bundle: nil), forCellWithReuseIdentifier: "ContestJudgingCell")
         contestJudgingCollView.showsHorizontalScrollIndicator = false
         //Set the delegate to self
@@ -250,7 +250,9 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         
         //Init & Setup Judging Contest Category Label
         contestClosedLayout.scrollDirection = .horizontal
-        contestClosedCollView = UICollectionView(frame: CGRect(x: 8, y: contestClosedLabel.frame.origin.y + contestClosedLabel.frame.height + 8, width: self.view.frame.width, height: self.view.frame.height/2.5), collectionViewLayout: contestClosedLayout)
+        var collViewHeight = self.view.frame.height/2.5
+        if collViewHeight < 250 { collViewHeight = 250 }
+        contestClosedCollView = UICollectionView(frame: CGRect(x: 8, y: contestClosedLabel.frame.origin.y + contestClosedLabel.frame.height + 8, width: self.view.frame.width, height: collViewHeight), collectionViewLayout: contestClosedLayout)
         contestClosedCollView.register(UINib(nibName: "ContestClosedCell", bundle: nil), forCellWithReuseIdentifier: "ContestClosedCell")
         contestClosedCollView.showsHorizontalScrollIndicator = false
         //Set the delegate to self
@@ -319,6 +321,7 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         }
         else
         {
+            
             return CGSize(width: self.view.frame.width/1.8, height: collectionView.bounds.height)
         }
         

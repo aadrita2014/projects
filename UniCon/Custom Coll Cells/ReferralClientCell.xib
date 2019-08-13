@@ -24,7 +24,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="195" height="227"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="client_demo_page" translatesAutoresizingMaskIntoConstraints="NO" id="iCG-NO-zQl">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="client_demo_1" translatesAutoresizingMaskIntoConstraints="NO" id="iCG-NO-zQl">
                         <rect key="frame" x="20.5" y="8" width="154" height="154"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="iCG-NO-zQl" secondAttribute="height" multiplier="1:1" id="3N9-XR-UfZ"/>
@@ -69,6 +69,6 @@
     </objects>
     <resources>
         <image name="client-new" width="58.5" height="18"/>
-        <image name="client_demo_page" width="165" height="165"/>
+        <image name="client_demo_1" width="165" height="165"/>
     </resources>
 </document>
