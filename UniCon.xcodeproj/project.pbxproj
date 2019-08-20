@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C1FD5F8230C5A5B0073EEF4 /* CongratulationPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FD5F7230C5A5B0073EEF4 /* CongratulationPopViewController.swift */; };
 		9C63192223014C2400830385 /* FeaturedCreatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C63192023014C2400830385 /* FeaturedCreatorCell.swift */; };
 		9C63192323014C2400830385 /* FeaturedCreatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C63192123014C2400830385 /* FeaturedCreatorCell.xib */; };
 		9C63192623014C4800830385 /* ReferralClientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C63192423014C4800830385 /* ReferralClientCell.swift */; };
@@ -28,8 +29,6 @@
 		9C70646522FEAFE600E006D7 /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C70646422FEAFE600E006D7 /* NotoSansCJKkr-Regular.otf */; };
 		9C70646722FEAFEF00E006D7 /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C70646622FEAFEF00E006D7 /* NotoSansCJKkr-Medium.otf */; };
 		9C70646922FEAFFC00E006D7 /* NotoSansCJKkr-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C70646822FEAFFB00E006D7 /* NotoSansCJKkr-Light.otf */; };
-		9C70646B22FEB00300E006D7 /* NotoSansCJKkr-DemiLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C70646A22FEB00300E006D7 /* NotoSansCJKkr-DemiLight.otf */; };
-		9C70646D22FEB00E00E006D7 /* NotoSansCJKkr-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C70646C22FEB00E00E006D7 /* NotoSansCJKkr-Black.otf */; };
 		9C70646F22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C70646E22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf */; };
 		9C70647122FEB5DD00E006D7 /* LoginClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70647022FEB5DD00E006D7 /* LoginClientViewController.swift */; };
 		9C70647322FEC0DC00E006D7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70647222FEC0DC00E006D7 /* Constants.swift */; };
@@ -40,9 +39,11 @@
 		9C9AC4AF22FEE04000230522 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4AE22FEE04000230522 /* ChannelViewController.swift */; };
 		9C9AC4B122FEE04900230522 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4B022FEE04900230522 /* RecordingViewController.swift */; };
 		9C9AC4B322FEE05900230522 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4B222FEE05900230522 /* AlarmViewController.swift */; };
+		9CCB4D5E230BED9E00375888 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCB4D5D230BED9E00375888 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C1FD5F7230C5A5B0073EEF4 /* CongratulationPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationPopViewController.swift; sourceTree = "<group>"; };
 		9C63192023014C2400830385 /* FeaturedCreatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCreatorCell.swift; sourceTree = "<group>"; };
 		9C63192123014C2400830385 /* FeaturedCreatorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedCreatorCell.xib; sourceTree = "<group>"; };
 		9C63192423014C4800830385 /* ReferralClientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferralClientCell.swift; sourceTree = "<group>"; };
@@ -68,8 +69,6 @@
 		9C70646422FEAFE600E006D7 /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
 		9C70646622FEAFEF00E006D7 /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
 		9C70646822FEAFFB00E006D7 /* NotoSansCJKkr-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Light.otf"; sourceTree = "<group>"; };
-		9C70646A22FEB00300E006D7 /* NotoSansCJKkr-DemiLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-DemiLight.otf"; sourceTree = "<group>"; };
-		9C70646C22FEB00E00E006D7 /* NotoSansCJKkr-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Black.otf"; sourceTree = "<group>"; };
 		9C70646E22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Thin.otf"; sourceTree = "<group>"; };
 		9C70647022FEB5DD00E006D7 /* LoginClientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginClientViewController.swift; path = ../LoginClientViewController.swift; sourceTree = "<group>"; };
 		9C70647222FEC0DC00E006D7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -80,6 +79,7 @@
 		9C9AC4AE22FEE04000230522 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		9C9AC4B022FEE04900230522 /* RecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
 		9C9AC4B222FEE05900230522 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
+		9CCB4D5D230BED9E00375888 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				9C70644822FEA3AC00E006D7 /* AppDelegate.swift */,
+				9CCB4D5D230BED9E00375888 /* ViewController.swift */,
+				9C1FD5F7230C5A5B0073EEF4 /* CongratulationPopViewController.swift */,
 				9C63191E23014BE900830385 /* Login VC */,
 				9C9AC4AB22FEE00B00230522 /* TabView Controller */,
 				9C63191F23014BF600830385 /* Helpers */,
@@ -166,9 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				9C70646E22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf */,
-				9C70646C22FEB00E00E006D7 /* NotoSansCJKkr-Black.otf */,
 				9C70646822FEAFFB00E006D7 /* NotoSansCJKkr-Light.otf */,
-				9C70646A22FEB00300E006D7 /* NotoSansCJKkr-DemiLight.otf */,
 				9C70646622FEAFEF00E006D7 /* NotoSansCJKkr-Medium.otf */,
 				9C70646422FEAFE600E006D7 /* NotoSansCJKkr-Regular.otf */,
 				9C70646122FEA9C900E006D7 /* NotoSansCJKkr-Bold.otf */,
@@ -249,9 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C70646B22FEB00300E006D7 /* NotoSansCJKkr-DemiLight.otf in Resources */,
 				9C70646522FEAFE600E006D7 /* NotoSansCJKkr-Regular.otf in Resources */,
-				9C70646D22FEB00E00E006D7 /* NotoSansCJKkr-Black.otf in Resources */,
 				9C70646922FEAFFC00E006D7 /* NotoSansCJKkr-Light.otf in Resources */,
 				9C70645622FEA3AF00E006D7 /* LaunchScreen.storyboard in Resources */,
 				9C63192723014C4800830385 /* ReferralClientCell.xib in Resources */,
@@ -275,12 +273,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C63193223014C8A00830385 /* ContestClosedCell.swift in Sources */,
+				9CCB4D5E230BED9E00375888 /* ViewController.swift in Sources */,
 				9C70645122FEA3AC00E006D7 /* UniCon.xcdatamodeld in Sources */,
 				9C70644B22FEA3AC00E006D7 /* LoginViewController.swift in Sources */,
 				9C9AC4B322FEE05900230522 /* AlarmViewController.swift in Sources */,
 				9C9AC4B122FEE04900230522 /* RecordingViewController.swift in Sources */,
 				9C63192A23014C6300830385 /* OngoingContestCell.swift in Sources */,
 				9C70644922FEA3AC00E006D7 /* AppDelegate.swift in Sources */,
+				9C1FD5F8230C5A5B0073EEF4 /* CongratulationPopViewController.swift in Sources */,
 				9C9AC4AA22FEDB5D00230522 /* GeneralVideosViewController.swift in Sources */,
 				9C70645E22FEA65600E006D7 /* Extensions.swift in Sources */,
 				9C9AC4AD22FEE03600230522 /* MyPageViewController.swift in Sources */,
