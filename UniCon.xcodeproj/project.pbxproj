@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9C1FD5F8230C5A5B0073EEF4 /* CongratulationPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FD5F7230C5A5B0073EEF4 /* CongratulationPopViewController.swift */; };
+		9C6178F7230FE33D007896F2 /* FeedSharedPopUpPrimary.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C6178F6230FE33D007896F2 /* FeedSharedPopUpPrimary.xib */; };
+		9C6178F9230FE37C007896F2 /* FeedSharedPopUpPrimary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6178F8230FE37C007896F2 /* FeedSharedPopUpPrimary.swift */; };
 		9C63192223014C2400830385 /* FeaturedCreatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C63192023014C2400830385 /* FeaturedCreatorCell.swift */; };
 		9C63192323014C2400830385 /* FeaturedCreatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C63192123014C2400830385 /* FeaturedCreatorCell.xib */; };
 		9C63192623014C4800830385 /* ReferralClientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C63192423014C4800830385 /* ReferralClientCell.swift */; };
@@ -48,6 +50,8 @@
 
 /* Begin PBXFileReference section */
 		9C1FD5F7230C5A5B0073EEF4 /* CongratulationPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationPopViewController.swift; sourceTree = "<group>"; };
+		9C6178F6230FE33D007896F2 /* FeedSharedPopUpPrimary.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedSharedPopUpPrimary.xib; sourceTree = "<group>"; };
+		9C6178F8230FE37C007896F2 /* FeedSharedPopUpPrimary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSharedPopUpPrimary.swift; sourceTree = "<group>"; };
 		9C63192023014C2400830385 /* FeaturedCreatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCreatorCell.swift; sourceTree = "<group>"; };
 		9C63192123014C2400830385 /* FeaturedCreatorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedCreatorCell.xib; sourceTree = "<group>"; };
 		9C63192423014C4800830385 /* ReferralClientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferralClientCell.swift; sourceTree = "<group>"; };
@@ -101,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C6178FA230FF63F007896F2 /* SharedSuccessView */ = {
+			isa = PBXGroup;
+			children = (
+				9C6178F8230FE37C007896F2 /* FeedSharedPopUpPrimary.swift */,
+				9C6178F6230FE33D007896F2 /* FeedSharedPopUpPrimary.xib */,
+			);
+			path = SharedSuccessView;
+			sourceTree = "<group>";
+		};
 		9C63191D23014BD600830385 /* Custom Coll Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				9CF1E7AC230FC03E0093D21F /* ShareView */,
+				9C6178FA230FF63F007896F2 /* SharedSuccessView */,
 			);
 			path = "Reusable Components";
 			sourceTree = "<group>";
@@ -291,6 +305,7 @@
 				9C63192F23014C7A00830385 /* ContestJudgingCell.xib in Resources */,
 				9C63192B23014C6300830385 /* OngoingContestCell.xib in Resources */,
 				9C70646722FEAFEF00E006D7 /* NotoSansCJKkr-Medium.otf in Resources */,
+				9C6178F7230FE33D007896F2 /* FeedSharedPopUpPrimary.xib in Resources */,
 				9C63193323014C8A00830385 /* ContestClosedCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +339,7 @@
 				9C70647522FECCED00E006D7 /* FeedViewController.swift in Sources */,
 				9C63192623014C4800830385 /* ReferralClientCell.swift in Sources */,
 				9C63192E23014C7A00830385 /* ContestJudgingCell.swift in Sources */,
+				9C6178F9230FE37C007896F2 /* FeedSharedPopUpPrimary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,7 +22,7 @@ class SharePopUpView: UIView, UICollectionViewDataSource, UICollectionViewDelega
     
     
     var removeViewClicked:(()->Void)?
-    
+    var shareSuccessful:(()->Void)?
     var socialMediaModels = [
         ShareSocialMediaModel(image: "shareFacebook", name: "Facebook", sharePrice: "100",isSocialPlatform: true),
         ShareSocialMediaModel(image: "shareFacebook", name: "Instagram", sharePrice: "100",isSocialPlatform: true),
@@ -83,12 +83,15 @@ class SharePopUpView: UIView, UICollectionViewDataSource, UICollectionViewDelega
         return CGSize(width: 60, height: collectionView.frame.size.height)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let action = shareSuccessful {
+            action()
+        }
+    }
     
     //MARK: IBAction Methods
-    @IBAction func dismissView()
-    {
-        if let action = removeViewClicked
-        {
+    @IBAction func dismissView() {
+        if let action = removeViewClicked {
             action()
         }
     }

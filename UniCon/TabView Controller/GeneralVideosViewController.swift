@@ -31,6 +31,7 @@ class GeneralVideosViewController: UIViewController {
     
     //MARK: Other declarations
     var sharePopUpView:SharePopUpView? = nil   //Definition when share button is clicked
+    var sharedFeedPopup:FeedSharedPopUpPrimary? = nil
     
     //MARK: Overrided View Methods
     override func viewDidLoad() {
@@ -51,7 +52,7 @@ class GeneralVideosViewController: UIViewController {
     }
     
     @IBAction func commentClicked() {
-        print("Comment Clicked")
+       print("Comment Clicked")
     }
     
     @IBAction func shareClicked() {
@@ -63,21 +64,48 @@ class GeneralVideosViewController: UIViewController {
         bookmarkButton.isSelected = !bookmarkButton.isSelected
     }
     
-    //MARK: Share PopUp Definitions
+    //MARK: Share PopUp Methods
     func showShareView() {
+        //To avoid the duplicate initialisation
         if sharePopUpView == nil {
             sharePopUpView = SharePopUpView(frame: CGRect(x: 0, y: view.viewHeight() - (self.view.viewHeight()/4), width: view.viewWidth(), height: (view.viewHeight()/4)))
+            
+            //Remove share view from the view
             sharePopUpView?.removeViewClicked = {
                 self.removeShareView()
+            }
+            //Show Shared Successfully Pop Up View
+            sharePopUpView?.shareSuccessful = {
+                //Remove the share view
+                self.removeShareView()
+                self.showSharedPopUpView()
             }
             self.view.addSubview(sharePopUpView!)
         }
     }
     func removeShareView() {
+        //Check if view is not nil
         if let view = sharePopUpView {
             view.removeFromSuperview()
             sharePopUpView = nil
         }
     }
-   
+    
+    //MARK: Shared Feed Popup Methods
+    func showSharedPopUpView() {
+        //To avoid the duplicate initialisation
+        if sharedFeedPopup == nil {
+            sharedFeedPopup = FeedSharedPopUpPrimary(frame: CGRect(x: 0, y: 0, width: view.viewWidth(), height: view.viewHeight()))
+            sharedFeedPopup?.dismissClicked = {
+                self.removeSharedPopUpView()
+            }
+            self.view.addSubview(sharedFeedPopup!)
+        }
+    }
+    func removeSharedPopUpView() {
+        if let view = sharedFeedPopup {
+            view.removeFromSuperview()
+            sharedFeedPopup = nil
+        }
+    }
 }
