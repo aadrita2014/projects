@@ -26,7 +26,7 @@ class ContestDetailListViewController: UIViewController,UITableViewDelegate,UITa
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func filterListClicked(){
-        self.navigationController?.popViewController(animated: true)
+        showFilterActionSheet()
     }
     
     //MARK: Tableview Delegate
@@ -39,5 +39,29 @@ class ContestDetailListViewController: UIViewController,UITableViewDelegate,UITa
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
+    }
+    
+    func showFilterActionSheet()
+    {
+        let actionSheet = UIAlertController(title: "정렬", message: nil, preferredStyle: .actionSheet)
+        
+        
+        actionSheet.view.tintColor = UIColor.red  // change text color of the buttons
+        actionSheet.view.backgroundColor = UIColor.black  // change background color
+       
+        
+        let newestAction = UIAlertAction(title: "최신순", style: .default, handler: nil)
+        let highWinningAction = UIAlertAction(title: "우승 확률 높은 순", style: .default, handler: nil)
+        let netWinningPrizeAction = UIAlertAction(title: "우승 상금 많은 순", style: .default, handler: nil)
+        
+        let cancelAction = UIAlertAction(title: "취소", style: .destructive) { (action) in
+            actionSheet.dismiss(animated: true, completion: nil)
+        }
+        actionSheet.addAction(newestAction)
+        actionSheet.addAction(highWinningAction)
+        actionSheet.addAction(netWinningPrizeAction)
+        actionSheet.addAction(cancelAction)
+        
+        present(actionSheet, animated: true, completion: nil)
     }
 }

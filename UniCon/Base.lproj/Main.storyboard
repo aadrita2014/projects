@@ -517,6 +517,7 @@
                                 </constraints>
                                 <state key="normal" image="back"/>
                                 <connections>
+                                    <action selector="backClicked" destination="Cae-NF-l4n" eventType="touchUpInside" id="Esb-2C-zTi"/>
                                     <action selector="backClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="JGL-IY-Yqd"/>
                                 </connections>
                             </button>
@@ -529,6 +530,7 @@
                                 <state key="normal" image="filterTopIcon"/>
                                 <connections>
                                     <action selector="backClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="J3t-j1-ezE"/>
+                                    <action selector="filterListClicked" destination="Cae-NF-l4n" eventType="touchUpInside" id="bvc-vH-QBs"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Iu8-Ny-xKY">
