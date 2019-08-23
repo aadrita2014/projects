@@ -10,6 +10,9 @@
 		9C1FD5F8230C5A5B0073EEF4 /* CongratulationPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FD5F7230C5A5B0073EEF4 /* CongratulationPopViewController.swift */; };
 		9C6178F7230FE33D007896F2 /* FeedSharedPopUpPrimary.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C6178F6230FE33D007896F2 /* FeedSharedPopUpPrimary.xib */; };
 		9C6178F9230FE37C007896F2 /* FeedSharedPopUpPrimary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6178F8230FE37C007896F2 /* FeedSharedPopUpPrimary.swift */; };
+		9C6178FC230FF811007896F2 /* ContestDetailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6178FB230FF811007896F2 /* ContestDetailListViewController.swift */; };
+		9C617900230FFAA6007896F2 /* ContestDetailListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6178FE230FFAA6007896F2 /* ContestDetailListCell.swift */; };
+		9C617901230FFAA6007896F2 /* ContestDetailListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C6178FF230FFAA6007896F2 /* ContestDetailListCell.xib */; };
 		9C63192223014C2400830385 /* FeaturedCreatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C63192023014C2400830385 /* FeaturedCreatorCell.swift */; };
 		9C63192323014C2400830385 /* FeaturedCreatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C63192123014C2400830385 /* FeaturedCreatorCell.xib */; };
 		9C63192623014C4800830385 /* ReferralClientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C63192423014C4800830385 /* ReferralClientCell.swift */; };
@@ -52,6 +55,9 @@
 		9C1FD5F7230C5A5B0073EEF4 /* CongratulationPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationPopViewController.swift; sourceTree = "<group>"; };
 		9C6178F6230FE33D007896F2 /* FeedSharedPopUpPrimary.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedSharedPopUpPrimary.xib; sourceTree = "<group>"; };
 		9C6178F8230FE37C007896F2 /* FeedSharedPopUpPrimary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSharedPopUpPrimary.swift; sourceTree = "<group>"; };
+		9C6178FB230FF811007896F2 /* ContestDetailListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestDetailListViewController.swift; sourceTree = "<group>"; };
+		9C6178FE230FFAA6007896F2 /* ContestDetailListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestDetailListCell.swift; sourceTree = "<group>"; };
+		9C6178FF230FFAA6007896F2 /* ContestDetailListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContestDetailListCell.xib; sourceTree = "<group>"; };
 		9C63192023014C2400830385 /* FeaturedCreatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCreatorCell.swift; sourceTree = "<group>"; };
 		9C63192123014C2400830385 /* FeaturedCreatorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedCreatorCell.xib; sourceTree = "<group>"; };
 		9C63192423014C4800830385 /* ReferralClientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferralClientCell.swift; sourceTree = "<group>"; };
@@ -114,6 +120,15 @@
 			path = SharedSuccessView;
 			sourceTree = "<group>";
 		};
+		9C6178FD230FF963007896F2 /* Custom Tv Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9C6178FE230FFAA6007896F2 /* ContestDetailListCell.swift */,
+				9C6178FF230FFAA6007896F2 /* ContestDetailListCell.xib */,
+			);
+			path = "Custom Tv Cells";
+			sourceTree = "<group>";
+		};
 		9C63191D23014BD600830385 /* Custom Coll Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +186,7 @@
 				9C70644822FEA3AC00E006D7 /* AppDelegate.swift */,
 				9CCB4D5D230BED9E00375888 /* ViewController.swift */,
 				9C1FD5F7230C5A5B0073EEF4 /* CongratulationPopViewController.swift */,
+				9C6178FB230FF811007896F2 /* ContestDetailListViewController.swift */,
 				9C70644C22FEA3AC00E006D7 /* Main.storyboard */,
 				9CF1E7A1230F917C0093D21F /* Reusable Components */,
 				9C63191E23014BE900830385 /* Login VC */,
@@ -178,6 +194,7 @@
 				9C63191F23014BF600830385 /* Helpers */,
 				9C63191D23014BD600830385 /* Custom Coll Cells */,
 				9C70646322FEA9CD00E006D7 /* Custom Fonts */,
+				9C6178FD230FF963007896F2 /* Custom Tv Cells */,
 				9C70645222FEA3AE00E006D7 /* Assets.xcassets */,
 				9C70645422FEA3AE00E006D7 /* LaunchScreen.storyboard */,
 				9C70645722FEA3AF00E006D7 /* Info.plist */,
@@ -297,6 +314,7 @@
 				9CF1E7AB230F98890093D21F /* SharePopUpCell.xib in Resources */,
 				9CF1E7A7230F967E0093D21F /* SharePopUpView.xib in Resources */,
 				9C63192723014C4800830385 /* ReferralClientCell.xib in Resources */,
+				9C617901230FFAA6007896F2 /* ContestDetailListCell.xib in Resources */,
 				9C70646F22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf in Resources */,
 				9C70646222FEA9C900E006D7 /* NotoSansCJKkr-Bold.otf in Resources */,
 				9C70645322FEA3AE00E006D7 /* Assets.xcassets in Resources */,
@@ -331,11 +349,13 @@
 				9C70645E22FEA65600E006D7 /* Extensions.swift in Sources */,
 				9C9AC4AD22FEE03600230522 /* MyPageViewController.swift in Sources */,
 				9CF1E7A5230F966D0093D21F /* SharePopUpView.swift in Sources */,
+				9C6178FC230FF811007896F2 /* ContestDetailListViewController.swift in Sources */,
 				9C70647122FEB5DD00E006D7 /* LoginClientViewController.swift in Sources */,
 				9C70647322FEC0DC00E006D7 /* Constants.swift in Sources */,
 				9C9AC4A822FEDB4B00230522 /* ContestViewController.swift in Sources */,
 				9C9AC4AF22FEE04000230522 /* ChannelViewController.swift in Sources */,
 				9C63192223014C2400830385 /* FeaturedCreatorCell.swift in Sources */,
+				9C617900230FFAA6007896F2 /* ContestDetailListCell.swift in Sources */,
 				9C70647522FECCED00E006D7 /* FeedViewController.swift in Sources */,
 				9C63192623014C4800830385 /* ReferralClientCell.swift in Sources */,
 				9C63192E23014C7A00830385 /* ContestJudgingCell.swift in Sources */,

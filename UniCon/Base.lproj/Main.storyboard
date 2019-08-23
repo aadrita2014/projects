@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yVe-rQ-kQQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cae-NF-l4n">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -488,11 +488,80 @@
                         <outlet property="pageControl" destination="zoE-IW-FQY" id="Iz2-Lq-5y9"/>
                         <outlet property="searchTf" destination="fXf-N1-lc5" id="XKI-39-MmW"/>
                         <outlet property="topSliderView" destination="zUA-tm-Chx" id="f5P-H6-O9m"/>
+                        <segue destination="Cae-NF-l4n" kind="show" identifier="ContestDetailList" id="cOm-dN-R6b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L9b-zP-1Wg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2525.5999999999999" y="183.95802098950526"/>
+        </scene>
+        <!--Contest Detail List View Controller-->
+        <scene sceneID="M35-3n-Rhv">
+            <objects>
+                <viewController id="Cae-NF-l4n" customClass="ContestDetailListViewController" customModule="UniCon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ew3-h9-bPX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="콘테스트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmn-8U-mWX">
+                                <rect key="frame" x="158" y="33" width="59" height="24"/>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3V2-4v-DFd">
+                                <rect key="frame" x="16" y="25.5" width="32" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="BZ6-R6-fDa"/>
+                                    <constraint firstAttribute="height" constant="39" id="aGG-2H-dTd"/>
+                                </constraints>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="backClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="JGL-IY-Yqd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RxA-ld-xa3">
+                                <rect key="frame" x="327" y="25.5" width="32" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="JvN-nH-gWc"/>
+                                    <constraint firstAttribute="width" constant="32" id="z6B-kU-qmq"/>
+                                </constraints>
+                                <state key="normal" image="filterTopIcon"/>
+                                <connections>
+                                    <action selector="backClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="J3t-j1-ezE"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Iu8-Ny-xKY">
+                                <rect key="frame" x="0.0" y="65" width="375" height="602"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Cae-NF-l4n" id="e0R-Gm-QyX"/>
+                                    <outlet property="delegate" destination="Cae-NF-l4n" id="khl-A3-FCb"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nmn-8U-mWX" firstAttribute="centerX" secondItem="Qj5-B6-30A" secondAttribute="centerX" id="2t2-0y-SxD"/>
+                            <constraint firstItem="Qj5-B6-30A" firstAttribute="bottom" secondItem="Iu8-Ny-xKY" secondAttribute="bottom" id="393-9J-6Ef"/>
+                            <constraint firstItem="3V2-4v-DFd" firstAttribute="centerY" secondItem="nmn-8U-mWX" secondAttribute="centerY" id="6fi-FJ-32O"/>
+                            <constraint firstItem="Iu8-Ny-xKY" firstAttribute="top" secondItem="nmn-8U-mWX" secondAttribute="bottom" constant="8" id="7xi-c8-UAd"/>
+                            <constraint firstItem="3V2-4v-DFd" firstAttribute="leading" secondItem="Qj5-B6-30A" secondAttribute="leading" constant="16" id="D9e-dJ-ZQ7"/>
+                            <constraint firstItem="RxA-ld-xa3" firstAttribute="centerY" secondItem="nmn-8U-mWX" secondAttribute="centerY" id="JwL-Ig-kw4"/>
+                            <constraint firstItem="nmn-8U-mWX" firstAttribute="top" secondItem="Qj5-B6-30A" secondAttribute="top" constant="13" id="KGt-mo-rRm"/>
+                            <constraint firstItem="Qj5-B6-30A" firstAttribute="trailing" secondItem="Iu8-Ny-xKY" secondAttribute="trailing" id="LNN-aF-7iZ"/>
+                            <constraint firstItem="Iu8-Ny-xKY" firstAttribute="leading" secondItem="Qj5-B6-30A" secondAttribute="leading" id="bMZ-g6-j0r"/>
+                            <constraint firstItem="Qj5-B6-30A" firstAttribute="trailing" secondItem="RxA-ld-xa3" secondAttribute="trailing" constant="16" id="pDE-Va-hUm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qj5-B6-30A"/>
+                    </view>
+                    <connections>
+                        <outlet property="contestListTv" destination="Iu8-Ny-xKY" id="orv-be-3a2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D4n-OR-s4J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3236" y="190"/>
         </scene>
         <!--Feed View Controller-->
         <scene sceneID="DMR-IZ-KVf">
@@ -1419,6 +1488,7 @@
         <image name="facebook" width="343" height="56.5"/>
         <image name="feed" width="28" height="28"/>
         <image name="feed-selected" width="28" height="34"/>
+        <image name="filterTopIcon" width="18" height="18"/>
         <image name="google" width="343" height="56.5"/>
         <image name="image" width="375" height="735"/>
         <image name="kakao" width="343" height="56.5"/>

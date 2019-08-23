@@ -36,6 +36,7 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
                   "demo_image",
                   "demo_image",
                   "demo_image"]
+    
     let demo_featured_creator = ["demo_featured_creator",
                                  "demo_featured_creator_2"]
     let demo_referral_client = ["client_demo_1",
@@ -47,20 +48,22 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
     //Margin for collection Views
     let const_top_margin = CGFloat(16)
     
+    
+    //MARK: Inital Setup of the View
     override func viewDidLoad() {
         super.viewDidLoad()
         //Add Default Background Color to the view
         self.view.addDefaultBackgroundColor()
     }
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     override func viewWillAppear(_ animated: Bool) {
-        if viewSetup == false
-        {
+        if viewSetup == false {
             setupView()
             viewSetup = true
         }
     }
-    
     func setupView()
     {
         //Setup Top Slider
@@ -126,8 +129,6 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         featuredCategoryLabel.text = "추천 크리에이터"
         featuredCategoryLabel.textColor = UIColor.white
         
-        
-        
         //Init & Setup Featured Collection View
         featuredCollViewLayout.scrollDirection = .horizontal
         featuredCollView = UICollectionView(frame: CGRect(x: 8, y: featuredCategoryLabel.frame.origin.y + featuredCategoryLabel.frame.height + 8, width: self.view.frame.width, height: self.view.frame.height/3), collectionViewLayout:   featuredCollViewLayout)
@@ -184,7 +185,7 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         let showMoreButton = UIButton(frame: CGRect(x: self.view.frame.width - 50, y: 0, width: 50, height: 100))
         showMoreButton.center.y = ongoingContestLabel.center.y
         showMoreButton.setImage(UIImage(named: "next_arrow"), for: .normal)
-        
+        showMoreButton.addTarget(self, action: #selector(ChannelViewController.showContestDetailList), for: .touchUpInside)
         
         //Init & Setup Ongoing Contest Collection View
         ongoingContestLayout.scrollDirection = .horizontal
@@ -216,6 +217,7 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         let showMoreButton = UIButton(frame: CGRect(x: self.view.frame.width - 50, y: 0, width: 50, height: 100))
         showMoreButton.center.y = contestJudgingLabel.center.y
         showMoreButton.setImage(UIImage(named: "next_arrow"), for: .normal)
+        showMoreButton.addTarget(self, action: #selector(ChannelViewController.showContestDetailList), for: .touchUpInside)
         
         // Init & Setup Judging Contest Category Label
         contestJudgingLayout.scrollDirection = .horizontal
@@ -247,6 +249,7 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         let showMoreButton = UIButton(frame: CGRect(x: self.view.frame.width - 50, y: 0, width: 50, height: 100))
         showMoreButton.center.y = contestClosedLabel.center.y
         showMoreButton.setImage(UIImage(named: "next_arrow"), for: .normal)
+        showMoreButton.addTarget(self, action: #selector(ChannelViewController.showContestDetailList), for: .touchUpInside)
         
         //Init & Setup Judging Contest Category Label
         contestClosedLayout.scrollDirection = .horizontal
@@ -275,20 +278,17 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         return 5
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == featuredCollView
-        {
+        if collectionView == featuredCollView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeaturedCreatorCell", for: indexPath) as! FeaturedCreatorCell
             cell.creatorProfilePic.image = UIImage(named:demo_featured_creator[indexPath.row % 2])
             return cell
         }
-        else if collectionView == referralCollView
-        {
+        else if collectionView == referralCollView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReferralClientCell", for: indexPath) as! ReferralClientCell
             cell.clientLogo.image = UIImage(named:demo_referral_client[indexPath.row % 3])
             return cell
         }
-        else if collectionView == ongoingContestCollView
-        {
+        else if collectionView == ongoingContestCollView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OngoingContestCell", for: indexPath) as! OngoingContestCell
             cell.respondButton.isSelected = test_btn_status[indexPath.row]
             
@@ -297,13 +297,11 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
             }
             return cell
         }
-        else if collectionView == contestJudgingCollView
-        {
+        else if collectionView == contestJudgingCollView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ContestJudgingCell", for: indexPath) as! ContestJudgingCell
             return cell
         }
-        else
-        {
+        else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ContestClosedCell", for: indexPath) as! ContestClosedCell
             return cell
         }
@@ -311,23 +309,22 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if collectionView == featuredCollView
-        {
+        if collectionView == featuredCollView {
             return CGSize(width: self.view.frame.width/2.5, height: collectionView.bounds.height)
         }
-        else if collectionView == referralCollView
-        {
+        else if collectionView == referralCollView {
             return CGSize(width: self.view.frame.width/2.8, height: collectionView.bounds.height)
         }
-        else
-        {
-            
+        else {
             return CGSize(width: self.view.frame.width/1.8, height: collectionView.bounds.height)
         }
         
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+    
+    //MARK: Navigation (To Other VC) Methods
+    @objc func showContestDetailList() {
+        self.performSegue(withIdentifier: "ContestDetailList", sender: nil)
     }
+    
 }
