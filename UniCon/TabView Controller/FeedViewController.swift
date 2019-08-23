@@ -20,6 +20,9 @@ class FeedViewController: UIViewController {
         super.viewDidLoad()
         
         
+        //Black background color for some of the designs
+        self.view.addBlackBackgroundColor()
+        
         //Setup the segment view according to the design
         segmentViewSetup()
         //Select the default value of segmented Control

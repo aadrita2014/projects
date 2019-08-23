@@ -40,6 +40,10 @@
 		9C9AC4B122FEE04900230522 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4B022FEE04900230522 /* RecordingViewController.swift */; };
 		9C9AC4B322FEE05900230522 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4B222FEE05900230522 /* AlarmViewController.swift */; };
 		9CCB4D5E230BED9E00375888 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCB4D5D230BED9E00375888 /* ViewController.swift */; };
+		9CF1E7A5230F966D0093D21F /* SharePopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF1E7A4230F966D0093D21F /* SharePopUpView.swift */; };
+		9CF1E7A7230F967E0093D21F /* SharePopUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CF1E7A6230F967E0093D21F /* SharePopUpView.xib */; };
+		9CF1E7AA230F98890093D21F /* SharePopUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF1E7A8230F98890093D21F /* SharePopUpCell.swift */; };
+		9CF1E7AB230F98890093D21F /* SharePopUpCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CF1E7A9230F98890093D21F /* SharePopUpCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +84,10 @@
 		9C9AC4B022FEE04900230522 /* RecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
 		9C9AC4B222FEE05900230522 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		9CCB4D5D230BED9E00375888 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9CF1E7A4230F966D0093D21F /* SharePopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePopUpView.swift; sourceTree = "<group>"; };
+		9CF1E7A6230F967E0093D21F /* SharePopUpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SharePopUpView.xib; sourceTree = "<group>"; };
+		9CF1E7A8230F98890093D21F /* SharePopUpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePopUpCell.swift; sourceTree = "<group>"; };
+		9CF1E7A9230F98890093D21F /* SharePopUpCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SharePopUpCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,12 +158,13 @@
 				9C70644822FEA3AC00E006D7 /* AppDelegate.swift */,
 				9CCB4D5D230BED9E00375888 /* ViewController.swift */,
 				9C1FD5F7230C5A5B0073EEF4 /* CongratulationPopViewController.swift */,
+				9C70644C22FEA3AC00E006D7 /* Main.storyboard */,
+				9CF1E7A1230F917C0093D21F /* Reusable Components */,
 				9C63191E23014BE900830385 /* Login VC */,
 				9C9AC4AB22FEE00B00230522 /* TabView Controller */,
 				9C63191F23014BF600830385 /* Helpers */,
 				9C63191D23014BD600830385 /* Custom Coll Cells */,
 				9C70646322FEA9CD00E006D7 /* Custom Fonts */,
-				9C70644C22FEA3AC00E006D7 /* Main.storyboard */,
 				9C70645222FEA3AE00E006D7 /* Assets.xcassets */,
 				9C70645422FEA3AE00E006D7 /* LaunchScreen.storyboard */,
 				9C70645722FEA3AF00E006D7 /* Info.plist */,
@@ -188,6 +197,25 @@
 				9C9AC4B222FEE05900230522 /* AlarmViewController.swift */,
 			);
 			path = "TabView Controller";
+			sourceTree = "<group>";
+		};
+		9CF1E7A1230F917C0093D21F /* Reusable Components */ = {
+			isa = PBXGroup;
+			children = (
+				9CF1E7AC230FC03E0093D21F /* ShareView */,
+			);
+			path = "Reusable Components";
+			sourceTree = "<group>";
+		};
+		9CF1E7AC230FC03E0093D21F /* ShareView */ = {
+			isa = PBXGroup;
+			children = (
+				9CF1E7A4230F966D0093D21F /* SharePopUpView.swift */,
+				9CF1E7A6230F967E0093D21F /* SharePopUpView.xib */,
+				9CF1E7A8230F98890093D21F /* SharePopUpCell.swift */,
+				9CF1E7A9230F98890093D21F /* SharePopUpCell.xib */,
+			);
+			path = ShareView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +280,8 @@
 				9C70646522FEAFE600E006D7 /* NotoSansCJKkr-Regular.otf in Resources */,
 				9C70646922FEAFFC00E006D7 /* NotoSansCJKkr-Light.otf in Resources */,
 				9C70645622FEA3AF00E006D7 /* LaunchScreen.storyboard in Resources */,
+				9CF1E7AB230F98890093D21F /* SharePopUpCell.xib in Resources */,
+				9CF1E7A7230F967E0093D21F /* SharePopUpView.xib in Resources */,
 				9C63192723014C4800830385 /* ReferralClientCell.xib in Resources */,
 				9C70646F22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf in Resources */,
 				9C70646222FEA9C900E006D7 /* NotoSansCJKkr-Bold.otf in Resources */,
@@ -279,11 +309,13 @@
 				9C9AC4B322FEE05900230522 /* AlarmViewController.swift in Sources */,
 				9C9AC4B122FEE04900230522 /* RecordingViewController.swift in Sources */,
 				9C63192A23014C6300830385 /* OngoingContestCell.swift in Sources */,
+				9CF1E7AA230F98890093D21F /* SharePopUpCell.swift in Sources */,
 				9C70644922FEA3AC00E006D7 /* AppDelegate.swift in Sources */,
 				9C1FD5F8230C5A5B0073EEF4 /* CongratulationPopViewController.swift in Sources */,
 				9C9AC4AA22FEDB5D00230522 /* GeneralVideosViewController.swift in Sources */,
 				9C70645E22FEA65600E006D7 /* Extensions.swift in Sources */,
 				9C9AC4AD22FEE03600230522 /* MyPageViewController.swift in Sources */,
+				9CF1E7A5230F966D0093D21F /* SharePopUpView.swift in Sources */,
 				9C70647122FEB5DD00E006D7 /* LoginClientViewController.swift in Sources */,
 				9C70647322FEC0DC00E006D7 /* Constants.swift in Sources */,
 				9C9AC4A822FEDB4B00230522 /* ContestViewController.swift in Sources */,

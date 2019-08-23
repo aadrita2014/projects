@@ -9,16 +9,43 @@
 import UIKit
 
 extension UIView {
+    
+    func viewWidth() -> CGFloat
+    {
+        return self.frame.size.width
+    }
+    func viewHeight() -> CGFloat
+    {
+        return self.frame.size.height
+    }
     func addDefaultBackgroundColor()
     {
-        self.backgroundColor = UIColor(red: 3.0/255.0, green: 15.0/255.0, blue: 18.0/255.0, alpha: 1)
-        
+        addBackgroundColor(color: AppColors.default_background_color)
+    }
+    func addBlackBackgroundColor()
+    {
+        addBackgroundColor(color: UIColor.black)
+    }
+    private func addBackgroundColor(color:UIColor)
+    {
+        self.backgroundColor = color
     }
     func addCornerRadius(radius:CGFloat = 5.0)
     {
         let layer = self.layer
         layer.cornerRadius = radius
         layer.masksToBounds = true
+    }
+    
+    //For Custom Written Views
+    func fixInView(_ container: UIView!){
+        self.translatesAutoresizingMaskIntoConstraints = false;
+        self.frame = container.frame;
+        container.addSubview(self);
+        NSLayoutConstraint(item: self, attribute: .leading, relatedBy: .equal, toItem: container, attribute: .leading, multiplier: 1.0, constant: 0).isActive = true
+        NSLayoutConstraint(item: self, attribute: .trailing, relatedBy: .equal, toItem: container, attribute: .trailing, multiplier: 1.0, constant: 0).isActive = true
+        NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal, toItem: container, attribute: .top, multiplier: 1.0, constant: 0).isActive = true
+        NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: container, attribute: .bottom, multiplier: 1.0, constant: 0).isActive = true
     }
 }
 
