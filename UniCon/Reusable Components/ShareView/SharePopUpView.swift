@@ -51,8 +51,6 @@ class SharePopUpView: UIView, UICollectionViewDataSource, UICollectionViewDelega
         shareCollView.register(UINib(nibName: "SharePopUpCell", bundle: nil), forCellWithReuseIdentifier: "ShareCell")
         contentView.fixInView(self)
     }
-    override func awakeFromNib() {
-    }
     
     //MARK: Collection View Delegates
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

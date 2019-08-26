@@ -11,6 +11,9 @@ import UIKit
 class ContestDetailListViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     @IBOutlet weak var contestListTv:UITableView!
+    var filterActionSheet:CustomActionSheet? = nil
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addBlackBackgroundColor()
@@ -40,28 +43,31 @@ class ContestDetailListViewController: UIViewController,UITableViewDelegate,UITa
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
-    
-    func showFilterActionSheet()
-    {
-        let actionSheet = UIAlertController(title: "정렬", message: nil, preferredStyle: .actionSheet)
-        
-        
-        actionSheet.view.tintColor = UIColor.red  // change text color of the buttons
-        actionSheet.view.backgroundColor = UIColor.black  // change background color
-       
-        
-        let newestAction = UIAlertAction(title: "최신순", style: .default, handler: nil)
-        let highWinningAction = UIAlertAction(title: "우승 확률 높은 순", style: .default, handler: nil)
-        let netWinningPrizeAction = UIAlertAction(title: "우승 상금 많은 순", style: .default, handler: nil)
-        
-        let cancelAction = UIAlertAction(title: "취소", style: .destructive) { (action) in
-            actionSheet.dismiss(animated: true, completion: nil)
+    //MARK: Shared Feed Popup Methods
+    func showFilterActionSheet() {
+        //To avoid the duplicate initialisation
+        if filterActionSheet == nil {
+            filterActionSheet = CustomActionSheet(frame: view.frame,title: "정렬")
+            filterActionSheet?.addAction(title: "최신순", handler: { (action) in
+                print("Action 1")
+            })
+            filterActionSheet?.addAction(title: "우승 확률 높은 순", handler: { (action) in
+                print("Action 2")
+            })
+            filterActionSheet?.addAction(title: "우승 상금 많은 순", handler: { (action) in
+                print("Action 3")
+            })
+            filterActionSheet?.dismissViewAction = { _ in
+                self.removeFilterActionSheet()  
+            }
+            self.view.addSubview(filterActionSheet!)
+            filterActionSheet?.reload()
         }
-        actionSheet.addAction(newestAction)
-        actionSheet.addAction(highWinningAction)
-        actionSheet.addAction(netWinningPrizeAction)
-        actionSheet.addAction(cancelAction)
-        
-        present(actionSheet, animated: true, completion: nil)
+    }
+    func removeFilterActionSheet() {
+        if let actionSheet = filterActionSheet {
+            actionSheet.removeFromSuperview()
+            filterActionSheet = nil
+        }
     }
 }

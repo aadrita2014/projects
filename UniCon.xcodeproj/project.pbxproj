@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C1BED99231112F10011F296 /* CustomActionSheetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C1BED98231112F10011F296 /* CustomActionSheetView.xib */; };
+		9C1BED9B2311130C0011F296 /* CustomActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BED9A2311130C0011F296 /* CustomActionSheet.swift */; };
+		9C1BED9E231116350011F296 /* CustomActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BED9C231116350011F296 /* CustomActionSheetCell.swift */; };
+		9C1BED9F231116350011F296 /* CustomActionSheetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C1BED9D231116350011F296 /* CustomActionSheetCell.xib */; };
 		9C1FD5F8230C5A5B0073EEF4 /* CongratulationPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FD5F7230C5A5B0073EEF4 /* CongratulationPopViewController.swift */; };
 		9C6178F7230FE33D007896F2 /* FeedSharedPopUpPrimary.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C6178F6230FE33D007896F2 /* FeedSharedPopUpPrimary.xib */; };
 		9C6178F9230FE37C007896F2 /* FeedSharedPopUpPrimary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6178F8230FE37C007896F2 /* FeedSharedPopUpPrimary.swift */; };
@@ -52,6 +56,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C1BED98231112F10011F296 /* CustomActionSheetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomActionSheetView.xib; sourceTree = "<group>"; };
+		9C1BED9A2311130C0011F296 /* CustomActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActionSheet.swift; sourceTree = "<group>"; };
+		9C1BED9C231116350011F296 /* CustomActionSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActionSheetCell.swift; sourceTree = "<group>"; };
+		9C1BED9D231116350011F296 /* CustomActionSheetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomActionSheetCell.xib; sourceTree = "<group>"; };
 		9C1FD5F7230C5A5B0073EEF4 /* CongratulationPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationPopViewController.swift; sourceTree = "<group>"; };
 		9C6178F6230FE33D007896F2 /* FeedSharedPopUpPrimary.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedSharedPopUpPrimary.xib; sourceTree = "<group>"; };
 		9C6178F8230FE37C007896F2 /* FeedSharedPopUpPrimary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSharedPopUpPrimary.swift; sourceTree = "<group>"; };
@@ -111,13 +119,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9C6178FA230FF63F007896F2 /* SharedSuccessView */ = {
+		9C6178FA230FF63F007896F2 /* SharedSuccessAlertView */ = {
 			isa = PBXGroup;
 			children = (
 				9C6178F8230FE37C007896F2 /* FeedSharedPopUpPrimary.swift */,
 				9C6178F6230FE33D007896F2 /* FeedSharedPopUpPrimary.xib */,
 			);
-			path = SharedSuccessView;
+			path = SharedSuccessAlertView;
 			sourceTree = "<group>";
 		};
 		9C6178FD230FF963007896F2 /* Custom Tv Cells */ = {
@@ -162,6 +170,17 @@
 				9C70647222FEC0DC00E006D7 /* Constants.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9C693450231409B70053BFF0 /* CustomActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				9C1BED9A2311130C0011F296 /* CustomActionSheet.swift */,
+				9C1BED98231112F10011F296 /* CustomActionSheetView.xib */,
+				9C1BED9C231116350011F296 /* CustomActionSheetCell.swift */,
+				9C1BED9D231116350011F296 /* CustomActionSheetCell.xib */,
+			);
+			path = CustomActionSheet;
 			sourceTree = "<group>";
 		};
 		9C70643C22FEA3AC00E006D7 = {
@@ -232,8 +251,9 @@
 		9CF1E7A1230F917C0093D21F /* Reusable Components */ = {
 			isa = PBXGroup;
 			children = (
+				9C693450231409B70053BFF0 /* CustomActionSheet */,
 				9CF1E7AC230FC03E0093D21F /* ShareView */,
-				9C6178FA230FF63F007896F2 /* SharedSuccessView */,
+				9C6178FA230FF63F007896F2 /* SharedSuccessAlertView */,
 			);
 			path = "Reusable Components";
 			sourceTree = "<group>";
@@ -317,8 +337,10 @@
 				9C617901230FFAA6007896F2 /* ContestDetailListCell.xib in Resources */,
 				9C70646F22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf in Resources */,
 				9C70646222FEA9C900E006D7 /* NotoSansCJKkr-Bold.otf in Resources */,
+				9C1BED9F231116350011F296 /* CustomActionSheetCell.xib in Resources */,
 				9C70645322FEA3AE00E006D7 /* Assets.xcassets in Resources */,
 				9C63192323014C2400830385 /* FeaturedCreatorCell.xib in Resources */,
+				9C1BED99231112F10011F296 /* CustomActionSheetView.xib in Resources */,
 				9C70644E22FEA3AC00E006D7 /* Main.storyboard in Resources */,
 				9C63192F23014C7A00830385 /* ContestJudgingCell.xib in Resources */,
 				9C63192B23014C6300830385 /* OngoingContestCell.xib in Resources */,
@@ -338,6 +360,7 @@
 				9C63193223014C8A00830385 /* ContestClosedCell.swift in Sources */,
 				9CCB4D5E230BED9E00375888 /* ViewController.swift in Sources */,
 				9C70645122FEA3AC00E006D7 /* UniCon.xcdatamodeld in Sources */,
+				9C1BED9E231116350011F296 /* CustomActionSheetCell.swift in Sources */,
 				9C70644B22FEA3AC00E006D7 /* LoginViewController.swift in Sources */,
 				9C9AC4B322FEE05900230522 /* AlarmViewController.swift in Sources */,
 				9C9AC4B122FEE04900230522 /* RecordingViewController.swift in Sources */,
@@ -359,6 +382,7 @@
 				9C70647522FECCED00E006D7 /* FeedViewController.swift in Sources */,
 				9C63192623014C4800830385 /* ReferralClientCell.swift in Sources */,
 				9C63192E23014C7A00830385 /* ContestJudgingCell.swift in Sources */,
+				9C1BED9B2311130C0011F296 /* CustomActionSheet.swift in Sources */,
 				9C6178F9230FE37C007896F2 /* FeedSharedPopUpPrimary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

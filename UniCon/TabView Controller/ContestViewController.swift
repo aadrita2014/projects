@@ -97,7 +97,7 @@ class ContestViewController: UIViewController {
     func showSharedPopUpView() {
         //To avoid the duplicate initialisation
         if sharedFeedPopup == nil {
-            sharedFeedPopup = FeedSharedPopUpPrimary(frame: CGRect(x: 0, y: 0, width: view.viewWidth(), height: view.viewHeight()))
+            sharedFeedPopup = FeedSharedPopUpPrimary(frame: view.frame)
             sharedFeedPopup?.dismissClicked = {
                 self.removeSharedPopUpView()
             }

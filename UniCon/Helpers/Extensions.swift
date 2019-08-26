@@ -10,14 +10,18 @@ import UIKit
 
 extension UIView {
     
+    //Helper methods to get the view width
     func viewWidth() -> CGFloat
     {
         return self.frame.size.width
     }
+    //Helper methods to get the view height
     func viewHeight() -> CGFloat
     {
         return self.frame.size.height
     }
+    
+    //Add Background colors to the view
     func addDefaultBackgroundColor()
     {
         addBackgroundColor(color: AppColors.default_background_color)
@@ -30,6 +34,7 @@ extension UIView {
     {
         self.backgroundColor = color
     }
+    //Helper method to add for rounded corners to the view
     func addCornerRadius(radius:CGFloat = 5.0)
     {
         let layer = self.layer
@@ -47,6 +52,20 @@ extension UIView {
         NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal, toItem: container, attribute: .top, multiplier: 1.0, constant: 0).isActive = true
         NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: container, attribute: .bottom, multiplier: 1.0, constant: 0).isActive = true
     }
+    
+    @discardableResult
+    public func addBlur(style: UIBlurEffect.Style = .extraLight) -> UIVisualEffectView {
+        let blurEffect = UIBlurEffect(style: style)
+        let blurBackground = UIVisualEffectView(effect: blurEffect)
+        addSubview(blurBackground)
+        blurBackground.translatesAutoresizingMaskIntoConstraints = false
+        blurBackground.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        blurBackground.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        blurBackground.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        blurBackground.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        return blurBackground
+    }
+
 }
 
 extension UIButton {
