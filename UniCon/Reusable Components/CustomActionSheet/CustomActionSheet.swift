@@ -25,20 +25,18 @@ class CustomActionSheet: UIView,UITableViewDelegate,UITableViewDataSource {
     var actions:[ActionModel] = []
     var dismissViewAction:CompletionHandler = nil
     var tableTitle:String? = nil
+    
     //MARK: View Setup Methods
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
-    
     //Contents of a nib file are unarchived
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
     }
-    
-    init(frame: CGRect, title:String)
-    {
+    init(frame: CGRect, title:String){
         super.init(frame: frame)
         self.tableTitle = title
         commonInit()
@@ -50,8 +48,7 @@ class CustomActionSheet: UIView,UITableViewDelegate,UITableViewDataSource {
         contentView.fixInView(self)
         setupView()
     }
-    func setupView()
-    {
+    func setupView() {
         tableView.register(UINib(nibName: "CustomActionSheetCell", bundle: nil), forCellReuseIdentifier: "ActionCell")
         tableView.estimatedRowHeight = 0
         tableView.addBlur()
@@ -65,7 +62,6 @@ class CustomActionSheet: UIView,UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ActionCell") as! CustomActionSheetCell
         cell.actionLabel.text = actions[indexPath.row].title
-        
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -97,18 +93,15 @@ class CustomActionSheet: UIView,UITableViewDelegate,UITableViewDataSource {
         view.addSubview(separatorView)
         return view
     }
-    func addAction(title:String,handler:CompletionHandler)
-    {
+    func addAction(title:String,handler:CompletionHandler) {
         let action = ActionModel(title: title, handler: handler)
         actions.append(action)
     }
-    func reload()
-    {
+    func reload() {
         tableView.reloadData()
         tableHeight.constant = tableView.contentSize.height
     }
-    @IBAction func dismissClicked()
-    {
+    @IBAction func dismissClicked() {
         if let action = dismissViewAction
         {
             action(self)
