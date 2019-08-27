@@ -13,4 +13,6 @@ struct AppColors {
     static let default_red_color = UIColor(red: 191.0/255.0, green: 8.0/255.0, blue: 24.0/255.0, alpha: 1.0)
     static let default_background_color = UIColor(red: 3.0/255.0, green: 15.0/255.0, blue: 18.0/255.0, alpha: 1)
     
+    static let gray_background_color = UIColor(red: 13.0/255.0, green: 13.0/255.0, blue: 15.0/255.0, alpha: 1.0)
+    
 }

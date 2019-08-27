@@ -13,6 +13,10 @@
 		9C1BED9F231116350011F296 /* CustomActionSheetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C1BED9D231116350011F296 /* CustomActionSheetCell.xib */; };
 		9C1FD5F8230C5A5B0073EEF4 /* CongratulationPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1FD5F7230C5A5B0073EEF4 /* CongratulationPopViewController.swift */; };
 		9C2628D523150FE200835446 /* UploadVideoCreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2628D423150FE200835446 /* UploadVideoCreatorViewController.swift */; };
+		9C2628D823151B1A00835446 /* MusicInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2628D623151B1A00835446 /* MusicInfoCell.swift */; };
+		9C2628D923151B1A00835446 /* MusicInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C2628D723151B1A00835446 /* MusicInfoCell.xib */; };
+		9C2628DC23151B4300835446 /* ContestInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2628DA23151B4300835446 /* ContestInfoCell.swift */; };
+		9C2628DD23151B4300835446 /* ContestInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C2628DB23151B4300835446 /* ContestInfoCell.xib */; };
 		9C6178F7230FE33D007896F2 /* FeedSharedPopUpPrimary.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C6178F6230FE33D007896F2 /* FeedSharedPopUpPrimary.xib */; };
 		9C6178F9230FE37C007896F2 /* FeedSharedPopUpPrimary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6178F8230FE37C007896F2 /* FeedSharedPopUpPrimary.swift */; };
 		9C6178FC230FF811007896F2 /* ContestDetailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6178FB230FF811007896F2 /* ContestDetailListViewController.swift */; };
@@ -63,6 +67,10 @@
 		9C1BED9D231116350011F296 /* CustomActionSheetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomActionSheetCell.xib; sourceTree = "<group>"; };
 		9C1FD5F7230C5A5B0073EEF4 /* CongratulationPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationPopViewController.swift; sourceTree = "<group>"; };
 		9C2628D423150FE200835446 /* UploadVideoCreatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadVideoCreatorViewController.swift; sourceTree = "<group>"; };
+		9C2628D623151B1A00835446 /* MusicInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicInfoCell.swift; sourceTree = "<group>"; };
+		9C2628D723151B1A00835446 /* MusicInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicInfoCell.xib; sourceTree = "<group>"; };
+		9C2628DA23151B4300835446 /* ContestInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestInfoCell.swift; sourceTree = "<group>"; };
+		9C2628DB23151B4300835446 /* ContestInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContestInfoCell.xib; sourceTree = "<group>"; };
 		9C6178F6230FE33D007896F2 /* FeedSharedPopUpPrimary.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedSharedPopUpPrimary.xib; sourceTree = "<group>"; };
 		9C6178F8230FE37C007896F2 /* FeedSharedPopUpPrimary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSharedPopUpPrimary.swift; sourceTree = "<group>"; };
 		9C6178FB230FF811007896F2 /* ContestDetailListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestDetailListViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +143,10 @@
 			children = (
 				9C6178FE230FFAA6007896F2 /* ContestDetailListCell.swift */,
 				9C6178FF230FFAA6007896F2 /* ContestDetailListCell.xib */,
+				9C2628D623151B1A00835446 /* MusicInfoCell.swift */,
+				9C2628D723151B1A00835446 /* MusicInfoCell.xib */,
+				9C2628DA23151B4300835446 /* ContestInfoCell.swift */,
+				9C2628DB23151B4300835446 /* ContestInfoCell.xib */,
 			);
 			path = "Custom Tv Cells";
 			sourceTree = "<group>";
@@ -350,6 +362,8 @@
 				9C70646722FEAFEF00E006D7 /* NotoSansCJKkr-Medium.otf in Resources */,
 				9C6178F7230FE33D007896F2 /* FeedSharedPopUpPrimary.xib in Resources */,
 				9C63193323014C8A00830385 /* ContestClosedCell.xib in Resources */,
+				9C2628D923151B1A00835446 /* MusicInfoCell.xib in Resources */,
+				9C2628DD23151B4300835446 /* ContestInfoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,8 +378,10 @@
 				9CCB4D5E230BED9E00375888 /* ViewController.swift in Sources */,
 				9CF1EAA52314440D006895F9 /* VideoRecordingVC.swift in Sources */,
 				9C70645122FEA3AC00E006D7 /* UniCon.xcdatamodeld in Sources */,
+				9C2628DC23151B4300835446 /* ContestInfoCell.swift in Sources */,
 				9C1BED9E231116350011F296 /* CustomActionSheetCell.swift in Sources */,
 				9C70644B22FEA3AC00E006D7 /* LoginViewController.swift in Sources */,
+				9C2628D823151B1A00835446 /* MusicInfoCell.swift in Sources */,
 				9C9AC4B322FEE05900230522 /* AlarmViewController.swift in Sources */,
 				9C63192A23014C6300830385 /* OngoingContestCell.swift in Sources */,
 				9CF1E7AA230F98890093D21F /* SharePopUpCell.swift in Sources */,

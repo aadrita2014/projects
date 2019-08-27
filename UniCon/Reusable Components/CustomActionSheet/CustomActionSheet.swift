@@ -55,6 +55,8 @@ class CustomActionSheet: UIView,UITableViewDelegate,UITableViewDataSource {
         tableView.addCornerRadius(radius: 15)
         dismissBtn.addCornerRadius(radius: 5)
     }
+    
+    //MARK: TableView Delegates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return actions.count
     }
@@ -93,6 +95,8 @@ class CustomActionSheet: UIView,UITableViewDelegate,UITableViewDataSource {
         view.addSubview(separatorView)
         return view
     }
+    
+    
     func addAction(title:String,handler:CompletionHandler) {
         let action = ActionModel(title: title, handler: handler)
         actions.append(action)

@@ -15,8 +15,10 @@ class ContestDetailListCell: UITableViewCell {
     @IBOutlet weak var dayCounterBtn: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
-        containerView.addCornerRadius(radius: 5)
-        dayCounterBtn.addCornerRadius(radius: 5)
+        
+        containerView.addDarkGrayBackgroundColor()
+        containerView.addCornerRadius()
+        dayCounterBtn.addCornerRadius()
         // Initialization code
     }
 

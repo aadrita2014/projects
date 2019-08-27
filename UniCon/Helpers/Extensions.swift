@@ -30,6 +30,10 @@ extension UIView {
     {
         addBackgroundColor(color: UIColor.black)
     }
+    func addDarkGrayBackgroundColor()
+    {
+        addBackgroundColor(color: AppColors.gray_background_color)
+    }
     private func addBackgroundColor(color:UIColor)
     {
         self.backgroundColor = color
@@ -41,7 +45,12 @@ extension UIView {
         layer.cornerRadius = radius
         layer.masksToBounds = true
     }
-    
+    func addBorderColor(color: UIColor = UIColor.white)
+    {
+        let layer = self.layer
+        layer.borderWidth = 0.5
+        layer.borderColor = color.cgColor
+    }
     //For Custom Written Views
     func fixInView(_ container: UIView!){
         self.translatesAutoresizingMaskIntoConstraints = false;
@@ -67,7 +76,16 @@ extension UIView {
     }
 
 }
-
+//extension UIStackView {
+//    
+//    func addBackground(color: UIColor) {
+//        let subview = UIView(frame: bounds)
+//        subview.backgroundColor = AppColors.gray_background_color
+//        subview.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//        insertSubview(subview, at: 0)
+//    }
+//    
+//}
 extension UIButton {
     func underline() {
         let attributedString = NSMutableAttributedString(string: (self.titleLabel?.text!)!)
