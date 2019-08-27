@@ -51,7 +51,7 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
     let const_top_margin = CGFloat(16)
     
     
-    var isClient = true
+    var isClient = false
     //MARK: Inital Setup of the View
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +71,6 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
     {
         //Setup Top Slider
         setupTopSlider()
-        
         //Update Search Placeholder
         searchTf.updatePlaceHolder(text: "검색")
         if isClient
