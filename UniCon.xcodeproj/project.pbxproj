@@ -44,7 +44,7 @@
 		9C70646722FEAFEF00E006D7 /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C70646622FEAFEF00E006D7 /* NotoSansCJKkr-Medium.otf */; };
 		9C70646922FEAFFC00E006D7 /* NotoSansCJKkr-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C70646822FEAFFB00E006D7 /* NotoSansCJKkr-Light.otf */; };
 		9C70646F22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C70646E22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf */; };
-		9C70647122FEB5DD00E006D7 /* LoginClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70647022FEB5DD00E006D7 /* LoginClientViewController.swift */; };
+		9C70647122FEB5DD00E006D7 /* LoginCreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70647022FEB5DD00E006D7 /* LoginCreatorViewController.swift */; };
 		9C70647322FEC0DC00E006D7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70647222FEC0DC00E006D7 /* Constants.swift */; };
 		9C70647522FECCED00E006D7 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70647422FECCED00E006D7 /* FeedViewController.swift */; };
 		9C9AC4A822FEDB4B00230522 /* ContestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4A722FEDB4B00230522 /* ContestViewController.swift */; };
@@ -52,6 +52,8 @@
 		9C9AC4AD22FEE03600230522 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4AC22FEE03600230522 /* MyPageViewController.swift */; };
 		9C9AC4AF22FEE04000230522 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4AE22FEE04000230522 /* ChannelViewController.swift */; };
 		9C9AC4B322FEE05900230522 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4B222FEE05900230522 /* AlarmViewController.swift */; };
+		9CAC821323154CE400936CE7 /* Client.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CAC821223154CE400936CE7 /* Client.storyboard */; };
+		9CAC8216231556BB00936CE7 /* LoginClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAC8215231556BB00936CE7 /* LoginClientViewController.swift */; };
 		9CCB4D5E230BED9E00375888 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCB4D5D230BED9E00375888 /* ViewController.swift */; };
 		9CF1E7A5230F966D0093D21F /* SharePopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF1E7A4230F966D0093D21F /* SharePopUpView.swift */; };
 		9CF1E7A7230F967E0093D21F /* SharePopUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CF1E7A6230F967E0093D21F /* SharePopUpView.xib */; };
@@ -102,7 +104,7 @@
 		9C70646622FEAFEF00E006D7 /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
 		9C70646822FEAFFB00E006D7 /* NotoSansCJKkr-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Light.otf"; sourceTree = "<group>"; };
 		9C70646E22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Thin.otf"; sourceTree = "<group>"; };
-		9C70647022FEB5DD00E006D7 /* LoginClientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginClientViewController.swift; path = ../LoginClientViewController.swift; sourceTree = "<group>"; };
+		9C70647022FEB5DD00E006D7 /* LoginCreatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginCreatorViewController.swift; path = ../LoginCreatorViewController.swift; sourceTree = "<group>"; };
 		9C70647222FEC0DC00E006D7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9C70647422FECCED00E006D7 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		9C9AC4A722FEDB4B00230522 /* ContestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,8 @@
 		9C9AC4AC22FEE03600230522 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		9C9AC4AE22FEE04000230522 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		9C9AC4B222FEE05900230522 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
+		9CAC821223154CE400936CE7 /* Client.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Client.storyboard; sourceTree = "<group>"; };
+		9CAC8215231556BB00936CE7 /* LoginClientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClientViewController.swift; sourceTree = "<group>"; };
 		9CCB4D5D230BED9E00375888 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9CF1E7A4230F966D0093D21F /* SharePopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePopUpView.swift; sourceTree = "<group>"; };
 		9CF1E7A6230F967E0093D21F /* SharePopUpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SharePopUpView.xib; sourceTree = "<group>"; };
@@ -171,8 +175,9 @@
 		9C63191E23014BE900830385 /* Login VC */ = {
 			isa = PBXGroup;
 			children = (
+				9CAC8215231556BB00936CE7 /* LoginClientViewController.swift */,
 				9C70644A22FEA3AC00E006D7 /* LoginViewController.swift */,
-				9C70647022FEB5DD00E006D7 /* LoginClientViewController.swift */,
+				9C70647022FEB5DD00E006D7 /* LoginCreatorViewController.swift */,
 			);
 			path = "Login VC";
 			sourceTree = "<group>";
@@ -221,6 +226,8 @@
 				9C1FD5F7230C5A5B0073EEF4 /* CongratulationPopViewController.swift */,
 				9C6178FB230FF811007896F2 /* ContestDetailListViewController.swift */,
 				9C70644C22FEA3AC00E006D7 /* Main.storyboard */,
+				9CAC821223154CE400936CE7 /* Client.storyboard */,
+				9CAC821423154D9700936CE7 /* Client VC */,
 				9CF1E7A1230F917C0093D21F /* Reusable Components */,
 				9C63191E23014BE900830385 /* Login VC */,
 				9C9AC4AB22FEE00B00230522 /* TabView Controller */,
@@ -261,6 +268,13 @@
 				9C9AC4B222FEE05900230522 /* AlarmViewController.swift */,
 			);
 			path = "TabView Controller";
+			sourceTree = "<group>";
+		};
+		9CAC821423154D9700936CE7 /* Client VC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Client VC";
 			sourceTree = "<group>";
 		};
 		9CF1E7A1230F917C0093D21F /* Reusable Components */ = {
@@ -344,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C70646522FEAFE600E006D7 /* NotoSansCJKkr-Regular.otf in Resources */,
+				9CAC821323154CE400936CE7 /* Client.storyboard in Resources */,
 				9C70646922FEAFFC00E006D7 /* NotoSansCJKkr-Light.otf in Resources */,
 				9C70645622FEA3AF00E006D7 /* LaunchScreen.storyboard in Resources */,
 				9CF1E7AB230F98890093D21F /* SharePopUpCell.xib in Resources */,
@@ -380,6 +395,7 @@
 				9C70645122FEA3AC00E006D7 /* UniCon.xcdatamodeld in Sources */,
 				9C2628DC23151B4300835446 /* ContestInfoCell.swift in Sources */,
 				9C1BED9E231116350011F296 /* CustomActionSheetCell.swift in Sources */,
+				9CAC8216231556BB00936CE7 /* LoginClientViewController.swift in Sources */,
 				9C70644B22FEA3AC00E006D7 /* LoginViewController.swift in Sources */,
 				9C2628D823151B1A00835446 /* MusicInfoCell.swift in Sources */,
 				9C9AC4B322FEE05900230522 /* AlarmViewController.swift in Sources */,
@@ -392,7 +408,7 @@
 				9C9AC4AD22FEE03600230522 /* MyPageViewController.swift in Sources */,
 				9CF1E7A5230F966D0093D21F /* SharePopUpView.swift in Sources */,
 				9C6178FC230FF811007896F2 /* ContestDetailListViewController.swift in Sources */,
-				9C70647122FEB5DD00E006D7 /* LoginClientViewController.swift in Sources */,
+				9C70647122FEB5DD00E006D7 /* LoginCreatorViewController.swift in Sources */,
 				9C70647322FEC0DC00E006D7 /* Constants.swift in Sources */,
 				9C9AC4A822FEDB4B00230522 /* ContestViewController.swift in Sources */,
 				9C9AC4AF22FEE04000230522 /* ChannelViewController.swift in Sources */,

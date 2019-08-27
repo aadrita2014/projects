@@ -29,6 +29,8 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
     let contestJudgingLayout = UICollectionViewFlowLayout()
     let contestClosedLayout = UICollectionViewFlowLayout()
     
+    //MARK: Client Controls
+    var segmentedControl:UISegmentedControl!
     
     //MARK: Demo Images Declaration
     let images = ["demo_image",
@@ -49,6 +51,7 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
     let const_top_margin = CGFloat(16)
     
     
+    var isClient = true
     //MARK: Inital Setup of the View
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,19 +74,38 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         
         //Update Search Placeholder
         searchTf.updatePlaceHolder(text: "검색")
-        //Add Featured Collection View Programmatically
-        addFeaturedCategoryView()
-        //Add Referral Client Collection View Programmatically
-        addReferralClientCollView()
-        //Add Ongoing Collection View Programmatically
-        addOngoingContestCollView()
-        //Add Contest Judging Collection View Programmatically
-        addJudgingContestCollView()
-        //Add Closed Contest Collection View Programmatically
-        addClosedContestCollView()
-        
-        //Adjust the container view height according to the content
-        containerHeightConstraint.constant = contestClosedCollView.frame.origin.y + contestClosedCollView.frame.height + 20
+        if isClient
+        {
+            addSegmentedControl(topSliderView)
+            //Add Featured Collection View Programmatically
+          //  addFeaturedCategoryView(topSliderView)
+            //Add Referral Client Collection View Programmatically
+          //  addReferralClientCollView(featuredCollView)
+            //Add Ongoing Collection View Programmatically
+            addOngoingContestCollView(segmentedControl)
+            //Add Contest Judging Collection View Programmatically
+            addJudgingContestCollView(ongoingContestCollView)
+            //Add Closed Contest Collection View Programmatically
+            addClosedContestCollView(contestJudgingCollView)
+            //Adjust the container view height according to the content
+            containerHeightConstraint.constant = contestClosedCollView.frame.origin.y + contestClosedCollView.frame.height + 20
+        }
+        else
+        {
+            //Add Featured Collection View Programmatically
+            addFeaturedCategoryView(topSliderView)
+            //Add Referral Client Collection View Programmatically
+            addReferralClientCollView(featuredCollView)
+            //Add Ongoing Collection View Programmatically
+            addOngoingContestCollView(referralCollView)
+            //Add Contest Judging Collection View Programmatically
+            addJudgingContestCollView(ongoingContestCollView)
+            //Add Closed Contest Collection View Programmatically
+            addClosedContestCollView(contestJudgingCollView)
+            
+            //Adjust the container view height according to the content
+            containerHeightConstraint.constant = contestClosedCollView.frame.origin.y + contestClosedCollView.frame.height + 20
+        }
     }
     
     
@@ -120,12 +142,30 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         }
         self.view.endEditing(true)
     }
-    
+    //MARK: Client Segment Control
+    func addSegmentedControl(_ relativeView:UIView) {
+        segmentedControl = UISegmentedControl(frame: CGRect(x: 70, y: relativeView.frame.origin.y + relativeView.frame.height + 8, width: self.view.viewWidth() - 140, height: 29))
+        segmentedControl.tintColor = AppColors.default_red_color
+        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
+        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.red], for: .normal)
+        segmentedControl.insertSegment(withTitle: "나의 콘테스트", at: 0, animated: true)
+        segmentedControl.insertSegment(withTitle: "전체 콘테스트", at: 1, animated: true)
+        containerView.addSubview(segmentedControl)
+    }
+    func segmentValueChanged()
+    {
+        if segmentedControl.selectedSegmentIndex == 0 {
+            
+        }
+        else {
+            
+        }
+    }
     //MARK: Collection View Initialisation & Label Initialisations
-    func addFeaturedCategoryView()
+    func addFeaturedCategoryView(_ relativeView:UIView)
     {
         // Init & Setup Featured Category Label
-        let featuredCategoryLabel = UILabel(frame: CGRect(x: 8, y: topSliderView.frame.origin.y + topSliderView.frame.height + 8, width: self.view.frame.width, height: 30))
+        let featuredCategoryLabel = UILabel(frame: CGRect(x: 8, y: relativeView.frame.origin.y + relativeView.frame.height + 8, width: self.view.viewWidth(), height: 30))
         featuredCategoryLabel.text = "추천 크리에이터"
         featuredCategoryLabel.textColor = UIColor.white
         
@@ -148,10 +188,10 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         featuredCollView.reloadData()
     }
     
-    func addReferralClientCollView()
+    func addReferralClientCollView(_ relativeView:UIView)
     {
         // Init & Setup Referral Client Category Label
-        let referralClientLabel = UILabel(frame: CGRect(x: 8, y: featuredCollView.frame.origin.y + featuredCollView.frame.height + const_top_margin, width: self.view.frame.width, height: 30))
+        let referralClientLabel = UILabel(frame: CGRect(x: 8, y: relativeView.frame.origin.y + relativeView.frame.height + const_top_margin, width: self.view.frame.width, height: 30))
         referralClientLabel.text = "추천 클라이언트"
         referralClientLabel.textColor = UIColor.white
         
@@ -173,10 +213,10 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         referralCollView.reloadData()
     }
     
-    func addOngoingContestCollView()
+    func addOngoingContestCollView(_ relativeView:UIView)
     {
         // Init & Setup Ongoing Contest Category Label
-        let ongoingContestLabel = UILabel(frame: CGRect(x: 8, y: referralCollView.frame.origin.y + referralCollView.frame.height + const_top_margin, width: self.view.frame.width, height: 30))
+        let ongoingContestLabel = UILabel(frame: CGRect(x: 8, y: relativeView.frame.origin.y + relativeView.frame.height + const_top_margin, width: self.view.frame.width, height: 30))
         ongoingContestLabel.text = "진행중 콘테스트"
         ongoingContestLabel.textColor = UIColor.white
         
@@ -206,10 +246,10 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         //Reload the Collection view to reload the data and size of the collection view
         ongoingContestCollView.reloadData()
     }
-    func addJudgingContestCollView()
+    func addJudgingContestCollView(_ relativeView:UIView)
     {
         // Init & Setup Judging Contest Category Label
-        let contestJudgingLabel = UILabel(frame: CGRect(x: 8, y: ongoingContestCollView.frame.origin.y + ongoingContestCollView.frame.height + const_top_margin, width: self.view.frame.width, height: 30))
+        let contestJudgingLabel = UILabel(frame: CGRect(x: 8, y: relativeView.frame.origin.y + relativeView.frame.height + const_top_margin, width: self.view.frame.width, height: 30))
         contestJudgingLabel.text = "심사중 콘테스트"
         contestJudgingLabel.textColor = UIColor.white
         
@@ -238,10 +278,10 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         //Reload the Collection view to reload the data and size of the collection view
         contestJudgingCollView.reloadData()
     }
-    func addClosedContestCollView()
+    func addClosedContestCollView(_ relativeView:UIView)
     {
         //Init & Setup Judging Contest Category Label
-        let contestClosedLabel = UILabel(frame: CGRect(x: 8, y: contestJudgingCollView.frame.origin.y + contestJudgingCollView.frame.height + const_top_margin, width: self.view.frame.width, height: 30))
+        let contestClosedLabel = UILabel(frame: CGRect(x: 8, y: relativeView.frame.origin.y + relativeView.frame.height + const_top_margin, width: self.view.frame.width, height: 30))
         contestClosedLabel.text = "종료된 콘테스트"
         contestClosedLabel.textColor = UIColor.white
         

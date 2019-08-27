@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginClientViewController: UIViewController, UITextFieldDelegate {
+class LoginCreatorViewController: UIViewController, UITextFieldDelegate {
 
     //MARK: IBOutlets Declared
     @IBOutlet weak var emailTf:UITextField!
