@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "btnSaveRec.png",
+      "scale" : "1x",
+      "idiom" : "universal"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "btnSaveRec@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "btnSaveRec@3x.png",
+      "scale" : "3x",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
