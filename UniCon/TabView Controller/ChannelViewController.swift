@@ -20,6 +20,8 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
     
     
     //MARK: Category Collection View Declarations
+    var featuredCollViewLabel, referralCollViewLabel, ongoingContesCollViewLabel, contestJudgingCollViewLabel, contestClosedCollViewlabel:UILabel!
+    
     var featuredCollView,referralCollView,ongoingContestCollView,contestJudgingCollView,contestClosedCollView:UICollectionView!
     
     //MARK: Collection View Layout Declarations
@@ -51,7 +53,7 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
     let const_top_margin = CGFloat(16)
     
     
-    var isClient = false
+    var isClient = Defaults.getBool(key: StringConsts.isClientSaveKey)
     //MARK: Inital Setup of the View
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,13 +75,37 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         setupTopSlider()
         //Update Search Placeholder
         searchTf.updatePlaceHolder(text: "검색")
-        if isClient
-        {
+        if isClient {
             addSegmentedControl(topSliderView)
-            //Add Featured Collection View Programmatically
-          //  addFeaturedCategoryView(topSliderView)
-            //Add Referral Client Collection View Programmatically
-          //  addReferralClientCollView(featuredCollView)
+            addAllForClient(value: 0)
+        }
+        else {
+            addAllForCreators()
+        }
+        
+    }
+    func addAllForCreators() {
+        //Add Featured Collection View Programmatically
+        addFeaturedCategoryView(topSliderView)
+        //Add Referral Client Collection View Programmatically
+        addReferralClientCollView(featuredCollView)
+        //Add Ongoing Collection View Programmatically
+        addOngoingContestCollView(referralCollView)
+        //Add Contest Judging Collection View Programmatically
+        addJudgingContestCollView(ongoingContestCollView)
+        //Add Closed Contest Collection View Programmatically
+        addClosedContestCollView(contestJudgingCollView)
+        updateLayout()
+    }
+    func addAllForClient(value:Int){
+        
+        removeFeaturedCategoryView()
+        removeReferralCollView()
+        removeOngoingCollView()
+        removeContestJudgingCollView()
+        removeClosedContestCollView()
+        
+        if value == 0 {
             //Add Ongoing Collection View Programmatically
             addOngoingContestCollView(segmentedControl)
             //Add Contest Judging Collection View Programmatically
@@ -87,12 +113,10 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
             //Add Closed Contest Collection View Programmatically
             addClosedContestCollView(contestJudgingCollView)
             //Adjust the container view height according to the content
-            containerHeightConstraint.constant = contestClosedCollView.frame.origin.y + contestClosedCollView.frame.height + 20
         }
-        else
-        {
+        else {
             //Add Featured Collection View Programmatically
-            addFeaturedCategoryView(topSliderView)
+            addFeaturedCategoryView(segmentedControl)
             //Add Referral Client Collection View Programmatically
             addReferralClientCollView(featuredCollView)
             //Add Ongoing Collection View Programmatically
@@ -101,12 +125,12 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
             addJudgingContestCollView(ongoingContestCollView)
             //Add Closed Contest Collection View Programmatically
             addClosedContestCollView(contestJudgingCollView)
-            
-            //Adjust the container view height according to the content
-            containerHeightConstraint.constant = contestClosedCollView.frame.origin.y + contestClosedCollView.frame.height + 20
         }
+        updateLayout()
     }
-    
+    func updateLayout() {
+       containerHeightConstraint.constant = contestClosedCollView.frame.origin.y + contestClosedCollView.frame.height + 20
+    }
     
     //MARK: Textfield delegates
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -134,8 +158,7 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
     //MARK: ScrollView Delegate
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         
-        if scrollView == topSliderView
-        {
+        if scrollView == topSliderView {
             let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
             pageControl.currentPage = Int(pageNumber)
         }
@@ -144,33 +167,30 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
     //MARK: Client Segment Control
     func addSegmentedControl(_ relativeView:UIView) {
         segmentedControl = UISegmentedControl(frame: CGRect(x: 70, y: relativeView.frame.origin.y + relativeView.frame.height + 8, width: self.view.viewWidth() - 140, height: 29))
+        
         segmentedControl.tintColor = AppColors.default_red_color
         segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
         segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.red], for: .normal)
         segmentedControl.insertSegment(withTitle: "나의 콘테스트", at: 0, animated: true)
         segmentedControl.insertSegment(withTitle: "전체 콘테스트", at: 1, animated: true)
+        segmentedControl.selectedSegmentIndex = 0
+        segmentedControl.addTarget(self, action: #selector(segmentValueChanged), for: .valueChanged)
         containerView.addSubview(segmentedControl)
     }
-    func segmentValueChanged()
-    {
-        if segmentedControl.selectedSegmentIndex == 0 {
-            
-        }
-        else {
-            
-        }
+    @objc func segmentValueChanged() {
+        addAllForClient(value: segmentedControl.selectedSegmentIndex)
     }
+    
     //MARK: Collection View Initialisation & Label Initialisations
-    func addFeaturedCategoryView(_ relativeView:UIView)
-    {
+    func addFeaturedCategoryView(_ relativeView:UIView) {
         // Init & Setup Featured Category Label
-        let featuredCategoryLabel = UILabel(frame: CGRect(x: 8, y: relativeView.frame.origin.y + relativeView.frame.height + 8, width: self.view.viewWidth(), height: 30))
-        featuredCategoryLabel.text = "추천 크리에이터"
-        featuredCategoryLabel.textColor = UIColor.white
+        featuredCollViewLabel = UILabel(frame: CGRect(x: 8, y: relativeView.frame.origin.y + relativeView.frame.height + 8, width: self.view.viewWidth(), height: 30))
+        featuredCollViewLabel.text = "추천 크리에이터"
+        featuredCollViewLabel.textColor = UIColor.white
         
         //Init & Setup Featured Collection View
         featuredCollViewLayout.scrollDirection = .horizontal
-        featuredCollView = UICollectionView(frame: CGRect(x: 8, y: featuredCategoryLabel.frame.origin.y + featuredCategoryLabel.frame.height + 8, width: self.view.frame.width, height: self.view.frame.height/3), collectionViewLayout:   featuredCollViewLayout)
+        featuredCollView = UICollectionView(frame: CGRect(x: 8, y: featuredCollViewLabel.frame.origin.y + featuredCollViewLabel.frame.height + 8, width: self.view.frame.width, height: self.view.frame.height/3), collectionViewLayout:   featuredCollViewLayout)
         featuredCollView.showsHorizontalScrollIndicator = false
         featuredCollView.register(UINib(nibName: "FeaturedCreatorCell", bundle: nil), forCellWithReuseIdentifier: "FeaturedCreatorCell")
         
@@ -179,24 +199,27 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         featuredCollView.delegate = self
         
         //Add label & collection view to the container as sub views
-        containerView.addSubview(featuredCategoryLabel)
+        containerView.addSubview(featuredCollViewLabel)
         containerView.addSubview(featuredCollView)
         
         //Reload the Collection view to reload the data and size of the collection view
-        
         featuredCollView.reloadData()
     }
-    
-    func addReferralClientCollView(_ relativeView:UIView)
-    {
+    func removeFeaturedCategoryView() {
+        if featuredCollView != nil {
+            featuredCollViewLabel.removeFromSuperview()
+            featuredCollView.removeFromSuperview()
+        }
+    }
+    func addReferralClientCollView(_ relativeView:UIView) {
         // Init & Setup Referral Client Category Label
-        let referralClientLabel = UILabel(frame: CGRect(x: 8, y: relativeView.frame.origin.y + relativeView.frame.height + const_top_margin, width: self.view.frame.width, height: 30))
-        referralClientLabel.text = "추천 클라이언트"
-        referralClientLabel.textColor = UIColor.white
+        referralCollViewLabel = UILabel(frame: CGRect(x: 8, y: relativeView.frame.origin.y + relativeView.frame.height + const_top_margin, width: self.view.frame.width, height: 30))
+        referralCollViewLabel.text = "추천 클라이언트"
+        referralCollViewLabel.textColor = UIColor.white
         
         //Init & Setup Referral Client Collection View
         referallClientViewLayout.scrollDirection = .horizontal
-        referralCollView = UICollectionView(frame: CGRect(x: 8, y: referralClientLabel.frame.origin.y + referralClientLabel.frame.height + 8, width: self.view.frame.width, height: self.view.frame.height/4), collectionViewLayout: referallClientViewLayout)
+        referralCollView = UICollectionView(frame: CGRect(x: 8, y: referralCollViewLabel.frame.origin.y + referralCollViewLabel.frame.height + 8, width: self.view.frame.width, height: self.view.frame.height/4), collectionViewLayout: referallClientViewLayout)
         referralCollView.register(UINib(nibName: "ReferralClientCell", bundle: nil), forCellWithReuseIdentifier: "ReferralClientCell")
         referralCollView.showsHorizontalScrollIndicator = false
         
@@ -205,24 +228,27 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         referralCollView.delegate = self
         
         //Add label & collection view to the container as sub views
-        containerView.addSubview(referralClientLabel)
+        containerView.addSubview(referralCollViewLabel)
         containerView.addSubview(referralCollView)
         
         //Reload the Collection view to reload the data and size of the collection view
         referralCollView.reloadData()
     }
-    
-    func addOngoingContestCollView(_ relativeView:UIView)
-    {
+    func removeReferralCollView() {
+        if referralCollView != nil {
+            referralCollViewLabel.removeFromSuperview()
+            referralCollView.removeFromSuperview()
+        }
+    }
+    func addOngoingContestCollView(_ relativeView:UIView) {
         // Init & Setup Ongoing Contest Category Label
-        let ongoingContestLabel = UILabel(frame: CGRect(x: 8, y: relativeView.frame.origin.y + relativeView.frame.height + const_top_margin, width: self.view.frame.width, height: 30))
-        ongoingContestLabel.text = "진행중 콘테스트"
-        ongoingContestLabel.textColor = UIColor.white
-        
+        ongoingContesCollViewLabel = UILabel(frame: CGRect(x: 8, y: relativeView.frame.origin.y + relativeView.frame.height + const_top_margin, width: self.view.frame.width, height: 30))
+        ongoingContesCollViewLabel.text = "진행중 콘테스트"
+        ongoingContesCollViewLabel.textColor = UIColor.white
         
         //Show More Button
         let showMoreButton = UIButton(frame: CGRect(x: self.view.frame.width - 50, y: 0, width: 50, height: 100))
-        showMoreButton.center.y = ongoingContestLabel.center.y
+        showMoreButton.center.y = ongoingContesCollViewLabel.center.y
         showMoreButton.setImage(UIImage(named: "next_arrow"), for: .normal)
         showMoreButton.addTarget(self, action: #selector(ChannelViewController.showContestDetailList), for: .touchUpInside)
         
@@ -230,7 +256,7 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         ongoingContestLayout.scrollDirection = .horizontal
         var collViewHeight = self.view.frame.height/2.5
         if collViewHeight < 250 { collViewHeight = 250 }
-        ongoingContestCollView = UICollectionView(frame: CGRect(x: 8, y: ongoingContestLabel.frame.origin.y + ongoingContestLabel.frame.height + 8, width: self.view.frame.width, height: collViewHeight), collectionViewLayout: ongoingContestLayout)
+        ongoingContestCollView = UICollectionView(frame: CGRect(x: 8, y: ongoingContesCollViewLabel.frame.origin.y + ongoingContesCollViewLabel.frame.height + 8, width: self.view.frame.width, height: collViewHeight), collectionViewLayout: ongoingContestLayout)
         
         ongoingContestCollView.register(UINib(nibName: "OngoingContestCell", bundle: nil), forCellWithReuseIdentifier: "OngoingContestCell")
         ongoingContestCollView.showsHorizontalScrollIndicator = false
@@ -239,22 +265,27 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         ongoingContestCollView.delegate = self
         
         //Add label & collection view to the container as sub views
-        containerView.addSubview(ongoingContestLabel)
-        containerView.addSubview(showMoreButton)
+        containerView.addSubview(ongoingContesCollViewLabel)
+      //  containerView.addSubview(showMoreButton)
         containerView.addSubview(ongoingContestCollView)
         //Reload the Collection view to reload the data and size of the collection view
         ongoingContestCollView.reloadData()
     }
-    func addJudgingContestCollView(_ relativeView:UIView)
-    {
+    func removeOngoingCollView() {
+        if ongoingContestCollView != nil {
+            ongoingContesCollViewLabel.removeFromSuperview()
+            ongoingContestCollView.removeFromSuperview()
+        }
+    }
+    func addJudgingContestCollView(_ relativeView:UIView) {
         // Init & Setup Judging Contest Category Label
-        let contestJudgingLabel = UILabel(frame: CGRect(x: 8, y: relativeView.frame.origin.y + relativeView.frame.height + const_top_margin, width: self.view.frame.width, height: 30))
-        contestJudgingLabel.text = "심사중 콘테스트"
-        contestJudgingLabel.textColor = UIColor.white
+        contestJudgingCollViewLabel = UILabel(frame: CGRect(x: 8, y: relativeView.frame.origin.y + relativeView.frame.height + const_top_margin, width: self.view.frame.width, height: 30))
+        contestJudgingCollViewLabel.text = "심사중 콘테스트"
+        contestJudgingCollViewLabel.textColor = UIColor.white
         
         //Show More Button
         let showMoreButton = UIButton(frame: CGRect(x: self.view.frame.width - 50, y: 0, width: 50, height: 100))
-        showMoreButton.center.y = contestJudgingLabel.center.y
+        showMoreButton.center.y = contestJudgingCollViewLabel.center.y
         showMoreButton.setImage(UIImage(named: "next_arrow"), for: .normal)
         showMoreButton.addTarget(self, action: #selector(ChannelViewController.showContestDetailList), for: .touchUpInside)
         
@@ -262,7 +293,7 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         contestJudgingLayout.scrollDirection = .horizontal
         var collViewHeight = self.view.frame.height/2.5
         if collViewHeight < 250 { collViewHeight = 250 }
-        contestJudgingCollView = UICollectionView(frame: CGRect(x: 8, y: contestJudgingLabel.frame.origin.y + contestJudgingLabel.frame.height + 8, width: self.view.frame.width, height: collViewHeight), collectionViewLayout: contestJudgingLayout)
+        contestJudgingCollView = UICollectionView(frame: CGRect(x: 8, y: contestJudgingCollViewLabel.frame.origin.y + contestJudgingCollViewLabel.frame.height + 8, width: self.view.frame.width, height: collViewHeight), collectionViewLayout: contestJudgingLayout)
         contestJudgingCollView.register(UINib(nibName: "ContestJudgingCell", bundle: nil), forCellWithReuseIdentifier: "ContestJudgingCell")
         contestJudgingCollView.showsHorizontalScrollIndicator = false
         //Set the delegate to self
@@ -270,23 +301,28 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         contestJudgingCollView.delegate = self
         
         //Add label & collection view to the container as sub views
-        containerView.addSubview(contestJudgingLabel)
-        containerView.addSubview(showMoreButton)
+        containerView.addSubview(contestJudgingCollViewLabel)
+       // containerView.addSubview(showMoreButton)
         containerView.addSubview(contestJudgingCollView)
         
         //Reload the Collection view to reload the data and size of the collection view
         contestJudgingCollView.reloadData()
     }
-    func addClosedContestCollView(_ relativeView:UIView)
-    {
+    func removeContestJudgingCollView() {
+        if contestJudgingCollView != nil {
+            contestJudgingCollViewLabel.removeFromSuperview()
+            contestJudgingCollView.removeFromSuperview()
+        }
+    }
+    func addClosedContestCollView(_ relativeView:UIView) {
         //Init & Setup Judging Contest Category Label
-        let contestClosedLabel = UILabel(frame: CGRect(x: 8, y: relativeView.frame.origin.y + relativeView.frame.height + const_top_margin, width: self.view.frame.width, height: 30))
-        contestClosedLabel.text = "종료된 콘테스트"
-        contestClosedLabel.textColor = UIColor.white
+        contestClosedCollViewlabel = UILabel(frame: CGRect(x: 8, y: relativeView.frame.origin.y + relativeView.frame.height + const_top_margin, width: self.view.frame.width, height: 30))
+        contestClosedCollViewlabel.text = "종료된 콘테스트"
+        contestClosedCollViewlabel.textColor = UIColor.white
         
         //Show More Button
         let showMoreButton = UIButton(frame: CGRect(x: self.view.frame.width - 50, y: 0, width: 50, height: 100))
-        showMoreButton.center.y = contestClosedLabel.center.y
+        showMoreButton.center.y = contestClosedCollViewlabel.center.y
         showMoreButton.setImage(UIImage(named: "next_arrow"), for: .normal)
         showMoreButton.addTarget(self, action: #selector(ChannelViewController.showContestDetailList), for: .touchUpInside)
         
@@ -294,7 +330,7 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         contestClosedLayout.scrollDirection = .horizontal
         var collViewHeight = self.view.frame.height/2.5
         if collViewHeight < 250 { collViewHeight = 250 }
-        contestClosedCollView = UICollectionView(frame: CGRect(x: 8, y: contestClosedLabel.frame.origin.y + contestClosedLabel.frame.height + 8, width: self.view.frame.width, height: collViewHeight), collectionViewLayout: contestClosedLayout)
+        contestClosedCollView = UICollectionView(frame: CGRect(x: 8, y: contestClosedCollViewlabel.frame.origin.y + contestClosedCollViewlabel.frame.height + 8, width: self.view.frame.width, height: collViewHeight), collectionViewLayout: contestClosedLayout)
         contestClosedCollView.register(UINib(nibName: "ContestClosedCell", bundle: nil), forCellWithReuseIdentifier: "ContestClosedCell")
         contestClosedCollView.showsHorizontalScrollIndicator = false
         //Set the delegate to self
@@ -302,16 +338,19 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         contestClosedCollView.delegate = self
         
         //Add label & collection view to the container as sub views
-        containerView.addSubview(contestClosedLabel)
-        containerView.addSubview(showMoreButton)
+        containerView.addSubview(contestClosedCollViewlabel)
+        //containerView.addSubview(showMoreButton)
         containerView.addSubview(contestClosedCollView)
         
         //Reload the Collection view to reload the data and size of the collection view
         contestClosedCollView.reloadData()
     }
-    
-    
-    
+    func removeClosedContestCollView() {
+        if contestClosedCollView != nil {
+            contestClosedCollViewlabel.removeFromSuperview()
+            contestClosedCollView.removeFromSuperview()
+        }
+    }
     //MARK: Collection View Delegates
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5

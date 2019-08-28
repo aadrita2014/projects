@@ -39,7 +39,7 @@ class LoginClientViewController: UIViewController, UITextFieldDelegate {
     //MARK: IBActions Defined
     @IBAction func loginClicked() {
         //TODO: Login Functionality
-        print("Login Clicked")
+        Defaults.saveBool(key: StringConsts.isClientSaveKey, value: true) //Temp. to be removed after API implementation
         self.performSegue(withIdentifier: "Home", sender: nil)
     }
     @IBAction func forgotPasswordClicked() {
