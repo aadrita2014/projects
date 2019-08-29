@@ -17,6 +17,7 @@ class ChangePrizeAllocationVC: UIViewController {
     @IBOutlet weak var prize3Background: UIView!
     @IBOutlet weak var saveBtn: UIButton!
     
+    var alertView:CustomAlertView? = nil
     //MARK: Overriden view methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +48,25 @@ class ChangePrizeAllocationVC: UIViewController {
     
     //MARK: IBActions
     @IBAction func savePressed() {
-        
+            showAlertView()
     }
+    
+    func showAlertView(){
+        
+        if alertView == nil {
+            alertView = CustomAlertView(frame: self.view.frame) //, title: "상금 배분 오류", desc: "상금 배분의 총 합은 100%보다 \n작거나 클 수 없습니다.", btnTitle: "확인")
+            alertView?.dismissClicked = {
+                self.removeAlertView()
+            }
+            self.view.addSubview(alertView!)
+        }
+    }
+    
+    func removeAlertView() {
+        if let view = alertView {
+            view.removeFromSuperview()
+            alertView = nil
+        }
+    }
+    
 }

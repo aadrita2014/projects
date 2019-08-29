@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansCJKkr-Bold.otf">
+            <string>NotoSansCJKkr-Bold</string>
+        </array>
+        <array key="NotoSansCJKkr-Regular.otf">
+            <string>NotoSansCJKkr-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomAlertView" customModule="UniCon" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="AUK-nJ-sXS" id="o2A-CS-HYG"/>
+                <outlet property="contentView" destination="5N6-bf-YOw" id="H65-wI-LFO"/>
+                <outlet property="descLabel" destination="Dic-uL-bl5" id="G5G-Wc-ycE"/>
+                <outlet property="dismissBtn" destination="w3E-0x-SdH" id="5xl-NX-jnA"/>
+                <outlet property="titleLabel" destination="iWf-rP-snJ" id="FfM-hc-yYn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="5N6-bf-YOw">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AUK-nJ-sXS">
+                    <rect key="frame" x="52.5" y="262.5" width="270" height="162"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3E-0x-SdH">
+                            <rect key="frame" x="0.0" y="122" width="270" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="7jy-jy-5J5"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="16"/>
+                            <state key="normal" title="확인">
+                                <color key="titleColor" red="0.74901960779999999" green="0.031372549020000001" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="dismissView:" destination="-1" eventType="touchUpInside" id="2aZ-PJ-bef"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a1l-6D-Ubs">
+                            <rect key="frame" x="0.0" y="121" width="270" height="1"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="SYi-YK-T5S"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZSI-Ef-IsT">
+                            <rect key="frame" x="0.0" y="16" width="270" height="97"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="상금 배분 오류" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="iWf-rP-snJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="270" height="25"/>
+                                    <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Dic-uL-bl5">
+                                    <rect key="frame" x="0.0" y="25" width="270" height="72"/>
+                                    <string key="text">상금 배분의 총 합은 100%보다 
+작거나 클 수 없습니다.</string>
+                                    <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="13"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.86421767979999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="w3E-0x-SdH" secondAttribute="trailing" id="2dm-DW-D0x"/>
+                        <constraint firstAttribute="height" constant="162" id="32v-Jb-U8s"/>
+                        <constraint firstAttribute="trailing" secondItem="ZSI-Ef-IsT" secondAttribute="trailing" id="7Kn-xG-GNL"/>
+                        <constraint firstItem="a1l-6D-Ubs" firstAttribute="top" secondItem="ZSI-Ef-IsT" secondAttribute="bottom" constant="8" id="K3O-1U-EXK"/>
+                        <constraint firstItem="w3E-0x-SdH" firstAttribute="top" secondItem="a1l-6D-Ubs" secondAttribute="bottom" id="OR4-gN-fUr"/>
+                        <constraint firstAttribute="bottom" secondItem="w3E-0x-SdH" secondAttribute="bottom" id="ZGv-Ic-hKk"/>
+                        <constraint firstAttribute="width" constant="270" id="cXO-gT-3Fn"/>
+                        <constraint firstItem="ZSI-Ef-IsT" firstAttribute="leading" secondItem="AUK-nJ-sXS" secondAttribute="leading" id="gbR-Ua-VOc"/>
+                        <constraint firstItem="a1l-6D-Ubs" firstAttribute="leading" secondItem="AUK-nJ-sXS" secondAttribute="leading" id="kXy-kS-mxA"/>
+                        <constraint firstItem="w3E-0x-SdH" firstAttribute="leading" secondItem="AUK-nJ-sXS" secondAttribute="leading" id="r43-bW-fqS"/>
+                        <constraint firstAttribute="trailing" secondItem="a1l-6D-Ubs" secondAttribute="trailing" id="sWK-FQ-g49"/>
+                        <constraint firstItem="ZSI-Ef-IsT" firstAttribute="top" secondItem="AUK-nJ-sXS" secondAttribute="top" constant="16" id="v92-f8-H6D"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.25149828769999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="AUK-nJ-sXS" firstAttribute="centerY" secondItem="gQk-Cn-75v" secondAttribute="centerY" id="EmJ-Nl-Sou"/>
+                <constraint firstItem="AUK-nJ-sXS" firstAttribute="centerX" secondItem="gQk-Cn-75v" secondAttribute="centerX" id="mOv-i5-U0e"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="gQk-Cn-75v"/>
+            <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
+        </view>
+    </objects>
+</document>

@@ -17,6 +17,8 @@
 		9C2628D923151B1A00835446 /* MusicInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C2628D723151B1A00835446 /* MusicInfoCell.xib */; };
 		9C2628DC23151B4300835446 /* ContestInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2628DA23151B4300835446 /* ContestInfoCell.swift */; };
 		9C2628DD23151B4300835446 /* ContestInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C2628DB23151B4300835446 /* ContestInfoCell.xib */; };
+		9C3212002317EBA7004375D8 /* CustomAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C3211FF2317EBA7004375D8 /* CustomAlertView.xib */; };
+		9C3212022317EBB3004375D8 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3212012317EBB3004375D8 /* CustomAlertView.swift */; };
 		9C6178F7230FE33D007896F2 /* FeedSharedPopUpPrimary.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C6178F6230FE33D007896F2 /* FeedSharedPopUpPrimary.xib */; };
 		9C6178F9230FE37C007896F2 /* FeedSharedPopUpPrimary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6178F8230FE37C007896F2 /* FeedSharedPopUpPrimary.swift */; };
 		9C6178FC230FF811007896F2 /* ContestDetailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6178FB230FF811007896F2 /* ContestDetailListViewController.swift */; };
@@ -77,6 +79,8 @@
 		9C2628D723151B1A00835446 /* MusicInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicInfoCell.xib; sourceTree = "<group>"; };
 		9C2628DA23151B4300835446 /* ContestInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestInfoCell.swift; sourceTree = "<group>"; };
 		9C2628DB23151B4300835446 /* ContestInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContestInfoCell.xib; sourceTree = "<group>"; };
+		9C3211FF2317EBA7004375D8 /* CustomAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAlertView.xib; sourceTree = "<group>"; };
+		9C3212012317EBB3004375D8 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		9C6178F6230FE33D007896F2 /* FeedSharedPopUpPrimary.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedSharedPopUpPrimary.xib; sourceTree = "<group>"; };
 		9C6178F8230FE37C007896F2 /* FeedSharedPopUpPrimary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSharedPopUpPrimary.swift; sourceTree = "<group>"; };
 		9C6178FB230FF811007896F2 /* ContestDetailListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestDetailListViewController.swift; sourceTree = "<group>"; };
@@ -295,6 +299,8 @@
 				9C693450231409B70053BFF0 /* CustomActionSheet */,
 				9CF1E7AC230FC03E0093D21F /* ShareView */,
 				9C6178FA230FF63F007896F2 /* SharedSuccessAlertView */,
+				9C3211FF2317EBA7004375D8 /* CustomAlertView.xib */,
+				9C3212012317EBB3004375D8 /* CustomAlertView.swift */,
 			);
 			path = "Reusable Components";
 			sourceTree = "<group>";
@@ -389,6 +395,7 @@
 				9C70646722FEAFEF00E006D7 /* NotoSansCJKkr-Medium.otf in Resources */,
 				9C6178F7230FE33D007896F2 /* FeedSharedPopUpPrimary.xib in Resources */,
 				9C63193323014C8A00830385 /* ContestClosedCell.xib in Resources */,
+				9C3212002317EBA7004375D8 /* CustomAlertView.xib in Resources */,
 				9C2628D923151B1A00835446 /* MusicInfoCell.xib in Resources */,
 				9C2628DD23151B4300835446 /* ContestInfoCell.xib in Resources */,
 			);
@@ -431,6 +438,7 @@
 				9C63192223014C2400830385 /* FeaturedCreatorCell.swift in Sources */,
 				9C2628D523150FE200835446 /* UploadVideoCreatorViewController.swift in Sources */,
 				9C617900230FFAA6007896F2 /* ContestDetailListCell.swift in Sources */,
+				9C3212022317EBB3004375D8 /* CustomAlertView.swift in Sources */,
 				9C70647522FECCED00E006D7 /* FeedViewController.swift in Sources */,
 				9C63192623014C4800830385 /* ReferralClientCell.swift in Sources */,
 				9C63192E23014C7A00830385 /* ContestJudgingCell.swift in Sources */,
