@@ -18,6 +18,9 @@ class CustomAlertView:UIView {
     @IBOutlet weak var dismissBtn:UIButton!
     var dismissClicked:(()->Void)?
     
+    var titleStr:String?
+    var descStr:String?
+    var btnStr:String?
     //MARK: View Setup Methods
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,18 +34,20 @@ class CustomAlertView:UIView {
     }
     init(frame:CGRect,title:String?,desc:String?,btnTitle:String?)
     {
-        super.init(frame: frame)
-       
+       super.init(frame: frame)
+        self.titleStr = title
+        self.descStr = desc
+        self.btnStr = btnTitle
+       commonInit()
     }
     func commonInit() {
         //Loading the view from the nib file
         Bundle.main.loadNibNamed(kCONTENT_XIB_NAME, owner: self, options: nil)
         contentView.fixInView(self)
         containerView.addCornerRadius(radius: 15)
-        
-//        titleLabel.text = title
-//        descLabel.text = desc
-//        dismissBtn.setTitle(btnTitle, for: .normal)
+        titleLabel.text = titleStr
+        descLabel.text = descStr
+        dismissBtn.setTitle(btnStr, for: .normal)
        
     }
     @IBAction func dismissView(_ sender: UIButton) {
