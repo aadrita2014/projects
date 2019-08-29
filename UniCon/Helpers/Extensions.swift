@@ -11,42 +11,33 @@ import UIKit
 extension UIView {
     
     //Helper methods to get the view width
-    func viewWidth() -> CGFloat
-    {
+    func viewWidth() -> CGFloat {
         return self.frame.size.width
     }
     //Helper methods to get the view height
-    func viewHeight() -> CGFloat
-    {
+    func viewHeight() -> CGFloat {
         return self.frame.size.height
     }
-    
     //Add Background colors to the view
-    func addDefaultBackgroundColor()
-    {
+    func addDefaultBackgroundColor() {
         addBackgroundColor(color: AppColors.default_background_color)
     }
-    func addBlackBackgroundColor()
-    {
+    func addBlackBackgroundColor() {
         addBackgroundColor(color: UIColor.black)
     }
-    func addDarkGrayBackgroundColor()
-    {
+    func addDarkGrayBackgroundColor() {
         addBackgroundColor(color: AppColors.gray_background_color)
     }
-    private func addBackgroundColor(color:UIColor)
-    {
+    private func addBackgroundColor(color:UIColor) {
         self.backgroundColor = color
     }
     //Helper method to add for rounded corners to the view
-    func addCornerRadius(radius:CGFloat = 5.0)
-    {
+    func addCornerRadius(radius:CGFloat = 5.0) {
         let layer = self.layer
         layer.cornerRadius = radius
         layer.masksToBounds = true
     }
-    func addBorderColor(color: UIColor = UIColor.white)
-    {
+    func addBorderColor(color: UIColor = UIColor.white) {
         let layer = self.layer
         layer.borderWidth = 0.5
         layer.borderColor = color.cgColor

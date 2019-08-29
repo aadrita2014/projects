@@ -28,7 +28,6 @@ class ContestDetailsClientVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         //Add Default Background Color to the view
         self.view.addBlackBackgroundColor()
      
@@ -39,8 +38,10 @@ class ContestDetailsClientVC: UIViewController {
     override func viewWillLayoutSubviews() {
         participationCollView.reloadData()
     }
+    
+    //View setup
     func setupView() {
-        participationCollView.register(UINib(nibName: "ParticipationCell", bundle: nil), forCellWithReuseIdentifier: "ParticipationCell")
+        
         videoThumbnailImg.addCornerRadius(radius: 2)
         imageView1.addCornerRadius()
         imageView2.addCornerRadius()
@@ -53,11 +54,14 @@ class ContestDetailsClientVC: UIViewController {
         collViewHeaderView.addCornerRadius()
         
         participationCollView.frame.size = CGSize(width: participationCollView.frame.width, height: participationCollView.contentSize.height)
+        participationCollView.register(UINib(nibName: "ParticipationCell", bundle: nil), forCellWithReuseIdentifier: "ParticipationCell")
+
     }
     
 }
 
 
+//MARK: Collection View Delegates
 extension ContestDetailsClientVC:UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 9
