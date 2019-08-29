@@ -19,6 +19,7 @@
 		9C2628DD23151B4300835446 /* ContestInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C2628DB23151B4300835446 /* ContestInfoCell.xib */; };
 		9C3212002317EBA7004375D8 /* CustomAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C3211FF2317EBA7004375D8 /* CustomAlertView.xib */; };
 		9C3212022317EBB3004375D8 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3212012317EBB3004375D8 /* CustomAlertView.swift */; };
+		9C3212042318004A004375D8 /* ClientContestRegBasicInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C32120323180049004375D8 /* ClientContestRegBasicInfoVC.swift */; };
 		9C6178F7230FE33D007896F2 /* FeedSharedPopUpPrimary.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C6178F6230FE33D007896F2 /* FeedSharedPopUpPrimary.xib */; };
 		9C6178F9230FE37C007896F2 /* FeedSharedPopUpPrimary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6178F8230FE37C007896F2 /* FeedSharedPopUpPrimary.swift */; };
 		9C6178FC230FF811007896F2 /* ContestDetailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6178FB230FF811007896F2 /* ContestDetailListViewController.swift */; };
@@ -81,6 +82,7 @@
 		9C2628DB23151B4300835446 /* ContestInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContestInfoCell.xib; sourceTree = "<group>"; };
 		9C3211FF2317EBA7004375D8 /* CustomAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAlertView.xib; sourceTree = "<group>"; };
 		9C3212012317EBB3004375D8 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
+		9C32120323180049004375D8 /* ClientContestRegBasicInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientContestRegBasicInfoVC.swift; sourceTree = "<group>"; };
 		9C6178F6230FE33D007896F2 /* FeedSharedPopUpPrimary.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedSharedPopUpPrimary.xib; sourceTree = "<group>"; };
 		9C6178F8230FE37C007896F2 /* FeedSharedPopUpPrimary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSharedPopUpPrimary.swift; sourceTree = "<group>"; };
 		9C6178FB230FF811007896F2 /* ContestDetailListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestDetailListViewController.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 				9CF9324A23168EE7002AC77D /* ContestDetailsClientVC.swift */,
 				9CF72FCB23176A7B009D1C60 /* PrizeAllocationViewController.swift */,
 				9C75F0992317C67900E7B3F2 /* ChangePrizeAllocationVC.swift */,
+				9C32120323180049004375D8 /* ClientContestRegBasicInfoVC.swift */,
 			);
 			path = "Client VC";
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				9C70647122FEB5DD00E006D7 /* LoginCreatorViewController.swift in Sources */,
 				9C70647322FEC0DC00E006D7 /* Constants.swift in Sources */,
 				9CF9324B23168EE7002AC77D /* ContestDetailsClientVC.swift in Sources */,
+				9C3212042318004A004375D8 /* ClientContestRegBasicInfoVC.swift in Sources */,
 				9C9AC4A822FEDB4B00230522 /* ContestViewController.swift in Sources */,
 				9CF9324E2316B158002AC77D /* ParticipationCell.swift in Sources */,
 				9C9AC4AF22FEE04000230522 /* ChannelViewController.swift in Sources */,

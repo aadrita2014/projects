@@ -37,9 +37,9 @@ extension UIView {
         layer.cornerRadius = radius
         layer.masksToBounds = true
     }
-    func addBorderColor(color: UIColor = UIColor.white) {
+    func addBorderColor(borderWidth:CGFloat = 0.5, color: UIColor = UIColor.white) {
         let layer = self.layer
-        layer.borderWidth = 0.5
+        layer.borderWidth = borderWidth
         layer.borderColor = color.cgColor
     }
     //For Custom Written Views
@@ -83,7 +83,6 @@ extension UIButton {
         attributedString.addAttribute(NSAttributedString.Key.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: (self.titleLabel?.text!.count)!))
         self.setAttributedTitle(attributedString, for: .normal)
     }
-    
 }
 
 extension UITextField {
