@@ -47,6 +47,7 @@
 		9C70647122FEB5DD00E006D7 /* LoginCreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70647022FEB5DD00E006D7 /* LoginCreatorViewController.swift */; };
 		9C70647322FEC0DC00E006D7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70647222FEC0DC00E006D7 /* Constants.swift */; };
 		9C70647522FECCED00E006D7 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70647422FECCED00E006D7 /* FeedViewController.swift */; };
+		9C75F09A2317C67900E7B3F2 /* ChangePrizeAllocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C75F0992317C67900E7B3F2 /* ChangePrizeAllocationVC.swift */; };
 		9C9AC4A822FEDB4B00230522 /* ContestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4A722FEDB4B00230522 /* ContestViewController.swift */; };
 		9C9AC4AA22FEDB5D00230522 /* GeneralVideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4A922FEDB5D00230522 /* GeneralVideosViewController.swift */; };
 		9C9AC4AD22FEE03600230522 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4AC22FEE03600230522 /* MyPageViewController.swift */; };
@@ -110,6 +111,7 @@
 		9C70647022FEB5DD00E006D7 /* LoginCreatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginCreatorViewController.swift; path = ../LoginCreatorViewController.swift; sourceTree = "<group>"; };
 		9C70647222FEC0DC00E006D7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9C70647422FECCED00E006D7 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		9C75F0992317C67900E7B3F2 /* ChangePrizeAllocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePrizeAllocationVC.swift; sourceTree = "<group>"; };
 		9C9AC4A722FEDB4B00230522 /* ContestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestViewController.swift; sourceTree = "<group>"; };
 		9C9AC4A922FEDB5D00230522 /* GeneralVideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralVideosViewController.swift; sourceTree = "<group>"; };
 		9C9AC4AC22FEE03600230522 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 			children = (
 				9CF9324A23168EE7002AC77D /* ContestDetailsClientVC.swift */,
 				9CF72FCB23176A7B009D1C60 /* PrizeAllocationViewController.swift */,
+				9C75F0992317C67900E7B3F2 /* ChangePrizeAllocationVC.swift */,
 			);
 			path = "Client VC";
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C63193223014C8A00830385 /* ContestClosedCell.swift in Sources */,
+				9C75F09A2317C67900E7B3F2 /* ChangePrizeAllocationVC.swift in Sources */,
 				9CCB4D5E230BED9E00375888 /* ViewController.swift in Sources */,
 				9CF1EAA52314440D006895F9 /* VideoRecordingVC.swift in Sources */,
 				9CF72FCC23176A7B009D1C60 /* PrizeAllocationViewController.swift in Sources */,

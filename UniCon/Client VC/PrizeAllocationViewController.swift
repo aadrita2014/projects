@@ -13,10 +13,11 @@ class PrizeAllocationViewController: UIViewController {
     //MARK: IBOutlets
     @IBOutlet weak var topBackgroundView: UIView!
     @IBOutlet weak var bottomBackgroundView: UIView!
-    @IBOutlet weak var changePriceBtn: UIButton!
+    @IBOutlet weak var changePrizeBtn: UIButton!
     @IBOutlet weak var learnMoreButton: UIButton!
     @IBOutlet weak var priceTf: UITextField!
     
+    @IBOutlet weak var nextBtn: UIButton!
     
     //MARK: Overriden view code
     override func viewDidLoad() {
@@ -44,8 +45,9 @@ class PrizeAllocationViewController: UIViewController {
         bottomBackgroundView.addDarkGrayBackgroundColor()
         
         //Buttons Setup
+        nextBtn.addCornerRadius() 
         learnMoreButton.underline()
-        changePriceBtn.addCornerRadius(radius: 2)
+        changePrizeBtn.addCornerRadius(radius: 2)
         
         //Textfield Setup
         priceTf.addBottomBorder(color: AppColors.default_red_color)
@@ -54,7 +56,9 @@ class PrizeAllocationViewController: UIViewController {
     }
     
     //MARK: IBActions
-    @IBAction func changePriceClicked(){
-        self.performSegue(withIdentifier: "ChangePrice", sender: nil)
+    @IBAction func changePrizeClicked(){
+        self.performSegue(withIdentifier: "ChangePrize", sender: nil)
+    }
+    @IBAction func nextBtnClicked(_ sender: UIButton) {
     }
 }
