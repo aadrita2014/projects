@@ -66,6 +66,7 @@ class ClientContestRegBasicInfoVC: UIViewController {
         
         //Picker view setup
         datePicker.addDarkGrayBackgroundColor()
+        datePicker.setValue(UIColor.white, forKey: "textColor")
         datePicker.isHidden = true
         pickerToolbar.isHidden = true
     }
