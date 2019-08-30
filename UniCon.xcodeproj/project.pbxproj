@@ -61,6 +61,7 @@
 		9CCB4D5E230BED9E00375888 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCB4D5D230BED9E00375888 /* ViewController.swift */; };
 		9CF02C0C2319424700614F6B /* RefImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF02C0A2319424700614F6B /* RefImageCell.swift */; };
 		9CF02C0D2319424700614F6B /* RefImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CF02C0B2319424700614F6B /* RefImageCell.xib */; };
+		9CF02C0F2319571000614F6B /* ContestDepostiConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF02C0E2319571000614F6B /* ContestDepostiConfirmationVC.swift */; };
 		9CF1E7A5230F966D0093D21F /* SharePopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF1E7A4230F966D0093D21F /* SharePopUpView.swift */; };
 		9CF1E7A7230F967E0093D21F /* SharePopUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CF1E7A6230F967E0093D21F /* SharePopUpView.xib */; };
 		9CF1E7AA230F98890093D21F /* SharePopUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF1E7A8230F98890093D21F /* SharePopUpCell.swift */; };
@@ -131,6 +132,7 @@
 		9CCB4D5D230BED9E00375888 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9CF02C0A2319424700614F6B /* RefImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefImageCell.swift; sourceTree = "<group>"; };
 		9CF02C0B2319424700614F6B /* RefImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefImageCell.xib; sourceTree = "<group>"; };
+		9CF02C0E2319571000614F6B /* ContestDepostiConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestDepostiConfirmationVC.swift; sourceTree = "<group>"; };
 		9CF1E7A4230F966D0093D21F /* SharePopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePopUpView.swift; sourceTree = "<group>"; };
 		9CF1E7A6230F967E0093D21F /* SharePopUpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SharePopUpView.xib; sourceTree = "<group>"; };
 		9CF1E7A8230F98890093D21F /* SharePopUpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePopUpCell.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				9C75F0992317C67900E7B3F2 /* ChangePrizeAllocationVC.swift */,
 				9C32120323180049004375D8 /* ClientContestRegBasicInfoVC.swift */,
 				9C76CCB72319022A003821C8 /* ClientContestRegDetailsViewController.swift */,
+				9CF02C0E2319571000614F6B /* ContestDepostiConfirmationVC.swift */,
 			);
 			path = "Client VC";
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				9C63193223014C8A00830385 /* ContestClosedCell.swift in Sources */,
 				9C75F09A2317C67900E7B3F2 /* ChangePrizeAllocationVC.swift in Sources */,
 				9CCB4D5E230BED9E00375888 /* ViewController.swift in Sources */,
+				9CF02C0F2319571000614F6B /* ContestDepostiConfirmationVC.swift in Sources */,
 				9CF1EAA52314440D006895F9 /* VideoRecordingVC.swift in Sources */,
 				9CF72FCC23176A7B009D1C60 /* PrizeAllocationViewController.swift in Sources */,
 				9C70645122FEA3AC00E006D7 /* UniCon.xcdatamodeld in Sources */,
