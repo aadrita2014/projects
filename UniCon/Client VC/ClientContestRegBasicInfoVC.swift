@@ -26,6 +26,8 @@ class ClientContestRegBasicInfoVC: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var pickerToolbar: UIToolbar!
     
+    var selectedBtn:UIButton? = nil
+    
     //MARK: Overriden view methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,22 +81,42 @@ class ClientContestRegBasicInfoVC: UIViewController {
         datePicker.isHidden = !show
         pickerToolbar.isHidden = !show
     }
-
     //MARK: IBAction Methods
     @IBAction func changeDatePressed(_ sender: UIButton) {
+        removeBordersFromButtons()
         sender.addBorderColor(borderWidth: 2.0, color: AppColors.default_red_color)
-        sender.isHighlighted = true
+        selectedBtn = sender
         togglePicker(show: true)
     }
     
     @IBAction func moveToNextButton() {
-//        for (index,btn) in dateBtns.enumerated() {
-//
-//        }
+        for (index,btn) in dateBtns.enumerated() {
+            if btn == selectedBtn! {
+                if dateBtns.count > index + 1 {
+                    changeDatePressed(dateBtns[index+1])
+                }
+                else {
+                    togglePicker(show: false)
+                }
+                
+                break
+            }
+        }
     }
     
     @IBAction func moveToPrevButton() {
         
+        for (index,btn) in dateBtns.enumerated() {
+            if btn == selectedBtn! {
+                if index > 0 {
+                    changeDatePressed(dateBtns[index-1])
+                }
+                else {
+                    togglePicker(show: false)
+                }
+                break
+            }
+        }
     }
     @IBAction func donePressed(_ sender: UIBarButtonItem) {
         togglePicker(show: false)
