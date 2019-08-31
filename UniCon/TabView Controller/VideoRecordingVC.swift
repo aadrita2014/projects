@@ -29,24 +29,19 @@ class VideoRecordingVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         viewSetup()
         // Do any additional setup after loading the view.
     }
     
-    func viewSetup()
-    {
+    func viewSetup() {
         nextButton.addCornerRadius(radius: 10)
         updateButtons()
     }
     
     //MARK: Buttons/View Updates
-    func updateButtons()
-    {
-        switch recordingStatus
-        {
+    func updateButtons() {
+        switch recordingStatus {
         case .notStartedRecording:
-            
             nextButton.isHidden = true
             videoSaveButtons.isHidden = true
             videoEditButtons.isHidden = false
@@ -56,7 +51,6 @@ class VideoRecordingVC: UIViewController {
             recordBtn.setImage(UIImage(named: "btnVideoStart"), for: .normal)
             
         case .recording:
-            
             nextButton.isHidden = true
             videoSaveButtons.isHidden = true
             videoEditButtons.isHidden = true
@@ -66,7 +60,6 @@ class VideoRecordingVC: UIViewController {
             recordBtn.setImage(UIImage(named: "btnVideoStop"), for: .normal)
           
         case .stopped:
-            
             nextButton.isHidden = true
             videoSaveButtons.isHidden = false
             videoEditButtons.isHidden = false
@@ -76,11 +69,10 @@ class VideoRecordingVC: UIViewController {
             recordBtn.setImage(UIImage(named: "btnVideoStart"), for: .normal)
             
         case .saved:
-            
             nextButton.isHidden = false
             videoSaveButtons.isHidden = true
             videoEditButtons.isHidden = false
-            galleryView.isHidden = false
+            galleryView.isHidden = true
             backButton.isHidden = false
             recordBtn.isHidden = true
             recordBtn.setImage(UIImage(named: "btnVideoStart"), for: .normal)

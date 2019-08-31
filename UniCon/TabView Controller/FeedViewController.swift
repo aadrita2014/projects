@@ -29,14 +29,12 @@ class FeedViewController: UIViewController {
         segmentValueChanged()
     }
     //MARK: View Setup
-    func segmentViewSetup()
-    {
+    func segmentViewSetup() {
         segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
         segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.red], for: .normal)
     }
     //MARK: IBActions Declared
-    @IBAction func segmentValueChanged()
-    {
+    @IBAction func segmentValueChanged() {
         if segmentedControl.selectedSegmentIndex == 0
         {
             //TODO: Show Contest View
@@ -49,10 +47,8 @@ class FeedViewController: UIViewController {
         }
     }
     
-    func showContestView()
-    {
-        if contestViewController == nil
-        {
+    func showContestView() {
+        if contestViewController == nil {
             contestViewController = self.storyboard!.instantiateViewController(withIdentifier: "CONTEST_VIEW") as? ContestViewController
             contestViewController?.view.frame = self.containerView.bounds;
             contestViewController?.willMove(toParent: self)
@@ -60,20 +56,16 @@ class FeedViewController: UIViewController {
             self.addChild(contestViewController!)
             contestViewController!.didMove(toParent: self)
         }
-        else
-        {
-            if generalVideosViewController != nil
-            {
+        else {
+            if generalVideosViewController != nil {
                 generalVideosViewController?.view.isHidden = true
             }
             contestViewController?.view.isHidden = false
         }
     }
     
-    func showGeneralVideosView()
-    {
-        if generalVideosViewController == nil
-        {
+    func showGeneralVideosView() {
+        if generalVideosViewController == nil {
             generalVideosViewController = self.storyboard!.instantiateViewController(withIdentifier: "GENERAL_VIDEOS_VIEW") as? GeneralVideosViewController
             generalVideosViewController?.view.frame = self.containerView.bounds;
             generalVideosViewController?.willMove(toParent: self)
@@ -81,10 +73,8 @@ class FeedViewController: UIViewController {
             self.addChild(generalVideosViewController!)
             generalVideosViewController!.didMove(toParent: self)
         }
-        else
-        {
-            if contestViewController != nil
-            {
+        else {
+            if contestViewController != nil {
                 contestViewController?.view.isHidden = true
             }
             generalVideosViewController?.view.isHidden = false

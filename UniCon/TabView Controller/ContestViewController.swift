@@ -38,9 +38,15 @@ class ContestViewController: UIViewController {
     //MARK: Overrided View Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Setup View method
+        setupView()
+    }
+    func setupView() {
         //Set Bookmark selected non selected states
         bookmarkButton.setImage(UIImage(named: "bookmark"), for: .normal)
         bookmarkButton.setImage(UIImage(named: "bookmark_selected"), for: .selected)
+        followButton.addCornerRadius(radius: 2)
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {
         //White top status bar on dark designed screens

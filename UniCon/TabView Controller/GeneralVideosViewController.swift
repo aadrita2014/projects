@@ -37,9 +37,14 @@ class GeneralVideosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Setup View
+        setupView()
+    }
+    func setupView() {
         //Set Bookmark selected non selected states
         bookmarkButton.setImage(UIImage(named: "bookmark"), for: .normal)
         bookmarkButton.setImage(UIImage(named: "bookmark_selected"), for: .selected)
+        followButton.addCornerRadius(radius: 2)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

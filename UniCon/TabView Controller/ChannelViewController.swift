@@ -24,6 +24,7 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
     
     var featuredCollView,referralCollView,ongoingContestCollView,contestJudgingCollView,contestClosedCollView:UICollectionView!
     
+    var showMoreOngoing,showMoreContestJudging,showMoreContestClosed:UIButton!
     //MARK: Collection View Layout Declarations
     let featuredCollViewLayout = UICollectionViewFlowLayout()
     let referallClientViewLayout = UICollectionViewFlowLayout()
@@ -138,11 +139,9 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         return false
     }
     //MARK: Slider Setup
-    func setupTopSlider()
-    {
+    func setupTopSlider() {
         var xOrigin = CGFloat(0)
-        for (index,image) in images.enumerated()
-        {
+        for (index,image) in images.enumerated() {
             let imageView = UIImageView(frame:  CGRect(x: xOrigin, y: 0, width: self.view.frame.width , height: self.topSliderView.bounds.height))
             imageView.image = UIImage(named: image)
             imageView.contentMode = .scaleAspectFill
@@ -247,10 +246,10 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         ongoingContesCollViewLabel.textColor = UIColor.white
         
         //Show More Button
-        let showMoreButton = UIButton(frame: CGRect(x: self.view.frame.width - 50, y: 0, width: 50, height: 100))
-        showMoreButton.center.y = ongoingContesCollViewLabel.center.y
-        showMoreButton.setImage(UIImage(named: "next_arrow"), for: .normal)
-        showMoreButton.addTarget(self, action: #selector(ChannelViewController.showContestDetailList), for: .touchUpInside)
+        showMoreOngoing = UIButton(frame: CGRect(x: self.view.frame.width - 50, y: 0, width: 50, height: 100))
+        showMoreOngoing.center.y = ongoingContesCollViewLabel.center.y
+        showMoreOngoing.setImage(UIImage(named: "next_arrow"), for: .normal)
+        showMoreOngoing.addTarget(self, action: #selector(ChannelViewController.showContestDetailList), for: .touchUpInside)
         
         //Init & Setup Ongoing Contest Collection View
         ongoingContestLayout.scrollDirection = .horizontal
@@ -266,7 +265,7 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         
         //Add label & collection view to the container as sub views
         containerView.addSubview(ongoingContesCollViewLabel)
-      //  containerView.addSubview(showMoreButton)
+        containerView.addSubview(showMoreOngoing)
         containerView.addSubview(ongoingContestCollView)
         //Reload the Collection view to reload the data and size of the collection view
         ongoingContestCollView.reloadData()
@@ -275,6 +274,7 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         if ongoingContestCollView != nil {
             ongoingContesCollViewLabel.removeFromSuperview()
             ongoingContestCollView.removeFromSuperview()
+            showMoreOngoing.removeFromSuperview()
         }
     }
     func addJudgingContestCollView(_ relativeView:UIView) {
@@ -284,10 +284,10 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         contestJudgingCollViewLabel.textColor = UIColor.white
         
         //Show More Button
-        let showMoreButton = UIButton(frame: CGRect(x: self.view.frame.width - 50, y: 0, width: 50, height: 100))
-        showMoreButton.center.y = contestJudgingCollViewLabel.center.y
-        showMoreButton.setImage(UIImage(named: "next_arrow"), for: .normal)
-        showMoreButton.addTarget(self, action: #selector(ChannelViewController.showContestDetailList), for: .touchUpInside)
+        showMoreContestJudging = UIButton(frame: CGRect(x: self.view.frame.width - 50, y: 0, width: 50, height: 100))
+        showMoreContestJudging.center.y = contestJudgingCollViewLabel.center.y
+        showMoreContestJudging.setImage(UIImage(named: "next_arrow"), for: .normal)
+        showMoreContestJudging.addTarget(self, action: #selector(ChannelViewController.showContestDetailList), for: .touchUpInside)
         
         // Init & Setup Judging Contest Category Label
         contestJudgingLayout.scrollDirection = .horizontal
@@ -302,7 +302,7 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         
         //Add label & collection view to the container as sub views
         containerView.addSubview(contestJudgingCollViewLabel)
-       // containerView.addSubview(showMoreButton)
+        containerView.addSubview(showMoreContestJudging)
         containerView.addSubview(contestJudgingCollView)
         
         //Reload the Collection view to reload the data and size of the collection view
@@ -312,6 +312,7 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         if contestJudgingCollView != nil {
             contestJudgingCollViewLabel.removeFromSuperview()
             contestJudgingCollView.removeFromSuperview()
+            showMoreContestJudging.removeFromSuperview()
         }
     }
     func addClosedContestCollView(_ relativeView:UIView) {
@@ -321,10 +322,10 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         contestClosedCollViewlabel.textColor = UIColor.white
         
         //Show More Button
-        let showMoreButton = UIButton(frame: CGRect(x: self.view.frame.width - 50, y: 0, width: 50, height: 100))
-        showMoreButton.center.y = contestClosedCollViewlabel.center.y
-        showMoreButton.setImage(UIImage(named: "next_arrow"), for: .normal)
-        showMoreButton.addTarget(self, action: #selector(ChannelViewController.showContestDetailList), for: .touchUpInside)
+        showMoreContestClosed = UIButton(frame: CGRect(x: self.view.frame.width - 50, y: 0, width: 50, height: 100))
+        showMoreContestClosed.center.y = contestClosedCollViewlabel.center.y
+        showMoreContestClosed.setImage(UIImage(named: "next_arrow"), for: .normal)
+        showMoreContestClosed.addTarget(self, action: #selector(ChannelViewController.showContestDetailList), for: .touchUpInside)
         
         //Init & Setup Judging Contest Category Label
         contestClosedLayout.scrollDirection = .horizontal
@@ -339,7 +340,7 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         
         //Add label & collection view to the container as sub views
         containerView.addSubview(contestClosedCollViewlabel)
-        //containerView.addSubview(showMoreButton)
+        containerView.addSubview(showMoreContestClosed)
         containerView.addSubview(contestClosedCollView)
         
         //Reload the Collection view to reload the data and size of the collection view
