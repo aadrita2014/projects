@@ -62,6 +62,8 @@
 		9CCF2CDA231A52080062558A /* ImageViewerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF2CD8231A52080062558A /* ImageViewerVC.swift */; };
 		9CCF2CDB231A52080062558A /* ImageViewerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCF2CD9231A52080062558A /* ImageViewerVC.xib */; };
 		9CCF2CDD231A643E0062558A /* ClientRegistrationConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF2CDC231A643E0062558A /* ClientRegistrationConfirmationVC.swift */; };
+		9CCF2CDF231A6EEF0062558A /* ContestRegistrationDepositInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF2CDE231A6EEF0062558A /* ContestRegistrationDepositInfoVC.swift */; };
+		9CCF2CE1231A70590062558A /* FinishedAppointmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF2CE0231A70590062558A /* FinishedAppointmentVC.swift */; };
 		9CF02C0C2319424700614F6B /* RefImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF02C0A2319424700614F6B /* RefImageCell.swift */; };
 		9CF02C0D2319424700614F6B /* RefImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CF02C0B2319424700614F6B /* RefImageCell.xib */; };
 		9CF02C0F2319571000614F6B /* ContestDepostiConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF02C0E2319571000614F6B /* ContestDepostiConfirmationVC.swift */; };
@@ -136,6 +138,8 @@
 		9CCF2CD8231A52080062558A /* ImageViewerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerVC.swift; sourceTree = "<group>"; };
 		9CCF2CD9231A52080062558A /* ImageViewerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewerVC.xib; sourceTree = "<group>"; };
 		9CCF2CDC231A643E0062558A /* ClientRegistrationConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientRegistrationConfirmationVC.swift; sourceTree = "<group>"; };
+		9CCF2CDE231A6EEF0062558A /* ContestRegistrationDepositInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestRegistrationDepositInfoVC.swift; sourceTree = "<group>"; };
+		9CCF2CE0231A70590062558A /* FinishedAppointmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedAppointmentVC.swift; sourceTree = "<group>"; };
 		9CF02C0A2319424700614F6B /* RefImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefImageCell.swift; sourceTree = "<group>"; };
 		9CF02C0B2319424700614F6B /* RefImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefImageCell.xib; sourceTree = "<group>"; };
 		9CF02C0E2319571000614F6B /* ContestDepostiConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestDepostiConfirmationVC.swift; sourceTree = "<group>"; };
@@ -320,6 +324,8 @@
 				9C76CCB72319022A003821C8 /* ClientContestRegDetailsViewController.swift */,
 				9CF02C0E2319571000614F6B /* ContestDepostiConfirmationVC.swift */,
 				9CCF2CDC231A643E0062558A /* ClientRegistrationConfirmationVC.swift */,
+				9CCF2CDE231A6EEF0062558A /* ContestRegistrationDepositInfoVC.swift */,
+				9CCF2CE0231A70590062558A /* FinishedAppointmentVC.swift */,
 			);
 			path = "Client VC";
 			sourceTree = "<group>";
@@ -452,11 +458,13 @@
 				9CF02C0C2319424700614F6B /* RefImageCell.swift in Sources */,
 				9C2628DC23151B4300835446 /* ContestInfoCell.swift in Sources */,
 				9C1BED9E231116350011F296 /* CustomActionSheetCell.swift in Sources */,
+				9CCF2CDF231A6EEF0062558A /* ContestRegistrationDepositInfoVC.swift in Sources */,
 				9CAC8216231556BB00936CE7 /* LoginClientViewController.swift in Sources */,
 				9C70644B22FEA3AC00E006D7 /* LoginViewController.swift in Sources */,
 				9C2628D823151B1A00835446 /* MusicInfoCell.swift in Sources */,
 				9C9AC4B322FEE05900230522 /* AlarmViewController.swift in Sources */,
 				9C63192A23014C6300830385 /* OngoingContestCell.swift in Sources */,
+				9CCF2CE1231A70590062558A /* FinishedAppointmentVC.swift in Sources */,
 				9CF1E7AA230F98890093D21F /* SharePopUpCell.swift in Sources */,
 				9C76CCB82319022A003821C8 /* ClientContestRegDetailsViewController.swift in Sources */,
 				9C70644922FEA3AC00E006D7 /* AppDelegate.swift in Sources */,
