@@ -400,6 +400,13 @@ class ChannelViewController: UIViewController,UIScrollViewDelegate,UICollectionV
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if isClient {
+            if segmentedControl.selectedSegmentIndex == 0 {
+                self.performSegue(withIdentifier: "ClientContestDetails", sender: nil)
+            }
+        }
+    }
     
     //MARK: Navigation (To Other VC) Methods
     @objc func showContestDetailList() {
