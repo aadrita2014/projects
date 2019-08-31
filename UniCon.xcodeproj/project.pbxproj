@@ -58,7 +58,7 @@
 		9C9AC4AF22FEE04000230522 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4AE22FEE04000230522 /* ChannelViewController.swift */; };
 		9C9AC4B322FEE05900230522 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4B222FEE05900230522 /* AlarmViewController.swift */; };
 		9CAC8216231556BB00936CE7 /* LoginClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAC8215231556BB00936CE7 /* LoginClientViewController.swift */; };
-		9CCB4D5E230BED9E00375888 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCB4D5D230BED9E00375888 /* ViewController.swift */; };
+		9CCB4D5E230BED9E00375888 /* ShareFeeDetailsClientVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCB4D5D230BED9E00375888 /* ShareFeeDetailsClientVC.swift */; };
 		9CCF2CDA231A52080062558A /* ImageViewerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF2CD8231A52080062558A /* ImageViewerVC.swift */; };
 		9CCF2CDB231A52080062558A /* ImageViewerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCF2CD9231A52080062558A /* ImageViewerVC.xib */; };
 		9CCF2CDD231A643E0062558A /* ClientRegistrationConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF2CDC231A643E0062558A /* ClientRegistrationConfirmationVC.swift */; };
@@ -134,7 +134,7 @@
 		9C9AC4AE22FEE04000230522 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		9C9AC4B222FEE05900230522 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		9CAC8215231556BB00936CE7 /* LoginClientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClientViewController.swift; sourceTree = "<group>"; };
-		9CCB4D5D230BED9E00375888 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9CCB4D5D230BED9E00375888 /* ShareFeeDetailsClientVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareFeeDetailsClientVC.swift; sourceTree = "<group>"; };
 		9CCF2CD8231A52080062558A /* ImageViewerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerVC.swift; sourceTree = "<group>"; };
 		9CCF2CD9231A52080062558A /* ImageViewerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewerVC.xib; sourceTree = "<group>"; };
 		9CCF2CDC231A643E0062558A /* ClientRegistrationConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientRegistrationConfirmationVC.swift; sourceTree = "<group>"; };
@@ -267,7 +267,6 @@
 			isa = PBXGroup;
 			children = (
 				9C70644822FEA3AC00E006D7 /* AppDelegate.swift */,
-				9CCB4D5D230BED9E00375888 /* ViewController.swift */,
 				9C1FD5F7230C5A5B0073EEF4 /* CongratulationPopViewController.swift */,
 				9C6178FB230FF811007896F2 /* ContestDetailListViewController.swift */,
 				9C70644C22FEA3AC00E006D7 /* Main.storyboard */,
@@ -326,6 +325,7 @@
 				9CCF2CDC231A643E0062558A /* ClientRegistrationConfirmationVC.swift */,
 				9CCF2CDE231A6EEF0062558A /* ContestRegistrationDepositInfoVC.swift */,
 				9CCF2CE0231A70590062558A /* FinishedAppointmentVC.swift */,
+				9CCB4D5D230BED9E00375888 /* ShareFeeDetailsClientVC.swift */,
 			);
 			path = "Client VC";
 			sourceTree = "<group>";
@@ -450,7 +450,7 @@
 			files = (
 				9C63193223014C8A00830385 /* ContestClosedCell.swift in Sources */,
 				9C75F09A2317C67900E7B3F2 /* ChangePrizeAllocationVC.swift in Sources */,
-				9CCB4D5E230BED9E00375888 /* ViewController.swift in Sources */,
+				9CCB4D5E230BED9E00375888 /* ShareFeeDetailsClientVC.swift in Sources */,
 				9CF02C0F2319571000614F6B /* ContestDepostiConfirmationVC.swift in Sources */,
 				9CF1EAA52314440D006895F9 /* VideoRecordingVC.swift in Sources */,
 				9CF72FCC23176A7B009D1C60 /* PrizeAllocationViewController.swift in Sources */,
