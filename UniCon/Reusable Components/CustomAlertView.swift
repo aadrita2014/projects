@@ -48,7 +48,6 @@ class CustomAlertView:UIView {
         titleLabel.text = titleStr
         descLabel.text = descStr
         dismissBtn.setTitle(btnStr, for: .normal)
-       
     }
     @IBAction func dismissView(_ sender: UIButton) {
         if let action = dismissClicked {

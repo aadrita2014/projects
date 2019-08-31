@@ -59,6 +59,9 @@
 		9C9AC4B322FEE05900230522 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4B222FEE05900230522 /* AlarmViewController.swift */; };
 		9CAC8216231556BB00936CE7 /* LoginClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAC8215231556BB00936CE7 /* LoginClientViewController.swift */; };
 		9CCB4D5E230BED9E00375888 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCB4D5D230BED9E00375888 /* ViewController.swift */; };
+		9CCF2CDA231A52080062558A /* ImageViewerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF2CD8231A52080062558A /* ImageViewerVC.swift */; };
+		9CCF2CDB231A52080062558A /* ImageViewerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCF2CD9231A52080062558A /* ImageViewerVC.xib */; };
+		9CCF2CDD231A643E0062558A /* ClientRegistrationConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF2CDC231A643E0062558A /* ClientRegistrationConfirmationVC.swift */; };
 		9CF02C0C2319424700614F6B /* RefImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF02C0A2319424700614F6B /* RefImageCell.swift */; };
 		9CF02C0D2319424700614F6B /* RefImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CF02C0B2319424700614F6B /* RefImageCell.xib */; };
 		9CF02C0F2319571000614F6B /* ContestDepostiConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF02C0E2319571000614F6B /* ContestDepostiConfirmationVC.swift */; };
@@ -84,8 +87,8 @@
 		9C2628D723151B1A00835446 /* MusicInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicInfoCell.xib; sourceTree = "<group>"; };
 		9C2628DA23151B4300835446 /* ContestInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestInfoCell.swift; sourceTree = "<group>"; };
 		9C2628DB23151B4300835446 /* ContestInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContestInfoCell.xib; sourceTree = "<group>"; };
-		9C3211FF2317EBA7004375D8 /* CustomAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAlertView.xib; sourceTree = "<group>"; };
-		9C3212012317EBB3004375D8 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
+		9C3211FF2317EBA7004375D8 /* CustomAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CustomAlertView.xib; path = ../CustomAlertView.xib; sourceTree = "<group>"; };
+		9C3212012317EBB3004375D8 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomAlertView.swift; path = ../CustomAlertView.swift; sourceTree = "<group>"; };
 		9C32120323180049004375D8 /* ClientContestRegBasicInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientContestRegBasicInfoVC.swift; sourceTree = "<group>"; };
 		9C6178F6230FE33D007896F2 /* FeedSharedPopUpPrimary.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedSharedPopUpPrimary.xib; sourceTree = "<group>"; };
 		9C6178F8230FE37C007896F2 /* FeedSharedPopUpPrimary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSharedPopUpPrimary.swift; sourceTree = "<group>"; };
@@ -130,6 +133,9 @@
 		9C9AC4B222FEE05900230522 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		9CAC8215231556BB00936CE7 /* LoginClientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClientViewController.swift; sourceTree = "<group>"; };
 		9CCB4D5D230BED9E00375888 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9CCF2CD8231A52080062558A /* ImageViewerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerVC.swift; sourceTree = "<group>"; };
+		9CCF2CD9231A52080062558A /* ImageViewerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewerVC.xib; sourceTree = "<group>"; };
+		9CCF2CDC231A643E0062558A /* ClientRegistrationConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientRegistrationConfirmationVC.swift; sourceTree = "<group>"; };
 		9CF02C0A2319424700614F6B /* RefImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefImageCell.swift; sourceTree = "<group>"; };
 		9CF02C0B2319424700614F6B /* RefImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefImageCell.xib; sourceTree = "<group>"; };
 		9CF02C0E2319571000614F6B /* ContestDepostiConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestDepostiConfirmationVC.swift; sourceTree = "<group>"; };
@@ -155,6 +161,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C3D7D49231A513500A41C50 /* CustomAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				9C3211FF2317EBA7004375D8 /* CustomAlertView.xib */,
+				9C3212012317EBB3004375D8 /* CustomAlertView.swift */,
+			);
+			path = CustomAlertView;
+			sourceTree = "<group>";
+		};
 		9C6178FA230FF63F007896F2 /* SharedSuccessAlertView */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +319,7 @@
 				9C32120323180049004375D8 /* ClientContestRegBasicInfoVC.swift */,
 				9C76CCB72319022A003821C8 /* ClientContestRegDetailsViewController.swift */,
 				9CF02C0E2319571000614F6B /* ContestDepostiConfirmationVC.swift */,
+				9CCF2CDC231A643E0062558A /* ClientRegistrationConfirmationVC.swift */,
 			);
 			path = "Client VC";
 			sourceTree = "<group>";
@@ -314,8 +330,9 @@
 				9C693450231409B70053BFF0 /* CustomActionSheet */,
 				9CF1E7AC230FC03E0093D21F /* ShareView */,
 				9C6178FA230FF63F007896F2 /* SharedSuccessAlertView */,
-				9C3211FF2317EBA7004375D8 /* CustomAlertView.xib */,
-				9C3212012317EBB3004375D8 /* CustomAlertView.swift */,
+				9C3D7D49231A513500A41C50 /* CustomAlertView */,
+				9CCF2CD8231A52080062558A /* ImageViewerVC.swift */,
+				9CCF2CD9231A52080062558A /* ImageViewerVC.xib */,
 			);
 			path = "Reusable Components";
 			sourceTree = "<group>";
@@ -412,6 +429,7 @@
 				9C6178F7230FE33D007896F2 /* FeedSharedPopUpPrimary.xib in Resources */,
 				9C63193323014C8A00830385 /* ContestClosedCell.xib in Resources */,
 				9C3212002317EBA7004375D8 /* CustomAlertView.xib in Resources */,
+				9CCF2CDB231A52080062558A /* ImageViewerVC.xib in Resources */,
 				9C2628D923151B1A00835446 /* MusicInfoCell.xib in Resources */,
 				9C2628DD23151B4300835446 /* ContestInfoCell.xib in Resources */,
 			);
@@ -447,6 +465,7 @@
 				9C70645E22FEA65600E006D7 /* Extensions.swift in Sources */,
 				9C9AC4AD22FEE03600230522 /* MyPageViewController.swift in Sources */,
 				9CF1E7A5230F966D0093D21F /* SharePopUpView.swift in Sources */,
+				9CCF2CDD231A643E0062558A /* ClientRegistrationConfirmationVC.swift in Sources */,
 				9C6178FC230FF811007896F2 /* ContestDetailListViewController.swift in Sources */,
 				9C70647122FEB5DD00E006D7 /* LoginCreatorViewController.swift in Sources */,
 				9C70647322FEC0DC00E006D7 /* Constants.swift in Sources */,
@@ -457,6 +476,7 @@
 				9C9AC4AF22FEE04000230522 /* ChannelViewController.swift in Sources */,
 				9C63192223014C2400830385 /* FeaturedCreatorCell.swift in Sources */,
 				9C2628D523150FE200835446 /* UploadVideoCreatorViewController.swift in Sources */,
+				9CCF2CDA231A52080062558A /* ImageViewerVC.swift in Sources */,
 				9C617900230FFAA6007896F2 /* ContestDetailListCell.swift in Sources */,
 				9C3212022317EBB3004375D8 /* CustomAlertView.swift in Sources */,
 				9C70647522FECCED00E006D7 /* FeedViewController.swift in Sources */,

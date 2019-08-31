@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVKit
 
 class ClientContestRegDetailsViewController: UIViewController {
 
@@ -18,6 +19,7 @@ class ClientContestRegDetailsViewController: UIViewController {
     
     @IBOutlet weak var contestTitleTf: UITextField!
     @IBOutlet weak var imageCollView: UICollectionView!
+    @IBOutlet weak var videoPlayerThumbnailImageView: UIImageView!
     
     @IBOutlet weak var infoDescTv: UITextView!
     var images: [String] = []
@@ -35,9 +37,7 @@ class ClientContestRegDetailsViewController: UIViewController {
         //Other view setup
         viewSetup()
         
-        
     }
-    
     //MARK: Other View Setup
     func viewSetup() {
         
@@ -72,10 +72,34 @@ class ClientContestRegDetailsViewController: UIViewController {
             self.imgPicker?.allowsEditing = false
             self.imgPicker?.delegate = self
         }
+        
+        
+        //Add gesture recognizer to view thumbnail
+        addTapGestureToVideoThumb()
     }
-    
+    func addTapGestureToVideoThumb() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(openVideoVC))
+        videoPlayerThumbnailImageView.addGestureRecognizer(tapGesture)
+    }
+    //MARK: Navigating to other views
     func openPhotoPicker() {
         present(imgPicker!, animated: true, completion: nil)
+    }
+    //Display image viewer
+    func openImageViewer(image:UIImage) {
+        let imageVC = ImageViewerVC(nibName: "ImageViewerVC", bundle: nil)
+        imageVC.image = image
+        present(imageVC, animated: true, completion: nil)
+    }
+    @objc func openVideoVC() {
+        //Demo URL
+        let videoURL = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
+        let player = AVPlayer(url: videoURL!)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        self.present(playerViewController, animated: true) {
+            playerViewController.player!.play()
+        }
     }
 }
 
@@ -111,6 +135,13 @@ extension ClientContestRegDetailsViewController:UICollectionViewDataSource,UICol
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.viewWidth()/6, height: collectionView.viewWidth()/6)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if images.count > indexPath.row {
+            let image = images[indexPath.row]
+            openImageViewer(image: UIImage(named: image)!)
+        }
     }
 }
 
