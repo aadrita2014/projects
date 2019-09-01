@@ -57,6 +57,10 @@ class ContestDetailsClientVC: UIViewController {
         participationCollView.register(UINib(nibName: "ParticipationCell", bundle: nil), forCellWithReuseIdentifier: "ParticipationCell")
 
     }
+    //MARK: IBAction methods
+    @IBAction func backClicked() {
+        self.navigationController?.popViewController(animated: true)
+    }
     
 }
 

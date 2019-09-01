@@ -67,16 +67,6 @@ extension UIView {
     }
 
 }
-//extension UIStackView {
-//    
-//    func addBackground(color: UIColor) {
-//        let subview = UIView(frame: bounds)
-//        subview.backgroundColor = AppColors.gray_background_color
-//        subview.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-//        insertSubview(subview, at: 0)
-//    }
-//    
-//}
 extension UIButton {
     func underline() {
         let attributedString = NSMutableAttributedString(string: (self.titleLabel?.text!)!)
@@ -106,8 +96,9 @@ extension UITextField {
         self.layer.addSublayer(bottomLine)
         
     }
-    func updatePlaceHolder(text:String = "", color:UIColor = AppColors.default_placeholder_color)
-    {
+    func updatePlaceHolder(text:String = "", color:UIColor = AppColors.default_placeholder_color) {
         self.attributedPlaceholder = NSAttributedString(string: text, attributes: [NSAttributedString.Key.foregroundColor: color])
     }
 }
+
+
