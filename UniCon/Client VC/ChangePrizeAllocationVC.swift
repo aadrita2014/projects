@@ -16,8 +16,11 @@ class ChangePrizeAllocationVC: UIViewController {
     @IBOutlet weak var prize2Background: UIView!
     @IBOutlet weak var prize3Background: UIView!
     @IBOutlet weak var saveBtn: UIButton!
+    @IBOutlet weak var totalAmountLabel: UILabel!
     
     var alertView:CustomAlertView? = nil
+    var enteredAmount:String = ""
+    
     //MARK: Overriden view methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +32,6 @@ class ChangePrizeAllocationVC: UIViewController {
         //Other view setup methods
         setupView()
     }
-    
     func setupView() {
         
         //Background view setup
@@ -42,13 +44,20 @@ class ChangePrizeAllocationVC: UIViewController {
         prize1Background.addDarkGrayBackgroundColor()
         prize2Background.addDarkGrayBackgroundColor()
         prize3Background.addDarkGrayBackgroundColor()
+        
         //Buttons setup
         saveBtn.addCornerRadius()
+        
+        //Label setup
+        totalAmountLabel.text = enteredAmount
     }
-    
     //MARK: IBActions
     @IBAction func savePressed() {
             showAlertView()
+    }
+    @IBAction func backClicked() {
+        dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     func showAlertView(){

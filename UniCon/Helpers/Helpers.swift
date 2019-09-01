@@ -13,12 +13,12 @@ struct StringHelpers {
     //Converts the number into formatted price string and also adds currency string at the end
     static func convertToPriceStr(fromVal:Int) -> String {
         let formattedStr = formatToNumberStr(val: fromVal)
-        if let currencySymbol = Locale.current.currencySymbol {
-            return "\(formattedStr)\(currencySymbol)"
-        }
-        else {
+//        if let currencySymbol = Locale.current.currencySymbol {
+//            return "\(formattedStr)\(currencySymbol)"
+//        }
+//        else {
             return "\(formattedStr)원"
-        }
+      //  }
     }
     static func convertToPriceStr(fromVal:String) -> String {
         if let intVal = Int(fromVal) {
@@ -39,5 +39,11 @@ struct StringHelpers {
     static func formatToNumberStr(val:Double) -> String {
         let intVal = Int(val)
         return formatToNumberStr(val: intVal)
+    }
+    static func formatToNumberStr(val:String) -> String {
+        if let doubleVal = Double(val) {
+            return formatToNumberStr(val: doubleVal)
+        }
+        return ""
     }
 }

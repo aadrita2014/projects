@@ -105,7 +105,7 @@ class PrizeAllocationViewController: UIViewController {
         
         }
     }
-    //text field helper
+    //Text field helper
     func filterTextField(tf:UITextField) -> String {
         if let tfText = tf.text {
             //Remove spaces
@@ -114,10 +114,17 @@ class PrizeAllocationViewController: UIViewController {
         }
         return ""
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? ChangePrizeAllocationVC {
+            vc.enteredAmount = StringHelpers.convertToPriceStr(fromVal: priceTf.text!)
+        }
+    }
 }
 
 extension PrizeAllocationViewController:UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        //textField.text = StringHelpers.formatToNumberStr(val: textField.text!)
         calculatePrizeAmount()
         return true
     }
