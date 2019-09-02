@@ -23,7 +23,7 @@ class VideoRecordingVC: UIViewController {
     @IBOutlet weak var backButton:UIButton!
     @IBOutlet weak var nextButton:UIButton!
     
-    //Other Declaration
+    //Other Declarations
     fileprivate var recordingStatus:RecStatus = .notStartedRecording
     
     
@@ -40,7 +40,11 @@ class VideoRecordingVC: UIViewController {
     
     //MARK: Buttons/View Updates
     func updateButtons() {
+        
+        //View update according to the status of the app
         switch recordingStatus {
+            
+            
         case .notStartedRecording:
             nextButton.isHidden = true
             videoSaveButtons.isHidden = true
@@ -102,5 +106,8 @@ class VideoRecordingVC: UIViewController {
     }
     @IBAction func nextButtonClicked() {
         self.performSegue(withIdentifier: "UploadVideo", sender: nil)
+    }
+    @IBAction func addMusicClicked() {
+        self.performSegue(withIdentifier: "AddMusic", sender: nil)
     }
 }

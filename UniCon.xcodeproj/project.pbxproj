@@ -17,6 +17,11 @@
 		9C2628D923151B1A00835446 /* MusicInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C2628D723151B1A00835446 /* MusicInfoCell.xib */; };
 		9C2628DC23151B4300835446 /* ContestInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2628DA23151B4300835446 /* ContestInfoCell.swift */; };
 		9C2628DD23151B4300835446 /* ContestInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C2628DB23151B4300835446 /* ContestInfoCell.xib */; };
+		9C2FF924231D2AEA004923DE /* AddMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2FF923231D2AEA004923DE /* AddMusicViewController.swift */; };
+		9C2FF927231D2D9C004923DE /* MusicCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2FF925231D2D9C004923DE /* MusicCategoryCell.swift */; };
+		9C2FF928231D2D9C004923DE /* MusicCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C2FF926231D2D9C004923DE /* MusicCategoryCell.xib */; };
+		9C2FF92B231D2F67004923DE /* MusicAddInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2FF929231D2F67004923DE /* MusicAddInfoCell.swift */; };
+		9C2FF92C231D2F67004923DE /* MusicAddInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C2FF92A231D2F67004923DE /* MusicAddInfoCell.xib */; };
 		9C3212002317EBA7004375D8 /* CustomAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C3211FF2317EBA7004375D8 /* CustomAlertView.xib */; };
 		9C3212022317EBB3004375D8 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3212012317EBB3004375D8 /* CustomAlertView.swift */; };
 		9C3212042318004A004375D8 /* ClientContestRegBasicInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C32120323180049004375D8 /* ClientContestRegBasicInfoVC.swift */; };
@@ -92,6 +97,11 @@
 		9C2628D723151B1A00835446 /* MusicInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicInfoCell.xib; sourceTree = "<group>"; };
 		9C2628DA23151B4300835446 /* ContestInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestInfoCell.swift; sourceTree = "<group>"; };
 		9C2628DB23151B4300835446 /* ContestInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContestInfoCell.xib; sourceTree = "<group>"; };
+		9C2FF923231D2AEA004923DE /* AddMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMusicViewController.swift; sourceTree = "<group>"; };
+		9C2FF925231D2D9C004923DE /* MusicCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCategoryCell.swift; sourceTree = "<group>"; };
+		9C2FF926231D2D9C004923DE /* MusicCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicCategoryCell.xib; sourceTree = "<group>"; };
+		9C2FF929231D2F67004923DE /* MusicAddInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicAddInfoCell.swift; sourceTree = "<group>"; };
+		9C2FF92A231D2F67004923DE /* MusicAddInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicAddInfoCell.xib; sourceTree = "<group>"; };
 		9C3211FF2317EBA7004375D8 /* CustomAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CustomAlertView.xib; path = ../CustomAlertView.xib; sourceTree = "<group>"; };
 		9C3212012317EBB3004375D8 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomAlertView.swift; path = ../CustomAlertView.swift; sourceTree = "<group>"; };
 		9C32120323180049004375D8 /* ClientContestRegBasicInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientContestRegBasicInfoVC.swift; sourceTree = "<group>"; };
@@ -196,6 +206,8 @@
 				9C6178FF230FFAA6007896F2 /* ContestDetailListCell.xib */,
 				9C2628D623151B1A00835446 /* MusicInfoCell.swift */,
 				9C2628D723151B1A00835446 /* MusicInfoCell.xib */,
+				9C2FF929231D2F67004923DE /* MusicAddInfoCell.swift */,
+				9C2FF92A231D2F67004923DE /* MusicAddInfoCell.xib */,
 				9C2628DA23151B4300835446 /* ContestInfoCell.swift */,
 				9C2628DB23151B4300835446 /* ContestInfoCell.xib */,
 			);
@@ -219,6 +231,8 @@
 				9CF9324D2316B158002AC77D /* ParticipationCell.xib */,
 				9CF02C0A2319424700614F6B /* RefImageCell.swift */,
 				9CF02C0B2319424700614F6B /* RefImageCell.xib */,
+				9C2FF925231D2D9C004923DE /* MusicCategoryCell.swift */,
+				9C2FF926231D2D9C004923DE /* MusicCategoryCell.xib */,
 			);
 			path = "Custom Coll Cells";
 			sourceTree = "<group>";
@@ -315,6 +329,7 @@
 				9C9AC4AE22FEE04000230522 /* ChannelViewController.swift */,
 				9CF1EAA42314440D006895F9 /* VideoRecordingVC.swift */,
 				9C2628D423150FE200835446 /* UploadVideoCreatorViewController.swift */,
+				9C2FF923231D2AEA004923DE /* AddMusicViewController.swift */,
 				9C9AC4B222FEE05900230522 /* AlarmViewController.swift */,
 			);
 			path = "TabView Controller";
@@ -432,6 +447,7 @@
 				9C70646F22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf in Resources */,
 				9C70646222FEA9C900E006D7 /* NotoSansCJKkr-Bold.otf in Resources */,
 				9CF02C0D2319424700614F6B /* RefImageCell.xib in Resources */,
+				9C2FF92C231D2F67004923DE /* MusicAddInfoCell.xib in Resources */,
 				9C1BED9F231116350011F296 /* CustomActionSheetCell.xib in Resources */,
 				9C70645322FEA3AE00E006D7 /* Assets.xcassets in Resources */,
 				9C63192323014C2400830385 /* FeaturedCreatorCell.xib in Resources */,
@@ -443,6 +459,7 @@
 				9C70646722FEAFEF00E006D7 /* NotoSansCJKkr-Medium.otf in Resources */,
 				9C6178F7230FE33D007896F2 /* FeedSharedPopUpPrimary.xib in Resources */,
 				9C63193323014C8A00830385 /* ContestClosedCell.xib in Resources */,
+				9C2FF928231D2D9C004923DE /* MusicCategoryCell.xib in Resources */,
 				9C3212002317EBA7004375D8 /* CustomAlertView.xib in Resources */,
 				9CCF2CDB231A52080062558A /* ImageViewerVC.xib in Resources */,
 				9C2628D923151B1A00835446 /* MusicInfoCell.xib in Resources */,
@@ -457,8 +474,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C2FF924231D2AEA004923DE /* AddMusicViewController.swift in Sources */,
 				9C359031231A8783001C72DF /* ContestDetailsSharedDepositVC.swift in Sources */,
 				9C63193223014C8A00830385 /* ContestClosedCell.swift in Sources */,
+				9C2FF927231D2D9C004923DE /* MusicCategoryCell.swift in Sources */,
 				9C75F09A2317C67900E7B3F2 /* ChangePrizeAllocationVC.swift in Sources */,
 				9CCB4D5E230BED9E00375888 /* ShareFeeDetailsClientVC.swift in Sources */,
 				9CF02C0F2319571000614F6B /* ContestDepostiConfirmationVC.swift in Sources */,
@@ -480,6 +499,7 @@
 				9C76CCB82319022A003821C8 /* ClientContestRegDetailsViewController.swift in Sources */,
 				9C70644922FEA3AC00E006D7 /* AppDelegate.swift in Sources */,
 				9C1FD5F8230C5A5B0073EEF4 /* CongratulationPopViewController.swift in Sources */,
+				9C2FF92B231D2F67004923DE /* MusicAddInfoCell.swift in Sources */,
 				9C9AC4AA22FEDB5D00230522 /* GeneralVideosViewController.swift in Sources */,
 				9CCC584B231BCB180007112A /* Helpers.swift in Sources */,
 				9C70645E22FEA65600E006D7 /* Extensions.swift in Sources */,

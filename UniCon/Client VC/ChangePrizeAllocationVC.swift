@@ -18,8 +18,18 @@ class ChangePrizeAllocationVC: UIViewController {
     @IBOutlet weak var saveBtn: UIButton!
     @IBOutlet weak var totalAmountLabel: UILabel!
     
+    @IBOutlet weak var prize1Slider: UISlider!
+    @IBOutlet weak var prize2Slider: UISlider!
+    @IBOutlet weak var prize3Slider: UISlider!
+    
+    @IBOutlet weak var prize1Label: UILabel!
+    @IBOutlet weak var prize2Label: UILabel!
+    @IBOutlet weak var prize3Label: UILabel!
+    
+    
     var alertView:CustomAlertView? = nil
     var enteredAmount:String = ""
+    var prizeDtributionArr = [0,0,0]
     
     //MARK: Overriden view methods
     override func viewDidLoad() {
@@ -53,15 +63,45 @@ class ChangePrizeAllocationVC: UIViewController {
     }
     //MARK: IBActions
     @IBAction func savePressed() {
-            showAlertView()
+        if checkForTotalPercentage() {
+            dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     @IBAction func backClicked() {
         dismiss(animated: true, completion: nil)
         self.navigationController?.popViewController(animated: true)
     }
+    @IBAction func sliderChanged(_ sender:UISlider) {
+        let intVal = Int(sender.value * 100.0)
+        let str = "\(intVal)" + "%"
+        if sender == prize1Slider {
+            prize1Label.text = str
+            prizeDtributionArr[0] = intVal
+        }
+        else if sender == prize2Slider {
+            prize2Label.text = str
+            prizeDtributionArr[1] = intVal
+        }
+        else if sender == prize3Slider {
+            prize3Label.text = str
+            prizeDtributionArr[2] = intVal
+        }
+    }
     
-    func showAlertView(){
-        
+    func checkForTotalPercentage() -> Bool{
+        var totPercent = 0
+        for element in prizeDtributionArr {
+            totPercent = totPercent + element
+        }
+        if totPercent != 100 {
+            showErrorAlertView()
+            return false
+        }
+        return true
+    }
+    //MARK: Custom Alert View
+    func showErrorAlertView(){
         if alertView == nil {
             alertView = CustomAlertView(frame: self.view.frame , title: "상금 배분 오류", desc: "상금 배분의 총 합은 100%보다 \n작거나 클 수 없습니다.", btnTitle: "확인")
             alertView?.dismissClicked = {
@@ -77,5 +117,7 @@ class ChangePrizeAllocationVC: UIViewController {
             alertView = nil
         }
     }
+    
+    
     
 }

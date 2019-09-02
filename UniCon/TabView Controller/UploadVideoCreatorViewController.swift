@@ -8,11 +8,20 @@
 
 import UIKit
 
+//To be inherited for other classes
+class MusicInfo {
+    let image,title,artistInfo,duration:String
+    
+    init(image:String,title:String,artistInfo:String,duration:String) {
+        self.image = image
+        self.title = title
+        self.artistInfo = artistInfo
+        self.duration = duration
+    }
+}
+
 class UploadVideoCreatorViewController: UIViewController {
     
-    struct MusicInfo {
-        let image,title,artistInfo,duration:String
-    }
     
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var videoInfoTv: UITableView!
@@ -72,6 +81,7 @@ class UploadVideoCreatorViewController: UIViewController {
         videoInfoTv.reloadData()
         reloadTable()
     }
+
 }
 
 extension UploadVideoCreatorViewController:UITableViewDelegate, UITableViewDataSource {
@@ -92,7 +102,6 @@ extension UploadVideoCreatorViewController:UITableViewDelegate, UITableViewDataS
         return 1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         if showContestDetails{
             if indexPath.section == 0 {
                 let contestCell = tableView.dequeueReusableCell(withIdentifier: "ContestCell", for: indexPath) as! ContestDetailListCell
