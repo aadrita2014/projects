@@ -25,10 +25,10 @@ class SharePopUpView: UIView, UICollectionViewDataSource, UICollectionViewDelega
     var shareSuccessful:(()->Void)?
     var socialMediaModels = [
         ShareSocialMediaModel(image: "shareFacebook", name: "Facebook", sharePrice: "100",isSocialPlatform: true),
-        ShareSocialMediaModel(image: "shareFacebook", name: "Instagram", sharePrice: "100",isSocialPlatform: true),
+        ShareSocialMediaModel(image: "shareInstagram", name: "Instagram", sharePrice: "100",isSocialPlatform: true),
         ShareSocialMediaModel(image: "shareInstagramStory", name: "Story", sharePrice: "100",isSocialPlatform: true),
-        ShareSocialMediaModel(image: "shareFacebook", name: "Twitter", sharePrice: "100",isSocialPlatform: true),
-        ShareSocialMediaModel(image: "shareFacebook", name: "Band", sharePrice: "100",isSocialPlatform: true),
+        ShareSocialMediaModel(image: "shareTwitter", name: "Twitter", sharePrice: "100",isSocialPlatform: true),
+        ShareSocialMediaModel(image: "shareBand", name: "Band", sharePrice: "100",isSocialPlatform: true),
         ShareSocialMediaModel(image: "shareMore", name: "More", sharePrice: "100",isSocialPlatform: false),
         ShareSocialMediaModel(image: "shareReport", name: "Report", sharePrice: "100",isSocialPlatform: false)
     ]

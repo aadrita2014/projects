@@ -25,6 +25,7 @@ class VideoRecordingVC: UIViewController {
     
     //Other Declarations
     fileprivate var recordingStatus:RecStatus = .notStartedRecording
+    fileprivate var filterPopupView:FilterPopupView?
     
     
     override func viewDidLoad() {
@@ -43,7 +44,6 @@ class VideoRecordingVC: UIViewController {
         
         //View update according to the status of the app
         switch recordingStatus {
-            
             
         case .notStartedRecording:
             nextButton.isHidden = true
@@ -80,13 +80,33 @@ class VideoRecordingVC: UIViewController {
             backButton.isHidden = false
             recordBtn.isHidden = true
             recordBtn.setImage(UIImage(named: "btnVideoStart"), for: .normal)
+            
+       
         }
     }
     
+    func hideAllBtns() {
+        nextButton.isHidden = true
+        videoSaveButtons.isHidden = true
+        videoEditButtons.isHidden = true
+        galleryView.isHidden = true
+        backButton.isHidden = false
+        recordBtn.isHidden = true
+    }
     //MARK: IBActions
     @IBAction func backClicked() {
         self.navigationController?.popViewController(animated: true)
     }
+    @IBAction func nextButtonClicked() {
+        self.performSegue(withIdentifier: "UploadVideo", sender: nil)
+    }
+    @IBAction func addMusicClicked() {
+        self.performSegue(withIdentifier: "AddMusic", sender: nil)
+    }
+    @IBAction func addFilterClicked() {
+        showFilterPopupView()
+    }
+    //MARK: Video Recording IBActions
     @IBAction func recordVideoClicked() {
         if recordingStatus == .notStartedRecording {
             recordingStatus = .recording
@@ -104,10 +124,24 @@ class VideoRecordingVC: UIViewController {
         recordingStatus = .saved
         updateButtons()
     }
-    @IBAction func nextButtonClicked() {
-        self.performSegue(withIdentifier: "UploadVideo", sender: nil)
+    //MARK: Filter Pop Up View
+    func showFilterPopupView() {
+        if filterPopupView == nil {
+            filterPopupView = FilterPopupView(frame: CGRect(x: 0, y: 0, width: self.view.viewWidth(), height: self.view.viewHeight()))
+            filterPopupView?.dismissViewAction = {
+                self.hideFilterPopupView()
+            }
+            filterPopupView?.saveFilterAction = {
+                self.hideFilterPopupView()
+            }
+            filterPopupView?.shareCollView.reloadData()
+            self.view.addSubview(filterPopupView!)
+            hideAllBtns()
+        }
     }
-    @IBAction func addMusicClicked() {
-        self.performSegue(withIdentifier: "AddMusic", sender: nil)
+    func hideFilterPopupView() {
+        filterPopupView?.removeFromSuperview()
+        filterPopupView = nil
+        updateButtons()
     }
 }

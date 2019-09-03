@@ -1,14 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "shareBand.png",
       "scale" : "1x",
       "idiom" : "universal"
     },
     {
       "idiom" : "universal",
+      "filename" : "shareBand@2x.png",
       "scale" : "2x"
     },
     {
+      "filename" : "shareBand@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

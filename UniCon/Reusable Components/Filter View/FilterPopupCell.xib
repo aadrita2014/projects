@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansCJKkr-Regular.otf">
+            <string>NotoSansCJKkr-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FilterPopupCell" customModule="UniCon" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="201" height="283"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="201" height="283"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXz-mL-sja">
+                        <rect key="frame" x="0.0" y="0.0" width="201" height="283"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demo_featured_creator" translatesAutoresizingMaskIntoConstraints="NO" id="T3a-S1-wzE">
+                                <rect key="frame" x="0.0" y="16" width="201" height="201"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="T3a-S1-wzE" secondAttribute="height" multiplier="1:1" id="qln-gA-KWc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="FaceBook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOj-bP-ehj">
+                                <rect key="frame" x="0.0" y="217" width="201" height="66"/>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="T3a-S1-wzE" secondAttribute="trailing" id="1wc-xT-hrs"/>
+                            <constraint firstItem="T3a-S1-wzE" firstAttribute="leading" secondItem="gXz-mL-sja" secondAttribute="leading" id="CS3-u5-4JU"/>
+                            <constraint firstItem="T3a-S1-wzE" firstAttribute="top" secondItem="gXz-mL-sja" secondAttribute="top" constant="16" id="VTi-qw-xr0"/>
+                            <constraint firstAttribute="bottom" secondItem="AOj-bP-ehj" secondAttribute="bottom" id="cKi-Tj-i8z"/>
+                            <constraint firstAttribute="trailing" secondItem="AOj-bP-ehj" secondAttribute="trailing" id="qjg-rP-bFp"/>
+                            <constraint firstItem="AOj-bP-ehj" firstAttribute="top" secondItem="T3a-S1-wzE" secondAttribute="bottom" id="vNK-bR-1L4"/>
+                            <constraint firstItem="AOj-bP-ehj" firstAttribute="leading" secondItem="gXz-mL-sja" secondAttribute="leading" id="wav-sE-Zgn"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gXz-mL-sja" secondAttribute="trailing" id="SZg-Ub-xVf"/>
+                <constraint firstAttribute="bottom" secondItem="gXz-mL-sja" secondAttribute="bottom" id="VeD-bE-qOr"/>
+                <constraint firstItem="gXz-mL-sja" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="YHs-Ak-22p"/>
+                <constraint firstItem="gXz-mL-sja" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="eJe-54-zfI"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="201" height="283"/>
+            <connections>
+                <outlet property="filterImage" destination="T3a-S1-wzE" id="LBa-OH-9eF"/>
+                <outlet property="filterName" destination="AOj-bP-ehj" id="lqn-5P-JWt"/>
+            </connections>
+            <point key="canvasLocation" x="247.10144927536234" y="210.60267857142856"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="demo_featured_creator" width="140" height="230"/>
+    </resources>
+</document>
