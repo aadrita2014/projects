@@ -28,6 +28,7 @@ class VideoRecordingVC: UIViewController {
     fileprivate var filterPopupView:FilterPopupView?
     fileprivate var timerSettingScreenPopupView:TimerSettingScreen?
     fileprivate var musicEditingPopupView:MusicEditingPopupView?
+    fileprivate var stickerPopupView:AddStickersPopupView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,6 +111,9 @@ class VideoRecordingVC: UIViewController {
     @IBAction func editMusicClicked() {
         showMusicEditingPopupView()
     }
+    @IBAction func addStickersClicked() {
+        showStickerPopupView()
+    }
     //MARK: Video Recording IBActions
     @IBAction func recordVideoClicked() {
         if recordingStatus == .notStartedRecording {
@@ -178,6 +182,22 @@ class VideoRecordingVC: UIViewController {
     func hideMusicEditingPopupView() {
         musicEditingPopupView?.removeFromSuperview()
         musicEditingPopupView = nil
+        updateButtons()
+    }
+    //MARK: Timer Setting Screen Popup View
+    func showStickerPopupView() {
+        if stickerPopupView == nil {
+            stickerPopupView =  AddStickersPopupView(frame: CGRect(x: 0, y: 0, width: self.view.viewWidth(), height: self.view.viewHeight()))
+            stickerPopupView?.dismissViewAction = {
+                self.hideStickerPopUpView()
+            }
+            self.view.addSubview(stickerPopupView!)
+            hideAllBtns()
+        }
+    }
+    func hideStickerPopUpView() {
+        stickerPopupView?.removeFromSuperview()
+        stickerPopupView = nil
         updateButtons()
     }
 }

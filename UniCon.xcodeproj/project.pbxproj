@@ -64,6 +64,10 @@
 		9C76CCB82319022A003821C8 /* ClientContestRegDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76CCB72319022A003821C8 /* ClientContestRegDetailsViewController.swift */; };
 		9C7A8A9D2320D65F00A399C2 /* MusicEditingPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7A8A9C2320D65F00A399C2 /* MusicEditingPopupView.swift */; };
 		9C7A8A9F2320D6E100A399C2 /* MusicEditingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C7A8A9E2320D6E100A399C2 /* MusicEditingView.xib */; };
+		9C7D49E22321214E0011FDAF /* AddStickersPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7D49E12321214E0011FDAF /* AddStickersPopupView.swift */; };
+		9C7D49E4232121640011FDAF /* AddStickersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C7D49E3232121640011FDAF /* AddStickersView.xib */; };
+		9C7D49EA2321287B0011FDAF /* StickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7D49E82321287B0011FDAF /* StickerCell.swift */; };
+		9C7D49EB2321287B0011FDAF /* StickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C7D49E92321287B0011FDAF /* StickerCell.xib */; };
 		9C9AC4A822FEDB4B00230522 /* ContestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4A722FEDB4B00230522 /* ContestViewController.swift */; };
 		9C9AC4AA22FEDB5D00230522 /* GeneralVideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4A922FEDB5D00230522 /* GeneralVideosViewController.swift */; };
 		9C9AC4AD22FEE03600230522 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4AC22FEE03600230522 /* MyPageViewController.swift */; };
@@ -156,6 +160,10 @@
 		9C76CCB72319022A003821C8 /* ClientContestRegDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientContestRegDetailsViewController.swift; sourceTree = "<group>"; };
 		9C7A8A9C2320D65F00A399C2 /* MusicEditingPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicEditingPopupView.swift; sourceTree = "<group>"; };
 		9C7A8A9E2320D6E100A399C2 /* MusicEditingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicEditingView.xib; sourceTree = "<group>"; };
+		9C7D49E12321214E0011FDAF /* AddStickersPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStickersPopupView.swift; sourceTree = "<group>"; };
+		9C7D49E3232121640011FDAF /* AddStickersView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddStickersView.xib; sourceTree = "<group>"; };
+		9C7D49E82321287B0011FDAF /* StickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerCell.swift; sourceTree = "<group>"; };
+		9C7D49E92321287B0011FDAF /* StickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StickerCell.xib; sourceTree = "<group>"; };
 		9C9AC4A722FEDB4B00230522 /* ContestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestViewController.swift; sourceTree = "<group>"; };
 		9C9AC4A922FEDB5D00230522 /* GeneralVideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralVideosViewController.swift; sourceTree = "<group>"; };
 		9C9AC4AC22FEE03600230522 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
@@ -355,6 +363,35 @@
 			path = "Custom Fonts";
 			sourceTree = "<group>";
 		};
+		9C7D49E5232128100011FDAF /* Timer Setting Screen */ = {
+			isa = PBXGroup;
+			children = (
+				9C9AC6A52320BFF50091EE77 /* TimerSettingScreen.swift */,
+				9C9AC6A72320C05E0091EE77 /* TimerSettingScreen.xib */,
+			);
+			path = "Timer Setting Screen";
+			sourceTree = "<group>";
+		};
+		9C7D49E6232128220011FDAF /* MusicEditingView */ = {
+			isa = PBXGroup;
+			children = (
+				9C7A8A9C2320D65F00A399C2 /* MusicEditingPopupView.swift */,
+				9C7A8A9E2320D6E100A399C2 /* MusicEditingView.xib */,
+			);
+			path = MusicEditingView;
+			sourceTree = "<group>";
+		};
+		9C7D49E7232128310011FDAF /* Add Stickers View */ = {
+			isa = PBXGroup;
+			children = (
+				9C7D49E12321214E0011FDAF /* AddStickersPopupView.swift */,
+				9C7D49E3232121640011FDAF /* AddStickersView.xib */,
+				9C7D49E82321287B0011FDAF /* StickerCell.swift */,
+				9C7D49E92321287B0011FDAF /* StickerCell.xib */,
+			);
+			path = "Add Stickers View";
+			sourceTree = "<group>";
+		};
 		9C9AC4AB22FEE00B00230522 /* TabView Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,10 +436,9 @@
 				9C3D7D49231A513500A41C50 /* CustomAlertView */,
 				9C2FF92D231D50C1004923DE /* ImageViewer */,
 				9C6E2733231E1D9700C197D7 /* Filter View */,
-				9C9AC6A52320BFF50091EE77 /* TimerSettingScreen.swift */,
-				9C9AC6A72320C05E0091EE77 /* TimerSettingScreen.xib */,
-				9C7A8A9C2320D65F00A399C2 /* MusicEditingPopupView.swift */,
-				9C7A8A9E2320D6E100A399C2 /* MusicEditingView.xib */,
+				9C7D49E5232128100011FDAF /* Timer Setting Screen */,
+				9C7D49E6232128220011FDAF /* MusicEditingView */,
+				9C7D49E7232128310011FDAF /* Add Stickers View */,
 			);
 			path = "Reusable Components";
 			sourceTree = "<group>";
@@ -481,6 +517,7 @@
 				9C70646922FEAFFC00E006D7 /* NotoSansCJKkr-Light.otf in Resources */,
 				9C70645622FEA3AF00E006D7 /* LaunchScreen.storyboard in Resources */,
 				9CF1E7AB230F98890093D21F /* SharePopUpCell.xib in Resources */,
+				9C7D49EB2321287B0011FDAF /* StickerCell.xib in Resources */,
 				9CF1E7A7230F967E0093D21F /* SharePopUpView.xib in Resources */,
 				9C6E2732231E088A00C197D7 /* FilterPopupCell.xib in Resources */,
 				9C7A8A9F2320D6E100A399C2 /* MusicEditingView.xib in Resources */,
@@ -493,6 +530,7 @@
 				9C2FF92C231D2F67004923DE /* MusicAddInfoCell.xib in Resources */,
 				9C1BED9F231116350011F296 /* CustomActionSheetCell.xib in Resources */,
 				9C70645322FEA3AE00E006D7 /* Assets.xcassets in Resources */,
+				9C7D49E4232121640011FDAF /* AddStickersView.xib in Resources */,
 				9C6E272E231E084B00C197D7 /* FilterPopupView.xib in Resources */,
 				9C63192323014C2400830385 /* FeaturedCreatorCell.xib in Resources */,
 				9C1BED99231112F10011F296 /* CustomActionSheetView.xib in Resources */,
@@ -551,6 +589,7 @@
 				9CCC584B231BCB180007112A /* Helpers.swift in Sources */,
 				9C70645E22FEA65600E006D7 /* Extensions.swift in Sources */,
 				9C9AC4AD22FEE03600230522 /* MyPageViewController.swift in Sources */,
+				9C7D49EA2321287B0011FDAF /* StickerCell.swift in Sources */,
 				9CF1E7A5230F966D0093D21F /* SharePopUpView.swift in Sources */,
 				9CCF2CDD231A643E0062558A /* ClientRegistrationConfirmationVC.swift in Sources */,
 				9C6178FC230FF811007896F2 /* ContestDetailListViewController.swift in Sources */,
@@ -564,6 +603,7 @@
 				9C63192223014C2400830385 /* FeaturedCreatorCell.swift in Sources */,
 				9C2628D523150FE200835446 /* UploadVideoCreatorViewController.swift in Sources */,
 				9C6E272C231E081E00C197D7 /* FilterPopupView.swift in Sources */,
+				9C7D49E22321214E0011FDAF /* AddStickersPopupView.swift in Sources */,
 				9CCF2CDA231A52080062558A /* ImageViewerVC.swift in Sources */,
 				9C617900230FFAA6007896F2 /* ContestDetailListCell.swift in Sources */,
 				9C3212022317EBB3004375D8 /* CustomAlertView.swift in Sources */,
