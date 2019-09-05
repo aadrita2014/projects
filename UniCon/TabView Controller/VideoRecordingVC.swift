@@ -27,6 +27,7 @@ class VideoRecordingVC: UIViewController {
     fileprivate var recordingStatus:RecStatus = .notStartedRecording
     fileprivate var filterPopupView:FilterPopupView?
     fileprivate var timerSettingScreenPopupView:TimerSettingScreen?
+    fileprivate var musicEditingPopupView:MusicEditingPopupView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,11 +81,8 @@ class VideoRecordingVC: UIViewController {
             backButton.isHidden = false
             recordBtn.isHidden = true
             recordBtn.setImage(UIImage(named: "btnVideoStart"), for: .normal)
-            
-       
         }
     }
-    
     func hideAllBtns() {
         nextButton.isHidden = true
         videoSaveButtons.isHidden = true
@@ -108,6 +106,9 @@ class VideoRecordingVC: UIViewController {
     }
     @IBAction func startTimerClicked() {
         showTimerScreenPopupView()
+    }
+    @IBAction func editMusicClicked() {
+        showMusicEditingPopupView()
     }
     //MARK: Video Recording IBActions
     @IBAction func recordVideoClicked() {
@@ -161,6 +162,22 @@ class VideoRecordingVC: UIViewController {
     func hideTimerScreenPopupView() {
         timerSettingScreenPopupView?.removeFromSuperview()
         timerSettingScreenPopupView = nil
+        updateButtons()
+    }
+    //MARK: Timer Setting Screen Popup View
+    func showMusicEditingPopupView() {
+        if musicEditingPopupView == nil {
+            musicEditingPopupView = MusicEditingPopupView(frame: CGRect(x: 0, y: 0, width: self.view.viewWidth(), height: self.view.viewHeight()))
+            musicEditingPopupView?.selectedAction = {
+                self.hideMusicEditingPopupView()
+            }
+            self.view.addSubview(musicEditingPopupView!)
+            hideAllBtns()
+        }
+    }
+    func hideMusicEditingPopupView() {
+        musicEditingPopupView?.removeFromSuperview()
+        musicEditingPopupView = nil
         updateButtons()
     }
 }

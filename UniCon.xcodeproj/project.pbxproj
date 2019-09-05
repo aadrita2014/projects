@@ -62,6 +62,8 @@
 		9C70647522FECCED00E006D7 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70647422FECCED00E006D7 /* FeedViewController.swift */; };
 		9C75F09A2317C67900E7B3F2 /* ChangePrizeAllocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C75F0992317C67900E7B3F2 /* ChangePrizeAllocationVC.swift */; };
 		9C76CCB82319022A003821C8 /* ClientContestRegDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76CCB72319022A003821C8 /* ClientContestRegDetailsViewController.swift */; };
+		9C7A8A9D2320D65F00A399C2 /* MusicEditingPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7A8A9C2320D65F00A399C2 /* MusicEditingPopupView.swift */; };
+		9C7A8A9F2320D6E100A399C2 /* MusicEditingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C7A8A9E2320D6E100A399C2 /* MusicEditingView.xib */; };
 		9C9AC4A822FEDB4B00230522 /* ContestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4A722FEDB4B00230522 /* ContestViewController.swift */; };
 		9C9AC4AA22FEDB5D00230522 /* GeneralVideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4A922FEDB5D00230522 /* GeneralVideosViewController.swift */; };
 		9C9AC4AD22FEE03600230522 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4AC22FEE03600230522 /* MyPageViewController.swift */; };
@@ -152,6 +154,8 @@
 		9C70647422FECCED00E006D7 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		9C75F0992317C67900E7B3F2 /* ChangePrizeAllocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePrizeAllocationVC.swift; sourceTree = "<group>"; };
 		9C76CCB72319022A003821C8 /* ClientContestRegDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientContestRegDetailsViewController.swift; sourceTree = "<group>"; };
+		9C7A8A9C2320D65F00A399C2 /* MusicEditingPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicEditingPopupView.swift; sourceTree = "<group>"; };
+		9C7A8A9E2320D6E100A399C2 /* MusicEditingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicEditingView.xib; sourceTree = "<group>"; };
 		9C9AC4A722FEDB4B00230522 /* ContestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestViewController.swift; sourceTree = "<group>"; };
 		9C9AC4A922FEDB5D00230522 /* GeneralVideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralVideosViewController.swift; sourceTree = "<group>"; };
 		9C9AC4AC22FEE03600230522 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
@@ -397,6 +401,8 @@
 				9C6E2733231E1D9700C197D7 /* Filter View */,
 				9C9AC6A52320BFF50091EE77 /* TimerSettingScreen.swift */,
 				9C9AC6A72320C05E0091EE77 /* TimerSettingScreen.xib */,
+				9C7A8A9C2320D65F00A399C2 /* MusicEditingPopupView.swift */,
+				9C7A8A9E2320D6E100A399C2 /* MusicEditingView.xib */,
 			);
 			path = "Reusable Components";
 			sourceTree = "<group>";
@@ -477,6 +483,7 @@
 				9CF1E7AB230F98890093D21F /* SharePopUpCell.xib in Resources */,
 				9CF1E7A7230F967E0093D21F /* SharePopUpView.xib in Resources */,
 				9C6E2732231E088A00C197D7 /* FilterPopupCell.xib in Resources */,
+				9C7A8A9F2320D6E100A399C2 /* MusicEditingView.xib in Resources */,
 				9C63192723014C4800830385 /* ReferralClientCell.xib in Resources */,
 				9C617901230FFAA6007896F2 /* ContestDetailListCell.xib in Resources */,
 				9C70646F22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf in Resources */,
@@ -523,6 +530,7 @@
 				9C70645122FEA3AC00E006D7 /* UniCon.xcdatamodeld in Sources */,
 				9CF02C0C2319424700614F6B /* RefImageCell.swift in Sources */,
 				9C2628DC23151B4300835446 /* ContestInfoCell.swift in Sources */,
+				9C7A8A9D2320D65F00A399C2 /* MusicEditingPopupView.swift in Sources */,
 				9C9AC6A62320BFF50091EE77 /* TimerSettingScreen.swift in Sources */,
 				9C1BED9E231116350011F296 /* CustomActionSheetCell.swift in Sources */,
 				9CCF2CDF231A6EEF0062558A /* ContestRegistrationDepositInfoVC.swift in Sources */,
