@@ -64,6 +64,7 @@ class FilterPopupView: UIView {
             action()
         }
     }
+    //To rotate the screens and layout the views accordingly
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         
@@ -78,26 +79,9 @@ class FilterPopupView: UIView {
         self.shareCollView.collectionViewLayout.invalidateLayout()
         self.shareCollView.reloadData()
     }
-    
-//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-//        super.viewWillTransition(to: size, with: coordinator)
-//
-//        self.collectionView?.collectionViewLayout.invalidateLayout()
-//
-//        coordinator.animate(alongsideTransition: { context in
-//
-//        }, completion: { context in
-//            self.collectionView?.collectionViewLayout.invalidateLayout()
-//
-//            self.collectionView?.visibleCells.forEach { cell in
-//                guard let cell = cell as? Cell else {
-//                    return
-//                }
-//                cell.setCircularImageView()
-//            }
-//        })
-//    }
 }
+
+
 extension FilterPopupView:UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     //MARK: Collection View Delegates
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

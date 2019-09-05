@@ -26,7 +26,7 @@ class VideoRecordingVC: UIViewController {
     //Other Declarations
     fileprivate var recordingStatus:RecStatus = .notStartedRecording
     fileprivate var filterPopupView:FilterPopupView?
-    
+    fileprivate var timerSettingScreenPopupView:TimerSettingScreen?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,6 +106,9 @@ class VideoRecordingVC: UIViewController {
     @IBAction func addFilterClicked() {
         showFilterPopupView()
     }
+    @IBAction func startTimerClicked() {
+        showTimerScreenPopupView()
+    }
     //MARK: Video Recording IBActions
     @IBAction func recordVideoClicked() {
         if recordingStatus == .notStartedRecording {
@@ -142,6 +145,22 @@ class VideoRecordingVC: UIViewController {
     func hideFilterPopupView() {
         filterPopupView?.removeFromSuperview()
         filterPopupView = nil
+        updateButtons()
+    }
+    //MARK: Timer Setting Screen Popup View
+    func showTimerScreenPopupView() {
+        if timerSettingScreenPopupView == nil {
+            timerSettingScreenPopupView = TimerSettingScreen(frame: CGRect(x: 0, y: 0, width: self.view.viewWidth(), height: self.view.viewHeight()))
+            timerSettingScreenPopupView?.startTimerAction = {
+                self.hideTimerScreenPopupView()
+            }
+            self.view.addSubview(timerSettingScreenPopupView!)
+            hideAllBtns()
+        }
+    }
+    func hideTimerScreenPopupView() {
+        timerSettingScreenPopupView?.removeFromSuperview()
+        timerSettingScreenPopupView = nil
         updateButtons()
     }
 }

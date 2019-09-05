@@ -67,6 +67,8 @@
 		9C9AC4AD22FEE03600230522 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4AC22FEE03600230522 /* MyPageViewController.swift */; };
 		9C9AC4AF22FEE04000230522 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4AE22FEE04000230522 /* ChannelViewController.swift */; };
 		9C9AC4B322FEE05900230522 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4B222FEE05900230522 /* AlarmViewController.swift */; };
+		9C9AC6A62320BFF50091EE77 /* TimerSettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC6A52320BFF50091EE77 /* TimerSettingScreen.swift */; };
+		9C9AC6A82320C05E0091EE77 /* TimerSettingScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C9AC6A72320C05E0091EE77 /* TimerSettingScreen.xib */; };
 		9C9AE2DC231A7CF0000E45EB /* JudgeShareNonChargeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AE2DB231A7CF0000E45EB /* JudgeShareNonChargeVC.swift */; };
 		9CAC8216231556BB00936CE7 /* LoginClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAC8215231556BB00936CE7 /* LoginClientViewController.swift */; };
 		9CCB4D5E230BED9E00375888 /* ShareFeeDetailsClientVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCB4D5D230BED9E00375888 /* ShareFeeDetailsClientVC.swift */; };
@@ -155,6 +157,8 @@
 		9C9AC4AC22FEE03600230522 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		9C9AC4AE22FEE04000230522 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		9C9AC4B222FEE05900230522 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
+		9C9AC6A52320BFF50091EE77 /* TimerSettingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSettingScreen.swift; sourceTree = "<group>"; };
+		9C9AC6A72320C05E0091EE77 /* TimerSettingScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerSettingScreen.xib; sourceTree = "<group>"; };
 		9C9AE2DB231A7CF0000E45EB /* JudgeShareNonChargeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudgeShareNonChargeVC.swift; sourceTree = "<group>"; };
 		9CAC8215231556BB00936CE7 /* LoginClientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClientViewController.swift; sourceTree = "<group>"; };
 		9CCB4D5D230BED9E00375888 /* ShareFeeDetailsClientVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareFeeDetailsClientVC.swift; sourceTree = "<group>"; };
@@ -391,6 +395,8 @@
 				9C3D7D49231A513500A41C50 /* CustomAlertView */,
 				9C2FF92D231D50C1004923DE /* ImageViewer */,
 				9C6E2733231E1D9700C197D7 /* Filter View */,
+				9C9AC6A52320BFF50091EE77 /* TimerSettingScreen.swift */,
+				9C9AC6A72320C05E0091EE77 /* TimerSettingScreen.xib */,
 			);
 			path = "Reusable Components";
 			sourceTree = "<group>";
@@ -475,6 +481,7 @@
 				9C617901230FFAA6007896F2 /* ContestDetailListCell.xib in Resources */,
 				9C70646F22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf in Resources */,
 				9C70646222FEA9C900E006D7 /* NotoSansCJKkr-Bold.otf in Resources */,
+				9C9AC6A82320C05E0091EE77 /* TimerSettingScreen.xib in Resources */,
 				9CF02C0D2319424700614F6B /* RefImageCell.xib in Resources */,
 				9C2FF92C231D2F67004923DE /* MusicAddInfoCell.xib in Resources */,
 				9C1BED9F231116350011F296 /* CustomActionSheetCell.xib in Resources */,
@@ -516,6 +523,7 @@
 				9C70645122FEA3AC00E006D7 /* UniCon.xcdatamodeld in Sources */,
 				9CF02C0C2319424700614F6B /* RefImageCell.swift in Sources */,
 				9C2628DC23151B4300835446 /* ContestInfoCell.swift in Sources */,
+				9C9AC6A62320BFF50091EE77 /* TimerSettingScreen.swift in Sources */,
 				9C1BED9E231116350011F296 /* CustomActionSheetCell.swift in Sources */,
 				9CCF2CDF231A6EEF0062558A /* ContestRegistrationDepositInfoVC.swift in Sources */,
 				9C6E2731231E088A00C197D7 /* FilterPopupCell.swift in Sources */,
