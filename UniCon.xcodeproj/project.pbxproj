@@ -384,13 +384,13 @@
 			path = "Timer Setting Screen";
 			sourceTree = "<group>";
 		};
-		9C7D49E6232128220011FDAF /* MusicEditingView */ = {
+		9C7D49E6232128220011FDAF /* Music Editing View */ = {
 			isa = PBXGroup;
 			children = (
 				9C7A8A9C2320D65F00A399C2 /* MusicEditingPopupView.swift */,
 				9C7A8A9E2320D6E100A399C2 /* MusicEditingView.xib */,
 			);
-			path = MusicEditingView;
+			path = "Music Editing View";
 			sourceTree = "<group>";
 		};
 		9C7D49E7232128310011FDAF /* Add Stickers View */ = {
@@ -402,6 +402,19 @@
 				9C7D49E92321287B0011FDAF /* StickerCell.xib */,
 			);
 			path = "Add Stickers View";
+			sourceTree = "<group>";
+		};
+		9C7D49F823215C4C0011FDAF /* Add Text View */ = {
+			isa = PBXGroup;
+			children = (
+				9C7D49EC23213E200011FDAF /* AddTextView.swift */,
+				9C7D49EE23213E2A0011FDAF /* AddTextView.xib */,
+				9C7D49F023213F840011FDAF /* AddTextColorCell.swift */,
+				9C7D49F123213F840011FDAF /* AddTextColorCell.xib */,
+				9C7D49F423213F9A0011FDAF /* AddTextFontCell.swift */,
+				9C7D49F523213F9A0011FDAF /* AddTextFontCell.xib */,
+			);
+			path = "Add Text View";
 			sourceTree = "<group>";
 		};
 		9C9AC4AB22FEE00B00230522 /* TabView Controller */ = {
@@ -449,14 +462,9 @@
 				9C2FF92D231D50C1004923DE /* ImageViewer */,
 				9C6E2733231E1D9700C197D7 /* Filter View */,
 				9C7D49E5232128100011FDAF /* Timer Setting Screen */,
-				9C7D49E6232128220011FDAF /* MusicEditingView */,
+				9C7D49E6232128220011FDAF /* Music Editing View */,
 				9C7D49E7232128310011FDAF /* Add Stickers View */,
-				9C7D49EC23213E200011FDAF /* AddTextView.swift */,
-				9C7D49EE23213E2A0011FDAF /* AddTextView.xib */,
-				9C7D49F023213F840011FDAF /* AddTextColorCell.swift */,
-				9C7D49F123213F840011FDAF /* AddTextColorCell.xib */,
-				9C7D49F423213F9A0011FDAF /* AddTextFontCell.swift */,
-				9C7D49F523213F9A0011FDAF /* AddTextFontCell.xib */,
+				9C7D49F823215C4C0011FDAF /* Add Text View */,
 			);
 			path = "Reusable Components";
 			sourceTree = "<group>";
