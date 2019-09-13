@@ -25,6 +25,19 @@
 		9C3212002317EBA7004375D8 /* CustomAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C3211FF2317EBA7004375D8 /* CustomAlertView.xib */; };
 		9C3212022317EBB3004375D8 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3212012317EBB3004375D8 /* CustomAlertView.swift */; };
 		9C3212042318004A004375D8 /* ClientContestRegBasicInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C32120323180049004375D8 /* ClientContestRegBasicInfoVC.swift */; };
+		9C357244232BB3BC0079852D /* VideoLibraryEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C357243232BB3BC0079852D /* VideoLibraryEditVC.swift */; };
+		9C357257232BC5280079852D /* ABBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C357249232BC5280079852D /* ABBorder.swift */; };
+		9C357258232BC5280079852D /* ABEndIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C35724A232BC5280079852D /* ABEndIndicator.swift */; };
+		9C357259232BC5280079852D /* ABProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C35724B232BC5280079852D /* ABProgressIndicator.swift */; };
+		9C35725B232BC5280079852D /* ABThumbnailsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C35724D232BC5280079852D /* ABThumbnailsManager.swift */; };
+		9C35725C232BC5280079852D /* ABVideoRangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C35724E232BC5280079852D /* ABVideoRangeSlider.swift */; };
+		9C35725D232BC5280079852D /* ABStartIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C35724F232BC5280079852D /* ABStartIndicator.swift */; };
+		9C35725E232BC5280079852D /* ABTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C357250232BC5280079852D /* ABTimeView.swift */; };
+		9C35725F232BC5280079852D /* ABVideoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C357251232BC5280079852D /* ABVideoHelper.swift */; };
+		9C357260232BC5280079852D /* BorderLine.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C357253232BC5280079852D /* BorderLine.png */; };
+		9C357261232BC5280079852D /* StartIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C357254232BC5280079852D /* StartIndicator.png */; };
+		9C357262232BC5280079852D /* EndIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C357255232BC5280079852D /* EndIndicator.png */; };
+		9C357263232BC5280079852D /* ProgressIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C357256232BC5280079852D /* ProgressIndicator.png */; };
 		9C359031231A8783001C72DF /* ContestDetailsSharedDepositVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C359030231A8783001C72DF /* ContestDetailsSharedDepositVC.swift */; };
 		9C6178F7230FE33D007896F2 /* FeedSharedPopUpPrimary.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C6178F6230FE33D007896F2 /* FeedSharedPopUpPrimary.xib */; };
 		9C6178F9230FE37C007896F2 /* FeedSharedPopUpPrimary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6178F8230FE37C007896F2 /* FeedSharedPopUpPrimary.swift */; };
@@ -123,6 +136,19 @@
 		9C3211FF2317EBA7004375D8 /* CustomAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CustomAlertView.xib; path = ../CustomAlertView.xib; sourceTree = "<group>"; };
 		9C3212012317EBB3004375D8 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomAlertView.swift; path = ../CustomAlertView.swift; sourceTree = "<group>"; };
 		9C32120323180049004375D8 /* ClientContestRegBasicInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientContestRegBasicInfoVC.swift; sourceTree = "<group>"; };
+		9C357243232BB3BC0079852D /* VideoLibraryEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLibraryEditVC.swift; sourceTree = "<group>"; };
+		9C357249232BC5280079852D /* ABBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABBorder.swift; sourceTree = "<group>"; };
+		9C35724A232BC5280079852D /* ABEndIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABEndIndicator.swift; sourceTree = "<group>"; };
+		9C35724B232BC5280079852D /* ABProgressIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABProgressIndicator.swift; sourceTree = "<group>"; };
+		9C35724D232BC5280079852D /* ABThumbnailsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABThumbnailsManager.swift; sourceTree = "<group>"; };
+		9C35724E232BC5280079852D /* ABVideoRangeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABVideoRangeSlider.swift; sourceTree = "<group>"; };
+		9C35724F232BC5280079852D /* ABStartIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABStartIndicator.swift; sourceTree = "<group>"; };
+		9C357250232BC5280079852D /* ABTimeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABTimeView.swift; sourceTree = "<group>"; };
+		9C357251232BC5280079852D /* ABVideoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABVideoHelper.swift; sourceTree = "<group>"; };
+		9C357253232BC5280079852D /* BorderLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BorderLine.png; sourceTree = "<group>"; };
+		9C357254232BC5280079852D /* StartIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StartIndicator.png; sourceTree = "<group>"; };
+		9C357255232BC5280079852D /* EndIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EndIndicator.png; sourceTree = "<group>"; };
+		9C357256232BC5280079852D /* ProgressIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ProgressIndicator.png; sourceTree = "<group>"; };
 		9C359030231A8783001C72DF /* ContestDetailsSharedDepositVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestDetailsSharedDepositVC.swift; sourceTree = "<group>"; };
 		9C6178F6230FE33D007896F2 /* FeedSharedPopUpPrimary.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedSharedPopUpPrimary.xib; sourceTree = "<group>"; };
 		9C6178F8230FE37C007896F2 /* FeedSharedPopUpPrimary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSharedPopUpPrimary.swift; sourceTree = "<group>"; };
@@ -226,6 +252,57 @@
 			path = ImageViewer;
 			sourceTree = "<group>";
 		};
+		9C357245232BB3C70079852D /* Other VC */ = {
+			isa = PBXGroup;
+			children = (
+				9C357243232BB3BC0079852D /* VideoLibraryEditVC.swift */,
+			);
+			path = "Other VC";
+			sourceTree = "<group>";
+		};
+		9C357246232BC12E0079852D /* VideoRangeSlider */ = {
+			isa = PBXGroup;
+			children = (
+				9C357247232BC5280079852D /* ABVideoRangeSlider */,
+			);
+			path = VideoRangeSlider;
+			sourceTree = "<group>";
+		};
+		9C357247232BC5280079852D /* ABVideoRangeSlider */ = {
+			isa = PBXGroup;
+			children = (
+				9C357248232BC5280079852D /* Classes */,
+				9C357252232BC5280079852D /* Assets */,
+			);
+			path = ABVideoRangeSlider;
+			sourceTree = "<group>";
+		};
+		9C357248232BC5280079852D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9C357249232BC5280079852D /* ABBorder.swift */,
+				9C35724A232BC5280079852D /* ABEndIndicator.swift */,
+				9C35724B232BC5280079852D /* ABProgressIndicator.swift */,
+				9C35724D232BC5280079852D /* ABThumbnailsManager.swift */,
+				9C35724E232BC5280079852D /* ABVideoRangeSlider.swift */,
+				9C35724F232BC5280079852D /* ABStartIndicator.swift */,
+				9C357250232BC5280079852D /* ABTimeView.swift */,
+				9C357251232BC5280079852D /* ABVideoHelper.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		9C357252232BC5280079852D /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				9C357253232BC5280079852D /* BorderLine.png */,
+				9C357254232BC5280079852D /* StartIndicator.png */,
+				9C357255232BC5280079852D /* EndIndicator.png */,
+				9C357256232BC5280079852D /* ProgressIndicator.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		9C3D7D49231A513500A41C50 /* CustomAlertView */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +375,7 @@
 				9C70645D22FEA65600E006D7 /* Extensions.swift */,
 				9C70647222FEC0DC00E006D7 /* Constants.swift */,
 				9CCC584A231BCB180007112A /* Helpers.swift */,
+				9C357246232BC12E0079852D /* VideoRangeSlider */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -351,6 +429,7 @@
 				9CF1E7A1230F917C0093D21F /* Reusable Components */,
 				9C63191E23014BE900830385 /* Login VC */,
 				9C9AC4AB22FEE00B00230522 /* TabView Controller */,
+				9C357245232BB3C70079852D /* Other VC */,
 				9C63191F23014BF600830385 /* Helpers */,
 				9C63191D23014BD600830385 /* Custom Coll Cells */,
 				9C70646322FEA9CD00E006D7 /* Custom Fonts */,
@@ -559,7 +638,10 @@
 				9C70645322FEA3AE00E006D7 /* Assets.xcassets in Resources */,
 				9C7D49EF23213E2A0011FDAF /* AddTextView.xib in Resources */,
 				9C7D49E4232121640011FDAF /* AddStickersView.xib in Resources */,
+				9C357260232BC5280079852D /* BorderLine.png in Resources */,
 				9C6E272E231E084B00C197D7 /* FilterPopupView.xib in Resources */,
+				9C357262232BC5280079852D /* EndIndicator.png in Resources */,
+				9C357263232BC5280079852D /* ProgressIndicator.png in Resources */,
 				9C63192323014C2400830385 /* FeaturedCreatorCell.xib in Resources */,
 				9C1BED99231112F10011F296 /* CustomActionSheetView.xib in Resources */,
 				9C70644E22FEA3AC00E006D7 /* Main.storyboard in Resources */,
@@ -574,6 +656,7 @@
 				9CCF2CDB231A52080062558A /* ImageViewerVC.xib in Resources */,
 				9C7D49F723213F9A0011FDAF /* AddTextFontCell.xib in Resources */,
 				9C2628D923151B1A00835446 /* MusicInfoCell.xib in Resources */,
+				9C357261232BC5280079852D /* StartIndicator.png in Resources */,
 				9C2628DD23151B4300835446 /* ContestInfoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -591,14 +674,19 @@
 				9C63193223014C8A00830385 /* ContestClosedCell.swift in Sources */,
 				9C2FF927231D2D9C004923DE /* MusicCategoryCell.swift in Sources */,
 				9C75F09A2317C67900E7B3F2 /* ChangePrizeAllocationVC.swift in Sources */,
+				9C357257232BC5280079852D /* ABBorder.swift in Sources */,
 				9CCB4D5E230BED9E00375888 /* ShareFeeDetailsClientVC.swift in Sources */,
 				9CF02C0F2319571000614F6B /* ContestDepostiConfirmationVC.swift in Sources */,
+				9C35725B232BC5280079852D /* ABThumbnailsManager.swift in Sources */,
 				9CF1EAA52314440D006895F9 /* VideoRecordingVC.swift in Sources */,
 				9CF72FCC23176A7B009D1C60 /* PrizeAllocationViewController.swift in Sources */,
 				9C70645122FEA3AC00E006D7 /* UniCon.xcdatamodeld in Sources */,
+				9C357259232BC5280079852D /* ABProgressIndicator.swift in Sources */,
 				9CF02C0C2319424700614F6B /* RefImageCell.swift in Sources */,
 				9C2628DC23151B4300835446 /* ContestInfoCell.swift in Sources */,
+				9C35725F232BC5280079852D /* ABVideoHelper.swift in Sources */,
 				9C7A8A9D2320D65F00A399C2 /* MusicEditingPopupView.swift in Sources */,
+				9C35725C232BC5280079852D /* ABVideoRangeSlider.swift in Sources */,
 				9C9AC6A62320BFF50091EE77 /* TimerSettingScreen.swift in Sources */,
 				9C1BED9E231116350011F296 /* CustomActionSheetCell.swift in Sources */,
 				9CCF2CDF231A6EEF0062558A /* ContestRegistrationDepositInfoVC.swift in Sources */,
@@ -611,8 +699,10 @@
 				9C63192A23014C6300830385 /* OngoingContestCell.swift in Sources */,
 				9CCF2CE1231A70590062558A /* FinishedAppointmentVC.swift in Sources */,
 				9CF1E7AA230F98890093D21F /* SharePopUpCell.swift in Sources */,
+				9C357244232BB3BC0079852D /* VideoLibraryEditVC.swift in Sources */,
 				9C76CCB82319022A003821C8 /* ClientContestRegDetailsViewController.swift in Sources */,
 				9C70644922FEA3AC00E006D7 /* AppDelegate.swift in Sources */,
+				9C35725D232BC5280079852D /* ABStartIndicator.swift in Sources */,
 				9C1FD5F8230C5A5B0073EEF4 /* CongratulationPopViewController.swift in Sources */,
 				9C2FF92B231D2F67004923DE /* MusicAddInfoCell.swift in Sources */,
 				9C9AC4AA22FEDB5D00230522 /* GeneralVideosViewController.swift in Sources */,
@@ -628,11 +718,13 @@
 				9C70647322FEC0DC00E006D7 /* Constants.swift in Sources */,
 				9CF9324B23168EE7002AC77D /* ContestDetailsClientVC.swift in Sources */,
 				9C3212042318004A004375D8 /* ClientContestRegBasicInfoVC.swift in Sources */,
+				9C35725E232BC5280079852D /* ABTimeView.swift in Sources */,
 				9C9AC4A822FEDB4B00230522 /* ContestViewController.swift in Sources */,
 				9CF9324E2316B158002AC77D /* ParticipationCell.swift in Sources */,
 				9C9AC4AF22FEE04000230522 /* ChannelViewController.swift in Sources */,
 				9C63192223014C2400830385 /* FeaturedCreatorCell.swift in Sources */,
 				9C2628D523150FE200835446 /* UploadVideoCreatorViewController.swift in Sources */,
+				9C357258232BC5280079852D /* ABEndIndicator.swift in Sources */,
 				9C6E272C231E081E00C197D7 /* FilterPopupView.swift in Sources */,
 				9C7D49F223213F840011FDAF /* AddTextColorCell.swift in Sources */,
 				9C7D49E22321214E0011FDAF /* AddStickersPopupView.swift in Sources */,

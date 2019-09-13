@@ -137,22 +137,27 @@ class VideoRecordingVC: UIViewController {
         recordingStatus = .saved
         updateButtons()
     }
-    
+    //MARK: View Navigations Handling
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? VideoLibraryEditVC {
+            vc.videoURL = sender as? NSURL
+        }
+    }
     //MARK: Video Picker from the gallery
-//    func addTapGestureToGalleryImgv() {
-//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(openVideoGalleryClicked))
-//        galleryView.addGestureRecognizer(tapGesture)
-//    }
-//    @objc func openVideoGalleryClicked() {
-//        showvideoPicker()
-//    }
-//    func showvideoPicker() {
-//        let videoPickerController = UIImagePickerController()
-//        videoPickerController.sourceType = .photoLibrary
-//        videoPickerController.mediaTypes = ["kUTTypeMovie"]
-//        videoPickerController.delegate = self
-//        self.present(videoPickerController, animated: true, completion: nil)
-//    }
+    func addTapGestureToGalleryImgv() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(openVideoGalleryClicked))
+        galleryView.addGestureRecognizer(tapGesture)
+    }
+    @objc func openVideoGalleryClicked() {
+        showvideoPicker()
+    }
+    func showvideoPicker() {
+        let videoPickerController = UIImagePickerController()
+        videoPickerController.sourceType = .photoLibrary
+        videoPickerController.mediaTypes = ["public.movie"]
+        videoPickerController.delegate = self
+        self.present(videoPickerController, animated: true, completion: nil)
+    }
     //MARK: Filter Pop Up View
     func showFilterPopupView() {
         if filterPopupView == nil {
@@ -244,12 +249,14 @@ class VideoRecordingVC: UIViewController {
 
 extension VideoRecordingVC:UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        print(info)
-        if let videoURL = info[UIImagePickerController.InfoKey.mediaURL] {
-            print(videoURL)
+       
+        guard let videoURL = info[UIImagePickerController.InfoKey.mediaURL] else {
+            picker.dismiss(animated: true, completion: nil)
+            return }
+        picker.dismiss(animated: true) {
+            self.performSegue(withIdentifier: "PickedVideoEdit", sender: videoURL)
         }
     }
-    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
