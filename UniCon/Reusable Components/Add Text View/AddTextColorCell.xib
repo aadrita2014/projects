@@ -20,16 +20,16 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fod-oX-7PN">
-                        <rect key="frame" x="8" y="8" width="129" height="79"/>
+                        <rect key="frame" x="0.0" y="0.0" width="145" height="95"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="Fod-oX-7PN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="0xs-RJ-REh"/>
-                <constraint firstAttribute="trailing" secondItem="Fod-oX-7PN" secondAttribute="trailing" constant="8" id="C9q-7a-yCU"/>
-                <constraint firstAttribute="bottom" secondItem="Fod-oX-7PN" secondAttribute="bottom" constant="8" id="a6c-R1-c12"/>
-                <constraint firstItem="Fod-oX-7PN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="nxc-2p-eEH"/>
+                <constraint firstItem="Fod-oX-7PN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0xs-RJ-REh"/>
+                <constraint firstAttribute="trailing" secondItem="Fod-oX-7PN" secondAttribute="trailing" id="C9q-7a-yCU"/>
+                <constraint firstAttribute="bottom" secondItem="Fod-oX-7PN" secondAttribute="bottom" id="a6c-R1-c12"/>
+                <constraint firstItem="Fod-oX-7PN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nxc-2p-eEH"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="145" height="95"/>

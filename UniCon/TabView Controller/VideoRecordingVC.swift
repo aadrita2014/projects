@@ -40,6 +40,7 @@ class VideoRecordingVC: UIViewController {
     func viewSetup() {
         nextButton.addCornerRadius(radius: 10)
         updateButtons()
+        addTapGestureToGalleryImgv()
     }
     
     //MARK: Buttons/View Updates
@@ -136,6 +137,22 @@ class VideoRecordingVC: UIViewController {
         recordingStatus = .saved
         updateButtons()
     }
+    
+    //MARK: Video Picker from the gallery
+//    func addTapGestureToGalleryImgv() {
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(openVideoGalleryClicked))
+//        galleryView.addGestureRecognizer(tapGesture)
+//    }
+//    @objc func openVideoGalleryClicked() {
+//        showvideoPicker()
+//    }
+//    func showvideoPicker() {
+//        let videoPickerController = UIImagePickerController()
+//        videoPickerController.sourceType = .photoLibrary
+//        videoPickerController.mediaTypes = ["kUTTypeMovie"]
+//        videoPickerController.delegate = self
+//        self.present(videoPickerController, animated: true, completion: nil)
+//    }
     //MARK: Filter Pop Up View
     func showFilterPopupView() {
         if filterPopupView == nil {
@@ -215,9 +232,25 @@ class VideoRecordingVC: UIViewController {
             hideAllBtns()
         }
     }
+    //MARK: Hide Text View
     func hideAddTextView() {
         textPopupView?.removeFromSuperview()
         textPopupView = nil
         updateButtons()
+    }
+    
+}
+
+
+extension VideoRecordingVC:UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        print(info)
+        if let videoURL = info[UIImagePickerController.InfoKey.mediaURL] {
+            print(videoURL)
+        }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
     }
 }

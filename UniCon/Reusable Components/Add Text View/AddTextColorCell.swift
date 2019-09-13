@@ -20,10 +20,11 @@ class AddTextColorCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
     
     func configure() {
         bgView.addCornerRadius(radius: bgView.viewWidth()/2)
+        bgView.addBorderColor(borderWidth: 1.0, color: UIColor.white)
     }
 }

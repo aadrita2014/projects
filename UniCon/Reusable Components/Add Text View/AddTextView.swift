@@ -19,8 +19,9 @@ import UIKit
 struct FontModel {
     let image, name:String
 }
-struct TextModel {
+struct TextColorModel {
     let name:String
+    let color:UIColor
 }
 class AddTextView: UIView {
     
@@ -30,27 +31,17 @@ class AddTextView: UIView {
     @IBOutlet var textFontCollView:UICollectionView!
     @IBOutlet var colorCollView:UICollectionView!
     var dismissViewAction:(()->Void)?
-    
-    var socialMediaModels = [
-        StickerModel(image: "shareFacebook", name: "Facebook"),
-        StickerModel(image: "shareFacebook", name: "Instagram"),
-        StickerModel(image: "shareInstagramStory", name: "Story"),
-        StickerModel(image: "shareFacebook", name: "Twitter"),
-        StickerModel(image: "shareFacebook", name: "Band"),
-        StickerModel(image: "shareMore", name: "More"),
-        StickerModel(image: "shareReport", name: "Report"),
-        StickerModel(image: "shareReport", name: "Report"),
-        StickerModel(image: "shareReport", name: "Report"),
-        StickerModel(image: "shareReport", name: "Report"),
-        StickerModel(image: "shareReport", name: "Report"),
-        StickerModel(image: "shareReport", name: "Report"),
-        StickerModel(image: "shareReport", name: "Report"),
-        StickerModel(image: "shareReport", name: "Report"),
-        StickerModel(image: "shareReport", name: "Report"),
-        StickerModel(image: "shareReport", name: "Report"),
-        StickerModel(image: "shareReport", name: "Report"),
-        StickerModel(image: "shareReport", name: "Report")
-    ]
+    var colorModels:[TextColorModel] = [TextColorModel(name: "", color: AppColors.redTextColor),
+                                      TextColorModel(name: "", color: AppColors.orangeTextColor),
+                                      TextColorModel(name: "", color: AppColors.yellowTextColor),
+                                      TextColorModel(name: "", color: AppColors.greenTextColor),
+                                      TextColorModel(name: "", color: AppColors.royalBlueTextColor),
+                                      TextColorModel(name: "", color: AppColors.cyanTextColor),
+                                      TextColorModel(name: "", color: AppColors.pinkTextColor),
+                                      TextColorModel(name: "", color: AppColors.grayTextColor),
+                                      TextColorModel(name: "", color: AppColors.whiteTextColor),
+                                      TextColorModel(name: "", color: AppColors.lighGreenTextColor)]
+   
     //MARK: View Setup Methods
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -99,7 +90,7 @@ extension AddTextView:UICollectionViewDataSource, UICollectionViewDelegate, UICo
             return 5
         }
         else {
-            return 5
+            return colorModels.count
         }
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -110,18 +101,20 @@ extension AddTextView:UICollectionViewDataSource, UICollectionViewDelegate, UICo
         }
         else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ColorCell", for: indexPath) as! AddTextColorCell
+            let colorModel = self.colorModels[indexPath.row]
+            cell.configure()
+            cell.bgView.backgroundColor = colorModel.color
             return cell
         }
         
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == textFontCollView {
-            return CGSize(width: 100, height: 100)
+            return CGSize(width: 100, height: collectionView.bounds.height)
         }
         else {
-            return CGSize(width: 50, height: 50)
+            return CGSize(width: collectionView.bounds.height, height: collectionView.bounds.height)
         }
-       // return CGSize(width: collectionView.viewWidth()/4 - 10 , height: collectionView.viewHeight()/4 - 10)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     }
