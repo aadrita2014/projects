@@ -141,6 +141,9 @@ class VideoRecordingVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? VideoLibraryEditVC {
             vc.videoURL = sender as? NSURL
+            vc.trimmedVideoURL = { url in
+                    print(url)
+            }
         }
     }
     //MARK: Video Picker from the gallery

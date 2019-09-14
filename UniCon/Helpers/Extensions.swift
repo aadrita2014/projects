@@ -32,6 +32,11 @@ extension UIView {
         self.backgroundColor = color
     }
     //Helper method to add for rounded corners to the view
+    /*!
+     @method        Adds rounded corners to any view
+     @param        radius - Default is 5.0
+     Adds rounded corners
+     */
     func addCornerRadius(radius:CGFloat = 5.0) {
         let layer = self.layer
         layer.cornerRadius = radius
