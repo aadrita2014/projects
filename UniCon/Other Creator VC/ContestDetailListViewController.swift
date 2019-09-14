@@ -10,15 +10,37 @@ import UIKit
 
 class ContestDetailListViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
+    
+    //MARK: IBOutlets
     @IBOutlet weak var contestListTv:UITableView!
-    var filterActionSheet:CustomActionSheet? = nil
+    @IBOutlet weak var segmentedControl:UISegmentedControl!
     
+    //To sort contests
+    fileprivate var filterActionSheet:CustomActionSheet? = nil
     
+    //From previous screen
+    public var isToSelectContest:Bool = false
+    
+    var contestSelectedAction:((ContestModel)->Void)?
+    
+    //MARK: Overriden View Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addBlackBackgroundColor()
         // Do any additional setup after loading the view.
+        viewSetup()
+    }
+    //MARK: View Setup
+    func viewSetup() {
         contestListTv.register(UINib(nibName: "ContestDetailListCell", bundle: nil), forCellReuseIdentifier: "ContestCell")
+        if isToSelectContest {
+            segmentedControl.isHidden = false
+            segmentViewSetup()
+        }
+    }
+    func segmentViewSetup() {
+        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
+        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.red], for: .normal)
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -38,6 +60,7 @@ class ContestDetailListViewController: UIViewController,UITableViewDelegate,UITa
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContestCell", for: indexPath) as! ContestDetailListCell
+        
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C1B4B74232D0965003237DF /* ContestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1B4B73232D0965003237DF /* ContestModel.swift */; };
 		9C1BED99231112F10011F296 /* CustomActionSheetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C1BED98231112F10011F296 /* CustomActionSheetView.xib */; };
 		9C1BED9B2311130C0011F296 /* CustomActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BED9A2311130C0011F296 /* CustomActionSheet.swift */; };
 		9C1BED9E231116350011F296 /* CustomActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BED9C231116350011F296 /* CustomActionSheetCell.swift */; };
@@ -118,6 +119,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C1B4B73232D0965003237DF /* ContestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestModel.swift; sourceTree = "<group>"; };
 		9C1BED98231112F10011F296 /* CustomActionSheetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomActionSheetView.xib; sourceTree = "<group>"; };
 		9C1BED9A2311130C0011F296 /* CustomActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActionSheet.swift; sourceTree = "<group>"; };
 		9C1BED9C231116350011F296 /* CustomActionSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActionSheetCell.swift; sourceTree = "<group>"; };
@@ -243,6 +245,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C1B4B72232D0946003237DF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9C1B4B73232D0965003237DF /* ContestModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		9C2FF92D231D50C1004923DE /* ImageViewer */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,12 +262,13 @@
 			path = ImageViewer;
 			sourceTree = "<group>";
 		};
-		9C357245232BB3C70079852D /* Other VC */ = {
+		9C357245232BB3C70079852D /* Other Creator VC */ = {
 			isa = PBXGroup;
 			children = (
 				9C357243232BB3BC0079852D /* VideoLibraryEditVC.swift */,
+				9C6178FB230FF811007896F2 /* ContestDetailListViewController.swift */,
 			);
-			path = "Other VC";
+			path = "Other Creator VC";
 			sourceTree = "<group>";
 		};
 		9C357246232BC12E0079852D /* VideoRangeSlider */ = {
@@ -375,6 +386,8 @@
 				9C70645D22FEA65600E006D7 /* Extensions.swift */,
 				9C70647222FEC0DC00E006D7 /* Constants.swift */,
 				9CCC584A231BCB180007112A /* Helpers.swift */,
+				9CF1E7A1230F917C0093D21F /* Reusable Components */,
+				9C1B4B72232D0946003237DF /* Models */,
 				9C357246232BC12E0079852D /* VideoRangeSlider */,
 			);
 			path = Helpers;
@@ -423,13 +436,11 @@
 			children = (
 				9C70644822FEA3AC00E006D7 /* AppDelegate.swift */,
 				9C1FD5F7230C5A5B0073EEF4 /* CongratulationPopViewController.swift */,
-				9C6178FB230FF811007896F2 /* ContestDetailListViewController.swift */,
 				9C70644C22FEA3AC00E006D7 /* Main.storyboard */,
-				9CAC821423154D9700936CE7 /* Client VC */,
-				9CF1E7A1230F917C0093D21F /* Reusable Components */,
 				9C63191E23014BE900830385 /* Login VC */,
 				9C9AC4AB22FEE00B00230522 /* TabView Controller */,
-				9C357245232BB3C70079852D /* Other VC */,
+				9CAC821423154D9700936CE7 /* Client VC */,
+				9C357245232BB3C70079852D /* Other Creator VC */,
 				9C63191F23014BF600830385 /* Helpers */,
 				9C63191D23014BD600830385 /* Custom Coll Cells */,
 				9C70646322FEA9CD00E006D7 /* Custom Fonts */,
@@ -715,6 +726,7 @@
 				9CCF2CDD231A643E0062558A /* ClientRegistrationConfirmationVC.swift in Sources */,
 				9C6178FC230FF811007896F2 /* ContestDetailListViewController.swift in Sources */,
 				9C70647122FEB5DD00E006D7 /* LoginCreatorViewController.swift in Sources */,
+				9C1B4B74232D0965003237DF /* ContestModel.swift in Sources */,
 				9C70647322FEC0DC00E006D7 /* Constants.swift in Sources */,
 				9CF9324B23168EE7002AC77D /* ContestDetailsClientVC.swift in Sources */,
 				9C3212042318004A004375D8 /* ClientContestRegBasicInfoVC.swift in Sources */,

@@ -22,7 +22,7 @@ class MusicInfo {
 
 class UploadVideoCreatorViewController: UIViewController {
     
-    
+    //MARK: IBOutlets
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var videoInfoTv: UITableView!
     @IBOutlet weak var uploadVideoBtn:UIButton!
@@ -32,9 +32,12 @@ class UploadVideoCreatorViewController: UIViewController {
     @IBOutlet weak var infoTableHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var commentAllowedView: UIView!
     
-    
+    //MARK: Other Declarations
     var musicInfo:[MusicInfo] = []
     var showContestDetails:Bool = true
+    
+    
+    var selectedContests:[ContestModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,22 +45,22 @@ class UploadVideoCreatorViewController: UIViewController {
         // Do any additional setup after loading the view.
         viewSetup()
     }
+  
     //MARK: View Setup
     func segmentViewSetup() {
         segmentControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
         segmentControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.red], for: .normal)
+        //Select the index by default that is general
+        segmentControl.selectedSegmentIndex = 1
     }
     //Other view setup code
     fileprivate func infoTableSetup() {
-        
-
         videoInfoTv.estimatedRowHeight = 0
         videoInfoTv.tableFooterView = UIView(frame: .zero)
         videoInfoTv.register(UINib(nibName: "ContestDetailListCell", bundle: nil), forCellReuseIdentifier: "ContestCell")
         videoInfoTv.register(UINib(nibName: "MusicInfoCell", bundle: nil), forCellReuseIdentifier: "MusicInfoCell")
     }
     func viewSetup() {
-        
         uploadVideoBtn.addCornerRadius(radius: 5)
         segmentViewSetup()
         videoInfoBackgroundView.addCornerRadius(radius: 5)
@@ -73,6 +76,8 @@ class UploadVideoCreatorViewController: UIViewController {
         videoInfoTv.reloadData()
         infoTableHeightConstraint.constant = videoInfoTv.contentSize.height
     }
+    
+    //MARK: IBActions
     @IBAction func backClicked() {
         self.navigationController?.popViewController(animated: true)
     }
@@ -80,12 +85,17 @@ class UploadVideoCreatorViewController: UIViewController {
         showContestDetails = !showContestDetails
         videoInfoTv.reloadData()
         reloadTable()
+        //If no contest is selected then move to select contest screen
+        if showContestDetails {
+            self.performSegue(withIdentifier: "SelectContest", sender: nil)
+        }
     }
-
+    @IBAction func uploadVideoClicked() {
+        
+    }
 }
 
 extension UploadVideoCreatorViewController:UITableViewDelegate, UITableViewDataSource {
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         if showContestDetails {
             return 2
