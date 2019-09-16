@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import AVKit
 extension UIView {
     
     //Helper methods to get the view width
@@ -106,4 +106,19 @@ extension UITextField {
     }
 }
 
+extension UIViewController {
+    func showAlertMessage(title:String = "Error",message:String = "") {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+}
 
+
+extension Float64 {
+    func cmtime(timeScale:Int32 = 1) -> CMTime{
+        return CMTime(value: Int64(self), timescale: timeScale)
+    }
+    
+}

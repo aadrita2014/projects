@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVFoundation
+import MobileCoreServices
 
 class VideoRecordingVC: UIViewController {
     //Recording status of the video
@@ -15,7 +17,7 @@ class VideoRecordingVC: UIViewController {
     }
     
     //MARK: IBOutlets
-    @IBOutlet weak var videoContainerView:UIView!
+    @IBOutlet weak var videoContainerView:UIView!  //To preview the camera feed {
     @IBOutlet weak var videoEditButtons:UIStackView!
     @IBOutlet weak var videoSaveButtons:UIStackView!
     @IBOutlet weak var galleryView:UIImageView!
@@ -31,17 +33,40 @@ class VideoRecordingVC: UIViewController {
     fileprivate var stickerPopupView:AddStickersPopupView?
     fileprivate var textPopupView:AddTextView?
     
+    
+    
+    //MARK: Camera recording & saving declarations
+    var captureDevice:AVCaptureDevice?
+    var captureSession:AVCaptureSession?
+    var videoInput:AVCaptureDeviceInput?
+    var videoOutput:AVCaptureMovieFileOutput?
+    var focusView:UIView?
+    var videoPreviewLayer:AVCaptureVideoPreviewLayer?
+    var outputURL:URL?
+    
+    //MARK: Overriden view methods
     override func viewDidLoad() {
         super.viewDidLoad()
         viewSetup()
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        //Nothing to add in here
+    }
+    override func viewWillLayoutSubviews() {
+        //Nothing to add in here
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        //Initialising after view appears to get the correct bounds of the view
+        initialize()
+    }
     func viewSetup() {
         nextButton.addCornerRadius(radius: 10)
         updateButtons()
         addTapGestureToGalleryImgv()
     }
+    
     
     //MARK: Buttons/View Updates
     func updateButtons() {
@@ -59,6 +84,7 @@ class VideoRecordingVC: UIViewController {
             recordBtn.setImage(UIImage(named: "btnVideoStart"), for: .normal)
             
         case .recording:
+            startRecording()
             nextButton.isHidden = true
             videoSaveButtons.isHidden = true
             videoEditButtons.isHidden = true
@@ -66,8 +92,10 @@ class VideoRecordingVC: UIViewController {
             backButton.isHidden = true
             recordBtn.isHidden = false
             recordBtn.setImage(UIImage(named: "btnVideoStop"), for: .normal)
+           
           
         case .stopped:
+            stopRecording()
             nextButton.isHidden = true
             videoSaveButtons.isHidden = false
             videoEditButtons.isHidden = false
@@ -249,7 +277,7 @@ class VideoRecordingVC: UIViewController {
     
 }
 
-
+//MARK: UIImagePickerControllerDelegate
 extension VideoRecordingVC:UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
        
@@ -263,4 +291,120 @@ extension VideoRecordingVC:UIImagePickerControllerDelegate,UINavigationControlle
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
+}
+
+//MARK: Video Recording & Setup Methods
+extension VideoRecordingVC {
+    //To get the temporary save path for the recorded video
+    func getVideoOutputPath() -> URL? {
+        let outputPath = NSTemporaryDirectory() + "output.mov" //Demo File Name
+        let outputURL = URL(fileURLWithPath: outputPath)
+        let fileManager = FileManager.default
+        //Check if already exists and try to delete the file
+        if fileManager.fileExists(atPath: outputPath) {
+            do {
+               try fileManager.removeItem(atPath: outputPath)
+            }catch {
+                print("Not able to remove the file")
+                return nil
+            }
+        }
+        return outputURL
+    }
+    func initialize() {
+        //To avoid duplicating the capture session
+        if captureSession != nil {
+            return
+        }
+        //Initiate the capture session
+        captureSession = AVCaptureSession()
+        
+        //Start capturing the camera feed by default from the back camera
+        if let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) {
+            self.captureDevice = device
+            do {
+                let inputDevice = try AVCaptureDeviceInput(device: device)
+                captureSession?.addInput(inputDevice)
+            }
+            catch {
+                showAlertMessage(title: "Error", message: "Camera initialisation Failed")
+            }
+         
+            setVideoOutput(session: captureSession!)
+            //Set the video layer to preview the live camera content
+            videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
+            videoPreviewLayer?.videoGravity = .resizeAspectFill
+            videoPreviewLayer?.frame = videoContainerView.layer.bounds
+            videoContainerView.layer.addSublayer(videoPreviewLayer!)
+            
+            //Start capturing the session
+            captureSession?.startRunning()
+            
+            checkForPermission()
+        }
+        else {
+            //Method added to the extension of the view controller to show alert messages
+            showAlertMessage(title: "Error", message: "Camera initialisation Failed")
+        }
+    }
+    //Setup the video output and other related variables
+    func setVideoOutput(session:AVCaptureSession) {
+        //set the video output variable
+        videoOutput = AVCaptureMovieFileOutput()
+        
+        let totalTime = AppConsts.MAX_LENGTH_VIDEO
+        let timeScale:Int32 = 1 //FPS
+        
+        let max_duration_cmTime = totalTime.cmtime(timeScale: timeScale)
+        videoOutput?.maxRecordedDuration = max_duration_cmTime
+        //Set min free space in bytes for recording to continue on a volume
+        videoOutput?.minFreeDiskSpaceLimit = 1024 * 1024
+        
+        if session.canAddOutput(videoOutput!) {
+            session.addOutput(videoOutput!)
+        }
+    }
+    
+    func startRecording() {
+        if let videoOutput = self.videoOutput, let outputURL = self.getVideoOutputPath() {
+            
+            videoOutput.startRecording(to: outputURL, recordingDelegate: self)
+        }
+    }
+    func stopRecording() {
+        if let videoOutput = self.videoOutput {
+            videoOutput.stopRecording()
+        }
+    }
+    
+    func checkForPermission() {
+        let status = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
+        
+        if status == AVAuthorizationStatus.authorized {
+            
+            captureSession?.startRunning()
+            
+        } else if status == AVAuthorizationStatus.denied || status == AVAuthorizationStatus.restricted {
+            
+            captureSession?.stopRunning()
+            showAlertMessage(title: "Error", message: "Please give camera capture permission")
+        }
+    }
+}
+
+extension VideoRecordingVC:AVCaptureFileOutputRecordingDelegate {
+    func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
+        print("saved file \(outputFileURL)")
+        if error == nil {
+            self.outputURL = outputFileURL
+        }
+        else {
+            showAlertMessage(title: "Error", message: "Failed to save the video")
+        }
+    }
+    func fileOutput(_ output: AVCaptureFileOutput, didStartRecordingTo fileURL: URL, from connections: [AVCaptureConnection]) {
+        print("Recording Started at \(fileURL)")
+    }
+    
+    
 }

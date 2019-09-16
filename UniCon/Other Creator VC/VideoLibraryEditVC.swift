@@ -13,8 +13,8 @@ import AVFoundation
 class VideoLibraryEditVC: UIViewController {
     
     //MARK: Constants
-    private let MAX_DURATION = 60.0
-    private let MIN_DURATION = 5.0
+    private let MAX_DURATION = AppConsts.MAX_LENGTH_VIDEO
+    private let MIN_DURATION = AppConsts.MIN_LENGTH_VIDEo
     
     //MARK: IBOutlets
     @IBOutlet weak var videoRangeSlider:ABVideoRangeSlider!
@@ -85,8 +85,8 @@ class VideoLibraryEditVC: UIViewController {
         
         // Add obseerver for the player to reply the video when video reaches the end
         self.timeObserver = player.addPeriodicTimeObserver(forInterval: CMTimeMakeWithSeconds(1, preferredTimescale: 1), queue: DispatchQueue.main) { (time) in
-            if self.player.currentTime() > self.cmtimefromFloat(time: self.endTime) {
-                self.player.seek(to: self.cmtimefromFloat(time: 0))
+            if self.player.currentTime() > self.endTime.cmtime() {
+                self.player.seek(to: 0.0.cmtime())
                 // self.videoRangeSlider.progressPercentage =
             }
         }
@@ -98,7 +98,7 @@ class VideoLibraryEditVC: UIViewController {
         
         if let playerItem = player.currentItem, playerItem.status == AVPlayerItem.Status.readyToPlay {
             let duration = playerItem.duration
-            if duration < cmtimefromFloat(time: MAX_DURATION) {
+            if duration < MAX_DURATION.cmtime() {
                 self.endTime = duration.seconds
             }
             else {
@@ -140,9 +140,7 @@ class VideoLibraryEditVC: UIViewController {
     }
     
     //MARK: Other Helper Methods
-    func cmtimefromFloat(time:Float64) -> CMTime{
-        return CMTime(value: Int64(time), timescale: 1)
-    }
+  
    
     //MARK: Video Edit & Save
     func cropVideo(url: NSURL, statTime:Float, endTime:Float)
@@ -207,7 +205,7 @@ extension VideoLibraryEditVC:ABVideoRangeSliderDelegate {
     }
     
     func indicatorDidChangePosition(videoRangeSlider: ABVideoRangeSlider, position: Float64) {
-        player.seek(to: cmtimefromFloat(time: position), toleranceBefore: cmtimefromFloat(time: startTime), toleranceAfter: cmtimefromFloat(time: endTime))
+        player.seek(to: position.cmtime(), toleranceBefore: startTime.cmtime(), toleranceAfter: endTime.cmtime())
         
     }
 }

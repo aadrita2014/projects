@@ -46,3 +46,9 @@ struct Defaults {
 struct StringConsts {
     static let isClientSaveKey = "is_client_save_key"
 }
+
+struct AppConsts {
+    //Static Consts before getting from the API
+    static let MAX_LENGTH_VIDEO = 60.0
+    static let MIN_LENGTH_VIDEo = 5.0
+}
