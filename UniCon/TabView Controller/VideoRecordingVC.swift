@@ -24,9 +24,20 @@ class VideoRecordingVC: UIViewController {
     @IBOutlet weak var recordBtn:UIButton!
     @IBOutlet weak var backButton:UIButton!
     @IBOutlet weak var nextButton:UIButton!
+    @IBOutlet weak var recordingProgress:UIProgressView!
+    
+    //MARK: Video Edit StackView IBOutlets
+    @IBOutlet weak var selectMusicStackView:UIStackView!
+    @IBOutlet weak var trimMusicStackView:UIStackView!
+    @IBOutlet weak var addTextStackView:UIStackView!
+    @IBOutlet weak var addStickerStackView:UIStackView!
+    
     
     //Other Declarations
     fileprivate var recordingStatus:RecStatus = .notStartedRecording
+    
+    
+    //Video Editing Functionality & Views
     fileprivate var filterPopupView:FilterPopupView?
     fileprivate var timerSettingScreenPopupView:TimerSettingScreen?
     fileprivate var musicEditingPopupView:MusicEditingPopupView?
@@ -43,6 +54,17 @@ class VideoRecordingVC: UIViewController {
     var focusView:UIView?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var outputURL:URL?
+    var recordingTimer:Timer?
+    var totalElapsedSeconds:Double = 0.0
+    var models:[TextColorModel] = []
+    var snapGesture:[SnapGesture] = []
+    //MARK: Other Variables
+    var isMusicSelected:Bool = false {
+        didSet {
+            updateUI()
+        }
+    }
+    
     
     //MARK: Overriden view methods
     override func viewDidLoad() {
@@ -53,20 +75,34 @@ class VideoRecordingVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         //Nothing to add in here
+        
     }
     override func viewWillLayoutSubviews() {
         //Nothing to add in here
     }
     override func viewDidAppear(_ animated: Bool) {
-        //Initialising after view appears to get the correct bounds of the view
+        //Initialising camera capture session and other variables after view appears to get the correct bounds of the view
         initialize()
     }
     func viewSetup() {
         nextButton.addCornerRadius(radius: 10)
         updateButtons()
         addTapGestureToGalleryImgv()
+        updateUI()
     }
     
+    func updateUI() {
+        //track change in value of music selection variable and accordingly update the UI
+        
+        if isMusicSelected {
+            videoEditButtons.insertSubview(trimMusicStackView, belowSubview: selectMusicStackView)
+            trimMusicStackView.isHidden = false
+        }
+        else {
+            videoEditButtons.removeArrangedSubview(trimMusicStackView)
+            trimMusicStackView.isHidden = true
+        }
+    }
     
     //MARK: Buttons/View Updates
     func updateButtons() {
@@ -82,6 +118,8 @@ class VideoRecordingVC: UIViewController {
             backButton.isHidden = false
             recordBtn.isHidden = false
             recordBtn.setImage(UIImage(named: "btnVideoStart"), for: .normal)
+            totalElapsedSeconds = 0.0
+            toggleAddTextStickerViews()
             
         case .recording:
             startRecording()
@@ -92,8 +130,9 @@ class VideoRecordingVC: UIViewController {
             backButton.isHidden = true
             recordBtn.isHidden = false
             recordBtn.setImage(UIImage(named: "btnVideoStop"), for: .normal)
-           
-          
+            toggleAddTextStickerViews()
+            
+            
         case .stopped:
             stopRecording()
             nextButton.isHidden = true
@@ -103,6 +142,8 @@ class VideoRecordingVC: UIViewController {
             backButton.isHidden = true
             recordBtn.isHidden = false
             recordBtn.setImage(UIImage(named: "btnVideoStart"), for: .normal)
+            recordingTimer?.invalidate()
+            toggleAddTextStickerViews()
             
         case .saved:
             nextButton.isHidden = false
@@ -112,7 +153,10 @@ class VideoRecordingVC: UIViewController {
             backButton.isHidden = false
             recordBtn.isHidden = true
             recordBtn.setImage(UIImage(named: "btnVideoStart"), for: .normal)
+            toggleAddTextStickerViews(show: true)
         }
+        
+        
     }
     func hideAllBtns() {
         nextButton.isHidden = true
@@ -121,6 +165,17 @@ class VideoRecordingVC: UIViewController {
         galleryView.isHidden = true
         backButton.isHidden = false
         recordBtn.isHidden = true
+    }
+    func toggleAddTextStickerViews(show:Bool = false) {
+        if show {
+            
+        }
+        else {
+//            videoEditButtons.removeArrangedSubview(addTextStackView)
+//            videoEditButtons.removeArrangedSubview(addStickerStackView)
+//            addTextStackView.isHidden = true
+//            addStickerStackView.isHidden = true
+        }
     }
     //MARK: IBActions
     @IBAction func backClicked() {
@@ -170,7 +225,7 @@ class VideoRecordingVC: UIViewController {
         if let vc = segue.destination as? VideoLibraryEditVC {
             vc.videoURL = sender as? NSURL
             vc.trimmedVideoURL = { url in
-                    print(url)
+                print(url)
             }
         }
     }
@@ -264,7 +319,16 @@ class VideoRecordingVC: UIViewController {
             textPopupView?.dismissViewAction = {
                 self.hideAddTextView()
             }
+           
+            textPopupView?.addTextToParent = { model in
+                self.models.append(model)
+                self.addSnapView(textModel: model)
+                self.hideAddTextView()
+            }
             self.view.addSubview(textPopupView!)
+            self.textPopupView?.textView.becomeFirstResponder()
+            self.textPopupView?.textView.inputAccessoryView = self.textPopupView?.bottomContainerView
+            
             hideAllBtns()
         }
     }
@@ -275,12 +339,23 @@ class VideoRecordingVC: UIViewController {
         updateButtons()
     }
     
+    func addSnapView(textModel:TextColorModel) {
+        let snapView = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        snapView.text = textModel.name
+        snapView.textColor = UIColor.white
+        snapView.backgroundColor = textModel.color
+        snapView.sizeToFit()
+        snapView.center = videoContainerView.center
+        
+        snapGesture.append(SnapGesture(view: snapView))
+        self.videoContainerView.addSubview(snapView)
+     //   self.videoPreviewLayer?.addSublayer(snapView.layer)
+    }
 }
-
 //MARK: UIImagePickerControllerDelegate
 extension VideoRecordingVC:UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-       
+        
         guard let videoURL = info[UIImagePickerController.InfoKey.mediaURL] else {
             picker.dismiss(animated: true, completion: nil)
             return }
@@ -303,13 +378,16 @@ extension VideoRecordingVC {
         //Check if already exists and try to delete the file
         if fileManager.fileExists(atPath: outputPath) {
             do {
-               try fileManager.removeItem(atPath: outputPath)
+                try fileManager.removeItem(atPath: outputPath)
             }catch {
                 print("Not able to remove the file")
                 return nil
             }
         }
         return outputURL
+    }
+    func getAppDocumentsPath() {
+        
     }
     func initialize() {
         //To avoid duplicating the capture session
@@ -329,7 +407,7 @@ extension VideoRecordingVC {
             catch {
                 showAlertMessage(title: "Error", message: "Camera initialisation Failed")
             }
-         
+            
             setVideoOutput(session: captureSession!)
             //Set the video layer to preview the live camera content
             videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
@@ -364,19 +442,25 @@ extension VideoRecordingVC {
             session.addOutput(videoOutput!)
         }
     }
-    
+    //Start Recording
     func startRecording() {
         if let videoOutput = self.videoOutput, let outputURL = self.getVideoOutputPath() {
-            
             videoOutput.startRecording(to: outputURL, recordingDelegate: self)
+            if recordingTimer == nil {
+                recordingTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(startTimer), userInfo: nil, repeats: true)
+            }
         }
     }
     func stopRecording() {
         if let videoOutput = self.videoOutput {
             videoOutput.stopRecording()
+            totalElapsedSeconds = 0.0
         }
     }
-    
+    func saveRecordedVideo() {
+        
+    }
+    //Check camera authorization
     func checkForPermission() {
         let status = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
         
@@ -389,6 +473,13 @@ extension VideoRecordingVC {
             captureSession?.stopRunning()
             showAlertMessage(title: "Error", message: "Please give camera capture permission")
         }
+    }
+    //To track the video progress
+    @objc func startTimer() {
+        totalElapsedSeconds = totalElapsedSeconds + 1.0
+        //let progressMax = 1.0/AppConsts.MAX_LENGTH_VIDEO
+        let currentProgress = totalElapsedSeconds/AppConsts.MAX_LENGTH_VIDEO
+        recordingProgress.setProgress(Float(currentProgress), animated: true)
     }
 }
 
