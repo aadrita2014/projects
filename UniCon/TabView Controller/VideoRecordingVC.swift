@@ -118,6 +118,7 @@ class VideoRecordingVC: UIViewController {
             backButton.isHidden = false
             recordBtn.isHidden = false
             recordBtn.setImage(UIImage(named: "btnVideoStart"), for: .normal)
+            //Reset the timer
             totalElapsedSeconds = 0.0
             toggleAddTextStickerViews()
             
@@ -528,6 +529,4 @@ extension VideoRecordingVC:AVCaptureFileOutputRecordingDelegate {
     func fileOutput(_ output: AVCaptureFileOutput, didStartRecordingTo fileURL: URL, from connections: [AVCaptureConnection]) {
         print("Recording Started at \(fileURL)")
     }
-    
-    
 }
