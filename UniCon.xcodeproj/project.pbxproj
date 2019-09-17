@@ -40,6 +40,9 @@
 		9C357262232BC5280079852D /* EndIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C357255232BC5280079852D /* EndIndicator.png */; };
 		9C357263232BC5280079852D /* ProgressIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C357256232BC5280079852D /* ProgressIndicator.png */; };
 		9C359031231A8783001C72DF /* ContestDetailsSharedDepositVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C359030231A8783001C72DF /* ContestDetailsSharedDepositVC.swift */; };
+		9C5C0A102330795F00367B8A /* NanumMyeongjo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C5C0A0F2330795F00367B8A /* NanumMyeongjo-Regular.ttf */; };
+		9C5C0A122330798500367B8A /* Gaegu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C5C0A112330798500367B8A /* Gaegu-Regular.ttf */; };
+		9C5C0A14233079C900367B8A /* DoHyeon-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C5C0A13233079C800367B8A /* DoHyeon-Regular.ttf */; };
 		9C6178F7230FE33D007896F2 /* FeedSharedPopUpPrimary.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C6178F6230FE33D007896F2 /* FeedSharedPopUpPrimary.xib */; };
 		9C6178F9230FE37C007896F2 /* FeedSharedPopUpPrimary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6178F8230FE37C007896F2 /* FeedSharedPopUpPrimary.swift */; };
 		9C6178FC230FF811007896F2 /* ContestDetailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6178FB230FF811007896F2 /* ContestDetailListViewController.swift */; };
@@ -153,6 +156,9 @@
 		9C357255232BC5280079852D /* EndIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EndIndicator.png; sourceTree = "<group>"; };
 		9C357256232BC5280079852D /* ProgressIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ProgressIndicator.png; sourceTree = "<group>"; };
 		9C359030231A8783001C72DF /* ContestDetailsSharedDepositVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestDetailsSharedDepositVC.swift; sourceTree = "<group>"; };
+		9C5C0A0F2330795F00367B8A /* NanumMyeongjo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumMyeongjo-Regular.ttf"; sourceTree = "<group>"; };
+		9C5C0A112330798500367B8A /* Gaegu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gaegu-Regular.ttf"; sourceTree = "<group>"; };
+		9C5C0A13233079C800367B8A /* DoHyeon-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DoHyeon-Regular.ttf"; sourceTree = "<group>"; };
 		9C6178F6230FE33D007896F2 /* FeedSharedPopUpPrimary.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedSharedPopUpPrimary.xib; sourceTree = "<group>"; };
 		9C6178F8230FE37C007896F2 /* FeedSharedPopUpPrimary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSharedPopUpPrimary.swift; sourceTree = "<group>"; };
 		9C6178FB230FF811007896F2 /* ContestDetailListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestDetailListViewController.swift; sourceTree = "<group>"; };
@@ -464,6 +470,9 @@
 				9C70646622FEAFEF00E006D7 /* NotoSansCJKkr-Medium.otf */,
 				9C70646422FEAFE600E006D7 /* NotoSansCJKkr-Regular.otf */,
 				9C70646122FEA9C900E006D7 /* NotoSansCJKkr-Bold.otf */,
+				9C5C0A0F2330795F00367B8A /* NanumMyeongjo-Regular.ttf */,
+				9C5C0A112330798500367B8A /* Gaegu-Regular.ttf */,
+				9C5C0A13233079C800367B8A /* DoHyeon-Regular.ttf */,
 			);
 			path = "Custom Fonts";
 			sourceTree = "<group>";
@@ -644,6 +653,7 @@
 				9C63192723014C4800830385 /* ReferralClientCell.xib in Resources */,
 				9C617901230FFAA6007896F2 /* ContestDetailListCell.xib in Resources */,
 				9C70646F22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf in Resources */,
+				9C5C0A102330795F00367B8A /* NanumMyeongjo-Regular.ttf in Resources */,
 				9C70646222FEA9C900E006D7 /* NotoSansCJKkr-Bold.otf in Resources */,
 				9C9AC6A82320C05E0091EE77 /* TimerSettingScreen.xib in Resources */,
 				9CF02C0D2319424700614F6B /* RefImageCell.xib in Resources */,
@@ -651,6 +661,7 @@
 				9C1BED9F231116350011F296 /* CustomActionSheetCell.xib in Resources */,
 				9C70645322FEA3AE00E006D7 /* Assets.xcassets in Resources */,
 				9C7D49EF23213E2A0011FDAF /* AddTextView.xib in Resources */,
+				9C5C0A14233079C900367B8A /* DoHyeon-Regular.ttf in Resources */,
 				9C7D49E4232121640011FDAF /* AddStickersView.xib in Resources */,
 				9C357260232BC5280079852D /* BorderLine.png in Resources */,
 				9C6E272E231E084B00C197D7 /* FilterPopupView.xib in Resources */,
@@ -668,6 +679,7 @@
 				9C2FF928231D2D9C004923DE /* MusicCategoryCell.xib in Resources */,
 				9C3212002317EBA7004375D8 /* CustomAlertView.xib in Resources */,
 				9CCF2CDB231A52080062558A /* ImageViewerVC.xib in Resources */,
+				9C5C0A122330798500367B8A /* Gaegu-Regular.ttf in Resources */,
 				9C7D49F723213F9A0011FDAF /* AddTextFontCell.xib in Resources */,
 				9C2628D923151B1A00835446 /* MusicInfoCell.xib in Resources */,
 				9C357261232BC5280079852D /* StartIndicator.png in Resources */,

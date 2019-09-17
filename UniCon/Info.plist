@@ -49,6 +49,12 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NanumMyeongjo-Regular.ttf</string>
+		<string>Gaegu-Regular.ttf</string>
+		<string>DoHyeon-Regular.ttf</string>
+	</array>
 	<key>UIFileSharingEnabled</key>
 	<true/>
 </dict>

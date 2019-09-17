@@ -10,10 +10,22 @@ import UIKit
 
 class AddTextFontCell: UICollectionViewCell {
 
+    @IBOutlet weak var fontText:UILabel!
+    
+
+    override var bounds: CGRect {
+        didSet {
+            self.layoutIfNeeded()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+    }
+    
+    func configure() {
+        contentView.addCornerRadius(radius: 5)
     }
 
 }

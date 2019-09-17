@@ -17,7 +17,7 @@
 import UIKit
 
 struct FontModel {
-    let image, name:String
+    let text, fontName:String
 }
 struct TextColorModel {
     let name:String
@@ -39,12 +39,7 @@ class AddTextView: UIView {
     @IBOutlet var bottomContainerView: UIView!
     @IBOutlet var textFontCollView:UICollectionView!
     @IBOutlet var colorCollView:UICollectionView!
-    @IBOutlet var textView:UITextField! {
-        didSet {
-            
-            
-        }
-    }
+    @IBOutlet var textView:UITextField!
     @IBOutlet var textFillModeToggleButton:UIButton!
     @IBOutlet var textAlignmentButton:UIButton!
     
@@ -67,6 +62,9 @@ class AddTextView: UIView {
                                         TextColorModel(name: "", color: AppColors.whiteTextColor),
                                         TextColorModel(name: "", color: AppColors.lighGreenTextColor)]
     
+    var fontModels:[FontModel] = [FontModel(text: "나눔명조", fontName: "NanumMyeongjo-Regular"),
+                                  FontModel(text: "개구", fontName: "Gaegu-Regular"),
+                                  FontModel(text: "도현", fontName: "DoHyeon-Regular")]
     var centerConstraint:NSLayoutConstraint!
     var leftConstraint:NSLayoutConstraint!
     var rightConstraint:NSLayoutConstraint!
@@ -233,7 +231,7 @@ class AddTextView: UIView {
 extension AddTextView:UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == textFontCollView {
-            return 5
+            return fontModels.count
         }
         else {
             return colorModels.count
@@ -243,6 +241,10 @@ extension AddTextView:UICollectionViewDataSource, UICollectionViewDelegate, UICo
         
         if collectionView == textFontCollView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FontCell", for: indexPath) as! AddTextFontCell
+            let model = self.fontModels[indexPath.row]
+            cell.configure()
+            cell.fontText.text = model.text
+            cell.fontText.font = UIFont(name: model.fontName, size: 23)
             return cell
         }
         else {
@@ -256,7 +258,11 @@ extension AddTextView:UICollectionViewDataSource, UICollectionViewDelegate, UICo
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == textFontCollView {
-            return CGSize(width: 100, height: collectionView.bounds.height)
+                   let label = UILabel(frame: CGRect.zero)
+                   label.text = self.fontModels[indexPath.row].text
+                   label.sizeToFit()
+            //        return CGSize(width: label.frame.width + 20, height: 30)
+            return CGSize(width: label.frame.width + 20, height: collectionView.bounds.height)
         }
         else {
             return CGSize(width: collectionView.bounds.height, height: collectionView.bounds.height)
@@ -264,7 +270,7 @@ extension AddTextView:UICollectionViewDataSource, UICollectionViewDelegate, UICo
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == textFontCollView {
-            
+            textView.font = UIFont(name: self.fontModels[indexPath.row].fontName, size: 20)
         }
         else {
             //Select color model & apply it to the text
