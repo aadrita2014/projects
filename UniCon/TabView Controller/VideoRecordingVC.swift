@@ -251,7 +251,8 @@ class VideoRecordingVC: UIViewController {
             filterPopupView?.dismissViewAction = {
                 self.hideFilterPopupView()
             }
-            filterPopupView?.saveFilterAction = {
+            filterPopupView?.saveFilterAction = { filterModel in
+                self.addFilterView(model: filterModel)
                 self.hideFilterPopupView()
             }
             filterPopupView?.shareCollView.reloadData()
@@ -347,6 +348,12 @@ class VideoRecordingVC: UIViewController {
         updateButtons()
     }
     
+    //MARK: Add Filter to the view {
+    func addFilterView(model:FilterModel) {
+        let view = GradientView(frame: self.videoContainerView.bounds)
+        view.gradientColor = model.color
+        self.videoContainerView.addSubview(view)
+    }
     //MARK: Add Resizable, Rotatable snap view to the video container
     func addSnapView(fromTextModel:TextColorModel) {
         let snapView = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))

@@ -9,6 +9,8 @@
 import UIKit
 
 struct AppColors {
+    
+    //Primay Colors
     static let default_placeholder_color = UIColor(red: 170.0/255.0, green: 170.0/255.0, blue: 170.0/255.0, alpha: 1.0)
     static let default_red_color = UIColor(red: 191.0/255.0, green: 8.0/255.0, blue: 24.0/255.0, alpha: 1.0)
     static let default_background_color = UIColor(red: 3.0/255.0, green: 15.0/255.0, blue: 18.0/255.0, alpha: 1)
@@ -26,6 +28,24 @@ struct AppColors {
     static let grayTextColor = UIColor(red: 51.0/255.0, green: 51.0/255.0, blue: 51.0/255.0, alpha: 1.0)
     static let whiteTextColor = UIColor(red: 242.0/255.0, green: 242.0/255.0, blue: 242.0/255.0, alpha: 1.0)
     static let lighGreenTextColor = UIColor(red: 111.0/255.0, green: 207.0/255.0, blue: 151.0/255.0, alpha: 1.0)
+    
+    
+    //Filter Colors
+    static let pinkFlueFilterColor = UIColor(red: 250.0/255.0, green: 36.0/255.0, blue: 86.0/255.0, alpha: 1.0)
+    static let whiteFilterColor = UIColor.white
+    static let bluesFilterColor = UIColor(red: 79.0/255.0, green: 76.0/255.0, blue: 224.0/255.0, alpha: 0.2)
+    static let mandarinFilterColor = UIColor(red: 212.0/255.0, green: 224.0/255.0, blue: 76.0/255.0, alpha: 0.2)
+    static let greenTeaFilterColor = UIColor(red:76.0/255.0,green: 224.0/255.0,blue: 82.0/255.0, alpha: 0.2)
+    static let redWineFilterColor = UIColor(red: 191.0/255.0, green: 8.0/255.0, blue: 24.0/255.0, alpha: 0.2)
+    
+    
+    //Gradient Colors works with cgColor only
+    static let pinkFlueGradient = [AppColors.pinkFlueFilterColor.cgColor,UIColor.clear.cgColor]
+    static let whiteGradient = [AppColors.whiteFilterColor.cgColor,UIColor.clear.cgColor]
+    static let bluesGradient = [AppColors.bluesFilterColor.cgColor]
+    static let greenTeaGradient = [AppColors.greenTeaFilterColor.cgColor]
+    static let redWineGradient = [AppColors.redWineFilterColor.cgColor]
+    static let mandarinGradient = [AppColors.mandarinFilterColor.cgColor]
     
 }
 

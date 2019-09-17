@@ -28,6 +28,7 @@
 		9C3212042318004A004375D8 /* ClientContestRegBasicInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C32120323180049004375D8 /* ClientContestRegBasicInfoVC.swift */; };
 		9C34717D2330BA3B00F64B89 /* EmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C34717B2330BA3B00F64B89 /* EmojiCell.swift */; };
 		9C34717E2330BA3B00F64B89 /* EmojiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C34717C2330BA3B00F64B89 /* EmojiCell.xib */; };
+		9C3471802330D4BB00F64B89 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C34717F2330D4BB00F64B89 /* GradientView.swift */; };
 		9C357244232BB3BC0079852D /* VideoLibraryEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C357243232BB3BC0079852D /* VideoLibraryEditVC.swift */; };
 		9C357257232BC5280079852D /* ABBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C357249232BC5280079852D /* ABBorder.swift */; };
 		9C357258232BC5280079852D /* ABEndIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C35724A232BC5280079852D /* ABEndIndicator.swift */; };
@@ -146,6 +147,7 @@
 		9C32120323180049004375D8 /* ClientContestRegBasicInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientContestRegBasicInfoVC.swift; sourceTree = "<group>"; };
 		9C34717B2330BA3B00F64B89 /* EmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCell.swift; sourceTree = "<group>"; };
 		9C34717C2330BA3B00F64B89 /* EmojiCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmojiCell.xib; sourceTree = "<group>"; };
+		9C34717F2330D4BB00F64B89 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		9C357243232BB3BC0079852D /* VideoLibraryEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLibraryEditVC.swift; sourceTree = "<group>"; };
 		9C357249232BC5280079852D /* ABBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABBorder.swift; sourceTree = "<group>"; };
 		9C35724A232BC5280079852D /* ABEndIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABEndIndicator.swift; sourceTree = "<group>"; };
@@ -424,6 +426,7 @@
 				9C6E272D231E084B00C197D7 /* FilterPopupView.xib */,
 				9C6E272F231E088A00C197D7 /* FilterPopupCell.swift */,
 				9C6E2730231E088A00C197D7 /* FilterPopupCell.xib */,
+				9C34717F2330D4BB00F64B89 /* GradientView.swift */,
 			);
 			path = "Filter View";
 			sourceTree = "<group>";
@@ -763,6 +766,7 @@
 				9C357258232BC5280079852D /* ABEndIndicator.swift in Sources */,
 				9C6E272C231E081E00C197D7 /* FilterPopupView.swift in Sources */,
 				9C7D49F223213F840011FDAF /* AddTextColorCell.swift in Sources */,
+				9C3471802330D4BB00F64B89 /* GradientView.swift in Sources */,
 				9C7D49E22321214E0011FDAF /* AddStickersPopupView.swift in Sources */,
 				9CCF2CDA231A52080062558A /* ImageViewerVC.swift in Sources */,
 				9C617900230FFAA6007896F2 /* ContestDetailListCell.swift in Sources */,
