@@ -303,6 +303,14 @@ class VideoRecordingVC: UIViewController {
             stickerPopupView?.dismissViewAction = {
                 self.hideStickerPopUpView()
             }
+            stickerPopupView?.addStickerToTheView = { sticker in
+                self.addSnapView(fromSticker: sticker)
+                self.hideStickerPopUpView()
+            }
+            stickerPopupView?.addEmojiToTheView = { emoji,size in
+                self.addSnapView(fromEmoji: emoji, fontSize: size)
+                self.hideStickerPopUpView()
+            }
             self.view.addSubview(stickerPopupView!)
             hideAllBtns()
         }
@@ -322,7 +330,7 @@ class VideoRecordingVC: UIViewController {
            
             textPopupView?.addTextToParent = { model in
                 self.models.append(model)
-                self.addSnapView(textModel: model)
+                self.addSnapView(fromTextModel: model)
                 self.hideAddTextView()
             }
             self.view.addSubview(textPopupView!)
@@ -339,17 +347,35 @@ class VideoRecordingVC: UIViewController {
         updateButtons()
     }
     
-    func addSnapView(textModel:TextColorModel) {
+    //MARK: Add Resizable, Rotatable snap view to the video container
+    func addSnapView(fromTextModel:TextColorModel) {
         let snapView = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-        snapView.text = textModel.name
+        snapView.text = fromTextModel.name
         snapView.textColor = UIColor.white
-        snapView.backgroundColor = textModel.color
+        snapView.backgroundColor = fromTextModel.color
         snapView.sizeToFit()
         snapView.center = videoContainerView.center
         
         snapGesture.append(SnapGesture(view: snapView))
         self.videoContainerView.addSubview(snapView)
-     //   self.videoPreviewLayer?.addSublayer(snapView.layer)
+    }
+    
+    func addSnapView(fromSticker sticker: UIImage) {
+        let snapView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height:  100))
+        snapView.image = sticker
+        snapView.contentMode = .scaleAspectFit
+        snapView.center = videoContainerView.center
+        snapGesture.append(SnapGesture(view: snapView))
+        self.videoContainerView.addSubview(snapView)
+    }
+    func addSnapView(fromEmoji: String,fontSize:Double) {
+        let snapView = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        snapView.text = fromEmoji
+        snapView.font = UIFont.systemFont(ofSize: CGFloat(fontSize))
+        snapView.sizeToFit()
+        snapView.center = videoContainerView.center
+        snapGesture.append(SnapGesture(view: snapView))
+        self.videoContainerView.addSubview(snapView)
     }
 }
 //MARK: UIImagePickerControllerDelegate
@@ -407,7 +433,6 @@ extension VideoRecordingVC {
             catch {
                 showAlertMessage(title: "Error", message: "Camera initialisation Failed")
             }
-            
             setVideoOutput(session: captureSession!)
             //Set the video layer to preview the live camera content
             videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)

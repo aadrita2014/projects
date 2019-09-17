@@ -26,6 +26,8 @@
 		9C3212002317EBA7004375D8 /* CustomAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C3211FF2317EBA7004375D8 /* CustomAlertView.xib */; };
 		9C3212022317EBB3004375D8 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3212012317EBB3004375D8 /* CustomAlertView.swift */; };
 		9C3212042318004A004375D8 /* ClientContestRegBasicInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C32120323180049004375D8 /* ClientContestRegBasicInfoVC.swift */; };
+		9C34717D2330BA3B00F64B89 /* EmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C34717B2330BA3B00F64B89 /* EmojiCell.swift */; };
+		9C34717E2330BA3B00F64B89 /* EmojiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C34717C2330BA3B00F64B89 /* EmojiCell.xib */; };
 		9C357244232BB3BC0079852D /* VideoLibraryEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C357243232BB3BC0079852D /* VideoLibraryEditVC.swift */; };
 		9C357257232BC5280079852D /* ABBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C357249232BC5280079852D /* ABBorder.swift */; };
 		9C357258232BC5280079852D /* ABEndIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C35724A232BC5280079852D /* ABEndIndicator.swift */; };
@@ -142,6 +144,8 @@
 		9C3211FF2317EBA7004375D8 /* CustomAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CustomAlertView.xib; path = ../CustomAlertView.xib; sourceTree = "<group>"; };
 		9C3212012317EBB3004375D8 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomAlertView.swift; path = ../CustomAlertView.swift; sourceTree = "<group>"; };
 		9C32120323180049004375D8 /* ClientContestRegBasicInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientContestRegBasicInfoVC.swift; sourceTree = "<group>"; };
+		9C34717B2330BA3B00F64B89 /* EmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCell.swift; sourceTree = "<group>"; };
+		9C34717C2330BA3B00F64B89 /* EmojiCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmojiCell.xib; sourceTree = "<group>"; };
 		9C357243232BB3BC0079852D /* VideoLibraryEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLibraryEditVC.swift; sourceTree = "<group>"; };
 		9C357249232BC5280079852D /* ABBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABBorder.swift; sourceTree = "<group>"; };
 		9C35724A232BC5280079852D /* ABEndIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABEndIndicator.swift; sourceTree = "<group>"; };
@@ -502,6 +506,8 @@
 				9C7D49E3232121640011FDAF /* AddStickersView.xib */,
 				9C7D49E82321287B0011FDAF /* StickerCell.swift */,
 				9C7D49E92321287B0011FDAF /* StickerCell.xib */,
+				9C34717B2330BA3B00F64B89 /* EmojiCell.swift */,
+				9C34717C2330BA3B00F64B89 /* EmojiCell.xib */,
 			);
 			path = "Add Stickers View";
 			sourceTree = "<group>";
@@ -651,6 +657,7 @@
 				9C6E2732231E088A00C197D7 /* FilterPopupCell.xib in Resources */,
 				9C7A8A9F2320D6E100A399C2 /* MusicEditingView.xib in Resources */,
 				9C63192723014C4800830385 /* ReferralClientCell.xib in Resources */,
+				9C34717E2330BA3B00F64B89 /* EmojiCell.xib in Resources */,
 				9C617901230FFAA6007896F2 /* ContestDetailListCell.xib in Resources */,
 				9C70646F22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf in Resources */,
 				9C5C0A102330795F00367B8A /* NanumMyeongjo-Regular.ttf in Resources */,
@@ -744,6 +751,7 @@
 				9C70647122FEB5DD00E006D7 /* LoginCreatorViewController.swift in Sources */,
 				9C1B4B74232D0965003237DF /* ContestModel.swift in Sources */,
 				9C70647322FEC0DC00E006D7 /* Constants.swift in Sources */,
+				9C34717D2330BA3B00F64B89 /* EmojiCell.swift in Sources */,
 				9CF9324B23168EE7002AC77D /* ContestDetailsClientVC.swift in Sources */,
 				9C3212042318004A004375D8 /* ClientContestRegBasicInfoVC.swift in Sources */,
 				9C35725E232BC5280079852D /* ABTimeView.swift in Sources */,

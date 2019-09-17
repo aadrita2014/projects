@@ -21,7 +21,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddStickersPopupView" customModule="UniCon" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="L9A-Sv-sYL" id="Hgz-GL-MYS"/>
-                <outlet property="stickerCollView" destination="pwI-oS-1hL" id="trj-dT-4xP"/>
+                <outlet property="segmentedControl" destination="QeW-oS-QQT" id="TSD-gO-3Vh"/>
+                <outlet property="stickersCollView" destination="pwI-oS-1hL" id="mG2-De-C6r"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -38,10 +39,10 @@
                     <subviews>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pwI-oS-1hL">
                             <rect key="frame" x="0.0" y="78" width="375" height="333.5"/>
-                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="4" minimumInteritemSpacing="2" id="b8I-x8-vyi">
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="b8I-x8-vyi">
                                 <size key="itemSize" width="50" height="50"/>
-                                <size key="headerReferenceSize" width="10" height="0.0"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </collectionViewFlowLayout>
@@ -85,6 +86,9 @@
                                 <segment title="이모티콘"/>
                             </segments>
                             <color key="tintColor" red="0.74901960779999999" green="0.031372549020000001" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="segmentValueChanged" destination="-1" eventType="valueChanged" id="opS-Dv-jRJ"/>
+                            </connections>
                         </segmentedControl>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.61980950342465757" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

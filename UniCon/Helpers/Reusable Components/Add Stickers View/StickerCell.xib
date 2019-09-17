@@ -20,15 +20,15 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j8s-K3-GVf">
-                        <rect key="frame" x="0.0" y="0.0" width="119" height="119"/>
+                        <rect key="frame" x="8" y="8" width="103" height="103"/>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="j8s-K3-GVf" secondAttribute="trailing" id="CMg-Oy-VNj"/>
-                <constraint firstItem="j8s-K3-GVf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Rf1-aA-v3O"/>
-                <constraint firstItem="j8s-K3-GVf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Yp7-4p-szF"/>
-                <constraint firstAttribute="bottom" secondItem="j8s-K3-GVf" secondAttribute="bottom" id="cg8-6J-8DS"/>
+                <constraint firstAttribute="trailing" secondItem="j8s-K3-GVf" secondAttribute="trailing" constant="8" id="CMg-Oy-VNj"/>
+                <constraint firstItem="j8s-K3-GVf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Rf1-aA-v3O"/>
+                <constraint firstItem="j8s-K3-GVf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="Yp7-4p-szF"/>
+                <constraint firstAttribute="bottom" secondItem="j8s-K3-GVf" secondAttribute="bottom" constant="8" id="cg8-6J-8DS"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="119" height="119"/>

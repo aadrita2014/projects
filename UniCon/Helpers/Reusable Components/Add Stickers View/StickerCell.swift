@@ -11,13 +11,18 @@ import UIKit
 class StickerCell: UICollectionViewCell {
 
     @IBOutlet weak var stickerImageView:UIImageView!
-    
+    override var bounds: CGRect {
+        didSet {
+            self.layoutIfNeeded()
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-    func setModel(model:StickerModel) {
-        stickerImageView.image = UIImage(named:model.image)
+    
+    func setImage( img:UIImage) {
+        stickerImageView.image = img
     }
 
 }
