@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C0E787023320AE600509C19 /* bensound-ukulele.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E786F23320AE600509C19 /* bensound-ukulele.mp3 */; };
+		9C0E787023320AE600509C19 /* demo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E786F23320AE600509C19 /* demo.mp3 */; };
 		9C1B4B74232D0965003237DF /* ContestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1B4B73232D0965003237DF /* ContestModel.swift */; };
 		9C1BED99231112F10011F296 /* CustomActionSheetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C1BED98231112F10011F296 /* CustomActionSheetView.xib */; };
 		9C1BED9B2311130C0011F296 /* CustomActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BED9A2311130C0011F296 /* CustomActionSheet.swift */; };
@@ -132,7 +132,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9C0E786F23320AE600509C19 /* bensound-ukulele.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bensound-ukulele.mp3"; sourceTree = "<group>"; };
+		9C0E786F23320AE600509C19 /* demo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = demo.mp3; sourceTree = "<group>"; };
 		9C1B4B73232D0965003237DF /* ContestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestModel.swift; sourceTree = "<group>"; };
 		9C1BED98231112F10011F296 /* CustomActionSheetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomActionSheetView.xib; sourceTree = "<group>"; };
 		9C1BED9A2311130C0011F296 /* CustomActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActionSheet.swift; sourceTree = "<group>"; };
@@ -481,7 +481,7 @@
 				9C70645422FEA3AE00E006D7 /* LaunchScreen.storyboard */,
 				9C70645722FEA3AF00E006D7 /* Info.plist */,
 				9C70644F22FEA3AC00E006D7 /* UniCon.xcdatamodeld */,
-				9C0E786F23320AE600509C19 /* bensound-ukulele.mp3 */,
+				9C0E786F23320AE600509C19 /* demo.mp3 */,
 			);
 			path = UniCon;
 			sourceTree = "<group>";
@@ -678,7 +678,7 @@
 			files = (
 				9C70646522FEAFE600E006D7 /* NotoSansCJKkr-Regular.otf in Resources */,
 				9C70646922FEAFFC00E006D7 /* NotoSansCJKkr-Light.otf in Resources */,
-				9C0E787023320AE600509C19 /* bensound-ukulele.mp3 in Resources */,
+				9C0E787023320AE600509C19 /* demo.mp3 in Resources */,
 				9C70645622FEA3AF00E006D7 /* LaunchScreen.storyboard in Resources */,
 				9CF1E7AB230F98890093D21F /* SharePopUpCell.xib in Resources */,
 				9C7D49F323213F840011FDAF /* AddTextColorCell.xib in Resources */,

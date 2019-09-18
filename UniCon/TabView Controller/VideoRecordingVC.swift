@@ -15,7 +15,9 @@ class VideoRecordingVC: UIViewController {
     fileprivate enum RecStatus {
         case notStartedRecording, recording, stopped, saved
     }
-    
+    fileprivate enum FlashStatus {
+        case auto,on,off
+    }
     //MARK: IBOutlets
     @IBOutlet weak var videoContainerView:UIView!  //To preview the camera feed {
     @IBOutlet weak var videoEditButtons:UIStackView!
@@ -25,12 +27,15 @@ class VideoRecordingVC: UIViewController {
     @IBOutlet weak var backButton:UIButton!
     @IBOutlet weak var nextButton:UIButton!
     @IBOutlet weak var recordingProgress:UIProgressView!
-    
+    //To hold stickers & text
+    @IBOutlet weak var tempImageView:UIImageView!
     //MARK: Video Edit StackView IBOutlets
     @IBOutlet weak var selectMusicStackView:UIStackView!
     @IBOutlet weak var trimMusicStackView:UIStackView!
     @IBOutlet weak var addTextStackView:UIStackView!
     @IBOutlet weak var addStickerStackView:UIStackView!
+    @IBOutlet weak var flashStackView:UIStackView!
+    @IBOutlet weak var flashButton:UIButton!
     
     
     //Other Declarations
@@ -62,6 +67,9 @@ class VideoRecordingVC: UIViewController {
     var models:[TextColorModel] = []
     var snapGesture:[SnapGesture] = []
     
+    fileprivate var flashStatus = FlashStatus.auto
+    //To record & save multiple videos //TODO
+    var outputURLs:[URL] = []
     
 
     //MARK: Overriden view methods
@@ -103,7 +111,8 @@ class VideoRecordingVC: UIViewController {
     //MARK: Buttons/View Updates
     func updateButtons() {
         
-        
+        recordingProgress.isHidden = false
+        backButton.isHidden = false
         //View update according to the status of the app
         switch recordingStatus {
         case .notStartedRecording:
@@ -170,8 +179,10 @@ class VideoRecordingVC: UIViewController {
         videoSaveButtons.isHidden = true
         videoEditButtons.isHidden = true
         galleryView.isHidden = true
-        backButton.isHidden = false
+        backButton.isHidden = true
         recordBtn.isHidden = true
+        recordingProgress.isHidden = true
+        
     }
     
     //MARK: IBActions
@@ -199,6 +210,12 @@ class VideoRecordingVC: UIViewController {
     @IBAction func addTextViewClicked() {
         showAddTextView()
     }
+    @IBAction func toggleFlash() {
+        updateFlashButton()
+    }
+    @IBAction func setupTimerClicked() {
+        
+    }
     //MARK: Video Recording IBActions
     @IBAction func recordVideoClicked() {
         if recordingStatus == .notStartedRecording {
@@ -216,6 +233,24 @@ class VideoRecordingVC: UIViewController {
     @IBAction func saveVideoClicked(){
         recordingStatus = .saved
         updateButtons()
+    }
+    //Update flash settings
+    func updateFlashButton() {
+        switch flashStatus {
+        case .auto:
+            flashStatus = .on
+            flashSettings(mode: AVCaptureDevice.TorchMode.on)
+            flashButton.setImage(UIImage(named: "iconRecFlashOn"), for: .normal)
+        case .on:
+            flashStatus = .off
+            flashSettings(mode: AVCaptureDevice.TorchMode.off)
+             flashButton.setImage(UIImage(named: "iconRecFlashOff"), for: .normal)
+        case .off:
+            flashStatus = .auto
+            flashSettings(mode: AVCaptureDevice.TorchMode.auto)
+             flashButton.setImage(UIImage(named: "iconRecFlashAuto"), for: .normal)
+            
+        }
     }
     //MARK: View Navigation Handling
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -356,7 +391,7 @@ class VideoRecordingVC: UIViewController {
     func addFilterView(model:FilterModel) {
         let view = GradientView(frame: self.videoContainerView.bounds)
         view.gradientColor = model.color
-        self.videoContainerView.addSubview(view)
+        self.tempImageView.addSubview(view)
     }
     //MARK: Add Resizable, Rotatable snap view to the video container
     func addSnapView(fromTextModel:TextColorModel) {
@@ -365,28 +400,28 @@ class VideoRecordingVC: UIViewController {
         snapView.textColor = UIColor.white
         snapView.backgroundColor = fromTextModel.color
         snapView.sizeToFit()
-        snapView.center = videoContainerView.center
+        snapView.center = tempImageView.center
         
         snapGesture.append(SnapGesture(view: snapView))
-        self.videoContainerView.addSubview(snapView)
+        self.tempImageView.addSubview(snapView)
     }
     
     func addSnapView(fromSticker sticker: UIImage) {
         let snapView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height:  100))
         snapView.image = sticker
         snapView.contentMode = .scaleAspectFit
-        snapView.center = videoContainerView.center
+        snapView.center = tempImageView.center
         snapGesture.append(SnapGesture(view: snapView))
-        self.videoContainerView.addSubview(snapView)
+        self.tempImageView.addSubview(snapView)
     }
     func addSnapView(fromEmoji: String,fontSize:Double) {
         let snapView = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         snapView.text = fromEmoji
         snapView.font = UIFont.systemFont(ofSize: CGFloat(fontSize))
         snapView.sizeToFit()
-        snapView.center = videoContainerView.center
+        snapView.center = tempImageView.center
         snapGesture.append(SnapGesture(view: snapView))
-        self.videoContainerView.addSubview(snapView)
+        self.tempImageView.addSubview(snapView)
     }
 }
 //MARK: UIImagePickerControllerDelegate
@@ -426,6 +461,18 @@ extension VideoRecordingVC {
     func getAppDocumentsPath() {
         
     }
+    func flashSettings(mode:AVCaptureDevice.TorchMode = AVCaptureDevice.TorchMode.auto) {
+        if let device = self.captureDevice {
+            do {
+                try device.lockForConfiguration()
+                device.torchMode = mode
+                device.unlockForConfiguration()
+            }
+            catch _{
+                print("Failed")
+            }
+        }
+    }
     func initialize() {
         //To avoid duplicating the capture session
         if captureSession != nil {
@@ -451,8 +498,11 @@ extension VideoRecordingVC {
             videoPreviewLayer?.frame = videoContainerView.layer.bounds
             videoContainerView.layer.addSublayer(videoPreviewLayer!)
             
+          
             //Start capturing the session
             captureSession?.startRunning()
+            //Flash Configuration
+            flashSettings()
             
             checkForPermission()
         }
