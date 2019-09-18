@@ -35,6 +35,8 @@ class VideoRecordingVC: UIViewController {
     @IBOutlet weak var addTextStackView:UIStackView!
     @IBOutlet weak var addStickerStackView:UIStackView!
     @IBOutlet weak var flashStackView:UIStackView!
+    @IBOutlet weak var timerStackView:UIStackView!
+    @IBOutlet weak var beautyStackView:UIStackView!
     @IBOutlet weak var flashButton:UIButton!
     
     
@@ -124,13 +126,19 @@ class VideoRecordingVC: UIViewController {
             galleryView.isHidden = false
             backButton.isHidden = false
             recordBtn.isHidden = false
+            
+            beautyStackView.isHidden = false
+            timerStackView.isHidden = false
+            flashStackView.isHidden = false
+            
             //Hide Text & Sticker options
             addTextStackView.isHidden = true
             addStickerStackView.isHidden = true
             recordBtn.setImage(UIImage(named: "btnVideoStart"), for: .normal)
             //Reset the timer
             totalElapsedSeconds = 0.0
-          
+            
+            
             
         case .recording:
             startRecording()
@@ -141,6 +149,10 @@ class VideoRecordingVC: UIViewController {
             galleryView.isHidden = true
             backButton.isHidden = true
             recordBtn.isHidden = false
+            
+            beautyStackView.isHidden = true
+            timerStackView.isHidden = true
+            flashStackView.isHidden = true
             
             addTextStackView.isHidden = true
             addStickerStackView.isHidden = true
@@ -156,8 +168,14 @@ class VideoRecordingVC: UIViewController {
             galleryView.isHidden = true
             backButton.isHidden = true
             recordBtn.isHidden = false
+            
+            beautyStackView.isHidden = false
+            timerStackView.isHidden = false
+            flashStackView.isHidden = false
+            
             addTextStackView.isHidden = true
             addStickerStackView.isHidden = true
+            
             recordBtn.setImage(UIImage(named: "btnVideoStart"), for: .normal)
             recordingTimer?.invalidate()
           
@@ -169,10 +187,17 @@ class VideoRecordingVC: UIViewController {
             galleryView.isHidden = true
             backButton.isHidden = false
             recordBtn.isHidden = true
-            addTextStackView.isHidden = true
-            addStickerStackView.isHidden = true
-            recordBtn.setImage(UIImage(named: "btnVideoStart"), for: .normal)
+            
+            beautyStackView.isHidden = true
+            timerStackView.isHidden = true
+            flashStackView.isHidden = true
+            
+            addTextStackView.isHidden = false
+            addStickerStackView.isHidden = false
+           // recordBtn.setImage(UIImage(named: "btnVideoStart"), for: .normal)
         }
+        
+        updateUIForMusicModel()
     }
     func hideAllBtns() {
         nextButton.isHidden = true
@@ -219,6 +244,9 @@ class VideoRecordingVC: UIViewController {
     //MARK: Video Recording IBActions
     @IBAction func recordVideoClicked() {
         if recordingStatus == .notStartedRecording {
+            recordingStatus = .recording
+        }
+        else if recordingStatus == .stopped {
             recordingStatus = .recording
         }
         else {
@@ -540,7 +568,9 @@ extension VideoRecordingVC {
     func stopRecording() {
         if let videoOutput = self.videoOutput {
             videoOutput.stopRecording()
-            totalElapsedSeconds = 0.0
+            recordingTimer?.invalidate()
+            recordingTimer = nil
+            //totalElapsedSeconds = 0.0
         }
     }
     func saveRecordedVideo() {
