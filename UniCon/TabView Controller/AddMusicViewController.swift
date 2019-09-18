@@ -8,15 +8,6 @@
 
 import UIKit
 
-//Class for music info detail model inherited from music info class
-class MusicInfoDetail:MusicInfo {
-    var isFavorite:Bool = false
-    var isSelected:Bool = false
-}
-struct MusicCategory {
-    let image,name:String
-    var isFavoriteCategory:Bool = false
-}
 class AddMusicViewController: UIViewController {
 
     //MARK: Cell Identifiers declarations
@@ -39,8 +30,11 @@ class AddMusicViewController: UIViewController {
         MusicCategory(image: "demo_featured_creator", name: "록", isFavoriteCategory: false)
         
     ]
-    var musicList:[MusicInfoDetail] = []
+    var musicList:[MusicInfoDetail] = [MusicInfoDetail(image: "", title: "Song", artistInfo: "Artist", duration: "30")]
     
+    
+    //MARK: ACtion & data to be passed to the parent view
+    var musicSelectedAction:((MusicInfo)->Void)?
     //MARK: OVerriden view methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +58,15 @@ class AddMusicViewController: UIViewController {
         //Segment Control setup
         musicFilterSegmentControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
         musicFilterSegmentControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.red], for: .normal)
+    }
+    //MARK: IBActions
+    @IBAction func backClicked() {
+        if let navVC = self.navigationController {
+            navVC.popViewController(animated: true)
+        }
+        else {
+            dismiss(animated: true, completion: nil)
+        }
     }
 }
 
@@ -95,9 +98,18 @@ extension AddMusicViewController:UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: MUSIC_ADD_CELL_IDENTIFIER, for: indexPath) as! MusicAddInfoCell
         cell.musicSelectedAction = { cell in
             
+            //just a demo selecttion by selecting the first element from the list
+            let model = self.musicList.first! as MusicInfo
+            if let action = self.musicSelectedAction {
+                action(model)
+            }
             self.dismiss(animated: true, completion: nil)
         }
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+        
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         //Fixed height for now

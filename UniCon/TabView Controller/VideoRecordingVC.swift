@@ -35,7 +35,12 @@ class VideoRecordingVC: UIViewController {
     
     //Other Declarations
     fileprivate var recordingStatus:RecStatus = .notStartedRecording
-    
+    //To save the music selected from add music controller
+    fileprivate var selectedMusicModel:MusicInfo? {
+        didSet {
+            updateUIForMusicModel()
+        }
+    }
     
     //Video Editing Functionality & Views
     fileprivate var filterPopupView:FilterPopupView?
@@ -43,8 +48,6 @@ class VideoRecordingVC: UIViewController {
     fileprivate var musicEditingPopupView:MusicEditingPopupView?
     fileprivate var stickerPopupView:AddStickersPopupView?
     fileprivate var textPopupView:AddTextView?
-    
-    
     
     //MARK: Camera recording & saving declarations
     var captureDevice:AVCaptureDevice?
@@ -58,14 +61,9 @@ class VideoRecordingVC: UIViewController {
     var totalElapsedSeconds:Double = 0.0
     var models:[TextColorModel] = []
     var snapGesture:[SnapGesture] = []
-    //MARK: Other Variables
-    var isMusicSelected:Bool = false {
-        didSet {
-            updateUI()
-        }
-    }
     
     
+
     //MARK: Overriden view methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,18 +86,16 @@ class VideoRecordingVC: UIViewController {
         nextButton.addCornerRadius(radius: 10)
         updateButtons()
         addTapGestureToGalleryImgv()
-        updateUI()
+        updateUIForMusicModel()
     }
     
-    func updateUI() {
+    func updateUIForMusicModel() {
         //track change in value of music selection variable and accordingly update the UI
-        
-        if isMusicSelected {
-            videoEditButtons.insertSubview(trimMusicStackView, belowSubview: selectMusicStackView)
+        if selectedMusicModel != nil {
             trimMusicStackView.isHidden = false
         }
         else {
-            videoEditButtons.removeArrangedSubview(trimMusicStackView)
+          
             trimMusicStackView.isHidden = true
         }
     }
@@ -107,31 +103,40 @@ class VideoRecordingVC: UIViewController {
     //MARK: Buttons/View Updates
     func updateButtons() {
         
+        
         //View update according to the status of the app
         switch recordingStatus {
-            
         case .notStartedRecording:
+            
             nextButton.isHidden = true
             videoSaveButtons.isHidden = true
+            
             videoEditButtons.isHidden = false
             galleryView.isHidden = false
             backButton.isHidden = false
             recordBtn.isHidden = false
+            //Hide Text & Sticker options
+            addTextStackView.isHidden = true
+            addStickerStackView.isHidden = true
             recordBtn.setImage(UIImage(named: "btnVideoStart"), for: .normal)
             //Reset the timer
             totalElapsedSeconds = 0.0
-            toggleAddTextStickerViews()
+          
             
         case .recording:
             startRecording()
+            
             nextButton.isHidden = true
             videoSaveButtons.isHidden = true
             videoEditButtons.isHidden = true
             galleryView.isHidden = true
             backButton.isHidden = true
             recordBtn.isHidden = false
+            
+            addTextStackView.isHidden = true
+            addStickerStackView.isHidden = true
             recordBtn.setImage(UIImage(named: "btnVideoStop"), for: .normal)
-            toggleAddTextStickerViews()
+            
             
             
         case .stopped:
@@ -142,9 +147,11 @@ class VideoRecordingVC: UIViewController {
             galleryView.isHidden = true
             backButton.isHidden = true
             recordBtn.isHidden = false
+            addTextStackView.isHidden = true
+            addStickerStackView.isHidden = true
             recordBtn.setImage(UIImage(named: "btnVideoStart"), for: .normal)
             recordingTimer?.invalidate()
-            toggleAddTextStickerViews()
+          
             
         case .saved:
             nextButton.isHidden = false
@@ -153,11 +160,10 @@ class VideoRecordingVC: UIViewController {
             galleryView.isHidden = true
             backButton.isHidden = false
             recordBtn.isHidden = true
+            addTextStackView.isHidden = true
+            addStickerStackView.isHidden = true
             recordBtn.setImage(UIImage(named: "btnVideoStart"), for: .normal)
-            toggleAddTextStickerViews(show: true)
         }
-        
-        
     }
     func hideAllBtns() {
         nextButton.isHidden = true
@@ -167,17 +173,7 @@ class VideoRecordingVC: UIViewController {
         backButton.isHidden = false
         recordBtn.isHidden = true
     }
-    func toggleAddTextStickerViews(show:Bool = false) {
-        if show {
-            
-        }
-        else {
-//            videoEditButtons.removeArrangedSubview(addTextStackView)
-//            videoEditButtons.removeArrangedSubview(addStickerStackView)
-//            addTextStackView.isHidden = true
-//            addStickerStackView.isHidden = true
-        }
-    }
+    
     //MARK: IBActions
     @IBAction func backClicked() {
         self.navigationController?.popViewController(animated: true)
@@ -221,12 +217,17 @@ class VideoRecordingVC: UIViewController {
         recordingStatus = .saved
         updateButtons()
     }
-    //MARK: View Navigations Handling
+    //MARK: View Navigation Handling
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? VideoLibraryEditVC {
             vc.videoURL = sender as? NSURL
             vc.trimmedVideoURL = { url in
                 print(url)
+            }
+        }
+        else if let vc = segue.destination as? AddMusicViewController {
+            vc.musicSelectedAction = { musicModel in
+                self.selectedMusicModel = musicModel
             }
         }
     }
@@ -286,9 +287,11 @@ class VideoRecordingVC: UIViewController {
     func showMusicEditingPopupView() {
         if musicEditingPopupView == nil {
             musicEditingPopupView = MusicEditingPopupView(frame: CGRect(x: 0, y: 0, width: self.view.viewWidth(), height: self.view.viewHeight()))
+            musicEditingPopupView?.selectedMusicModel = self.selectedMusicModel
             musicEditingPopupView?.selectedAction = {
                 self.hideMusicEditingPopupView()
             }
+            
             self.view.addSubview(musicEditingPopupView!)
             hideAllBtns()
         }

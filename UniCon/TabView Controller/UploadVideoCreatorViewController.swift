@@ -8,17 +8,6 @@
 
 import UIKit
 
-//To be inherited for other classes
-class MusicInfo {
-    let image,title,artistInfo,duration:String
-    
-    init(image:String,title:String,artistInfo:String,duration:String) {
-        self.image = image
-        self.title = title
-        self.artistInfo = artistInfo
-        self.duration = duration
-    }
-}
 
 class UploadVideoCreatorViewController: UIViewController {
     

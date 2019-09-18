@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C0E787023320AE600509C19 /* bensound-ukulele.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E786F23320AE600509C19 /* bensound-ukulele.mp3 */; };
 		9C1B4B74232D0965003237DF /* ContestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1B4B73232D0965003237DF /* ContestModel.swift */; };
 		9C1BED99231112F10011F296 /* CustomActionSheetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C1BED98231112F10011F296 /* CustomActionSheetView.xib */; };
 		9C1BED9B2311130C0011F296 /* CustomActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BED9A2311130C0011F296 /* CustomActionSheet.swift */; };
@@ -61,6 +62,10 @@
 		9C63192F23014C7A00830385 /* ContestJudgingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C63192D23014C7A00830385 /* ContestJudgingCell.xib */; };
 		9C63193223014C8A00830385 /* ContestClosedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C63193023014C8A00830385 /* ContestClosedCell.swift */; };
 		9C63193323014C8A00830385 /* ContestClosedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C63193123014C8A00830385 /* ContestClosedCell.xib */; };
+		9C696C5A2332261A00B686BC /* VIWaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C696C562332261900B686BC /* VIWaveformView.swift */; };
+		9C696C5B2332261A00B686BC /* VIAudioSampleOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C696C572332261900B686BC /* VIAudioSampleOperation.swift */; };
+		9C696C5C2332261A00B686BC /* VIWaveformNodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C696C582332261900B686BC /* VIWaveformNodeView.swift */; };
+		9C696C5D2332261A00B686BC /* WaveformNodeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C696C592332261900B686BC /* WaveformNodeProvider.swift */; };
 		9C6E272C231E081E00C197D7 /* FilterPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E272B231E081E00C197D7 /* FilterPopupView.swift */; };
 		9C6E272E231E084B00C197D7 /* FilterPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C6E272D231E084B00C197D7 /* FilterPopupView.xib */; };
 		9C6E2731231E088A00C197D7 /* FilterPopupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E272F231E088A00C197D7 /* FilterPopupCell.swift */; };
@@ -111,6 +116,7 @@
 		9CCF2CDD231A643E0062558A /* ClientRegistrationConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF2CDC231A643E0062558A /* ClientRegistrationConfirmationVC.swift */; };
 		9CCF2CDF231A6EEF0062558A /* ContestRegistrationDepositInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF2CDE231A6EEF0062558A /* ContestRegistrationDepositInfoVC.swift */; };
 		9CCF2CE1231A70590062558A /* FinishedAppointmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF2CE0231A70590062558A /* FinishedAppointmentVC.swift */; };
+		9CE7DEE72331030800EFBB02 /* MusicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE7DEE62331030800EFBB02 /* MusicInfo.swift */; };
 		9CF02C0C2319424700614F6B /* RefImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF02C0A2319424700614F6B /* RefImageCell.swift */; };
 		9CF02C0D2319424700614F6B /* RefImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CF02C0B2319424700614F6B /* RefImageCell.xib */; };
 		9CF02C0F2319571000614F6B /* ContestDepostiConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF02C0E2319571000614F6B /* ContestDepostiConfirmationVC.swift */; };
@@ -126,6 +132,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C0E786F23320AE600509C19 /* bensound-ukulele.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bensound-ukulele.mp3"; sourceTree = "<group>"; };
 		9C1B4B73232D0965003237DF /* ContestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestModel.swift; sourceTree = "<group>"; };
 		9C1BED98231112F10011F296 /* CustomActionSheetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomActionSheetView.xib; sourceTree = "<group>"; };
 		9C1BED9A2311130C0011F296 /* CustomActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActionSheet.swift; sourceTree = "<group>"; };
@@ -180,6 +187,10 @@
 		9C63192D23014C7A00830385 /* ContestJudgingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContestJudgingCell.xib; sourceTree = "<group>"; };
 		9C63193023014C8A00830385 /* ContestClosedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestClosedCell.swift; sourceTree = "<group>"; };
 		9C63193123014C8A00830385 /* ContestClosedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContestClosedCell.xib; sourceTree = "<group>"; };
+		9C696C562332261900B686BC /* VIWaveformView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIWaveformView.swift; sourceTree = "<group>"; };
+		9C696C572332261900B686BC /* VIAudioSampleOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIAudioSampleOperation.swift; sourceTree = "<group>"; };
+		9C696C582332261900B686BC /* VIWaveformNodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIWaveformNodeView.swift; sourceTree = "<group>"; };
+		9C696C592332261900B686BC /* WaveformNodeProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveformNodeProvider.swift; sourceTree = "<group>"; };
 		9C6E272B231E081E00C197D7 /* FilterPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPopupView.swift; sourceTree = "<group>"; };
 		9C6E272D231E084B00C197D7 /* FilterPopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterPopupView.xib; sourceTree = "<group>"; };
 		9C6E272F231E088A00C197D7 /* FilterPopupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPopupCell.swift; sourceTree = "<group>"; };
@@ -234,6 +245,7 @@
 		9CCF2CDC231A643E0062558A /* ClientRegistrationConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientRegistrationConfirmationVC.swift; sourceTree = "<group>"; };
 		9CCF2CDE231A6EEF0062558A /* ContestRegistrationDepositInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestRegistrationDepositInfoVC.swift; sourceTree = "<group>"; };
 		9CCF2CE0231A70590062558A /* FinishedAppointmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedAppointmentVC.swift; sourceTree = "<group>"; };
+		9CE7DEE62331030800EFBB02 /* MusicInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicInfo.swift; sourceTree = "<group>"; };
 		9CF02C0A2319424700614F6B /* RefImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefImageCell.swift; sourceTree = "<group>"; };
 		9CF02C0B2319424700614F6B /* RefImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefImageCell.xib; sourceTree = "<group>"; };
 		9CF02C0E2319571000614F6B /* ContestDepostiConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestDepostiConfirmationVC.swift; sourceTree = "<group>"; };
@@ -263,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				9C1B4B73232D0965003237DF /* ContestModel.swift */,
+				9CE7DEE62331030800EFBB02 /* MusicInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -283,14 +296,6 @@
 				9C6178FB230FF811007896F2 /* ContestDetailListViewController.swift */,
 			);
 			path = "Other Creator VC";
-			sourceTree = "<group>";
-		};
-		9C357246232BC12E0079852D /* VideoRangeSlider */ = {
-			isa = PBXGroup;
-			children = (
-				9C357247232BC5280079852D /* ABVideoRangeSlider */,
-			);
-			path = VideoRangeSlider;
 			sourceTree = "<group>";
 		};
 		9C357247232BC5280079852D /* ABVideoRangeSlider */ = {
@@ -401,9 +406,9 @@
 				9C70647222FEC0DC00E006D7 /* Constants.swift */,
 				9CCC584A231BCB180007112A /* Helpers.swift */,
 				9C8C8A19232FA2620053CCBA /* SnapGesture.swift */,
-				9CF1E7A1230F917C0093D21F /* Reusable Components */,
+				9CF1E7A1230F917C0093D21F /* Reusable Views */,
 				9C1B4B72232D0946003237DF /* Models */,
-				9C357246232BC12E0079852D /* VideoRangeSlider */,
+				9CA6CB5F23321B2800B55CED /* Vendor */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -417,6 +422,17 @@
 				9C1BED9D231116350011F296 /* CustomActionSheetCell.xib */,
 			);
 			path = CustomActionSheet;
+			sourceTree = "<group>";
+		};
+		9C696C552332261900B686BC /* VIWaveFormView */ = {
+			isa = PBXGroup;
+			children = (
+				9C696C562332261900B686BC /* VIWaveformView.swift */,
+				9C696C572332261900B686BC /* VIAudioSampleOperation.swift */,
+				9C696C582332261900B686BC /* VIWaveformNodeView.swift */,
+				9C696C592332261900B686BC /* WaveformNodeProvider.swift */,
+			);
+			path = VIWaveFormView;
 			sourceTree = "<group>";
 		};
 		9C6E2733231E1D9700C197D7 /* Filter View */ = {
@@ -465,6 +481,7 @@
 				9C70645422FEA3AE00E006D7 /* LaunchScreen.storyboard */,
 				9C70645722FEA3AF00E006D7 /* Info.plist */,
 				9C70644F22FEA3AC00E006D7 /* UniCon.xcdatamodeld */,
+				9C0E786F23320AE600509C19 /* bensound-ukulele.mp3 */,
 			);
 			path = UniCon;
 			sourceTree = "<group>";
@@ -544,6 +561,15 @@
 			path = "TabView Controller";
 			sourceTree = "<group>";
 		};
+		9CA6CB5F23321B2800B55CED /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				9C696C552332261900B686BC /* VIWaveFormView */,
+				9C357247232BC5280079852D /* ABVideoRangeSlider */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
 		9CAC821423154D9700936CE7 /* Client VC */ = {
 			isa = PBXGroup;
 			children = (
@@ -563,7 +589,7 @@
 			path = "Client VC";
 			sourceTree = "<group>";
 		};
-		9CF1E7A1230F917C0093D21F /* Reusable Components */ = {
+		9CF1E7A1230F917C0093D21F /* Reusable Views */ = {
 			isa = PBXGroup;
 			children = (
 				9C693450231409B70053BFF0 /* CustomActionSheet */,
@@ -577,7 +603,7 @@
 				9C7D49E7232128310011FDAF /* Add Stickers View */,
 				9C7D49F823215C4C0011FDAF /* Add Text View */,
 			);
-			path = "Reusable Components";
+			path = "Reusable Views";
 			sourceTree = "<group>";
 		};
 		9CF1E7AC230FC03E0093D21F /* ShareView */ = {
@@ -652,6 +678,7 @@
 			files = (
 				9C70646522FEAFE600E006D7 /* NotoSansCJKkr-Regular.otf in Resources */,
 				9C70646922FEAFFC00E006D7 /* NotoSansCJKkr-Light.otf in Resources */,
+				9C0E787023320AE600509C19 /* bensound-ukulele.mp3 in Resources */,
 				9C70645622FEA3AF00E006D7 /* LaunchScreen.storyboard in Resources */,
 				9CF1E7AB230F98890093D21F /* SharePopUpCell.xib in Resources */,
 				9C7D49F323213F840011FDAF /* AddTextColorCell.xib in Resources */,
@@ -716,7 +743,9 @@
 				9C35725B232BC5280079852D /* ABThumbnailsManager.swift in Sources */,
 				9CF1EAA52314440D006895F9 /* VideoRecordingVC.swift in Sources */,
 				9CF72FCC23176A7B009D1C60 /* PrizeAllocationViewController.swift in Sources */,
+				9CE7DEE72331030800EFBB02 /* MusicInfo.swift in Sources */,
 				9C70645122FEA3AC00E006D7 /* UniCon.xcdatamodeld in Sources */,
+				9C696C5A2332261A00B686BC /* VIWaveformView.swift in Sources */,
 				9C357259232BC5280079852D /* ABProgressIndicator.swift in Sources */,
 				9CF02C0C2319424700614F6B /* RefImageCell.swift in Sources */,
 				9C2628DC23151B4300835446 /* ContestInfoCell.swift in Sources */,
@@ -742,6 +771,7 @@
 				9C1FD5F8230C5A5B0073EEF4 /* CongratulationPopViewController.swift in Sources */,
 				9C2FF92B231D2F67004923DE /* MusicAddInfoCell.swift in Sources */,
 				9C9AC4AA22FEDB5D00230522 /* GeneralVideosViewController.swift in Sources */,
+				9C696C5D2332261A00B686BC /* WaveformNodeProvider.swift in Sources */,
 				9CCC584B231BCB180007112A /* Helpers.swift in Sources */,
 				9C70645E22FEA65600E006D7 /* Extensions.swift in Sources */,
 				9C9AC4AD22FEE03600230522 /* MyPageViewController.swift in Sources */,
@@ -750,6 +780,7 @@
 				9C8C8A1A232FA2620053CCBA /* SnapGesture.swift in Sources */,
 				9CF1E7A5230F966D0093D21F /* SharePopUpView.swift in Sources */,
 				9CCF2CDD231A643E0062558A /* ClientRegistrationConfirmationVC.swift in Sources */,
+				9C696C5B2332261A00B686BC /* VIAudioSampleOperation.swift in Sources */,
 				9C6178FC230FF811007896F2 /* ContestDetailListViewController.swift in Sources */,
 				9C70647122FEB5DD00E006D7 /* LoginCreatorViewController.swift in Sources */,
 				9C1B4B74232D0965003237DF /* ContestModel.swift in Sources */,
@@ -775,6 +806,7 @@
 				9C63192623014C4800830385 /* ReferralClientCell.swift in Sources */,
 				9C63192E23014C7A00830385 /* ContestJudgingCell.swift in Sources */,
 				9C1BED9B2311130C0011F296 /* CustomActionSheet.swift in Sources */,
+				9C696C5C2332261A00B686BC /* VIWaveformNodeView.swift in Sources */,
 				9C6178F9230FE37C007896F2 /* FeedSharedPopUpPrimary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

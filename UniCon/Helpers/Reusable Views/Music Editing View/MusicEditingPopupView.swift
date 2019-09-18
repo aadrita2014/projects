@@ -11,7 +11,15 @@ import UIKit
 class MusicEditingPopupView: UIView {
 
     let kCONTENT_XIB_NAME = "MusicEditingView"
-    @IBOutlet var contentView: UIView!
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var musicInfoLabel:UILabel!
+    @IBOutlet weak var saveTrimmedMusicButton:UIButton!
+    
+    var selectedMusicModel:MusicInfo? {
+        didSet {
+           updateMusicLabel()
+        }
+    }
     var selectedAction:(()->Void)?
     
     //MARK: View Setup Methods
@@ -30,6 +38,10 @@ class MusicEditingPopupView: UIView {
         //Loading the view from the nib file
         Bundle.main.loadNibNamed(kCONTENT_XIB_NAME, owner: self, options: nil)
         contentView.fixInView(self)
+        saveTrimmedMusicButton.addCornerRadius()
+    }
+    func updateMusicLabel() {
+         musicInfoLabel.text = selectedMusicModel!.title + " - " + selectedMusicModel!.artistInfo
     }
     @IBAction fileprivate func selectedClicked() {
         if let action = selectedAction {
