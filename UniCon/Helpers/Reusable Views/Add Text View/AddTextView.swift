@@ -16,21 +16,11 @@
 
 import UIKit
 
-struct FontModel {
-    let text, fontName:String
-}
-struct TextColorModel {
-    let name:String
-    let color:UIColor
-    
-}
 class AddTextView: UIView {
     
-    enum TextFillMode {
-        case textOnly,bgOnly,alphaBg
-    }
-    enum TextAlignment {
-        case center, left, right
+    
+    struct FontModel {
+        let text, fontName:String
     }
     let kCONTENT_XIB_NAME = "AddTextView"
     
@@ -45,22 +35,24 @@ class AddTextView: UIView {
     
     //To pass result to the called view acts as delegate
     var dismissViewAction:(()->Void)?
-    var addTextToParent:((TextColorModel)->Void)?
+    var addTextToParent:((UILabel)->Void)?
     
     var selectedColor:UIColor = UIColor.white
     var textFillMode:TextFillMode = .textOnly
     var textAlignmentMode:TextAlignment = .center
+    
+    fileprivate typealias TextColorModel = UIColor
     //Demo Models
-    var colorModels:[TextColorModel] = [TextColorModel(name: "", color: AppColors.redTextColor),
-                                        TextColorModel(name: "", color: AppColors.orangeTextColor),
-                                        TextColorModel(name: "", color: AppColors.yellowTextColor),
-                                        TextColorModel(name: "", color: AppColors.greenTextColor),
-                                        TextColorModel(name: "", color: AppColors.royalBlueTextColor),
-                                        TextColorModel(name: "", color: AppColors.cyanTextColor),
-                                        TextColorModel(name: "", color: AppColors.pinkTextColor),
-                                        TextColorModel(name: "", color: AppColors.grayTextColor),
-                                        TextColorModel(name: "", color: AppColors.whiteTextColor),
-                                        TextColorModel(name: "", color: AppColors.lighGreenTextColor)]
+    fileprivate var colorModels:[TextColorModel] = [AppColors.redTextColor,
+                                                    AppColors.orangeTextColor,
+                                                    AppColors.yellowTextColor,
+                                                    AppColors.greenTextColor,
+                                                    AppColors.royalBlueTextColor,
+                                                    AppColors.cyanTextColor,
+                                                    AppColors.pinkTextColor,
+                                                    AppColors.grayTextColor,
+                                                    AppColors.whiteTextColor,
+                                                    AppColors.lighGreenTextColor]
     
     var fontModels:[FontModel] = [FontModel(text: "나눔명조", fontName: "NanumMyeongjo-Regular"),
                                   FontModel(text: "개구", fontName: "Gaegu-Regular"),
@@ -81,7 +73,7 @@ class AddTextView: UIView {
         commonInit()
     }
     func commonInit() {
-       
+        
         //Loading the view from the nib file
         Bundle.main.loadNibNamed(kCONTENT_XIB_NAME, owner: self, options: nil)
         
@@ -209,7 +201,15 @@ class AddTextView: UIView {
             rightConstraint.isActive = true
         }
     }
-    
+    func labelFromtextField() -> UILabel{
+        let label = UILabel(frame: CGRect.zero)
+        label.text = textView.text
+        label.textColor = textView.textColor
+        label.backgroundColor = textView.backgroundColor
+        label.font = textView.font
+        label.sizeToFit()
+        return label
+    }
     //To rotate the screens and layout the views accordingly
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
@@ -251,16 +251,16 @@ extension AddTextView:UICollectionViewDataSource, UICollectionViewDelegate, UICo
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ColorCell", for: indexPath) as! AddTextColorCell
             let colorModel = self.colorModels[indexPath.row]
             cell.configure()
-            cell.bgView.backgroundColor = colorModel.color
+            cell.bgView.backgroundColor = colorModel
             return cell
         }
         
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == textFontCollView {
-                   let label = UILabel(frame: CGRect.zero)
-                   label.text = self.fontModels[indexPath.row].text
-                   label.sizeToFit()
+            let label = UILabel(frame: CGRect.zero)
+            label.text = self.fontModels[indexPath.row].text
+            label.sizeToFit()
             //        return CGSize(width: label.frame.width + 20, height: 30)
             return CGSize(width: label.frame.width + 20, height: collectionView.bounds.height)
         }
@@ -275,7 +275,7 @@ extension AddTextView:UICollectionViewDataSource, UICollectionViewDelegate, UICo
         else {
             //Select color model & apply it to the text
             let colorModel = self.colorModels[indexPath.row]
-            self.selectedColor = colorModel.color
+            self.selectedColor = colorModel
             updateTextFill()
         }
     }
@@ -287,9 +287,8 @@ extension AddTextView:UITextFieldDelegate {
     //Dismiss the view and return the text with settings to the parent view
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         endEditing(true)
-        let textColorModel = TextColorModel(name: textField.text!, color: textField.backgroundColor ?? UIColor.clear)
         if let action = addTextToParent {
-            action(textColorModel)
+            action(labelFromtextField())
         }
         return false
     }

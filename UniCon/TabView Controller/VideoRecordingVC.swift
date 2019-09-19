@@ -66,8 +66,7 @@ class VideoRecordingVC: UIViewController {
     var outputURL:URL?
     var recordingTimer:Timer?
     var totalElapsedSeconds:Double = 0.0
-    var models:[TextColorModel] = []
-    var snapGesture:[SnapGesture] = []
+    var snapView:[SnapView] = []
     
     fileprivate var flashStatus = FlashStatus.auto
     //To record & save multiple videos //TODO
@@ -105,7 +104,9 @@ class VideoRecordingVC: UIViewController {
             trimMusicStackView.isHidden = false
         }
         else {
-          
+            
+            
+            
             trimMusicStackView.isHidden = true
         }
     }
@@ -138,7 +139,8 @@ class VideoRecordingVC: UIViewController {
             //Reset the timer
             totalElapsedSeconds = 0.0
             
-            
+            //Reset the output url array
+            outputURLs = []
             
         case .recording:
             startRecording()
@@ -396,9 +398,9 @@ class VideoRecordingVC: UIViewController {
                 self.hideAddTextView()
             }
            
-            textPopupView?.addTextToParent = { model in
-                self.models.append(model)
-                self.addSnapView(fromTextModel: model)
+            textPopupView?.addTextToParent = { label in
+                
+                self.addSnapView(label: label)
                 self.hideAddTextView()
             }
             self.view.addSubview(textPopupView!)
@@ -422,33 +424,38 @@ class VideoRecordingVC: UIViewController {
         self.tempImageView.addSubview(view)
     }
     //MARK: Add Resizable, Rotatable snap view to the video container
-    func addSnapView(fromTextModel:TextColorModel) {
-        let snapView = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-        snapView.text = fromTextModel.name
-        snapView.textColor = UIColor.white
-        snapView.backgroundColor = fromTextModel.color
-        snapView.sizeToFit()
-        snapView.center = tempImageView.center
-        
-        snapGesture.append(SnapGesture(view: snapView))
+    func addSnapView(label:UILabel) {
+        let snapView = SnapView.addSnapView(toView: self.tempImageView,label:label)
+        snapView.deleteClickedAction = { snap in
+            self.snapView.removeAll { tempSnap in
+                tempSnap == snap
+            }
+            snap.removeFromSuperview()
+        }
+        self.snapView.append(snapView)
         self.tempImageView.addSubview(snapView)
     }
     
     func addSnapView(fromSticker sticker: UIImage) {
-        let snapView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height:  100))
-        snapView.image = sticker
-        snapView.contentMode = .scaleAspectFit
-        snapView.center = tempImageView.center
-        snapGesture.append(SnapGesture(view: snapView))
+        let snapView = SnapView.addSnapView(toView: self.tempImageView, fromImage: sticker)
+        snapView.deleteClickedAction = { snap in
+            self.snapView.removeAll { tempSnap in
+                tempSnap == snap
+            }
+            snap.removeFromSuperview()
+        }
+        self.snapView.append(snapView)
         self.tempImageView.addSubview(snapView)
     }
     func addSnapView(fromEmoji: String,fontSize:Double) {
-        let snapView = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-        snapView.text = fromEmoji
-        snapView.font = UIFont.systemFont(ofSize: CGFloat(fontSize))
-        snapView.sizeToFit()
-        snapView.center = tempImageView.center
-        snapGesture.append(SnapGesture(view: snapView))
+        let snapView = SnapView.addSnapView(toView: self.tempImageView,emoji: fromEmoji,fontSize:fontSize)
+        snapView.deleteClickedAction = { snap in
+            self.snapView.removeAll { tempSnap in
+                tempSnap == snap
+            }
+            snap.removeFromSuperview()
+        }
+        self.snapView.append(snapView)
         self.tempImageView.addSubview(snapView)
     }
 }
@@ -472,7 +479,7 @@ extension VideoRecordingVC:UIImagePickerControllerDelegate,UINavigationControlle
 extension VideoRecordingVC {
     //To get the temporary save path for the recorded video
     func getVideoOutputPath() -> URL? {
-        let outputPath = NSTemporaryDirectory() + "output.mov" //Demo File Name
+        let outputPath = NSTemporaryDirectory() + "output\(outputURLs.count).mov" //Multiple videos to record, it will be joine when user will save
         let outputURL = URL(fileURLWithPath: outputPath)
         let fileManager = FileManager.default
         //Check if already exists and try to delete the file
@@ -604,6 +611,7 @@ extension VideoRecordingVC:AVCaptureFileOutputRecordingDelegate {
         print("saved file \(outputFileURL)")
         if error == nil {
             self.outputURL = outputFileURL
+            outputURLs.append(self.outputURL!)
         }
         else {
             showAlertMessage(title: "Error", message: "Failed to save the video")
