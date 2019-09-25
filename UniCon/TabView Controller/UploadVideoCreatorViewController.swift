@@ -42,7 +42,7 @@ class UploadVideoCreatorViewController: UIViewController {
         //Select the index by default that is general
         segmentControl.selectedSegmentIndex = 1
     }
-    //Other view setup code
+    //Other view setup cod
     fileprivate func infoTableSetup() {
         videoInfoTv.estimatedRowHeight = 0
         videoInfoTv.tableFooterView = UIView(frame: .zero)
