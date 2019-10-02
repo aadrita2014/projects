@@ -406,6 +406,7 @@
 		9C63191F23014BF600830385 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				9CF1E7A1230F917C0093D21F /* Reusable Views */,
 				9C70645D22FEA65600E006D7 /* Extensions.swift */,
 				9C70647222FEC0DC00E006D7 /* Constants.swift */,
 				9CCC584A231BCB180007112A /* Helpers.swift */,
@@ -477,7 +478,6 @@
 				9C9AC4AB22FEE00B00230522 /* TabView Controller */,
 				9CAC821423154D9700936CE7 /* Client VC */,
 				9C357245232BB3C70079852D /* Other Creator VC */,
-				9CF1E7A1230F917C0093D21F /* Reusable Views */,
 				9C63191F23014BF600830385 /* Helpers */,
 				9C63191D23014BD600830385 /* Custom Coll Cells */,
 				9C70646322FEA9CD00E006D7 /* Custom Fonts */,
