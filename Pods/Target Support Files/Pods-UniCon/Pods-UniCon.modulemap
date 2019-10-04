@@ -1,0 +1,6 @@
+framework module Pods_UniCon {
+  umbrella header "Pods-UniCon-umbrella.h"
+
+  export *
+  module * { export * }
+}
