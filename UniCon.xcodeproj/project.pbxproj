@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -82,7 +82,6 @@
 		9C70646522FEAFE600E006D7 /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C70646422FEAFE600E006D7 /* NotoSansCJKkr-Regular.otf */; };
 		9C70646722FEAFEF00E006D7 /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C70646622FEAFEF00E006D7 /* NotoSansCJKkr-Medium.otf */; };
 		9C70646922FEAFFC00E006D7 /* NotoSansCJKkr-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C70646822FEAFFB00E006D7 /* NotoSansCJKkr-Light.otf */; };
-		9C70646F22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C70646E22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf */; };
 		9C70647122FEB5DD00E006D7 /* LoginCreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70647022FEB5DD00E006D7 /* LoginCreatorViewController.swift */; };
 		9C70647322FEC0DC00E006D7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70647222FEC0DC00E006D7 /* Constants.swift */; };
 		9C70647522FECCED00E006D7 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70647422FECCED00E006D7 /* FeedViewController.swift */; };
@@ -101,6 +100,8 @@
 		9C7D49F623213F9A0011FDAF /* AddTextFontCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7D49F423213F9A0011FDAF /* AddTextFontCell.swift */; };
 		9C7D49F723213F9A0011FDAF /* AddTextFontCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C7D49F523213F9A0011FDAF /* AddTextFontCell.xib */; };
 		9C8C8A1A232FA2620053CCBA /* SnapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8C8A19232FA2620053CCBA /* SnapGesture.swift */; };
+		9C993CA52346095D009F6B15 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9C993CA42346095D009F6B15 /* Alamofire */; };
+		9C993CA823460EB4009F6B15 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C993CA723460EB4009F6B15 /* APIManager.swift */; };
 		9C9AC4A822FEDB4B00230522 /* ContestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4A722FEDB4B00230522 /* ContestViewController.swift */; };
 		9C9AC4AA22FEDB5D00230522 /* GeneralVideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4A922FEDB5D00230522 /* GeneralVideosViewController.swift */; };
 		9C9AC4AD22FEE03600230522 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4AC22FEE03600230522 /* MyPageViewController.swift */; };
@@ -109,6 +110,8 @@
 		9C9AC6A62320BFF50091EE77 /* TimerSettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC6A52320BFF50091EE77 /* TimerSettingScreen.swift */; };
 		9C9AC6A82320C05E0091EE77 /* TimerSettingScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C9AC6A72320C05E0091EE77 /* TimerSettingScreen.xib */; };
 		9C9AE2DC231A7CF0000E45EB /* JudgeShareNonChargeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AE2DB231A7CF0000E45EB /* JudgeShareNonChargeVC.swift */; };
+		9CA3DDBF2347756600777F16 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA3DDBE2347756600777F16 /* User.swift */; };
+		9CA3DDC12347763D00777F16 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA3DDC02347763D00777F16 /* Reachability.swift */; };
 		9CAC8216231556BB00936CE7 /* LoginClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAC8215231556BB00936CE7 /* LoginClientViewController.swift */; };
 		9CB1E63923337522009BCD52 /* AddTextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB1E63823337522009BCD52 /* AddTextModel.swift */; };
 		9CCB4D5E230BED9E00375888 /* ShareFeeDetailsClientVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCB4D5D230BED9E00375888 /* ShareFeeDetailsClientVC.swift */; };
@@ -213,7 +216,6 @@
 		9C70646422FEAFE600E006D7 /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
 		9C70646622FEAFEF00E006D7 /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
 		9C70646822FEAFFB00E006D7 /* NotoSansCJKkr-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Light.otf"; sourceTree = "<group>"; };
-		9C70646E22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Thin.otf"; sourceTree = "<group>"; };
 		9C70647022FEB5DD00E006D7 /* LoginCreatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginCreatorViewController.swift; path = ../LoginCreatorViewController.swift; sourceTree = "<group>"; };
 		9C70647222FEC0DC00E006D7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9C70647422FECCED00E006D7 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 		9C7D49F423213F9A0011FDAF /* AddTextFontCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTextFontCell.swift; sourceTree = "<group>"; };
 		9C7D49F523213F9A0011FDAF /* AddTextFontCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTextFontCell.xib; sourceTree = "<group>"; };
 		9C8C8A19232FA2620053CCBA /* SnapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapGesture.swift; sourceTree = "<group>"; };
+		9C993CA723460EB4009F6B15 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		9C9AC4A722FEDB4B00230522 /* ContestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestViewController.swift; sourceTree = "<group>"; };
 		9C9AC4A922FEDB5D00230522 /* GeneralVideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralVideosViewController.swift; sourceTree = "<group>"; };
 		9C9AC4AC22FEE03600230522 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
@@ -240,6 +243,8 @@
 		9C9AC6A52320BFF50091EE77 /* TimerSettingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSettingScreen.swift; sourceTree = "<group>"; };
 		9C9AC6A72320C05E0091EE77 /* TimerSettingScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerSettingScreen.xib; sourceTree = "<group>"; };
 		9C9AE2DB231A7CF0000E45EB /* JudgeShareNonChargeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudgeShareNonChargeVC.swift; sourceTree = "<group>"; };
+		9CA3DDBE2347756600777F16 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9CA3DDC02347763D00777F16 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		9CAC8215231556BB00936CE7 /* LoginClientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClientViewController.swift; sourceTree = "<group>"; };
 		9CB1E63823337522009BCD52 /* AddTextModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddTextModel.swift; path = ../../Models/AddTextModel.swift; sourceTree = "<group>"; };
 		9CCB4D5D230BED9E00375888 /* ShareFeeDetailsClientVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareFeeDetailsClientVC.swift; sourceTree = "<group>"; };
@@ -269,6 +274,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C993CA52346095D009F6B15 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +284,7 @@
 		9C1B4B72232D0946003237DF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9CA3DDBE2347756600777F16 /* User.swift */,
 				9C1B4B73232D0965003237DF /* ContestModel.swift */,
 				9CE7DEE62331030800EFBB02 /* MusicInfo.swift */,
 			);
@@ -406,13 +413,11 @@
 		9C63191F23014BF600830385 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				9CF1E7A1230F917C0093D21F /* Reusable Views */,
 				9C70645D22FEA65600E006D7 /* Extensions.swift */,
 				9C70647222FEC0DC00E006D7 /* Constants.swift */,
 				9CCC584A231BCB180007112A /* Helpers.swift */,
 				9C8C8A19232FA2620053CCBA /* SnapGesture.swift */,
 				9C1A0C9123325B6C005D2CA2 /* SnapView.swift */,
-				9C1B4B72232D0946003237DF /* Models */,
 				9CA6CB5F23321B2800B55CED /* Vendor */,
 			);
 			path = Helpers;
@@ -473,15 +478,12 @@
 			children = (
 				9C70644822FEA3AC00E006D7 /* AppDelegate.swift */,
 				9C1FD5F7230C5A5B0073EEF4 /* CongratulationPopViewController.swift */,
+				9C993CA623460E9E009F6B15 /* Network */,
+				9C1B4B72232D0946003237DF /* Models */,
 				9C70644C22FEA3AC00E006D7 /* Main.storyboard */,
-				9C63191E23014BE900830385 /* Login VC */,
-				9C9AC4AB22FEE00B00230522 /* TabView Controller */,
-				9CAC821423154D9700936CE7 /* Client VC */,
-				9C357245232BB3C70079852D /* Other Creator VC */,
+				9CA3DDBC2347752000777F16 /* VC */,
 				9C63191F23014BF600830385 /* Helpers */,
-				9C63191D23014BD600830385 /* Custom Coll Cells */,
-				9C70646322FEA9CD00E006D7 /* Custom Fonts */,
-				9C6178FD230FF963007896F2 /* Custom Tv Cells */,
+				9CA3DDBD2347753000777F16 /* Custom Views */,
 				9C70645222FEA3AE00E006D7 /* Assets.xcassets */,
 				9C70645422FEA3AE00E006D7 /* LaunchScreen.storyboard */,
 				9C70645722FEA3AF00E006D7 /* Info.plist */,
@@ -494,7 +496,6 @@
 		9C70646322FEA9CD00E006D7 /* Custom Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				9C70646E22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf */,
 				9C70646822FEAFFB00E006D7 /* NotoSansCJKkr-Light.otf */,
 				9C70646622FEAFEF00E006D7 /* NotoSansCJKkr-Medium.otf */,
 				9C70646422FEAFE600E006D7 /* NotoSansCJKkr-Regular.otf */,
@@ -551,6 +552,15 @@
 			path = "Add Text View";
 			sourceTree = "<group>";
 		};
+		9C993CA623460E9E009F6B15 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9C993CA723460EB4009F6B15 /* APIManager.swift */,
+				9CA3DDC02347763D00777F16 /* Reachability.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		9C9AC4AB22FEE00B00230522 /* TabView Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -565,6 +575,28 @@
 				9C9AC4B222FEE05900230522 /* AlarmViewController.swift */,
 			);
 			path = "TabView Controller";
+			sourceTree = "<group>";
+		};
+		9CA3DDBC2347752000777F16 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				9C63191E23014BE900830385 /* Login VC */,
+				9C9AC4AB22FEE00B00230522 /* TabView Controller */,
+				9CAC821423154D9700936CE7 /* Client VC */,
+				9C357245232BB3C70079852D /* Other Creator VC */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		9CA3DDBD2347753000777F16 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				9CF1E7A1230F917C0093D21F /* Reusable Views */,
+				9C63191D23014BD600830385 /* Custom Coll Cells */,
+				9C70646322FEA9CD00E006D7 /* Custom Fonts */,
+				9C6178FD230FF963007896F2 /* Custom Tv Cells */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 		9CA6CB5F23321B2800B55CED /* Vendor */ = {
@@ -639,6 +671,9 @@
 			dependencies = (
 			);
 			name = UniCon;
+			packageProductDependencies = (
+				9C993CA42346095D009F6B15 /* Alamofire */,
+			);
 			productName = UniCon;
 			productReference = 9C70644522FEA3AC00E006D7 /* UniCon.app */;
 			productType = "com.apple.product-type.application";
@@ -650,7 +685,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1030;
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = Rick;
 				TargetAttributes = {
 					9C70644422FEA3AC00E006D7 = {
@@ -668,6 +703,9 @@
 				ko,
 			);
 			mainGroup = 9C70643C22FEA3AC00E006D7;
+			packageReferences = (
+				9C993CA32346095D009F6B15 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 9C70644622FEA3AC00E006D7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -695,7 +733,6 @@
 				9C63192723014C4800830385 /* ReferralClientCell.xib in Resources */,
 				9C34717E2330BA3B00F64B89 /* EmojiCell.xib in Resources */,
 				9C617901230FFAA6007896F2 /* ContestDetailListCell.xib in Resources */,
-				9C70646F22FEB01B00E006D7 /* NotoSansCJKkr-Thin.otf in Resources */,
 				9C5C0A102330795F00367B8A /* NanumMyeongjo-Regular.ttf in Resources */,
 				9C70646222FEA9C900E006D7 /* NotoSansCJKkr-Bold.otf in Resources */,
 				9C9AC6A82320C05E0091EE77 /* TimerSettingScreen.xib in Resources */,
@@ -769,6 +806,8 @@
 				9C70644B22FEA3AC00E006D7 /* LoginViewController.swift in Sources */,
 				9C2628D823151B1A00835446 /* MusicInfoCell.swift in Sources */,
 				9C9AC4B322FEE05900230522 /* AlarmViewController.swift in Sources */,
+				9CA3DDC12347763D00777F16 /* Reachability.swift in Sources */,
+				9C993CA823460EB4009F6B15 /* APIManager.swift in Sources */,
 				9C63192A23014C6300830385 /* OngoingContestCell.swift in Sources */,
 				9CCF2CE1231A70590062558A /* FinishedAppointmentVC.swift in Sources */,
 				9CF1E7AA230F98890093D21F /* SharePopUpCell.swift in Sources */,
@@ -795,6 +834,7 @@
 				9C70647322FEC0DC00E006D7 /* Constants.swift in Sources */,
 				9C34717D2330BA3B00F64B89 /* EmojiCell.swift in Sources */,
 				9CF9324B23168EE7002AC77D /* ContestDetailsClientVC.swift in Sources */,
+				9CA3DDBF2347756600777F16 /* User.swift in Sources */,
 				9C3212042318004A004375D8 /* ClientContestRegBasicInfoVC.swift in Sources */,
 				9C35725E232BC5280079852D /* ABTimeView.swift in Sources */,
 				9C9AC4A822FEDB4B00230522 /* ContestViewController.swift in Sources */,
@@ -847,6 +887,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -908,6 +949,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -963,7 +1005,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3TT3YF37X6;
 				INFOPLIST_FILE = UniCon/Info.plist;
@@ -984,7 +1026,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3TT3YF37X6;
 				INFOPLIST_FILE = UniCon/Info.plist;
@@ -1023,6 +1065,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9C993CA32346095D009F6B15 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9C993CA42346095D009F6B15 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C993CA32346095D009F6B15 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		9C70644F22FEA3AC00E006D7 /* UniCon.xcdatamodeld */ = {

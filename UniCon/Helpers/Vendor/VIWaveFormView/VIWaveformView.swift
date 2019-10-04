@@ -69,7 +69,7 @@ public class VIWaveformView: UIView {
 }
 
 public extension VIWaveformView {
-    public func loadVoice(from asset: AVAsset, completion: @escaping ((Error?) -> Void)) -> Cancellable {
+    func loadVoice(from asset: AVAsset, completion: @escaping ((Error?) -> Void)) -> Cancellable {
         let width = frame.width + 300
         let cancellable = Cancellable()
         asset.loadValuesAsynchronously(forKeys: ["duration", "tracks"], completionHandler: { [weak self] in

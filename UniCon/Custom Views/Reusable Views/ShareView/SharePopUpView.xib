@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansCJKkr-Regular.otf">
+            <string>NotoSansCJKkr-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SharePopUpView" customModule="UniCon" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="KdL-jn-D7s"/>
+                <outlet property="shareCollView" destination="IQa-yy-ddw" id="Mm6-4v-QbR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="493" height="175"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="13x-Ge-otZ">
+                    <rect key="frame" x="0.0" y="0.0" width="493" height="35"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="공유" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcz-La-ppv">
+                            <rect key="frame" x="234.5" y="8" width="24" height="19"/>
+                            <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0n-t3-frR">
+                            <rect key="frame" x="455" y="4" width="30" height="30"/>
+                            <inset key="imageEdgeInsets" minX="7" minY="7" maxX="7" maxY="7"/>
+                            <state key="normal" image="close-icon"/>
+                            <connections>
+                                <action selector="dismissView" destination="-1" eventType="touchUpInside" id="Bsz-el-RmD"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="vcz-La-ppv" firstAttribute="centerX" secondItem="13x-Ge-otZ" secondAttribute="centerX" id="BVr-1l-qrR"/>
+                        <constraint firstAttribute="trailing" secondItem="w0n-t3-frR" secondAttribute="trailing" constant="8" id="WA6-W0-suK"/>
+                        <constraint firstItem="vcz-La-ppv" firstAttribute="top" secondItem="13x-Ge-otZ" secondAttribute="top" constant="8" id="eNA-aL-Sjh"/>
+                        <constraint firstAttribute="bottom" secondItem="vcz-La-ppv" secondAttribute="bottom" constant="8" id="sVb-cK-0T7"/>
+                        <constraint firstItem="w0n-t3-frR" firstAttribute="top" secondItem="13x-Ge-otZ" secondAttribute="top" constant="4" id="xKp-ge-Cto"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="IQa-yy-ddw">
+                    <rect key="frame" x="0.0" y="35" width="493" height="140"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="ixA-2t-Vqo">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="10" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Wmq-Kj-u69"/>
+                        <outlet property="delegate" destination="-1" id="Jkr-L4-bAo"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="13x-Ge-otZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2zt-0p-zpE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="13x-Ge-otZ" secondAttribute="trailing" id="6Kb-DZ-fTK"/>
+                <constraint firstItem="IQa-yy-ddw" firstAttribute="top" secondItem="13x-Ge-otZ" secondAttribute="bottom" id="NT6-gl-nMz"/>
+                <constraint firstItem="IQa-yy-ddw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="P9j-aC-FVV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="IQa-yy-ddw" secondAttribute="trailing" id="gfb-sd-3V3"/>
+                <constraint firstItem="13x-Ge-otZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hUe-r6-J2h"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="IQa-yy-ddw" secondAttribute="bottom" id="y9a-RF-Lr8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="514.6875" y="142.07746478873239"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close-icon" width="30" height="30"/>
+    </resources>
+</document>
