@@ -6,6 +6,5 @@ target 'UniCon' do
   use_frameworks!
 
   # Pods for UniCon
-  pod 'EVReflection/Alamofire'
-
+#  pod 'EVReflection'
 end

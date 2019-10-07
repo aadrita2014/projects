@@ -72,7 +72,6 @@
 		9C6E2731231E088A00C197D7 /* FilterPopupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E272F231E088A00C197D7 /* FilterPopupCell.swift */; };
 		9C6E2732231E088A00C197D7 /* FilterPopupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C6E2730231E088A00C197D7 /* FilterPopupCell.xib */; };
 		9C70644922FEA3AC00E006D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70644822FEA3AC00E006D7 /* AppDelegate.swift */; };
-		9C70644B22FEA3AC00E006D7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70644A22FEA3AC00E006D7 /* LoginViewController.swift */; };
 		9C70644E22FEA3AC00E006D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C70644C22FEA3AC00E006D7 /* Main.storyboard */; };
 		9C70645122FEA3AC00E006D7 /* UniCon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C70644F22FEA3AC00E006D7 /* UniCon.xcdatamodeld */; };
 		9C70645322FEA3AE00E006D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C70645222FEA3AE00E006D7 /* Assets.xcassets */; };
@@ -82,7 +81,6 @@
 		9C70646522FEAFE600E006D7 /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C70646422FEAFE600E006D7 /* NotoSansCJKkr-Regular.otf */; };
 		9C70646722FEAFEF00E006D7 /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C70646622FEAFEF00E006D7 /* NotoSansCJKkr-Medium.otf */; };
 		9C70646922FEAFFC00E006D7 /* NotoSansCJKkr-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C70646822FEAFFB00E006D7 /* NotoSansCJKkr-Light.otf */; };
-		9C70647122FEB5DD00E006D7 /* LoginCreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70647022FEB5DD00E006D7 /* LoginCreatorViewController.swift */; };
 		9C70647322FEC0DC00E006D7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70647222FEC0DC00E006D7 /* Constants.swift */; };
 		9C70647522FECCED00E006D7 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70647422FECCED00E006D7 /* FeedViewController.swift */; };
 		9C75F09A2317C67900E7B3F2 /* ChangePrizeAllocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C75F0992317C67900E7B3F2 /* ChangePrizeAllocationVC.swift */; };
@@ -110,10 +108,7 @@
 		9C9AE2DC231A7CF0000E45EB /* JudgeShareNonChargeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AE2DB231A7CF0000E45EB /* JudgeShareNonChargeVC.swift */; };
 		9CA3DDBF2347756600777F16 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA3DDBE2347756600777F16 /* User.swift */; };
 		9CA3DDC12347763D00777F16 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA3DDC02347763D00777F16 /* Reachability.swift */; };
-		9CA3DDC323477EF900777F16 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA3DDC223477EF900777F16 /* NetworkService.swift */; };
-		9CA3DDC623477FE700777F16 /* Promises in Frameworks */ = {isa = PBXBuildFile; productRef = 9CA3DDC523477FE700777F16 /* Promises */; };
 		9CAC8216231556BB00936CE7 /* LoginClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAC8215231556BB00936CE7 /* LoginClientViewController.swift */; };
-		9CB1E63923337522009BCD52 /* AddTextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB1E63823337522009BCD52 /* AddTextModel.swift */; };
 		9CCB4D5E230BED9E00375888 /* ShareFeeDetailsClientVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCB4D5D230BED9E00375888 /* ShareFeeDetailsClientVC.swift */; };
 		9CCC584B231BCB180007112A /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC584A231BCB180007112A /* Helpers.swift */; };
 		9CCF2CDA231A52080062558A /* ImageViewerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF2CD8231A52080062558A /* ImageViewerVC.swift */; };
@@ -121,6 +116,12 @@
 		9CCF2CDD231A643E0062558A /* ClientRegistrationConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF2CDC231A643E0062558A /* ClientRegistrationConfirmationVC.swift */; };
 		9CCF2CDF231A6EEF0062558A /* ContestRegistrationDepositInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF2CDE231A6EEF0062558A /* ContestRegistrationDepositInfoVC.swift */; };
 		9CCF2CE1231A70590062558A /* FinishedAppointmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF2CE0231A70590062558A /* FinishedAppointmentVC.swift */; };
+		9CE5B3EA234893ED00F35AC1 /* LoginCreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5B3E8234893ED00F35AC1 /* LoginCreatorViewController.swift */; };
+		9CE5B3EB234893ED00F35AC1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5B3E9234893ED00F35AC1 /* LoginViewController.swift */; };
+		9CE5B3ED2348941800F35AC1 /* AddTextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5B3EC2348941800F35AC1 /* AddTextModel.swift */; };
+		9CE5B3F02348957D00F35AC1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9CE5B3EF2348957D00F35AC1 /* Alamofire */; };
+		9CE5B3F32348A89500F35AC1 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9CE5B3F22348A89500F35AC1 /* PromiseKit */; };
+		9CE5B3F52348CE1700F35AC1 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5B3F42348CE1700F35AC1 /* Request.swift */; };
 		9CE7DEE72331030800EFBB02 /* MusicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE7DEE62331030800EFBB02 /* MusicInfo.swift */; };
 		9CF02C0C2319424700614F6B /* RefImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF02C0A2319424700614F6B /* RefImageCell.swift */; };
 		9CF02C0D2319424700614F6B /* RefImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CF02C0B2319424700614F6B /* RefImageCell.xib */; };
@@ -206,7 +207,6 @@
 		9C6E2730231E088A00C197D7 /* FilterPopupCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterPopupCell.xib; sourceTree = "<group>"; };
 		9C70644522FEA3AC00E006D7 /* UniCon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniCon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C70644822FEA3AC00E006D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9C70644A22FEA3AC00E006D7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 		9C70644D22FEA3AC00E006D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C70645022FEA3AC00E006D7 /* UniCon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UniCon.xcdatamodel; sourceTree = "<group>"; };
 		9C70645222FEA3AE00E006D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -219,7 +219,6 @@
 		9C70646422FEAFE600E006D7 /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
 		9C70646622FEAFEF00E006D7 /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
 		9C70646822FEAFFB00E006D7 /* NotoSansCJKkr-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Light.otf"; sourceTree = "<group>"; };
-		9C70647022FEB5DD00E006D7 /* LoginCreatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginCreatorViewController.swift; path = ../LoginCreatorViewController.swift; sourceTree = "<group>"; };
 		9C70647222FEC0DC00E006D7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9C70647422FECCED00E006D7 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		9C75F0992317C67900E7B3F2 /* ChangePrizeAllocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePrizeAllocationVC.swift; sourceTree = "<group>"; };
@@ -247,7 +246,6 @@
 		9C9AE2DB231A7CF0000E45EB /* JudgeShareNonChargeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudgeShareNonChargeVC.swift; sourceTree = "<group>"; };
 		9CA3DDBE2347756600777F16 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9CA3DDC02347763D00777F16 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		9CA3DDC223477EF900777F16 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		9CAC8215231556BB00936CE7 /* LoginClientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClientViewController.swift; sourceTree = "<group>"; };
 		9CB1E63823337522009BCD52 /* AddTextModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddTextModel.swift; path = ../../Models/AddTextModel.swift; sourceTree = "<group>"; };
 		9CCB4D5D230BED9E00375888 /* ShareFeeDetailsClientVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareFeeDetailsClientVC.swift; sourceTree = "<group>"; };
@@ -257,6 +255,10 @@
 		9CCF2CDC231A643E0062558A /* ClientRegistrationConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientRegistrationConfirmationVC.swift; sourceTree = "<group>"; };
 		9CCF2CDE231A6EEF0062558A /* ContestRegistrationDepositInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestRegistrationDepositInfoVC.swift; sourceTree = "<group>"; };
 		9CCF2CE0231A70590062558A /* FinishedAppointmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedAppointmentVC.swift; sourceTree = "<group>"; };
+		9CE5B3E8234893ED00F35AC1 /* LoginCreatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCreatorViewController.swift; sourceTree = "<group>"; };
+		9CE5B3E9234893ED00F35AC1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9CE5B3EC2348941800F35AC1 /* AddTextModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTextModel.swift; sourceTree = "<group>"; };
+		9CE5B3F42348CE1700F35AC1 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		9CE7DEE62331030800EFBB02 /* MusicInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicInfo.swift; sourceTree = "<group>"; };
 		9CF02C0A2319424700614F6B /* RefImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefImageCell.swift; sourceTree = "<group>"; };
 		9CF02C0B2319424700614F6B /* RefImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefImageCell.xib; sourceTree = "<group>"; };
@@ -278,7 +280,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CA3DDC623477FE700777F16 /* Promises in Frameworks */,
+				9CE5B3F02348957D00F35AC1 /* Alamofire in Frameworks */,
+				9CE5B3F32348A89500F35AC1 /* PromiseKit in Frameworks */,
 				B1880F3AF491E72165C27439 /* Pods_UniCon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +312,7 @@
 				9CA3DDBE2347756600777F16 /* User.swift */,
 				9C1B4B73232D0965003237DF /* ContestModel.swift */,
 				9CE7DEE62331030800EFBB02 /* MusicInfo.swift */,
+				9CE5B3EC2348941800F35AC1 /* AddTextModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -426,8 +430,8 @@
 			isa = PBXGroup;
 			children = (
 				9CAC8215231556BB00936CE7 /* LoginClientViewController.swift */,
-				9C70644A22FEA3AC00E006D7 /* LoginViewController.swift */,
-				9C70647022FEB5DD00E006D7 /* LoginCreatorViewController.swift */,
+				9CE5B3E8234893ED00F35AC1 /* LoginCreatorViewController.swift */,
+				9CE5B3E9234893ED00F35AC1 /* LoginViewController.swift */,
 			);
 			path = "Login VC";
 			sourceTree = "<group>";
@@ -502,9 +506,9 @@
 			children = (
 				9C70644822FEA3AC00E006D7 /* AppDelegate.swift */,
 				9C1FD5F7230C5A5B0073EEF4 /* CongratulationPopViewController.swift */,
+				9C70644C22FEA3AC00E006D7 /* Main.storyboard */,
 				9C993CA623460E9E009F6B15 /* Network */,
 				9C1B4B72232D0946003237DF /* Models */,
-				9C70644C22FEA3AC00E006D7 /* Main.storyboard */,
 				9CA3DDBC2347752000777F16 /* VC */,
 				9C63191F23014BF600830385 /* Helpers */,
 				9CA3DDBD2347753000777F16 /* Custom Views */,
@@ -580,7 +584,7 @@
 			isa = PBXGroup;
 			children = (
 				9CA3DDC02347763D00777F16 /* Reachability.swift */,
-				9CA3DDC223477EF900777F16 /* NetworkService.swift */,
+				9CE5B3F42348CE1700F35AC1 /* Request.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -690,7 +694,6 @@
 				9C70644122FEA3AC00E006D7 /* Sources */,
 				9C70644222FEA3AC00E006D7 /* Frameworks */,
 				9C70644322FEA3AC00E006D7 /* Resources */,
-				881206BCBE20DA66F3C8FA5C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -698,7 +701,8 @@
 			);
 			name = UniCon;
 			packageProductDependencies = (
-				9CA3DDC523477FE700777F16 /* Promises */,
+				9CE5B3EF2348957D00F35AC1 /* Alamofire */,
+				9CE5B3F22348A89500F35AC1 /* PromiseKit */,
 			);
 			productName = UniCon;
 			productReference = 9C70644522FEA3AC00E006D7 /* UniCon.app */;
@@ -730,7 +734,8 @@
 			);
 			mainGroup = 9C70643C22FEA3AC00E006D7;
 			packageReferences = (
-				9CA3DDC423477FE700777F16 /* XCRemoteSwiftPackageReference "promises" */,
+				9CE5B3EE2348957D00F35AC1 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				9CE5B3F12348A89500F35AC1 /* XCRemoteSwiftPackageReference "PromiseKit" */,
 			);
 			productRefGroup = 9C70644622FEA3AC00E006D7 /* Products */;
 			projectDirPath = "";
@@ -818,23 +823,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		881206BCBE20DA66F3C8FA5C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UniCon/Pods-UniCon-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UniCon/Pods-UniCon-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UniCon/Pods-UniCon-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -843,6 +831,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C2FF924231D2AEA004923DE /* AddMusicViewController.swift in Sources */,
+				9CE5B3EA234893ED00F35AC1 /* LoginCreatorViewController.swift in Sources */,
+				9CE5B3EB234893ED00F35AC1 /* LoginViewController.swift in Sources */,
+				9CE5B3ED2348941800F35AC1 /* AddTextModel.swift in Sources */,
 				9C7D49F623213F9A0011FDAF /* AddTextFontCell.swift in Sources */,
 				9C359031231A8783001C72DF /* ContestDetailsSharedDepositVC.swift in Sources */,
 				9C63193223014C8A00830385 /* ContestClosedCell.swift in Sources */,
@@ -861,7 +852,6 @@
 				9C357259232BC5280079852D /* ABProgressIndicator.swift in Sources */,
 				9CF02C0C2319424700614F6B /* RefImageCell.swift in Sources */,
 				9C2628DC23151B4300835446 /* ContestInfoCell.swift in Sources */,
-				9CB1E63923337522009BCD52 /* AddTextModel.swift in Sources */,
 				9C35725F232BC5280079852D /* ABVideoHelper.swift in Sources */,
 				9C7A8A9D2320D65F00A399C2 /* MusicEditingPopupView.swift in Sources */,
 				9C35725C232BC5280079852D /* ABVideoRangeSlider.swift in Sources */,
@@ -871,7 +861,6 @@
 				9C6E2731231E088A00C197D7 /* FilterPopupCell.swift in Sources */,
 				9C9AE2DC231A7CF0000E45EB /* JudgeShareNonChargeVC.swift in Sources */,
 				9CAC8216231556BB00936CE7 /* LoginClientViewController.swift in Sources */,
-				9C70644B22FEA3AC00E006D7 /* LoginViewController.swift in Sources */,
 				9C2628D823151B1A00835446 /* MusicInfoCell.swift in Sources */,
 				9C9AC4B322FEE05900230522 /* AlarmViewController.swift in Sources */,
 				9CA3DDC12347763D00777F16 /* Reachability.swift in Sources */,
@@ -890,13 +879,13 @@
 				9C70645E22FEA65600E006D7 /* Extensions.swift in Sources */,
 				9C9AC4AD22FEE03600230522 /* MyPageViewController.swift in Sources */,
 				9C7D49EA2321287B0011FDAF /* StickerCell.swift in Sources */,
+				9CE5B3F52348CE1700F35AC1 /* Request.swift in Sources */,
 				9C7D49ED23213E200011FDAF /* AddTextView.swift in Sources */,
 				9C8C8A1A232FA2620053CCBA /* SnapGesture.swift in Sources */,
 				9CF1E7A5230F966D0093D21F /* SharePopUpView.swift in Sources */,
 				9CCF2CDD231A643E0062558A /* ClientRegistrationConfirmationVC.swift in Sources */,
 				9C696C5B2332261A00B686BC /* VIAudioSampleOperation.swift in Sources */,
 				9C6178FC230FF811007896F2 /* ContestDetailListViewController.swift in Sources */,
-				9C70647122FEB5DD00E006D7 /* LoginCreatorViewController.swift in Sources */,
 				9C1B4B74232D0965003237DF /* ContestModel.swift in Sources */,
 				9C70647322FEC0DC00E006D7 /* Constants.swift in Sources */,
 				9C34717D2330BA3B00F64B89 /* EmojiCell.swift in Sources */,
@@ -908,7 +897,6 @@
 				9CF9324E2316B158002AC77D /* ParticipationCell.swift in Sources */,
 				9C9AC4AF22FEE04000230522 /* ChannelViewController.swift in Sources */,
 				9C63192223014C2400830385 /* FeaturedCreatorCell.swift in Sources */,
-				9CA3DDC323477EF900777F16 /* NetworkService.swift in Sources */,
 				9C2628D523150FE200835446 /* UploadVideoCreatorViewController.swift in Sources */,
 				9C357258232BC5280079852D /* ABEndIndicator.swift in Sources */,
 				9C6E272C231E081E00C197D7 /* FilterPopupView.swift in Sources */,
@@ -1137,21 +1125,34 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9CA3DDC423477FE700777F16 /* XCRemoteSwiftPackageReference "promises" */ = {
+		9CE5B3EE2348957D00F35AC1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/google/promises.git";
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.8;
+				minimumVersion = 4.9.0;
+			};
+		};
+		9CE5B3F12348A89500F35AC1 /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.11.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9CA3DDC523477FE700777F16 /* Promises */ = {
+		9CE5B3EF2348957D00F35AC1 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9CA3DDC423477FE700777F16 /* XCRemoteSwiftPackageReference "promises" */;
-			productName = Promises;
+			package = 9CE5B3EE2348957D00F35AC1 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		9CE5B3F22348A89500F35AC1 /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CE5B3F12348A89500F35AC1 /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 
