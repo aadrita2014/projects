@@ -98,6 +98,11 @@
 		9C7D49F623213F9A0011FDAF /* AddTextFontCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7D49F423213F9A0011FDAF /* AddTextFontCell.swift */; };
 		9C7D49F723213F9A0011FDAF /* AddTextFontCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C7D49F523213F9A0011FDAF /* AddTextFontCell.xib */; };
 		9C8C8A1A232FA2620053CCBA /* SnapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8C8A19232FA2620053CCBA /* SnapGesture.swift */; };
+		9C916B5D234DE63300F74F01 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C916B5C234DE63300F74F01 /* AuthorizationService.swift */; };
+		9C916B5F234DE68F00F74F01 /* TokenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C916B5E234DE68F00F74F01 /* TokenService.swift */; };
+		9C916B61234DE6AB00F74F01 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C916B60234DE6AB00F74F01 /* TokenManager.swift */; };
+		9C916B63234DE70E00F74F01 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C916B62234DE70E00F74F01 /* AuthenticationManager.swift */; };
+		9C916B69234DFCD700F74F01 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9C916B68234DFCD700F74F01 /* PromiseKit */; };
 		9C9AC4A822FEDB4B00230522 /* ContestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4A722FEDB4B00230522 /* ContestViewController.swift */; };
 		9C9AC4AA22FEDB5D00230522 /* GeneralVideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4A922FEDB5D00230522 /* GeneralVideosViewController.swift */; };
 		9C9AC4AD22FEE03600230522 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4AC22FEE03600230522 /* MyPageViewController.swift */; };
@@ -119,9 +124,7 @@
 		9CE5B3EA234893ED00F35AC1 /* LoginCreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5B3E8234893ED00F35AC1 /* LoginCreatorViewController.swift */; };
 		9CE5B3EB234893ED00F35AC1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5B3E9234893ED00F35AC1 /* LoginViewController.swift */; };
 		9CE5B3ED2348941800F35AC1 /* AddTextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5B3EC2348941800F35AC1 /* AddTextModel.swift */; };
-		9CE5B3F02348957D00F35AC1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9CE5B3EF2348957D00F35AC1 /* Alamofire */; };
-		9CE5B3F32348A89500F35AC1 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9CE5B3F22348A89500F35AC1 /* PromiseKit */; };
-		9CE5B3F52348CE1700F35AC1 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5B3F42348CE1700F35AC1 /* Request.swift */; };
+		9CE5B3F52348CE1700F35AC1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5B3F42348CE1700F35AC1 /* NetworkService.swift */; };
 		9CE7DEE72331030800EFBB02 /* MusicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE7DEE62331030800EFBB02 /* MusicInfo.swift */; };
 		9CF02C0C2319424700614F6B /* RefImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF02C0A2319424700614F6B /* RefImageCell.swift */; };
 		9CF02C0D2319424700614F6B /* RefImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CF02C0B2319424700614F6B /* RefImageCell.xib */; };
@@ -236,6 +239,10 @@
 		9C7D49F423213F9A0011FDAF /* AddTextFontCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTextFontCell.swift; sourceTree = "<group>"; };
 		9C7D49F523213F9A0011FDAF /* AddTextFontCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTextFontCell.xib; sourceTree = "<group>"; };
 		9C8C8A19232FA2620053CCBA /* SnapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapGesture.swift; sourceTree = "<group>"; };
+		9C916B5C234DE63300F74F01 /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
+		9C916B5E234DE68F00F74F01 /* TokenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenService.swift; sourceTree = "<group>"; };
+		9C916B60234DE6AB00F74F01 /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
+		9C916B62234DE70E00F74F01 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		9C9AC4A722FEDB4B00230522 /* ContestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestViewController.swift; sourceTree = "<group>"; };
 		9C9AC4A922FEDB5D00230522 /* GeneralVideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralVideosViewController.swift; sourceTree = "<group>"; };
 		9C9AC4AC22FEE03600230522 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
@@ -258,7 +265,7 @@
 		9CE5B3E8234893ED00F35AC1 /* LoginCreatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCreatorViewController.swift; sourceTree = "<group>"; };
 		9CE5B3E9234893ED00F35AC1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9CE5B3EC2348941800F35AC1 /* AddTextModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTextModel.swift; sourceTree = "<group>"; };
-		9CE5B3F42348CE1700F35AC1 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		9CE5B3F42348CE1700F35AC1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		9CE7DEE62331030800EFBB02 /* MusicInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicInfo.swift; sourceTree = "<group>"; };
 		9CF02C0A2319424700614F6B /* RefImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefImageCell.swift; sourceTree = "<group>"; };
 		9CF02C0B2319424700614F6B /* RefImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefImageCell.xib; sourceTree = "<group>"; };
@@ -280,9 +287,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CE5B3F02348957D00F35AC1 /* Alamofire in Frameworks */,
-				9CE5B3F32348A89500F35AC1 /* PromiseKit in Frameworks */,
 				B1880F3AF491E72165C27439 /* Pods_UniCon.framework in Frameworks */,
+				9C916B69234DFCD700F74F01 /* PromiseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,7 +590,11 @@
 			isa = PBXGroup;
 			children = (
 				9CA3DDC02347763D00777F16 /* Reachability.swift */,
-				9CE5B3F42348CE1700F35AC1 /* Request.swift */,
+				9CE5B3F42348CE1700F35AC1 /* NetworkService.swift */,
+				9C916B5C234DE63300F74F01 /* AuthorizationService.swift */,
+				9C916B5E234DE68F00F74F01 /* TokenService.swift */,
+				9C916B60234DE6AB00F74F01 /* TokenManager.swift */,
+				9C916B62234DE70E00F74F01 /* AuthenticationManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -694,6 +704,7 @@
 				9C70644122FEA3AC00E006D7 /* Sources */,
 				9C70644222FEA3AC00E006D7 /* Frameworks */,
 				9C70644322FEA3AC00E006D7 /* Resources */,
+				790B71C8D65036F25132F10C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -701,8 +712,7 @@
 			);
 			name = UniCon;
 			packageProductDependencies = (
-				9CE5B3EF2348957D00F35AC1 /* Alamofire */,
-				9CE5B3F22348A89500F35AC1 /* PromiseKit */,
+				9C916B68234DFCD700F74F01 /* PromiseKit */,
 			);
 			productName = UniCon;
 			productReference = 9C70644522FEA3AC00E006D7 /* UniCon.app */;
@@ -734,8 +744,7 @@
 			);
 			mainGroup = 9C70643C22FEA3AC00E006D7;
 			packageReferences = (
-				9CE5B3EE2348957D00F35AC1 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				9CE5B3F12348A89500F35AC1 /* XCRemoteSwiftPackageReference "PromiseKit" */,
+				9C916B67234DFCD700F74F01 /* XCRemoteSwiftPackageReference "PromiseKit" */,
 			);
 			productRefGroup = 9C70644622FEA3AC00E006D7 /* Products */;
 			projectDirPath = "";
@@ -823,6 +832,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		790B71C8D65036F25132F10C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UniCon/Pods-UniCon-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UniCon/Pods-UniCon-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UniCon/Pods-UniCon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -833,6 +859,7 @@
 				9C2FF924231D2AEA004923DE /* AddMusicViewController.swift in Sources */,
 				9CE5B3EA234893ED00F35AC1 /* LoginCreatorViewController.swift in Sources */,
 				9CE5B3EB234893ED00F35AC1 /* LoginViewController.swift in Sources */,
+				9C916B5F234DE68F00F74F01 /* TokenService.swift in Sources */,
 				9CE5B3ED2348941800F35AC1 /* AddTextModel.swift in Sources */,
 				9C7D49F623213F9A0011FDAF /* AddTextFontCell.swift in Sources */,
 				9C359031231A8783001C72DF /* ContestDetailsSharedDepositVC.swift in Sources */,
@@ -845,9 +872,12 @@
 				9CF02C0F2319571000614F6B /* ContestDepostiConfirmationVC.swift in Sources */,
 				9C35725B232BC5280079852D /* ABThumbnailsManager.swift in Sources */,
 				9CF1EAA52314440D006895F9 /* VideoRecordingVC.swift in Sources */,
+				9C916B5D234DE63300F74F01 /* AuthorizationService.swift in Sources */,
+				9C916B61234DE6AB00F74F01 /* TokenManager.swift in Sources */,
 				9CF72FCC23176A7B009D1C60 /* PrizeAllocationViewController.swift in Sources */,
 				9CE7DEE72331030800EFBB02 /* MusicInfo.swift in Sources */,
 				9C70645122FEA3AC00E006D7 /* UniCon.xcdatamodeld in Sources */,
+				9C916B63234DE70E00F74F01 /* AuthenticationManager.swift in Sources */,
 				9C696C5A2332261A00B686BC /* VIWaveformView.swift in Sources */,
 				9C357259232BC5280079852D /* ABProgressIndicator.swift in Sources */,
 				9CF02C0C2319424700614F6B /* RefImageCell.swift in Sources */,
@@ -879,7 +909,7 @@
 				9C70645E22FEA65600E006D7 /* Extensions.swift in Sources */,
 				9C9AC4AD22FEE03600230522 /* MyPageViewController.swift in Sources */,
 				9C7D49EA2321287B0011FDAF /* StickerCell.swift in Sources */,
-				9CE5B3F52348CE1700F35AC1 /* Request.swift in Sources */,
+				9CE5B3F52348CE1700F35AC1 /* NetworkService.swift in Sources */,
 				9C7D49ED23213E200011FDAF /* AddTextView.swift in Sources */,
 				9C8C8A1A232FA2620053CCBA /* SnapGesture.swift in Sources */,
 				9CF1E7A5230F966D0093D21F /* SharePopUpView.swift in Sources */,
@@ -1125,17 +1155,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9CE5B3EE2348957D00F35AC1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		9C916B67234DFCD700F74F01 /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.9.0;
-			};
-		};
-		9CE5B3F12348A89500F35AC1 /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mxcl/PromiseKit";
+			repositoryURL = "https://github.com/mxcl/PromiseKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 6.11.0;
@@ -1144,14 +1166,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9CE5B3EF2348957D00F35AC1 /* Alamofire */ = {
+		9C916B68234DFCD700F74F01 /* PromiseKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9CE5B3EE2348957D00F35AC1 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		9CE5B3F22348A89500F35AC1 /* PromiseKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9CE5B3F12348A89500F35AC1 /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			package = 9C916B67234DFCD700F74F01 /* XCRemoteSwiftPackageReference "PromiseKit" */;
 			productName = PromiseKit;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -1,3 +1,22 @@
-PODFILE CHECKSUM: f20a7a1c60a09473c9195c5364cc7984d6186f70
+PODS:
+  - Alamofire (4.9.0)
+  - EVReflection/Alamofire (5.10.1):
+    - Alamofire
+    - EVReflection/Core
+  - EVReflection/Core (5.10.1)
+
+DEPENDENCIES:
+  - EVReflection/Alamofire
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - EVReflection
+
+SPEC CHECKSUMS:
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  EVReflection: 8124de482178d34ccd56473e16cd95990f9a1113
+
+PODFILE CHECKSUM: 46a708a93f04a2e2455e5854306a17c364acbca5
 
 COCOAPODS: 1.8.1
