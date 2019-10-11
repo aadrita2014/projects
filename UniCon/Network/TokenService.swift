@@ -27,7 +27,14 @@ class TokenRequest:EVObject {
     
 }
 class TokenRefresh:EVObject {
+    var refreshToken:String = ""
     
+    init(refreshToken:String) {
+        self.refreshToken = refreshToken
+    }
+    required init() {
+        fatalError("init() has not been implemented")
+    }
 }
 struct TokenService: NetworkService
 {
@@ -36,7 +43,6 @@ struct TokenService: NetworkService
     static func refreshToken (request: TokenRefresh) -> Promise<Token> { return POST(request: request) }
 
     // MARK: - POST
-
     private static func POST<T:EVReflectable>(request: T) -> Promise<Token>
     {
         let headers = ["Content-Type": "application/x-www-form-urlencoded"]

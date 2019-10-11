@@ -23,7 +23,6 @@ class LoginCreatorViewController: UIViewController, UITextFieldDelegate {
         //Add Default Background Color to the view
         self.view.addDefaultBackgroundColor()
         
-       
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -60,6 +59,20 @@ class LoginCreatorViewController: UIViewController, UITextFieldDelegate {
         print("Forgot Password Clicked")
     }
 
+    //MARK: API Call
+    func login() {
+        self.showLoading()
+        firstly {
+            AuthenticationManager.authenticate(username: self.emailTf.text, password: self.passwordTf.text)
+        }.done { (token) in
+            self.hideLoading()
+            print(token)
+        }
+        .catch { (error) in
+            self.hideLoading()
+            print(error)
+        }
+    }
     
     //Text Field Delegates
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

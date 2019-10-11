@@ -13,7 +13,6 @@ struct AuthenticationManager
     static func authenticate(username:String!, password:String!) -> Promise<Void>
     {
         let request = TokenRequest(username: username, password: password)
-
-        return TokenManager.requestToken(request: request)!
+        return TokenManager.requestToken(request: request)
     }
 }

@@ -24,23 +24,10 @@ struct AuthorizationService: NetworkService {
     
     // MARK: - POST
     
-//    static func POST<T:EVObject> (URL: String, parameters: [String: AnyObject], encoding: ParameterEncoding) -> Promise<T>
-//    {
-//        return firstly
-//            {
-//                return POST(URL: URL, parameters: parameters, headers: authorizedHeader, encoding: encoding)
-//                
-//        }.catch { error in
-//
-//            switch ((error as NSError).code)
-//            {
-//            case 401:
-//                _ = TokenManager.refreshToken().then { return POST(URL: URL, parameters: parameters, encoding: encoding) }
-//            default: break
-//            }
-//            
-//        }
-//    }
+    static func POST<T:EVObject> (URL: String, parameters: [String: AnyObject], encoding: ParameterEncoding) -> Promise<T>
+    {
+        return POST(URL: URL, parameters: parameters, headers: authorizedHeader, encoding: encoding)
+    }
 }
 
 

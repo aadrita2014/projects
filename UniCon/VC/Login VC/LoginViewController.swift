@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import PromiseKit
 class LoginViewController: UIViewController {
 
     //MARK: IBOutlets Declared
@@ -18,7 +18,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton:UIButton!
     @IBOutlet weak var signupButton:UIButton!
     
-    
+    //MARK: View Overriden Methods
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -46,6 +46,7 @@ class LoginViewController: UIViewController {
     {
         //TODO: Add Email Login Functionality
         print("Email Login Clicked")
+        login()
     }
 
     @IBAction func kakaoLoginClicked()
@@ -65,9 +66,7 @@ class LoginViewController: UIViewController {
         print("Google Login Clicked")
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
+    
 }
 
 

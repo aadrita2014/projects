@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9C0E787023320AE600509C19 /* demo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E786F23320AE600509C19 /* demo.mp3 */; };
+		9C146EC0234F587200648C8D /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9C146EBF234F587200648C8D /* PromiseKit */; };
 		9C1A0C9223325B6C005D2CA2 /* SnapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A0C9123325B6C005D2CA2 /* SnapView.swift */; };
 		9C1B4B74232D0965003237DF /* ContestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1B4B73232D0965003237DF /* ContestModel.swift */; };
 		9C1BED99231112F10011F296 /* CustomActionSheetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C1BED98231112F10011F296 /* CustomActionSheetView.xib */; };
@@ -102,7 +103,6 @@
 		9C916B5F234DE68F00F74F01 /* TokenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C916B5E234DE68F00F74F01 /* TokenService.swift */; };
 		9C916B61234DE6AB00F74F01 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C916B60234DE6AB00F74F01 /* TokenManager.swift */; };
 		9C916B63234DE70E00F74F01 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C916B62234DE70E00F74F01 /* AuthenticationManager.swift */; };
-		9C916B69234DFCD700F74F01 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9C916B68234DFCD700F74F01 /* PromiseKit */; };
 		9C9AC4A822FEDB4B00230522 /* ContestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4A722FEDB4B00230522 /* ContestViewController.swift */; };
 		9C9AC4AA22FEDB5D00230522 /* GeneralVideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4A922FEDB5D00230522 /* GeneralVideosViewController.swift */; };
 		9C9AC4AD22FEE03600230522 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4AC22FEE03600230522 /* MyPageViewController.swift */; };
@@ -121,6 +121,7 @@
 		9CCF2CDD231A643E0062558A /* ClientRegistrationConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF2CDC231A643E0062558A /* ClientRegistrationConfirmationVC.swift */; };
 		9CCF2CDF231A6EEF0062558A /* ContestRegistrationDepositInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF2CDE231A6EEF0062558A /* ContestRegistrationDepositInfoVC.swift */; };
 		9CCF2CE1231A70590062558A /* FinishedAppointmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF2CE0231A70590062558A /* FinishedAppointmentVC.swift */; };
+		9CE1066F23508FDE00FF6A75 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE1066E23508FDE00FF6A75 /* Spinner.swift */; };
 		9CE5B3EA234893ED00F35AC1 /* LoginCreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5B3E8234893ED00F35AC1 /* LoginCreatorViewController.swift */; };
 		9CE5B3EB234893ED00F35AC1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5B3E9234893ED00F35AC1 /* LoginViewController.swift */; };
 		9CE5B3ED2348941800F35AC1 /* AddTextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5B3EC2348941800F35AC1 /* AddTextModel.swift */; };
@@ -262,6 +263,7 @@
 		9CCF2CDC231A643E0062558A /* ClientRegistrationConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientRegistrationConfirmationVC.swift; sourceTree = "<group>"; };
 		9CCF2CDE231A6EEF0062558A /* ContestRegistrationDepositInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestRegistrationDepositInfoVC.swift; sourceTree = "<group>"; };
 		9CCF2CE0231A70590062558A /* FinishedAppointmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedAppointmentVC.swift; sourceTree = "<group>"; };
+		9CE1066E23508FDE00FF6A75 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		9CE5B3E8234893ED00F35AC1 /* LoginCreatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCreatorViewController.swift; sourceTree = "<group>"; };
 		9CE5B3E9234893ED00F35AC1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9CE5B3EC2348941800F35AC1 /* AddTextModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTextModel.swift; sourceTree = "<group>"; };
@@ -288,7 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1880F3AF491E72165C27439 /* Pods_UniCon.framework in Frameworks */,
-				9C916B69234DFCD700F74F01 /* PromiseKit in Frameworks */,
+				9C146EC0234F587200648C8D /* PromiseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +448,7 @@
 			isa = PBXGroup;
 			children = (
 				9C70645D22FEA65600E006D7 /* Extensions.swift */,
+				9CE1066E23508FDE00FF6A75 /* Spinner.swift */,
 				9C70647222FEC0DC00E006D7 /* Constants.swift */,
 				9CCC584A231BCB180007112A /* Helpers.swift */,
 				9C8C8A19232FA2620053CCBA /* SnapGesture.swift */,
@@ -712,7 +715,7 @@
 			);
 			name = UniCon;
 			packageProductDependencies = (
-				9C916B68234DFCD700F74F01 /* PromiseKit */,
+				9C146EBF234F587200648C8D /* PromiseKit */,
 			);
 			productName = UniCon;
 			productReference = 9C70644522FEA3AC00E006D7 /* UniCon.app */;
@@ -744,7 +747,7 @@
 			);
 			mainGroup = 9C70643C22FEA3AC00E006D7;
 			packageReferences = (
-				9C916B67234DFCD700F74F01 /* XCRemoteSwiftPackageReference "PromiseKit" */,
+				9C146EBE234F587200648C8D /* XCRemoteSwiftPackageReference "PromiseKit" */,
 			);
 			productRefGroup = 9C70644622FEA3AC00E006D7 /* Products */;
 			projectDirPath = "";
@@ -860,6 +863,7 @@
 				9CE5B3EA234893ED00F35AC1 /* LoginCreatorViewController.swift in Sources */,
 				9CE5B3EB234893ED00F35AC1 /* LoginViewController.swift in Sources */,
 				9C916B5F234DE68F00F74F01 /* TokenService.swift in Sources */,
+				9CE1066F23508FDE00FF6A75 /* Spinner.swift in Sources */,
 				9CE5B3ED2348941800F35AC1 /* AddTextModel.swift in Sources */,
 				9C7D49F623213F9A0011FDAF /* AddTextFontCell.swift in Sources */,
 				9C359031231A8783001C72DF /* ContestDetailsSharedDepositVC.swift in Sources */,
@@ -1155,20 +1159,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9C916B67234DFCD700F74F01 /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+		9C146EBE234F587200648C8D /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mxcl/PromiseKit.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.11.0;
+				branch = v7;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9C916B68234DFCD700F74F01 /* PromiseKit */ = {
+		9C146EBF234F587200648C8D /* PromiseKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9C916B67234DFCD700F74F01 /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			package = 9C146EBE234F587200648C8D /* XCRemoteSwiftPackageReference "PromiseKit" */;
 			productName = PromiseKit;
 		};
 /* End XCSwiftPackageProductDependency section */

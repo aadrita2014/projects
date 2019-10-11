@@ -13,6 +13,7 @@ import EVReflection
 class Token: EVObject {
     
     var accessToken:String = ""
+    var refreshToken:String = ""
     
     static func instance(dictionary: NSDictionary) -> Token{
         let token = Token(dictionary: dictionary)
@@ -49,41 +50,37 @@ struct TokenManager {
             return true
         }
 
-        static func requestToken(request: TokenRequest) -> Promise<Void>?
+        static func requestToken(request: TokenRequest) -> Promise<Void>
         {
-            return nil
-//            return Promise { fulFill, reject in
-//
-//                TokenService.requestToken(request: request).then { (token: Token) -> Void in
-//                    setToken(token: token)
-//
-//                    let today = Date()
-//                    let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: today)
-//                    userDefaults.setValue(tomorrow, forKey: "EXPIRING_DATE")
-//
-//                    fulFill()
-//                }.catch { error in
-//                    reject(error)
-//                }
-//            }
+            return Promise { resolve in
+                TokenService.requestToken(request: request).done { (token) in
+                        //resolve.fulfill()
+                        setToken(token: token)
+                        let today = Date()
+                        let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: today)
+                        userDefaults.setValue(tomorrow, forKey: "EXPIRING_DATE")
+                        resolve.fulfill()
+                }.catch { (error) in
+                     resolve.reject(error)
+                }
+            }
         }
 
-        static func refreshToken() -> Promise<Void>?
+        static func refreshToken() -> Promise<Void>
         {
-            return nil
-//            return Promise.init(resolver: { fulFill, reject in
-//
-//                guard let token = token else { return }
-//
-//                let  request = TokenRefresh(refreshToken: token.refreshToken)
-//
-//                TokenService.refreshToken(request: request).then { (token: Token) -> Void in
-//                    setToken(token: token)
-//                    fulFill()
-//                }.catch { error in
-//                    reject(error)
-//                }
-//            })
+            return Promise { resolve in
+
+                guard let token = token else { return }
+
+                let request = TokenRefresh(refreshToken: token.refreshToken)
+
+                TokenService.refreshToken(request: request).done { (token) in
+                    setToken(token: token)
+                    resolve.fulfill()
+                }.catch { error in
+                    resolve.reject(error)
+                }
+            }
         }
 
         private static func setToken (token:Token!)

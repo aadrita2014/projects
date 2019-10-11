@@ -55,6 +55,11 @@
 		<string>Gaegu-Regular.ttf</string>
 		<string>DoHyeon-Regular.ttf</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>UIFileSharingEnabled</key>
 	<true/>
 </dict>
