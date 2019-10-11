@@ -46,7 +46,6 @@ class LoginViewController: UIViewController {
     {
         //TODO: Add Email Login Functionality
         print("Email Login Clicked")
-        login()
     }
 
     @IBAction func kakaoLoginClicked()

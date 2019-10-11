@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import PromiseKit
+
 
 class LoginCreatorViewController: UIViewController, UITextFieldDelegate {
 
@@ -63,7 +65,8 @@ class LoginCreatorViewController: UIViewController, UITextFieldDelegate {
     func login() {
         self.showLoading()
         firstly {
-            AuthenticationManager.authenticate(username: self.emailTf.text, password: self.passwordTf.text)
+            
+            AuthenticationManager.authenticate(username: self.emailTf.text!, password: self.passwordTf.text!)
         }.done { (token) in
             self.hideLoading()
             print(token)
