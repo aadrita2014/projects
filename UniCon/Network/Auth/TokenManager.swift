@@ -20,9 +20,11 @@ class Token: EVObject {
         return token
     }
 }
+
+//MARK: TokenManager to refresh & request tokens
 struct TokenManager {
         private static var userDefaults = UserDefaults.standard
-        private static var tokenKey = ""//CONSTANTS.userDefaults.tokenKey
+        private static var tokenKey = "token_key_defaults_user"
         static var date = Date()
 
         static var token:Token?
@@ -54,7 +56,6 @@ struct TokenManager {
         {
             return Promise { resolve in
                 TokenService.requestToken(request: request).done { (token) in
-                        //resolve.fulfill()
                         setToken(token: token)
                         let today = Date()
                         let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: today)

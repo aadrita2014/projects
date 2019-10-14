@@ -24,10 +24,11 @@ struct AuthorizationService: NetworkService {
     
     // MARK: - POST
     
-    static func POST<T:EVObject> (URL: String, parameters: [String: AnyObject], encoding: ParameterEncoding) -> Promise<T>
+    static func POST<T:EVObject> (URL: String, parameters: [String: AnyObject], encoding: ParameterEncoding = URLEncoding.default) -> Promise<T>
     {
         return POST(URL: URL, parameters: parameters, headers: authorizedHeader, encoding: encoding)
     }
+    
 }
 
 

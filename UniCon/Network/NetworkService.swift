@@ -13,18 +13,7 @@ import PromiseKit
 import EVReflection
 
 
-enum NetworkError: Error {
-    case badJsonResponse
-    case badUrl
-    var localizedDescription: String {
-        switch self {
-        case .badJsonResponse:
-            return "Unexpected values in JSON"
-        case .badUrl:
-            return "Bad url"
-        }
-    }
-}
+
 protocol NetworkService
 {
     static func POST<T:EVObject>(URL: String, parameters: [String: AnyObject]?, headers: [String: String]?, encoding: ParameterEncoding) -> Promise<T>
@@ -58,3 +47,16 @@ extension NetworkService
         return promise
     }
  }
+
+enum NetworkError: Error {
+    case badJsonResponse
+    case badUrl
+    var localizedDescription: String {
+        switch self {
+        case .badJsonResponse:
+            return "Unexpected values in JSON"
+        case .badUrl:
+            return "Bad url"
+        }
+    }
+}

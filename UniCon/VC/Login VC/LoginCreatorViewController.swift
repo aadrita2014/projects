@@ -22,9 +22,8 @@ class LoginCreatorViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //Add Default Background Color to the view
+        //Add default background color to the view
         self.view.addDefaultBackgroundColor()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,29 +50,44 @@ class LoginCreatorViewController: UIViewController, UITextFieldDelegate {
     @IBAction func loginClicked()
     {
         //TODO: Login Functionality
-        Defaults.saveBool(key: StringConsts.isClientSaveKey, value: false) //Temp. to be removed after API implementation
+//        Defaults.saveBool(key: StringConsts.isClientSaveKey, value: false) //Temp. to be removed after API implementation
         
-        self.performSegue(withIdentifier: "Home", sender: nil)
+      //
+        if let errMsg = validate() {
+            showAlertMessage(title: ValidationError.defaultErrorTitle.rawValue, message: errMsg)
+        }
+        else {
+            login()
+        }
     }
     @IBAction func forgotPasswordClicked()
     {
         //TODO: Forgot Password Functionality Required
         print("Forgot Password Clicked")
     }
-
+    //MARK: Validations before calling the API
+    func validate() -> String? {
+        if self.emailTf.text?.isEmpty == true || self.passwordTf.text?.isEmpty == true {
+            return ValidationError.empty.rawValue
+        }
+        return nil
+    }
     //MARK: API Call
     func login() {
+        //Show Loading
         self.showLoading()
         firstly {
-            
-            AuthenticationManager.authenticate(username: self.emailTf.text!, password: self.passwordTf.text!)
+            //Authenticate with the API
+            AuthenticationManager.authenticate(username: self.emailTf.text!, password: self.passwordTf.text!,role: Role.creator.rawValue)
         }.done { (token) in
+            //If successful
             self.hideLoading()
             print(token)
         }
         .catch { (error) in
+            //If generates error
             self.hideLoading()
-            print(error)
+            self.showAlertMessage(title: ValidationError.defaultErrorTitle.rawValue, message: error.localizedDescription)
         }
     }
     

@@ -14,11 +14,13 @@ import Alamofire
 class TokenRequest:EVObject {
     var username:String = ""
     var password:String = ""
+    var role:String = ""
     
-    init(username:String,password:String) {
+    init(username:String,password:String,role:String) {
         super.init()
         self.username = username
         self.password = password
+        self.role = role
     }
     
     required init() {
@@ -27,6 +29,7 @@ class TokenRequest:EVObject {
     
 }
 class TokenRefresh:EVObject {
+    var email:String = ""
     var refreshToken:String = ""
     
     init(refreshToken:String) {
@@ -38,17 +41,16 @@ class TokenRefresh:EVObject {
 }
 struct TokenService: NetworkService
 {
-    static func requestToken (request: TokenRequest) -> Promise<Token> { return POST(request: request) }
-
-    static func refreshToken (request: TokenRefresh) -> Promise<Token> { return POST(request: request) }
+    static func requestToken (request: TokenRequest) -> Promise<Token> {
+        return POST(url:APIRouter.LOGIN, request: request) }
+    static func refreshToken (request: TokenRefresh) -> Promise<Token> {
+        return POST(url:APIRouter.REFRESH_TOKEN, request: request) }
 
     // MARK: - POST
-    private static func POST<T:EVReflectable>(request: T) -> Promise<Token>
+    private static func POST<T:EVReflectable>(url:String, request: T) -> Promise<Token>
     {
         let headers = ["Content-Type": "application/x-www-form-urlencoded"]
-
         let parameters = request.toDictionary(.DefaultDeserialize) as! [String : AnyObject]
-
-        return POST(URL: "", parameters: parameters, headers: headers, encoding: URLEncoding.default)
+        return POST(URL: url, parameters: parameters, headers: headers, encoding: URLEncoding.default)
     }
 }
