@@ -2125,28 +2125,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZJx-5r-2Sf">
-                                <rect key="frame" x="67" y="296" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZJx-5r-2Sf">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="JMb-Mh-bxl"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="ldQ-U4-kJo"/>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="회원가입" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCn-Rp-k0H">
-                                <rect key="frame" x="158" y="31" width="59" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회원가입" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCn-Rp-k0H">
+                                <rect key="frame" x="158" y="32" width="59" height="24"/>
                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gM6-lp-Wtr">
+                                <rect key="frame" x="24" y="24.5" width="32" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="8nQ-QQ-dGk"/>
+                                    <constraint firstAttribute="width" constant="32" id="acx-Qd-7Qy"/>
+                                </constraints>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="backClicked" destination="wgA-1a-wgm" eventType="touchUpInside" id="46g-Zp-QSE"/>
+                                    <action selector="backClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="EGL-9Q-RaY"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZJx-5r-2Sf" firstAttribute="trailing" secondItem="hRx-N6-qZW" secondAttribute="trailing" id="3Vg-cc-QSH"/>
+                            <constraint firstItem="mCn-Rp-k0H" firstAttribute="centerX" secondItem="hRx-N6-qZW" secondAttribute="centerX" id="9CV-jb-Cwb"/>
+                            <constraint firstItem="mCn-Rp-k0H" firstAttribute="top" secondItem="hRx-N6-qZW" secondAttribute="top" constant="32" id="Uta-pK-0Up"/>
+                            <constraint firstItem="ZJx-5r-2Sf" firstAttribute="leading" secondItem="hRx-N6-qZW" secondAttribute="leading" id="nLv-VU-dcN"/>
+                            <constraint firstItem="ZJx-5r-2Sf" firstAttribute="top" secondItem="gM6-lp-Wtr" secondAttribute="bottom" id="o61-x1-YYN"/>
+                            <constraint firstItem="gM6-lp-Wtr" firstAttribute="leading" secondItem="idv-g0-MIe" secondAttribute="leading" constant="24" id="vrD-y5-ncX"/>
+                            <constraint firstItem="gM6-lp-Wtr" firstAttribute="centerY" secondItem="mCn-Rp-k0H" secondAttribute="centerY" id="wNK-Xe-o06"/>
+                            <constraint firstItem="ZJx-5r-2Sf" firstAttribute="bottom" secondItem="hRx-N6-qZW" secondAttribute="bottom" id="zuy-ec-q9Z"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hRx-N6-qZW"/>
                     </view>
                     <navigationItem key="navigationItem" id="OHX-z7-fFe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5eV-68-9Sr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="192" y="1434"/>
+            <point key="canvasLocation" x="191.19999999999999" y="1433.433283358321"/>
         </scene>
         <!--Congratulation Pop View Controller-->
         <scene sceneID="JFp-ji-EGf">
@@ -2258,7 +2278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uUG-4X-ZI4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="862" y="1484"/>
+            <point key="canvasLocation" x="889" y="1433"/>
         </scene>
         <!--Share Fee Details ClientVC-->
         <scene sceneID="v0F-G2-V3G">
@@ -2562,7 +2582,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회원가입" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVp-Pf-hVT">
-                                <rect key="frame" x="158" y="32" width="59" height="23.5"/>
+                                <rect key="frame" x="158" y="32" width="59" height="24"/>
                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>

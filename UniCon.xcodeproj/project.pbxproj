@@ -105,6 +105,7 @@
 		9C916B5F234DE68F00F74F01 /* TokenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C916B5E234DE68F00F74F01 /* TokenService.swift */; };
 		9C916B61234DE6AB00F74F01 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C916B60234DE6AB00F74F01 /* TokenManager.swift */; };
 		9C916B63234DE70E00F74F01 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C916B62234DE70E00F74F01 /* AuthenticationManager.swift */; };
+		9C91A26B2356ACE5009558ED /* NotoSansCJKkr-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C91A26A2356ACE4009558ED /* NotoSansCJKkr-Thin.otf */; };
 		9C9AC4A822FEDB4B00230522 /* ContestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4A722FEDB4B00230522 /* ContestViewController.swift */; };
 		9C9AC4AA22FEDB5D00230522 /* GeneralVideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4A922FEDB5D00230522 /* GeneralVideosViewController.swift */; };
 		9C9AC4AD22FEE03600230522 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4AC22FEE03600230522 /* MyPageViewController.swift */; };
@@ -251,6 +252,7 @@
 		9C916B5E234DE68F00F74F01 /* TokenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenService.swift; sourceTree = "<group>"; };
 		9C916B60234DE6AB00F74F01 /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
 		9C916B62234DE70E00F74F01 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		9C91A26A2356ACE4009558ED /* NotoSansCJKkr-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Thin.otf"; sourceTree = "<group>"; };
 		9C9AC4A722FEDB4B00230522 /* ContestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestViewController.swift; sourceTree = "<group>"; };
 		9C9AC4A922FEDB5D00230522 /* GeneralVideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralVideosViewController.swift; sourceTree = "<group>"; };
 		9C9AC4AC22FEE03600230522 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
@@ -555,6 +557,7 @@
 			isa = PBXGroup;
 			children = (
 				9C70646822FEAFFB00E006D7 /* NotoSansCJKkr-Light.otf */,
+				9C91A26A2356ACE4009558ED /* NotoSansCJKkr-Thin.otf */,
 				9C70646622FEAFEF00E006D7 /* NotoSansCJKkr-Medium.otf */,
 				9C70646422FEAFE600E006D7 /* NotoSansCJKkr-Regular.otf */,
 				9C70646122FEA9C900E006D7 /* NotoSansCJKkr-Bold.otf */,
@@ -824,6 +827,7 @@
 				9C63192323014C2400830385 /* FeaturedCreatorCell.xib in Resources */,
 				9C1BED99231112F10011F296 /* CustomActionSheetView.xib in Resources */,
 				9C70644E22FEA3AC00E006D7 /* Main.storyboard in Resources */,
+				9C91A26B2356ACE5009558ED /* NotoSansCJKkr-Thin.otf in Resources */,
 				9C63192F23014C7A00830385 /* ContestJudgingCell.xib in Resources */,
 				9CF9324F2316B158002AC77D /* ParticipationCell.xib in Resources */,
 				9C63192B23014C6300830385 /* OngoingContestCell.xib in Resources */,
