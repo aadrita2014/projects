@@ -22,6 +22,9 @@ class EmailViewController: UIViewController {
         self.view.addBlackBackgroundColor()
         
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     override func viewWillLayoutSubviews() {
         viewSetup()
     }
@@ -42,10 +45,11 @@ class EmailViewController: UIViewController {
             showAlertMessage(title: ValidationError.defaultErrorTitle.rawValue, message: errMsg)
         }
         else {
-            moveToNextScreen()
+            let regModel = TempRegModel()
+            regModel.email = emailTf.text!
+            moveToNextScreen(regModel)
         }
     }
-    
     //MARK: Validations
     func validate() -> String? {
         if emailTf.text?.isEmpty == true {
@@ -53,8 +57,19 @@ class EmailViewController: UIViewController {
         }
         return nil
     }
-        
-    func moveToNextScreen() {
-        
+       
+    //MARK: Navigation
+    func moveToNextScreen(_ model:TempRegModel) {
+        self.performSegue(withIdentifier: "MemberInfo", sender: model)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is MemberInfoViewController {
+            let vc = segue.destination as! MemberInfoViewController
+            vc.regModel = sender as? TempRegModel
+        }
+    }
+    
+    
+    
 }

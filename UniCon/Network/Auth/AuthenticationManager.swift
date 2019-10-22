@@ -41,6 +41,9 @@ struct AuthenticationManager
     static func register(param:[String:AnyObject]) -> Promise<RegisterRequest>{
         return AuthorizationService.POST(URL: APIRouter.REGISTER, parameters: param)
     }
+}
+
+struct AuthenticationCalls {
     
 }
 

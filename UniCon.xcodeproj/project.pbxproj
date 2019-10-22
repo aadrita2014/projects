@@ -70,6 +70,8 @@
 		9C696C5B2332261A00B686BC /* VIAudioSampleOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C696C572332261900B686BC /* VIAudioSampleOperation.swift */; };
 		9C696C5C2332261A00B686BC /* VIWaveformNodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C696C582332261900B686BC /* VIWaveformNodeView.swift */; };
 		9C696C5D2332261A00B686BC /* WaveformNodeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C696C592332261900B686BC /* WaveformNodeProvider.swift */; };
+		9C6A91AB235DDFB100D672B5 /* VerificationCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6A91AA235DDFB100D672B5 /* VerificationCodeVC.swift */; };
+		9C6A91AD235DE5FD00D672B5 /* TempRegModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6A91AC235DE5FD00D672B5 /* TempRegModel.swift */; };
 		9C6E272C231E081E00C197D7 /* FilterPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E272B231E081E00C197D7 /* FilterPopupView.swift */; };
 		9C6E272E231E084B00C197D7 /* FilterPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C6E272D231E084B00C197D7 /* FilterPopupView.xib */; };
 		9C6E2731231E088A00C197D7 /* FilterPopupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E272F231E088A00C197D7 /* FilterPopupCell.swift */; };
@@ -213,6 +215,8 @@
 		9C696C572332261900B686BC /* VIAudioSampleOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIAudioSampleOperation.swift; sourceTree = "<group>"; };
 		9C696C582332261900B686BC /* VIWaveformNodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIWaveformNodeView.swift; sourceTree = "<group>"; };
 		9C696C592332261900B686BC /* WaveformNodeProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveformNodeProvider.swift; sourceTree = "<group>"; };
+		9C6A91AA235DDFB100D672B5 /* VerificationCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeVC.swift; sourceTree = "<group>"; };
+		9C6A91AC235DE5FD00D672B5 /* TempRegModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempRegModel.swift; sourceTree = "<group>"; };
 		9C6E272B231E081E00C197D7 /* FilterPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPopupView.swift; sourceTree = "<group>"; };
 		9C6E272D231E084B00C197D7 /* FilterPopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterPopupView.xib; sourceTree = "<group>"; };
 		9C6E272F231E088A00C197D7 /* FilterPopupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPopupCell.swift; sourceTree = "<group>"; };
@@ -343,6 +347,8 @@
 			children = (
 				9C2F6B402351BEEB003D3D5E /* EmailViewController.swift */,
 				9C6771682351F0B4009ABB5B /* MemberInfoViewController.swift */,
+				9C6A91AA235DDFB100D672B5 /* VerificationCodeVC.swift */,
+				9C6A91AE235DE60200D672B5 /* RegModel */,
 			);
 			path = "Register VC";
 			sourceTree = "<group>";
@@ -501,6 +507,14 @@
 				9C696C592332261900B686BC /* WaveformNodeProvider.swift */,
 			);
 			path = VIWaveFormView;
+			sourceTree = "<group>";
+		};
+		9C6A91AE235DE60200D672B5 /* RegModel */ = {
+			isa = PBXGroup;
+			children = (
+				9C6A91AC235DE5FD00D672B5 /* TempRegModel.swift */,
+			);
+			path = RegModel;
 			sourceTree = "<group>";
 		};
 		9C6E2733231E1D9700C197D7 /* Filter View */ = {
@@ -972,10 +986,12 @@
 				9C9AC4AF22FEE04000230522 /* ChannelViewController.swift in Sources */,
 				9C63192223014C2400830385 /* FeaturedCreatorCell.swift in Sources */,
 				9C2628D523150FE200835446 /* UploadVideoCreatorViewController.swift in Sources */,
+				9C6A91AD235DE5FD00D672B5 /* TempRegModel.swift in Sources */,
 				9C357258232BC5280079852D /* ABEndIndicator.swift in Sources */,
 				9C6E272C231E081E00C197D7 /* FilterPopupView.swift in Sources */,
 				9C7D49F223213F840011FDAF /* AddTextColorCell.swift in Sources */,
 				9C3471802330D4BB00F64B89 /* GradientView.swift in Sources */,
+				9C6A91AB235DDFB100D672B5 /* VerificationCodeVC.swift in Sources */,
 				9C7D49E22321214E0011FDAF /* AddStickersPopupView.swift in Sources */,
 				9CCF2CDA231A52080062558A /* ImageViewerVC.swift in Sources */,
 				9C617900230FFAA6007896F2 /* ContestDetailListCell.swift in Sources */,
