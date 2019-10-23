@@ -21,7 +21,14 @@ class VerificationCodeVC: UIViewController {
 
         //Add Default Background Color to the view
         self.view.addBlackBackgroundColor()
+       
+        if AppConsts.DEBUG_MODE {
+            print("Model \(regModel)")
+        }
         
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+           return .lightContent
     }
     override func viewDidAppear(_ animated: Bool) {
         viewSetup()
@@ -30,6 +37,7 @@ class VerificationCodeVC: UIViewController {
         verificationCodeTf.addBottomBorder(color: AppColors.default_red_color)
         verificationCodeTf.updatePlaceHolder(text: "000000")
         verificationCodeTf.inputAccessoryView = bottomToolbar
+        verificationCodeTf.becomeFirstResponder()
        // verificationCodeTf.becomeFirstResponder()
     }
     
@@ -43,7 +51,7 @@ class VerificationCodeVC: UIViewController {
             showAlertMessage(title: ValidationError.defaultErrorTitle.rawValue, message: errMsg)
         }
         else {
-            register()
+           // register()
         }
     }
     //MARK: Validations
@@ -53,28 +61,7 @@ class VerificationCodeVC: UIViewController {
         }
         return nil
     }
-    //MARK: API Call
-    func register() {
-        if let model = regModel {
-            self.showLoading()
-            let modelParam = model.toDictionary() as! [String:AnyObject]
-            AuthenticationManager.register(param: modelParam).done { (request) in
-                print(request)
-                self.hideLoading()
-            }.catch { (error) in
-                print(error)
-                self.showAlertMessage(title: "Error", message: error.localizedDescription)
-            }
-        }
-    }
-    
     func showPrivacyPolicy() {
         self.performSegue(withIdentifier: "PrivacyPolicy", sender: nil)
     }
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-
-    
-
 }

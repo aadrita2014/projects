@@ -58,7 +58,7 @@
                                             <color key="titleColor" red="0.81176470588235294" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="wgA-1a-wgm" kind="show" id="zXl-hR-BRb"/>
+                                            <segue destination="wgA-1a-wgm" kind="show" id="gbA-EX-iG3"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -174,7 +174,7 @@
                         <outlet property="googleButton" destination="cnO-RU-Uep" id="vbt-xl-HmK"/>
                         <outlet property="kakaoButton" destination="zX0-mg-tMk" id="Ojs-Vv-gED"/>
                         <outlet property="loginButton" destination="Qar-cK-1sB" id="aGu-Y7-csV"/>
-                        <outlet property="signupButton" destination="pMV-NJ-K6n" id="JDO-us-I3l"/>
+                        <outlet property="signupButton" destination="pMV-NJ-K6n" id="P8W-7R-8fd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -413,17 +413,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="598"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUA-tm-Chx">
-                                                <rect key="frame" x="0.0" y="61" width="375" height="239"/>
+                                                <rect key="frame" x="0.0" y="43" width="375" height="239"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="bTK-EY-f45" id="kZF-fO-1gk"/>
                                                 </connections>
                                             </scrollView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Nc-q7-LvF">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="검색" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fXf-N1-lc5">
-                                                        <rect key="frame" x="8" y="0.0" width="315" height="61"/>
+                                                        <rect key="frame" x="8" y="0.0" width="335" height="43"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -432,7 +432,7 @@
                                                         </connections>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jj5-bd-zbZ">
-                                                        <rect key="frame" x="327" y="10" width="40" height="40"/>
+                                                        <rect key="frame" x="347" y="10" width="20" height="22"/>
                                                         <state key="normal" image="search"/>
                                                     </button>
                                                 </subviews>
@@ -2125,11 +2125,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZJx-5r-2Sf">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZJx-5r-2Sf">
+                                <rect key="frame" x="0.0" y="63.5" width="375" height="603.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPb-l5-1de">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="611"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMW-5l-v2A">
                                                 <rect key="frame" x="30" y="28" width="132.5" height="104.5"/>
@@ -2146,14 +2146,14 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mI-y7-qO9">
-                                                <rect key="frame" x="16" y="547" width="343" height="48.5"/>
+                                                <rect key="frame" x="16" y="554.5" width="343" height="48.5"/>
                                                 <color key="backgroundColor" red="0.74901960779999999" green="0.031372549020000001" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="20"/>
                                                 <state key="normal" title="다음">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="uploadVideoClicked" destination="qed-Ff-baI" eventType="touchUpInside" id="fbT-Px-jVV"/>
+                                                    <action selector="nextClicked" destination="7eD-2Y-6Lj" eventType="touchUpInside" id="yjd-WI-mq9"/>
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="MiO-o4-xCV">
@@ -2169,10 +2169,7 @@
                                                                 </constraints>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="16"/>
-                                                                <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="username"/>
-                                                                <connections>
-                                                                    <outlet property="delegate" destination="sSS-1J-FFB" id="gBY-KQ-6ki"/>
-                                                                </connections>
+                                                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="username"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTG-Rk-mMw">
                                                                 <rect key="frame" x="0.0" y="8" width="34" height="16"/>
@@ -2201,10 +2198,7 @@
                                                                 </constraints>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="16"/>
-                                                                <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES" textContentType="password"/>
-                                                                <connections>
-                                                                    <outlet property="delegate" destination="sSS-1J-FFB" id="xWk-fq-uqN"/>
-                                                                </connections>
+                                                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="username"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tp6-4C-8UN">
                                                                 <rect key="frame" x="0.0" y="8" width="39" height="16"/>
@@ -2233,10 +2227,7 @@
                                                                 </constraints>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="16"/>
-                                                                <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES" textContentType="password"/>
-                                                                <connections>
-                                                                    <outlet property="delegate" destination="sSS-1J-FFB" id="36t-4j-sUM"/>
-                                                                </connections>
+                                                                <textInputTraits key="textInputTraits" returnKeyType="continue" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="username"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 재입력" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RiQ-Jc-xAh">
                                                                 <rect key="frame" x="0.0" y="8" width="82.5" height="16"/>
@@ -2265,7 +2256,7 @@
                                             <constraint firstItem="MO6-VA-olg" firstAttribute="leading" secondItem="hMW-5l-v2A" secondAttribute="leading" id="7Ia-Dt-oDT"/>
                                             <constraint firstAttribute="trailing" secondItem="MiO-o4-xCV" secondAttribute="trailing" constant="30" id="9tB-A2-yJx"/>
                                             <constraint firstItem="hMW-5l-v2A" firstAttribute="top" secondItem="GPb-l5-1de" secondAttribute="top" constant="28" id="Kmp-vJ-4LL"/>
-                                            <constraint firstItem="4mI-y7-qO9" firstAttribute="top" relation="lessThanOrEqual" secondItem="MiO-o4-xCV" secondAttribute="bottom" priority="750" constant="94" id="XDZ-eX-cIv"/>
+                                            <constraint firstItem="4mI-y7-qO9" firstAttribute="top" secondItem="MiO-o4-xCV" secondAttribute="bottom" priority="750" constant="94" id="XDZ-eX-cIv"/>
                                             <constraint firstItem="4mI-y7-qO9" firstAttribute="leading" secondItem="GPb-l5-1de" secondAttribute="leading" constant="16" id="mFS-5P-4s3"/>
                                             <constraint firstItem="4mI-y7-qO9" firstAttribute="height" secondItem="GPb-l5-1de" secondAttribute="height" multiplier="0.08" id="mac-WD-9Pp"/>
                                             <constraint firstItem="MO6-VA-olg" firstAttribute="top" secondItem="hMW-5l-v2A" secondAttribute="bottom" constant="24.5" id="p5n-zF-BLg"/>
@@ -2276,12 +2267,11 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="ldQ-U4-kJo" firstAttribute="trailing" secondItem="GPb-l5-1de" secondAttribute="trailing" id="1Gs-We-xJ2"/>
-                                    <constraint firstItem="GPb-l5-1de" firstAttribute="leading" secondItem="ldQ-U4-kJo" secondAttribute="leading" id="AfF-92-84x"/>
-                                    <constraint firstItem="GPb-l5-1de" firstAttribute="top" secondItem="ldQ-U4-kJo" secondAttribute="top" id="MhS-v8-WFF"/>
-                                    <constraint firstItem="ldQ-U4-kJo" firstAttribute="bottom" secondItem="GPb-l5-1de" secondAttribute="bottom" id="fBx-0s-PJ2"/>
-                                    <constraint firstItem="GPb-l5-1de" firstAttribute="width" secondItem="ZJx-5r-2Sf" secondAttribute="width" id="hjO-3R-Uhl"/>
-                                    <constraint firstItem="GPb-l5-1de" firstAttribute="height" secondItem="ZJx-5r-2Sf" secondAttribute="height" id="lsV-As-t2k"/>
+                                    <constraint firstItem="GPb-l5-1de" firstAttribute="leading" secondItem="ZJx-5r-2Sf" secondAttribute="leading" id="J6f-Me-U5H"/>
+                                    <constraint firstItem="GPb-l5-1de" firstAttribute="width" secondItem="ZJx-5r-2Sf" secondAttribute="width" id="aXo-cu-QwG"/>
+                                    <constraint firstAttribute="trailing" secondItem="GPb-l5-1de" secondAttribute="trailing" id="dvu-xl-GaM"/>
+                                    <constraint firstAttribute="bottom" secondItem="GPb-l5-1de" secondAttribute="bottom" id="lj3-75-a9C"/>
+                                    <constraint firstItem="GPb-l5-1de" firstAttribute="top" secondItem="ZJx-5r-2Sf" secondAttribute="top" id="y68-Bi-Jpx"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="JMb-Mh-bxl"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="ldQ-U4-kJo"/>
@@ -2300,7 +2290,6 @@
                                 </constraints>
                                 <state key="normal" image="back"/>
                                 <connections>
-                                    <action selector="backClicked" destination="wgA-1a-wgm" eventType="touchUpInside" id="46g-Zp-QSE"/>
                                     <action selector="backClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="EGL-9Q-RaY"/>
                                 </connections>
                             </button>
@@ -2309,19 +2298,21 @@
                         <constraints>
                             <constraint firstItem="ZJx-5r-2Sf" firstAttribute="trailing" secondItem="hRx-N6-qZW" secondAttribute="trailing" id="3Vg-cc-QSH"/>
                             <constraint firstItem="mCn-Rp-k0H" firstAttribute="centerX" secondItem="hRx-N6-qZW" secondAttribute="centerX" id="9CV-jb-Cwb"/>
+                            <constraint firstItem="ZJx-5r-2Sf" firstAttribute="bottom" secondItem="hRx-N6-qZW" secondAttribute="bottom" id="JNY-wN-FQH"/>
                             <constraint firstItem="mCn-Rp-k0H" firstAttribute="top" secondItem="hRx-N6-qZW" secondAttribute="top" constant="32" id="Uta-pK-0Up"/>
                             <constraint firstItem="ZJx-5r-2Sf" firstAttribute="leading" secondItem="hRx-N6-qZW" secondAttribute="leading" id="nLv-VU-dcN"/>
                             <constraint firstItem="ZJx-5r-2Sf" firstAttribute="top" secondItem="gM6-lp-Wtr" secondAttribute="bottom" id="o61-x1-YYN"/>
                             <constraint firstItem="gM6-lp-Wtr" firstAttribute="leading" secondItem="idv-g0-MIe" secondAttribute="leading" constant="24" id="vrD-y5-ncX"/>
                             <constraint firstItem="gM6-lp-Wtr" firstAttribute="centerY" secondItem="mCn-Rp-k0H" secondAttribute="centerY" id="wNK-Xe-o06"/>
-                            <constraint firstItem="ZJx-5r-2Sf" firstAttribute="bottom" secondItem="hRx-N6-qZW" secondAttribute="bottom" id="zuy-ec-q9Z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hRx-N6-qZW"/>
                     </view>
                     <navigationItem key="navigationItem" id="OHX-z7-fFe"/>
                     <connections>
                         <outlet property="confirmPassTf" destination="VzN-vA-u9k" id="W53-fY-wm9"/>
+                        <outlet property="containerView" destination="GPb-l5-1de" id="VMf-rv-yin"/>
                         <outlet property="passwordTf" destination="1du-DH-9yP" id="QtK-bQ-2tM"/>
+                        <outlet property="scrollView" destination="ZJx-5r-2Sf" id="oMv-Xd-Al2"/>
                         <outlet property="usernameTf" destination="YYk-8z-Zmf" id="OFt-gU-gVR"/>
                         <segue destination="FFw-TW-Puz" kind="show" identifier="VerificationCode" id="qt6-b6-g07"/>
                     </connections>
@@ -2757,7 +2748,7 @@
                                 </constraints>
                                 <state key="normal" image="back"/>
                                 <connections>
-                                    <action selector="backClicked" destination="wgA-1a-wgm" eventType="touchUpInside" id="2d2-5w-5yb"/>
+                                    <action selector="backClicked" destination="wgA-1a-wgm" eventType="touchUpInside" id="7ef-ya-0hu"/>
                                     <action selector="backClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="dJ5-Fd-WNR"/>
                                 </connections>
                             </button>
@@ -5762,9 +5753,6 @@
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="username"/>
-                                                                <connections>
-                                                                    <outlet property="delegate" destination="FFw-TW-Puz" id="r8b-X1-5zn"/>
-                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인증번호" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mR7-ML-tHd">
                                                                 <rect key="frame" x="0.0" y="8" width="45" height="16"/>

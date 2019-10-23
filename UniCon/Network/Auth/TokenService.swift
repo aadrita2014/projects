@@ -12,13 +12,13 @@ import EVReflection
 import Alamofire
 
 class TokenRequest:EVObject {
-    var username:String = ""
+    var email:String = ""
     var password:String = ""
     var role:String = ""
     
     init(username:String,password:String,role:String) {
         super.init()
-        self.username = username
+        self.email = username
         self.password = password
         self.role = role
     }
@@ -45,7 +45,7 @@ struct TokenService: NetworkService
         return POST(url:APIRouter.LOGIN, request: request) }
     static func refreshToken (request: TokenRefresh) -> Promise<Token> {
         return POST(url:APIRouter.REFRESH_TOKEN, request: request) }
-
+    
     // MARK: - POST
     private static func POST<T:EVReflectable>(url:String, request: T) -> Promise<Token>
     {

@@ -69,6 +69,7 @@ struct StringConsts {
 
 struct AppConsts {
     //Static Consts before getting from the API
+    static let DEBUG_MODE = true
     static let MAX_LENGTH_VIDEO = 60.0
     static let MIN_LENGTH_VIDEo = 5.0
 }

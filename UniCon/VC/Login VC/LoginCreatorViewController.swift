@@ -78,7 +78,7 @@ class LoginCreatorViewController: UIViewController, UITextFieldDelegate {
         self.showLoading()
         firstly {
             //Authenticate with the API
-            AuthenticationManager.authenticate(username: self.emailTf.text!, password: self.passwordTf.text!,role: Role.creator.rawValue)
+            AuthenticationService.authenticate(username: self.emailTf.text!, password: self.passwordTf.text!,role: Role.creator.rawValue)
         }.done { (token) in
             //If successful
             self.hideLoading()

@@ -107,7 +107,7 @@ extension UITextField {
 }
 
 extension UIViewController {
-    func showAlertMessage(title:String = "Error",message:String = "") {
+    func showAlertMessage(title:String = ValidationError.defaultErrorTitle.rawValue,message:String = "") {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
         alertController.addAction(okAction)

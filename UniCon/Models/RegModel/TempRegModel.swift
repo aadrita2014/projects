@@ -12,7 +12,7 @@ import EVReflection
 class TempRegModel: EVObject {
     
     var email:String = ""
-    var username:String = ""
+    var name:String = ""
     var password:String = ""
     
 }
