@@ -9,10 +9,12 @@
 import UIKit
 import EVReflection
 
-class TempRegModel: EVObject {
-    
+class RegistrationRequest: EVObject {
     var email:String = ""
     var name:String = ""
     var password:String = ""
+    var nickName:String = ""
+    var phoneNumber:String = ""
+    var role:String = ""
     
 }

@@ -2117,10 +2117,10 @@
             </objects>
             <point key="canvasLocation" x="2977" y="712"/>
         </scene>
-        <!--Member Info View Controller-->
+        <!--Member InfoVC-->
         <scene sceneID="Y9N-ZV-XmY">
             <objects>
-                <viewController id="7eD-2Y-6Lj" customClass="MemberInfoViewController" customModule="UniCon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7eD-2Y-6Lj" customClass="MemberInfoVC" customModule="UniCon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="idv-g0-MIe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2291,6 +2291,7 @@
                                 <state key="normal" image="back"/>
                                 <connections>
                                     <action selector="backClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="EGL-9Q-RaY"/>
+                                    <action selector="backClicked" destination="7eD-2Y-6Lj" eventType="touchUpInside" id="rMZ-0p-lgE"/>
                                 </connections>
                             </button>
                         </subviews>

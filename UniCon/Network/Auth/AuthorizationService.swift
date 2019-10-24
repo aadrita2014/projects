@@ -13,21 +13,21 @@ import EVReflection
 
 struct AuthorizationService: NetworkService {
     
-    private static var authorizedHeader:[String: String]
-    {
-        guard let accessToken = TokenManager.token?.accessToken else
-        {
-            return ["Authorization": ""]
-        }
-        return ["Authorization": "Bearer \(accessToken)"]
-    }
-    
-    // MARK: - POST
-    
-    static func POST<T:EVObject> (URL: String, parameters: [String: AnyObject], encoding: ParameterEncoding = URLEncoding.default) -> Promise<T>
-    {
-        return POST(URL: URL, parameters: parameters, headers: authorizedHeader, encoding: encoding)
-    }
+//    private static var authorizedHeader:[String: String]
+//    {
+//        guard let accessToken = TokenManager.token?.accessToken else
+//        {
+//            return ["Authorization": ""]
+//        }
+//        return ["Authorization": "Bearer \(accessToken)"]
+//    }
+//    
+//    // MARK: - POST
+//    
+//    static func POST<T:Decodable> (URL: String, parameters: [String: AnyObject], encoding: ParameterEncoding = URLEncoding.default) -> Promise<T>
+//    {
+//        return POST(URL: URL, parameters: parameters, headers: authorizedHeader, encoding: encoding)
+//    }
     
 }
 

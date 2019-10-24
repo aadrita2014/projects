@@ -14,18 +14,13 @@ class VerificationCodeVC: UIViewController {
     @IBOutlet weak var verificationCodeTf: UITextField!
     @IBOutlet weak var bottomToolbar: UIToolbar!
     
-    var regModel:TempRegModel? = nil
+  
     //MARK: View Overriden Methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
         //Add Default Background Color to the view
         self.view.addBlackBackgroundColor()
-       
-        if AppConsts.DEBUG_MODE {
-            print("Model \(regModel)")
-        }
-        
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {
            return .lightContent

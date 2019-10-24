@@ -8,7 +8,8 @@
 
 import UIKit
 import PromiseKit
-class MemberInfoViewController: UIViewController {
+
+class MemberInfoVC: UIViewController {
     
     @IBOutlet weak var usernameTf: UITextField!
     @IBOutlet weak var passwordTf: UITextField!
@@ -16,16 +17,12 @@ class MemberInfoViewController: UIViewController {
     @IBOutlet weak var scrollView:UIScrollView!
     @IBOutlet weak var containerView:UIView!
     
+    var regRequest:RegistrationRequest? = nil
     
-    var regModel:TempRegModel? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
         //Setup default black background color
         self.view.addBlackBackgroundColor()
-        
-        //        print("Model Info \(regModel)")
-        // Do any additional setup after loading the view.
-        
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -54,20 +51,23 @@ class MemberInfoViewController: UIViewController {
         //add tap to dismiss to the scroll view
         tapToDismiss()
     }
-    
+    @IBAction func backClicked()  {
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBAction func nextClicked() {
         if let errMsg = validate() {
-            showAlertMessage(title: ValidationError.defaultErrorTitle.rawValue, message: errMsg)
+            showAlertMessage(message: errMsg)
         }
         else {
-            if regModel != nil {
-                regModel?.name = usernameTf.text!
-                regModel?.password = passwordTf.text!
+            if regRequest != nil {
+                regRequest?.name = usernameTf.text!
+                regRequest?.password = passwordTf.text!
+                regRequest?.nickName = usernameTf.text!
+                regRequest?.phoneNumber = "1212121212"
+                regRequest?.role = Role.creator.role
                 register()
-                //moveToVerificationCode(model: regModel!)
             }
             else {
-                showAlertMessage(title: "Error", message: "Please go back and enter your email")
                 self.navigationController?.popViewController(animated: true)
             }
             
@@ -81,36 +81,37 @@ class MemberInfoViewController: UIViewController {
     
     //MARK: API Call
     func register() {
-        if let model = regModel {
+        if let request = regRequest {
             // self.showLoading()
-            let modelParam = model.toDictionary() as! [String:AnyObject]
-            // print(modelParam)
+            let modelParam = request.toDictionary() as! [String:Any]
+            //print(modelParam)
             self.showLoading()
             firstly {
                 //Authenticate with the API
                 AuthenticationService.registerNewUser(param: modelParam)
             }.done { (model) in
                 //If successful
+                print(model.description)
                 self.hideLoading()
             }
             .catch {
                 //If generates error
+                self.hideLoading()
                 if let error = $0 as? NetworkError {
-                    self.hideLoading()
                     self.showAlertMessage(message: "\(error.localizedDescription)")
                 }
             }
         }
     }
     //MARK: Navigation
-    func moveToVerificationCode(model:TempRegModel) {
+    func moveToVerificationCode(model:RegistrationRequest) {
         self.performSegue(withIdentifier: "VerificationCode", sender: model)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is VerificationCodeVC {
             let vc = segue.destination as! VerificationCodeVC
-            vc.regModel = sender as? TempRegModel
+//            vc.regModel = sender as? RegistrationRequest
         }
     }
     //MARK: Deinitialisations
@@ -119,7 +120,7 @@ class MemberInfoViewController: UIViewController {
     }
 }
 
-extension MemberInfoViewController {
+extension MemberInfoVC{
     
     //MARK: Scrollview adjust code when keyboard shows/hides
     @objc func hideKeyboard()

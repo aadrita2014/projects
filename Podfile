@@ -7,5 +7,7 @@ target 'UniCon' do
 
   # Pods for UniCon
 #  pod 'EVReflection'
-  pod 'EVReflection/Alamofire'
+  pod 'EVReflection'
+  
+  pod 'Alamofire', '~> 5.0.0-rc.2'
 end

@@ -75,20 +75,20 @@ class LoginCreatorViewController: UIViewController, UITextFieldDelegate {
     //MARK: API Call
     func login() {
         //Show Loading
-        self.showLoading()
-        firstly {
-            //Authenticate with the API
-            AuthenticationService.authenticate(username: self.emailTf.text!, password: self.passwordTf.text!,role: Role.creator.rawValue)
-        }.done { (token) in
-            //If successful
-            self.hideLoading()
-            print(token)
-        }
-        .catch { (error) in
-            //If generates error
-            self.hideLoading()
-            self.showAlertMessage(title: ValidationError.defaultErrorTitle.rawValue, message: error.localizedDescription)
-        }
+//        self.showLoading()
+//        firstly {
+//            //Authenticate with the API
+//            AuthenticationService.authenticate(username: self.emailTf.text!, password: self.passwordTf.text!,role: Role.creator.rawValue)
+//        }.done { (token) in
+//            //If successful
+//            self.hideLoading()
+//            print(token)
+//        }
+//        .catch { (error) in
+//            //If generates error
+//            self.hideLoading()
+//            self.showAlertMessage(title: ValidationError.defaultErrorTitle.rawValue, message: error.localizedDescription)
+//        }
     }
     
     //Text Field Delegates

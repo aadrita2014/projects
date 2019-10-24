@@ -11,8 +11,8 @@ import UIKit
 //MARK: BASE API Routes
 struct APIRouter {
 
-    static let API_HOST = "http://52.79.128.120:"
-    static let API_PORT = "8080"
+    static let API_HOST = "http://52.79.128.120"
+    static let API_PORT = ":8080"
     static let API_VERSION = "v1"
     static let API_ROOT = API_HOST + API_PORT + "/" + API_VERSION
     

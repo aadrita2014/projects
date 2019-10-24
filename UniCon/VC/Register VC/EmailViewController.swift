@@ -45,7 +45,7 @@ class EmailViewController: UIViewController {
             showAlertMessage(title: ValidationError.defaultErrorTitle.rawValue, message: errMsg)
         }
         else {
-            let regModel = TempRegModel()
+            let regModel = RegistrationRequest()
             regModel.email = emailTf.text!
             moveToNextScreen(regModel)
         }
@@ -59,14 +59,14 @@ class EmailViewController: UIViewController {
     }
        
     //MARK: Navigation
-    func moveToNextScreen(_ model:TempRegModel) {
+    func moveToNextScreen(_ model:RegistrationRequest) {
         self.performSegue(withIdentifier: "MemberInfo", sender: model)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is MemberInfoViewController {
-            let vc = segue.destination as! MemberInfoViewController
-            vc.regModel = sender as? TempRegModel
+        if segue.destination is MemberInfoVC {
+            let vc = segue.destination as! MemberInfoVC
+            vc.regRequest = sender as? RegistrationRequest
         }
     }
     
