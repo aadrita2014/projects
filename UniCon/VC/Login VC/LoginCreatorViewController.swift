@@ -23,23 +23,23 @@ class LoginCreatorViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         //Add default background color to the view
-        self.view.addDefaultBackgroundColor()
+      //  self.view.addDefaultBackgroundColor()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        //Add Bottom Border for Textfields
-        emailTf.addBottomBorder(color: UIColor.red)
-        passwordTf.addBottomBorder(color: UIColor.red)
-        
-        //Add gray placeholder color for better visibility
-        emailTf.updatePlaceHolder(text: "aaa@bbb.ccc")
-        passwordTf.updatePlaceHolder(text: "*******")
-        
-        //Register for keyboard notifications
-        registerNotifications()
-        
-        //Tap to dismiss the keyboard
-        tapToDismiss()
+//        //Add Bottom Border for Textfields
+//        emailTf.addBottomBorder(color: UIColor.red)
+//        passwordTf.addBottomBorder(color: UIColor.red)
+//
+//        //Add gray placeholder color for better visibility
+//        emailTf.updatePlaceHolder(text: "aaa@bbb.ccc")
+//        passwordTf.updatePlaceHolder(text: "*******")
+//
+//        //Register for keyboard notifications
+//        registerNotifications()
+//
+//        //Tap to dismiss the keyboard
+//        tapToDismiss()
     }
     //MARK: IBActions Defined
     @IBAction func backClicked()

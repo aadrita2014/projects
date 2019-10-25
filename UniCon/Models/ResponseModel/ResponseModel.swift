@@ -9,20 +9,20 @@
 import UIKit
 import EVReflection
 
-class ResponseModel:Decodable {
+class ResponseModel:EVObject {
     var message:String = ""
     var success:Bool = false
     var token:String?
     
     
-    enum CodingKeys: String, CodingKey {
-        case message
-        case success
-        case token
-    }
-    
-    var description: String {
-        return "Response: { message: \(message), success: \(success) }"
-    }
+//    enum CodingKeys: String, CodingKey {
+//        case message
+//        case success
+//        case token
+//    }
+//
+//    var description: String {
+//        return "Response: { message: \(message), success: \(success) }"
+//    }
 }
 

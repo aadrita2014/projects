@@ -9,7 +9,7 @@
 import UIKit
 import EVReflection
 
-class RegistrationRequest: EVObject {
+class RegistrationRequest:EVObject {
     var email:String = ""
     var name:String = ""
     var password:String = ""

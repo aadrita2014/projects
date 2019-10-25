@@ -14,29 +14,25 @@ import EVReflection
 
 protocol NetworkService
 {
-    static func POST<T:Decodable>(URL: String, parameters: [String: Any]?, headers: [String: String]?, encoding: ParameterEncoding) -> Promise<T>
+    static func POST<T:EVObject>(URL: String, parameters: [String: Any]?, headers: [String: String]?, encoding: ParameterEncoding) -> Promise<T>
 }
 extension NetworkService
 {
     // MARK: - POST
-    static func POST<T:Decodable>(URL: String,
+    static func POST<T:EVObject>(URL: String,
                                   parameters: [String: Any]? = nil,
                                   headers: [String: String]? = nil,
                                   encoding: ParameterEncoding = URLEncoding.default) -> Promise<T>
     {
         let (promise, resolver) = Promise<T>.pending()
-        AF.request(URL,method: .post,parameters: parameters, encoder: URLEncodedFormParameterEncoder(destination: .httpBody), headers: ["Content-Type":"application/x-www-form-urlencoded"]).responseDecodable { (response:DataResponse<T,AFError>) in
-            if AppConsts.DEBUG_MODE {
-                print("API URL: \(URL)\nPARAMETERS: \(String(describing: parameters))\nRESULT: \(response)")
-            }
-            switch(response.result)
-            {
-            case .success(_):
-                
-                if let model = response.value as? ResponseModel {
-                    print(model.description)
+        AF.request(URL,method: .post,parameters: parameters).responseJSON { (response:AFDataResponse<T>) in
+
+                if AppConsts.DEBUG_MODE {
+                    print("API URL: \(URL)\nPARAMETERS: \(String(describing: parameters))\nRESULT: \(response)")
+                }
+                if let model = response.result.value as? ResponseModel {
                     if model.success {
-                        resolver.fulfill(response.value!)
+                        resolver.fulfill(response.result.value!)
                     }
                     else {
                         if model.message.isEmpty {
@@ -47,54 +43,52 @@ extension NetworkService
                         }
                     }
                 }
-                //                    if let value = response.value {
-                //                        resolver.fulfill(value)
-                //                    }
-                //                    else {
-                //                        let errorD = response.result.mapError { (error) -> Error in
-                //                            return error
-                //                        }
-                //                        resolver.reject(NetworkError.customError("Bad Request"))
-            //                }
-            case .failure(let error):
-                resolver.reject(error)
-                
+                else {
+                    if let result = response.result.value {
+                        resolver.fulfill(result)
+                    }
+                    else {
+                        if let error = response.error {
+                            resolver.reject(error)
+                        }
+                        else {
+                            resolver.reject(NetworkError.requestFailedError)
+                        }
+                    }
+                }
+            
             }
-        }
-        //        Alamofire.request(URL,
-        //                          method: .post,
-        //        parameters: parameters,
-        //        headers: ["Content-Type":"application/x-www-form-urlencoded"]).responseObject { (response: DataResponse<T>) in
-        //            if AppConsts.DEBUG_MODE {
-        //                print("API URL: \(URL)\nPARAMETERS: \(String(describing: parameters))\nRESULT: \(response)")
-        //            }
-        //            if let model = response.result.value as? ResponseModel {
-        //                if model.success {
-        //                    resolver.fulfill(response.result.value!)
-        //                }
-        //                else {
-        //                    if model.message.isEmpty {
-        //                        resolver.reject(NetworkError.requestFailedError)
-        //                    }
-        //                    else {
-        //                        resolver.reject(NetworkError.customError(model.message))
-        //                    }
-        //                }
-        //            }
-        //            else {
-        //                if let result = response.result.value {
-        //                    resolver.fulfill(result)
-        //                }
-        //                else {
-        //                    if let error = response.error {
-        //                        resolver.reject(error)
-        //                    }
-        //                    else {
-        //                        resolver.reject(NetworkError.requestFailedError)
-        //                    }
-        //                }
-        //            }
-        //        }
+//        AF.request(URL, method: .post, parameters: parameters).responseData { (response: DataResponse<UserResponseModel>) in
+//                    if AppConsts.DEBUG_MODE {
+//                        print("API URL: \(URL)\nPARAMETERS: \(String(describing: parameters))\nRESULT: \(response)")
+//                    }
+//                    if let model = response.result.value {
+//                        if model.success {
+//                            resolver.fulfill(response.result.value!)
+//                        }
+//                        else {
+//                            if model.message.isEmpty {
+//                                resolver.reject(NetworkError.requestFailedError)
+//                            }
+//                            else {
+//                                resolver.reject(NetworkError.customError(model.message))
+//                            }
+//                        }
+//                    }
+//                    else {
+//                        if let result = response.result.value {
+//                            resolver.fulfill(result)
+//                        }
+//                        else {
+//                            if let error = response.error {
+//                                resolver.reject(error)
+//                            }
+//                            else {
+//                                resolver.reject(NetworkError.requestFailedError)
+//                            }
+//                        }
+//                    }
+//                }
         return promise
     }
 }

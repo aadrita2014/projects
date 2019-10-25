@@ -25,8 +25,9 @@ class EmailViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    override func viewWillLayoutSubviews() {
-        viewSetup()
+    override func viewDidAppear(_ animated: Bool) {
+        
+    //    viewSetup()
     }
     func viewSetup() {
         emailTf.addBottomBorder(color: AppColors.default_red_color)
@@ -38,7 +39,6 @@ class EmailViewController: UIViewController {
     //MARK: IBActions
     @IBAction func backClicked() {
         self.navigationController?.popViewController(animated: true)
-        
     }
     @IBAction func nextClicked(_ sender: Any) {
         if let errMsg = validate() {

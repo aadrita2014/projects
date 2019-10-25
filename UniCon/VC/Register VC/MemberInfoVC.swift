@@ -8,7 +8,7 @@
 
 import UIKit
 import PromiseKit
-
+import Alamofire
 class MemberInfoVC: UIViewController {
     
     @IBOutlet weak var usernameTf: UITextField!
@@ -83,24 +83,25 @@ class MemberInfoVC: UIViewController {
     func register() {
         if let request = regRequest {
             // self.showLoading()
-            let modelParam = request.toDictionary() as! [String:Any]
-            //print(modelParam)
-            self.showLoading()
-            firstly {
-                //Authenticate with the API
-                AuthenticationService.registerNewUser(param: modelParam)
-            }.done { (model) in
-                //If successful
-                print(model.description)
-                self.hideLoading()
-            }
-            .catch {
-                //If generates error
-                self.hideLoading()
-                if let error = $0 as? NetworkError {
-                    self.showAlertMessage(message: "\(error.localizedDescription)")
-                }
-            }
+           // let modelParam = request.toDictionary() as! [String:Any]
+           // print(modelParam)
+            
+//            self.showLoading()
+//            firstly {
+//                //Authenticate with the API
+//                AuthenticationService.registerNewUser(param: modelParam)
+//            }.done { (model) in
+//                //If successful
+//                print(model.description)
+//                self.hideLoading()
+//            }
+//            .catch {
+//                //If generates error
+//                self.hideLoading()
+//                if let error = $0 as? NetworkError {
+//                    self.showAlertMessage(message: "\(error.localizedDescription)")
+//                }
+//            }
         }
     }
     //MARK: Navigation

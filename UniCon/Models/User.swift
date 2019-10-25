@@ -7,19 +7,19 @@
 //
 
 import UIKit
-import EVReflection
+//import EVReflection
 
 
 
 class UserResponseModel:ResponseModel{
     var user: User?
     
-    override var description: String {
-        return user?.description ?? ""
-    }
+//    override var description: String {
+//        return user?.description ?? ""
+//    }
     
 }
-class User: Decodable {
+class User: EVObject{
     
     var tokenType:String = ""
     var accessToken:String = ""
@@ -31,9 +31,9 @@ class User: Decodable {
     var role:String = ""
     var createdAt:String = ""
    
-    var description: String {
-        return "User: { email: \(email), role: \(role) }"
-    }
+//    var description: String {
+//        return "User: { email: \(email), role: \(role) }"
+//    }
 }
 
 

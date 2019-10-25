@@ -1,12 +1,12 @@
 PODS:
-  - Alamofire (4.9.0)
-  - EVReflection/Alamofire (5.10.1):
-    - Alamofire
-    - EVReflection/Core
+  - Alamofire (5.0.0-rc.2)
+  - EVReflection (5.10.1):
+    - EVReflection/Core (= 5.10.1)
   - EVReflection/Core (5.10.1)
 
 DEPENDENCIES:
-  - EVReflection/Alamofire
+  - Alamofire (~> 5.0.0-rc.2)
+  - EVReflection
 
 SPEC REPOS:
   trunk:
@@ -14,9 +14,9 @@ SPEC REPOS:
     - EVReflection
 
 SPEC CHECKSUMS:
-  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  Alamofire: f9450d3c7f6bea2ad62e7a541c3e9b186c7991d6
   EVReflection: 8124de482178d34ccd56473e16cd95990f9a1113
 
-PODFILE CHECKSUM: 46a708a93f04a2e2455e5854306a17c364acbca5
+PODFILE CHECKSUM: 7049e7501c9bd8bab421c3ea9a624435b3aa9b27
 
-COCOAPODS: 1.8.1
+COCOAPODS: 1.8.4

@@ -220,7 +220,7 @@
                                 </constraints>
                                 <state key="normal" image="back"/>
                                 <connections>
-                                    <action selector="backClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="CCw-R4-DsO"/>
+                                    <action selector="backClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="y6c-YP-UZs"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JzT-T3-NF3">
@@ -323,7 +323,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="loginClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="juR-98-acF"/>
+                                                    <action selector="loginClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="MWp-TH-fju"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUp-pw-Geb">
@@ -524,7 +524,6 @@
                                 <state key="normal" image="back"/>
                                 <connections>
                                     <action selector="backClicked" destination="Cae-NF-l4n" eventType="touchUpInside" id="Esb-2C-zTi"/>
-                                    <action selector="backClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="JGL-IY-Yqd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RxA-ld-xa3">
@@ -535,7 +534,6 @@
                                 </constraints>
                                 <state key="normal" image="filterTopIcon"/>
                                 <connections>
-                                    <action selector="backClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="J3t-j1-ezE"/>
                                     <action selector="filterListClicked" destination="Cae-NF-l4n" eventType="touchUpInside" id="bvc-vH-QBs"/>
                                 </connections>
                             </button>
@@ -607,7 +605,6 @@
                                 <connections>
                                     <action selector="backClicked" destination="0A6-kF-AUk" eventType="touchUpInside" id="lcd-X3-yPj"/>
                                     <action selector="backClicked" destination="Cae-NF-l4n" eventType="touchUpInside" id="nOO-HC-4jg"/>
-                                    <action selector="backClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="qLb-Xe-wD4"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cvc-Pm-BND">
@@ -1012,7 +1009,6 @@
                                 </constraints>
                                 <state key="normal" image="back"/>
                                 <connections>
-                                    <action selector="backClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="EiT-tC-aaB"/>
                                     <action selector="backClicked" destination="Cae-NF-l4n" eventType="touchUpInside" id="OiX-uh-VrZ"/>
                                 </connections>
                             </button>
@@ -2290,7 +2286,6 @@
                                 </constraints>
                                 <state key="normal" image="back"/>
                                 <connections>
-                                    <action selector="backClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="EGL-9Q-RaY"/>
                                     <action selector="backClicked" destination="7eD-2Y-6Lj" eventType="touchUpInside" id="rMZ-0p-lgE"/>
                                 </connections>
                             </button>
@@ -2401,9 +2396,6 @@
                                 <state key="normal" title="확인">
                                     <color key="titleColor" red="0.74901960779999999" green="0.031372549020000001" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="loginClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="EP4-WX-WZV"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.74901960779999999" green="0.031372549020000001" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -2455,9 +2447,6 @@
                                     <constraint firstAttribute="width" constant="32" id="fLc-Um-LRy"/>
                                 </constraints>
                                 <state key="normal" image="back"/>
-                                <connections>
-                                    <action selector="backClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="oqd-dv-OMl"/>
-                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qiX-Kc-vYM">
                                 <rect key="frame" x="0.0" y="40.5" width="375" height="626.5"/>
@@ -2749,8 +2738,7 @@
                                 </constraints>
                                 <state key="normal" image="back"/>
                                 <connections>
-                                    <action selector="backClicked" destination="wgA-1a-wgm" eventType="touchUpInside" id="7ef-ya-0hu"/>
-                                    <action selector="backClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="dJ5-Fd-WNR"/>
+                                    <action selector="backClicked" destination="wgA-1a-wgm" eventType="touchUpInside" id="8Dj-0a-43g"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일 입력" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebd-pq-Ujv">
@@ -3365,7 +3353,6 @@
                                 </constraints>
                                 <state key="normal" image="back"/>
                                 <connections>
-                                    <action selector="backClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="TP7-AK-biJ"/>
                                     <action selector="backClicked" destination="Cae-NF-l4n" eventType="touchUpInside" id="YNM-q5-teI"/>
                                     <action selector="backClicked" destination="lgv-f3-NAw" eventType="touchUpInside" id="uyl-go-Ytw"/>
                                 </connections>
@@ -3635,7 +3622,6 @@
                                 </constraints>
                                 <state key="normal" image="back"/>
                                 <connections>
-                                    <action selector="backClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="KTm-F9-JUF"/>
                                     <action selector="backClicked" destination="Cae-NF-l4n" eventType="touchUpInside" id="Xb7-2O-UCM"/>
                                 </connections>
                             </button>
@@ -4136,7 +4122,6 @@
                                 </constraints>
                                 <state key="normal" image="back"/>
                                 <connections>
-                                    <action selector="backClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="Pi9-UR-eG5"/>
                                     <action selector="backClicked" destination="Cae-NF-l4n" eventType="touchUpInside" id="s2h-TU-HLV"/>
                                 </connections>
                             </button>
@@ -4501,7 +4486,6 @@
                                 <state key="normal" image="back"/>
                                 <connections>
                                     <action selector="backClicked" destination="Cae-NF-l4n" eventType="touchUpInside" id="RVw-BO-pz5"/>
-                                    <action selector="backClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="wz3-8j-O9B"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAF-FO-OVv">
@@ -4619,7 +4603,6 @@
                                 <state key="normal" image="back"/>
                                 <connections>
                                     <action selector="backClicked" destination="Cae-NF-l4n" eventType="touchUpInside" id="aFQ-GU-k67"/>
-                                    <action selector="backClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="r0r-dp-ZGL"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xna-Vg-n0x">
@@ -4832,7 +4815,6 @@
                                 </constraints>
                                 <state key="normal" image="back"/>
                                 <connections>
-                                    <action selector="backClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="ILG-QA-Tlg"/>
                                     <action selector="backClicked" destination="Cae-NF-l4n" eventType="touchUpInside" id="gkF-s2-Ggx"/>
                                 </connections>
                             </button>
@@ -4955,7 +4937,6 @@
                                 </constraints>
                                 <state key="normal" image="back"/>
                                 <connections>
-                                    <action selector="backClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="VoR-lD-w3j"/>
                                     <action selector="backClicked" destination="Cae-NF-l4n" eventType="touchUpInside" id="vit-1k-FMV"/>
                                 </connections>
                             </button>
@@ -5074,9 +5055,6 @@
                                     <constraint firstAttribute="height" constant="39" id="tN4-aw-HCE"/>
                                 </constraints>
                                 <state key="normal" image="back"/>
-                                <connections>
-                                    <action selector="backClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="ePQ-JP-BS6"/>
-                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3U2-0Y-olU">
                                 <rect key="frame" x="0.0" y="40.5" width="375" height="626.5"/>
@@ -5403,7 +5381,6 @@
                                 </constraints>
                                 <state key="normal" image="back"/>
                                 <connections>
-                                    <action selector="backClicked" destination="sSS-1J-FFB" eventType="touchUpInside" id="6bE-zo-3nG"/>
                                     <action selector="backClicked" destination="Cae-NF-l4n" eventType="touchUpInside" id="qTA-Ex-0M8"/>
                                 </connections>
                             </button>
