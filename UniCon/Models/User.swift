@@ -7,33 +7,26 @@
 //
 
 import UIKit
-//import EVReflection
+import EVReflection
 
-
-
-class UserResponseModel:ResponseModel{
-    var user: User?
+class User: Codable{
     
-//    override var description: String {
-//        return user?.description ?? ""
-//    }
-    
-}
-class User: EVObject{
-    
-    var tokenType:String = ""
-    var accessToken:String = ""
-    var refreshToken:String = ""
-    var expiresIn:Int = 0
     var timezone:String = ""
     var id:String = ""
     var email:String = ""
+    var picture:String = ""
+    var tempPassword:Bool = false
+    var accountActivation:Bool = false
+    var nickName:String = ""
+    var phoneNumber:String = ""
     var role:String = ""
     var createdAt:String = ""
-   
-//    var description: String {
-//        return "User: { email: \(email), role: \(role) }"
-//    }
+    
+    var description: String {
+        return "User: { email: \(email), role: \(role) }"
+    }
+    
+    
 }
 
 

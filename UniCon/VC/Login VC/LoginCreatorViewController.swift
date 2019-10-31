@@ -23,23 +23,23 @@ class LoginCreatorViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         //Add default background color to the view
-      //  self.view.addDefaultBackgroundColor()
+        self.view.addDefaultBackgroundColor()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-//        //Add Bottom Border for Textfields
-//        emailTf.addBottomBorder(color: UIColor.red)
-//        passwordTf.addBottomBorder(color: UIColor.red)
-//
-//        //Add gray placeholder color for better visibility
-//        emailTf.updatePlaceHolder(text: "aaa@bbb.ccc")
-//        passwordTf.updatePlaceHolder(text: "*******")
-//
-//        //Register for keyboard notifications
-//        registerNotifications()
-//
-//        //Tap to dismiss the keyboard
-//        tapToDismiss()
+        //Add Bottom Border for Textfields
+        emailTf.addBottomBorder(color: UIColor.red)
+        passwordTf.addBottomBorder(color: UIColor.red)
+
+        //Add gray placeholder color for better visibility
+        emailTf.updatePlaceHolder(text: "aaa@bbb.ccc")
+        passwordTf.updatePlaceHolder(text: "*******")
+
+        //Register for keyboard notifications
+        registerNotifications()
+
+        //Tap to dismiss the keyboard
+        tapToDismiss()
     }
     //MARK: IBActions Defined
     @IBAction func backClicked()
@@ -75,20 +75,22 @@ class LoginCreatorViewController: UIViewController, UITextFieldDelegate {
     //MARK: API Call
     func login() {
         //Show Loading
-//        self.showLoading()
-//        firstly {
-//            //Authenticate with the API
-//            AuthenticationService.authenticate(username: self.emailTf.text!, password: self.passwordTf.text!,role: Role.creator.rawValue)
-//        }.done { (token) in
-//            //If successful
-//            self.hideLoading()
-//            print(token)
-//        }
-//        .catch { (error) in
-//            //If generates error
-//            self.hideLoading()
-//            self.showAlertMessage(title: ValidationError.defaultErrorTitle.rawValue, message: error.localizedDescription)
-//        }
+        self.showLoading()
+        firstly {
+            //Authenticate with the API
+            AuthenticationService.authenticate(username: self.emailTf.text!, password: self.passwordTf.text!,role: Role.creator.rawValue)
+        }.done { (userModel) in
+            //If successful
+            print("Logged In Successfully")
+            self.hideLoading()
+          //  self.performSegue(withIdentifier: "Home", sender: nil)
+            
+        }
+        .catch { (error) in
+            //If generates error
+            self.hideLoading()
+            self.showAlertMessage(title: ValidationError.defaultErrorTitle.rawValue, message: error.localizedDescription)
+        }
     }
     
     //Text Field Delegates

@@ -7,22 +7,31 @@
 //
 
 import UIKit
-import EVReflection
+//import EVReflection
 
-class ResponseModel:EVObject {
+class ResponseModel:Codable {
     var message:String = ""
-    var success:Bool = false
-    var token:String?
-    
-    
+    var code:Int = 0
 //    enum CodingKeys: String, CodingKey {
 //        case message
 //        case success
 //        case token
 //    }
 //
-//    var description: String {
-//        return "Response: { message: \(message), success: \(success) }"
-//    }
+    var description: String {
+        return "Response: { message: \(message), code: \(code) }"
+    }
 }
+class RegisterResponseModel:Codable {
+    var success:Bool?
+    var user: User?
+    var token:Token?
+    var message:String = ""
+}
+class UserResponseModel:Codable {
+    var token:Token?
+    var user:User?
+}
+
+
 

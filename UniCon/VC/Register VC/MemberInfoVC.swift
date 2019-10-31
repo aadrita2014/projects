@@ -82,26 +82,26 @@ class MemberInfoVC: UIViewController {
     //MARK: API Call
     func register() {
         if let request = regRequest {
-            // self.showLoading()
-           // let modelParam = request.toDictionary() as! [String:Any]
-           // print(modelParam)
-            
-//            self.showLoading()
-//            firstly {
-//                //Authenticate with the API
-//                AuthenticationService.registerNewUser(param: modelParam)
-//            }.done { (model) in
-//                //If successful
-//                print(model.description)
-//                self.hideLoading()
-//            }
-//            .catch {
-//                //If generates error
-//                self.hideLoading()
-//                if let error = $0 as? NetworkError {
-//                    self.showAlertMessage(message: "\(error.localizedDescription)")
-//                }
-//            }
+             self.showLoading()
+            let modelParam = request.toDictionary() as! [String:Any]
+            self.showLoading()
+            firstly {
+                //Authenticate with the API
+                AuthenticationService.registerNewUser(param: modelParam)
+            }.done { (model) in
+                //If successful
+                if AppConsts.DEBUG_MODE {
+                    print("Successfully Registered")
+                }
+                self.hideLoading()
+            }
+            .catch {
+                //If generates error
+                self.hideLoading()
+                if let error = $0 as? NetworkError {
+                    self.showAlertMessage(message: "\(error.localizedDescription)")
+                }
+            }
         }
     }
     //MARK: Navigation

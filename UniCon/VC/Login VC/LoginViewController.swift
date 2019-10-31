@@ -30,18 +30,7 @@ class LoginViewController: UIViewController {
         loginButton.underline()
         signupButton.underline()
         
-        
-        AF.upload(multipartFormData: { formdata in
-            formdata.append(Data("asdasd@gmail.com".utf8), withName: "email")
-            formdata.append(Data("1234567".utf8), withName: "password")
-            formdata.append(Data("asdfgh".utf8), withName: "name")
-            formdata.append(Data("asdfgh".utf8), withName: "nickName")
-            formdata.append(Data("creator".utf8), withName: "role")
-            formdata.append(Data("1234567890".utf8), withName: "phoneNumber")
-        }, to: APIRouter.LOGIN).responseJSON { (response) in
-            print(response)
-        }
-    
+//      AuthenticationService.registerNewUser(param: ["email":"asdasd@gmail.com","password":"1234567","role":"creator"])
     }
     override func viewWillAppear(_ animated: Bool) {
         
@@ -50,8 +39,6 @@ class LoginViewController: UIViewController {
         kakaoButton.imageView?.contentMode = .scaleAspectFit
         facebookButton.imageView?.contentMode = .scaleAspectFit
         googleButton.imageView?.contentMode = .scaleAspectFit
-        
-        
         
     }
     //MARK: IBActions Defined
