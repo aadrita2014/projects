@@ -82,8 +82,9 @@ class LoginCreatorViewController: UIViewController, UITextFieldDelegate {
         }.done { (userModel) in
             //If successful
             print("Logged In Successfully")
+            TokenManager.save(userResModel: userModel)
             self.hideLoading()
-          //  self.performSegue(withIdentifier: "Home", sender: nil)
+            self.performSegue(withIdentifier: "Home", sender: nil)
             
         }
         .catch { (error) in

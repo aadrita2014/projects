@@ -23,14 +23,23 @@ class ResponseModel:Codable {
     }
 }
 class RegisterResponseModel:Codable {
-    var success:Bool?
+    var success:Bool = false
     var user: User?
     var token:Token?
     var message:String = ""
 }
 class UserResponseModel:Codable {
+   
     var token:Token?
     var user:User?
+    
+    static func instance(token:Token?,user:User?) -> UserResponseModel?{
+        guard let token = token, let user = user else { return nil }
+        let model = UserResponseModel()
+        model.token = token
+        model.user = user
+        return model
+    }
 }
 
 

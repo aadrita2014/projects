@@ -9,7 +9,7 @@
 import UIKit
 import EVReflection
 
-class User: Codable{
+class User: EVObject, Codable{
     
     var timezone:String = ""
     var id:String = ""
@@ -22,11 +22,22 @@ class User: Codable{
     var role:String = ""
     var createdAt:String = ""
     
-    var description: String {
-        return "User: { email: \(email), role: \(role) }"
+//    var description: String {
+//        return "User: { email: \(email), role: \(role) }"
+//    }
+    
+    static func instance(dictionary: NSDictionary) -> User{
+        let token = User(dictionary: dictionary)
+        return token
+    }
+//
+    required init() {
+        
     }
     
     
 }
+
+
 
 

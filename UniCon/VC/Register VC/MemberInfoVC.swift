@@ -82,7 +82,6 @@ class MemberInfoVC: UIViewController {
     //MARK: API Call
     func register() {
         if let request = regRequest {
-             self.showLoading()
             let modelParam = request.toDictionary() as! [String:Any]
             self.showLoading()
             firstly {
@@ -93,8 +92,16 @@ class MemberInfoVC: UIViewController {
                 if AppConsts.DEBUG_MODE {
                     print("Successfully Registered")
                 }
-                self.hideLoading()
+                if let userResModel = UserResponseModel.instance(token: model.token, user: model.user) {
+                    TokenManager.save(userResModel: userResModel)
+                    self.hideLoading()
+                    self.performSegue(withIdentifier: "Home", sender: nil)
+                }
+                else {
+                    self.showAlertMessage(message: "Registration Failed")
+                }
             }
+                
             .catch {
                 //If generates error
                 self.hideLoading()
@@ -111,7 +118,7 @@ class MemberInfoVC: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is VerificationCodeVC {
-            let vc = segue.destination as! VerificationCodeVC
+           // let vc = segue.destination as! VerificationCodeVC
 //            vc.regModel = sender as? RegistrationRequest
         }
     }

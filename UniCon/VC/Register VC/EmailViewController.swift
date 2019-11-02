@@ -26,8 +26,7 @@ class EmailViewController: UIViewController {
         return .lightContent
     }
     override func viewDidAppear(_ animated: Bool) {
-        
-    //    viewSetup()
+        viewSetup()
     }
     func viewSetup() {
         emailTf.addBottomBorder(color: AppColors.default_red_color)

@@ -104,7 +104,6 @@
 		9C7D49F623213F9A0011FDAF /* AddTextFontCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7D49F423213F9A0011FDAF /* AddTextFontCell.swift */; };
 		9C7D49F723213F9A0011FDAF /* AddTextFontCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C7D49F523213F9A0011FDAF /* AddTextFontCell.xib */; };
 		9C8C8A1A232FA2620053CCBA /* SnapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8C8A19232FA2620053CCBA /* SnapGesture.swift */; };
-		9C8CE5032369928D00FDA64D /* NotoSansCJKkr-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C8CE5022369928D00FDA64D /* NotoSansCJKkr-Thin.otf */; };
 		9C916B5D234DE63300F74F01 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C916B5C234DE63300F74F01 /* AuthorizationService.swift */; };
 		9C916B5F234DE68F00F74F01 /* TokenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C916B5E234DE68F00F74F01 /* TokenService.swift */; };
 		9C916B61234DE6AB00F74F01 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C916B60234DE6AB00F74F01 /* TokenManager.swift */; };
@@ -265,7 +264,6 @@
 		9C7D49F423213F9A0011FDAF /* AddTextFontCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTextFontCell.swift; sourceTree = "<group>"; };
 		9C7D49F523213F9A0011FDAF /* AddTextFontCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTextFontCell.xib; sourceTree = "<group>"; };
 		9C8C8A19232FA2620053CCBA /* SnapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapGesture.swift; sourceTree = "<group>"; };
-		9C8CE5022369928D00FDA64D /* NotoSansCJKkr-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Thin.otf"; sourceTree = "<group>"; };
 		9C916B5C234DE63300F74F01 /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		9C916B5E234DE68F00F74F01 /* TokenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenService.swift; sourceTree = "<group>"; };
 		9C916B60234DE6AB00F74F01 /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
@@ -612,7 +610,6 @@
 		9C70646322FEA9CD00E006D7 /* Custom Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				9C8CE5022369928D00FDA64D /* NotoSansCJKkr-Thin.otf */,
 				9C70646822FEAFFB00E006D7 /* NotoSansCJKkr-Light.otf */,
 				9C70646622FEAFEF00E006D7 /* NotoSansCJKkr-Medium.otf */,
 				9C70646422FEAFE600E006D7 /* NotoSansCJKkr-Regular.otf */,
@@ -915,7 +912,6 @@
 				9C63192323014C2400830385 /* FeaturedCreatorCell.xib in Resources */,
 				9C1BED99231112F10011F296 /* CustomActionSheetView.xib in Resources */,
 				9C70644E22FEA3AC00E006D7 /* Main.storyboard in Resources */,
-				9C8CE5032369928D00FDA64D /* NotoSansCJKkr-Thin.otf in Resources */,
 				9C63192F23014C7A00830385 /* ContestJudgingCell.xib in Resources */,
 				9CF9324F2316B158002AC77D /* ParticipationCell.xib in Resources */,
 				9C63192B23014C6300830385 /* OngoingContestCell.xib in Resources */,
@@ -1250,8 +1246,8 @@
 			baseConfigurationReference = 5687C9003A2B8FABDC9ABDE4 /* Pods-UniCon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3TT3YF37X6;
 				INFOPLIST_FILE = UniCon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1261,7 +1257,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.UniCon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "UniCon Adhoc";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1272,8 +1268,8 @@
 			baseConfigurationReference = ED57F261BDBF84067B6DE163 /* Pods-UniCon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3TT3YF37X6;
 				INFOPLIST_FILE = UniCon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1283,7 +1279,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.UniCon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "UniCon Adhoc";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
