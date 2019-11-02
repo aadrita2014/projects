@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NRP-fU-bdz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NRP-fU-bdz">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -572,6 +572,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qj5-B6-30A"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Qkr-qB-PdU"/>
                     <connections>
                         <outlet property="contestListTv" destination="Iu8-Ny-xKY" id="orv-be-3a2"/>
                         <outlet property="segmentedControl" destination="mNn-Tn-csK" id="KyN-ZO-rI5"/>
@@ -970,6 +971,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RCe-vf-csK"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Eu4-BU-a64"/>
                     <connections>
                         <outlet property="collViewHeaderView" destination="ySE-6z-Baq" id="PjH-mH-KUz"/>
                         <outlet property="deadlineBtn" destination="2tN-pb-jeP" id="Gkn-EF-66K"/>
@@ -1617,6 +1619,7 @@
         <scene sceneID="irQ-NJ-Zzu">
             <objects>
                 <tabBarController id="IXP-jw-C1N" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="jaS-KR-ICo"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Hnc-SD-NEr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2098,6 +2101,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jTg-vI-f0O"/>
                     </view>
+                    <navigationItem key="navigationItem" id="lJ1-m7-oAX"/>
                     <connections>
                         <outlet property="commentAllowedView" destination="9VY-wC-n2X" id="tRt-9Z-92N"/>
                         <outlet property="infoTableHeightConstraint" destination="Swf-3l-9qD" id="E8q-vC-P0a"/>
@@ -2311,6 +2315,7 @@
                         <outlet property="scrollView" destination="ZJx-5r-2Sf" id="oMv-Xd-Al2"/>
                         <outlet property="usernameTf" destination="YYk-8z-Zmf" id="OFt-gU-gVR"/>
                         <segue destination="FFw-TW-Puz" kind="show" identifier="VerificationCode" id="qt6-b6-g07"/>
+                        <segue destination="IXP-jw-C1N" kind="show" identifier="Home" id="ohN-G4-8xM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5eV-68-9Sr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -5562,6 +5567,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5eP-rW-503"/>
                     </view>
+                    <navigationItem key="navigationItem" id="aUN-sM-1By"/>
                     <connections>
                         <outlet property="musicCategoryCollView" destination="nK3-jD-Geq" id="SaF-yT-5ad"/>
                         <outlet property="musicFilterSegmentControl" destination="Yoc-RV-FQO" id="qG9-NK-2WC"/>
@@ -5664,6 +5670,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VjJ-oi-k2v"/>
                     </view>
+                    <navigationItem key="navigationItem" id="7Li-sD-5He"/>
                     <connections>
                         <outlet property="durationLabel" destination="RHD-Bd-mnf" id="oIy-JX-GU6"/>
                         <outlet property="saveBtn" destination="WTu-cD-cD7" id="WgJ-Pb-bRS"/>
@@ -5870,7 +5877,7 @@
         <image name="up_arrow" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8DM-Il-FBm"/>
+        <segue reference="ohN-G4-8xM"/>
         <segue reference="UA3-EU-lCE"/>
     </inferredMetricsTieBreakers>
 </document>
