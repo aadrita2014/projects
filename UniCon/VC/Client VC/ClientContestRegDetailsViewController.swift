@@ -38,6 +38,11 @@ class ClientContestRegDetailsViewController: UIViewController {
         viewSetup()
         
     }
+    
+    //MARK: IBActions
+    @IBAction func back(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
     //MARK: Other View Setup
     func viewSetup() {
         

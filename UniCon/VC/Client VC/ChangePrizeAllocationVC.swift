@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol PrizeAllocationDelegate {
+    func setPriceAllocationPercentage(prizeDtributionArr : [Int])
+}
+
 class ChangePrizeAllocationVC: UIViewController {
 
     //MARK: IBOutlets
@@ -26,10 +30,12 @@ class ChangePrizeAllocationVC: UIViewController {
     @IBOutlet weak var prize2Label: UILabel!
     @IBOutlet weak var prize3Label: UILabel!
     
+    @IBOutlet var prizeAmountLbl: [UILabel]!
     
-    var alertView:CustomAlertView? = nil
-    var enteredAmount:String = ""
+    private var alertView:CustomAlertView? = nil
+    var enteredAmount:String = "0"
     var prizeDtributionArr = [0,0,0]
+    var delegate: PrizeAllocationDelegate!
     
     //MARK: Overriden view methods
     override func viewDidLoad() {
@@ -59,11 +65,19 @@ class ChangePrizeAllocationVC: UIViewController {
         saveBtn.addCornerRadius()
         
         //Label setup
-        totalAmountLabel.text = enteredAmount
+        enteredAmount = enteredAmount == "" ? "0" : enteredAmount
+        totalAmountLabel.text = StringHelpers.convertToPriceStr(fromVal: enteredAmount)
+        
+        let doubleEnteredPrize = Double(enteredAmount) ?? 0
+        prizeAmountLbl.forEach{
+            $0.text = StringHelpers.convertToPriceStr(fromVal: doubleEnteredPrize * Double(prizeDtributionArr[$0.tag - 1])/100)
+        }
+        
     }
     //MARK: IBActions
     @IBAction func savePressed() {
         if checkForTotalPercentage() {
+            delegate.setPriceAllocationPercentage(prizeDtributionArr: prizeDtributionArr)
             dismiss(animated: true, completion: nil)
             self.navigationController?.popViewController(animated: true)
         }
@@ -87,13 +101,18 @@ class ChangePrizeAllocationVC: UIViewController {
             prize3Label.text = str
             prizeDtributionArr[2] = intVal
         }
-    }
-    
-    func checkForTotalPercentage() -> Bool{
-        var totPercent = 0
-        for element in prizeDtributionArr {
-            totPercent = totPercent + element
+        if let doubleEnteredPrize = Double(enteredAmount)  {
+           prizeAmountLbl[sender.tag - 1].text =  StringHelpers.convertToPriceStr(fromVal: doubleEnteredPrize * Double(intVal)/100)
         }
+    }
+
+    func checkForTotalPercentage() -> Bool{
+//        var totPercent = 0
+//        for element in prizeDtributionArr {
+//            totPercent = totPercent + element
+//        }
+        
+        let totPercent = prizeDtributionArr.reduce(0) {$0 + $1}
         if totPercent != 100 {
             showErrorAlertView()
             return false

@@ -19,5 +19,11 @@ class ContestRegistrationDepositInfoVC: UIViewController {
         self.view.addBlackBackgroundColor()
         
     }
-
+    @IBAction func back(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func goToCreateContest(_ sender: UIButton) {
+        navigationController?.popToRootViewController(animated: true)
+    }
 }

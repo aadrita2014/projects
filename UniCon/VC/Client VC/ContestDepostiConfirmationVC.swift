@@ -29,5 +29,8 @@ class ContestDepostiConfirmationVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func back(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }

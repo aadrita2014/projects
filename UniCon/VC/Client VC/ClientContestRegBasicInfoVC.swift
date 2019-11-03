@@ -28,6 +28,11 @@ class ClientContestRegBasicInfoVC: UIViewController {
     
     var selectedBtn:UIButton? = nil
     
+    class func controller() -> ClientContestRegBasicInfoVC{
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ClientContestRegBasicInfoVC") as! ClientContestRegBasicInfoVC
+        return controller
+    }
+    
     //MARK: Overriden view methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -121,5 +126,8 @@ class ClientContestRegBasicInfoVC: UIViewController {
     }
     @IBAction func donePressed(_ sender: UIBarButtonItem) {
         togglePicker(show: false)
+    }
+    @IBAction func backButton(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
     }
 }

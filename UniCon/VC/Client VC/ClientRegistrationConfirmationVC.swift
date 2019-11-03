@@ -19,4 +19,9 @@ class ClientRegistrationConfirmationVC: UIViewController {
         self.view.addBlackBackgroundColor()
         
     }
+    
+    //MARK: IBActions
+    @IBAction func back(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
 }

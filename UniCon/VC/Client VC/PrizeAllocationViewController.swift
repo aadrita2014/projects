@@ -8,8 +8,8 @@
 
 import UIKit
 
-class PrizeAllocationViewController: UIViewController {
-
+class PrizeAllocationViewController: UIViewController, PrizeAllocationDelegate {
+    
     //MARK: IBOutlets
     @IBOutlet weak var topBackgroundView: UIView!
     @IBOutlet weak var bottomBackgroundView: UIView!
@@ -22,6 +22,7 @@ class PrizeAllocationViewController: UIViewController {
     @IBOutlet weak var platformFeeLabel: UILabel!
     @IBOutlet weak var totalAmountLabel: UILabel!
     
+    @IBOutlet var prizeDistributionLbl: [UILabel]!
     @IBOutlet weak var nextBtn: UIButton!
     
     var prizeDistributionArr = [50,30,20]
@@ -65,7 +66,7 @@ class PrizeAllocationViewController: UIViewController {
         self.performSegue(withIdentifier: "ChangePrize", sender: nil)
     }
     @IBAction func nextBtnClicked(_ sender: UIButton) {
-        
+        self.navigationController?.pushViewController(ClientContestRegBasicInfoVC.controller(), animated: true)
     }
     
     //MARK: Keyboard handle code
@@ -75,9 +76,9 @@ class PrizeAllocationViewController: UIViewController {
     }
     
     //MARK: Prize Calculation
-    func calculatePrizeAmount() {
+    func calculatePrizeAmount(amount: String) {
         
-        if let doubleEnteredPrize = Double(filterTextField(tf: priceTf)), prizeDistributionArr.count > 2 {
+        if let doubleEnteredPrize = Double(amount), prizeDistributionArr.count > 2 {
             
             let firstPrizePercent = Double(prizeDistributionArr[0])
             let secondPrizePercent = Double(prizeDistributionArr[1])
@@ -102,6 +103,10 @@ class PrizeAllocationViewController: UIViewController {
             prize3rdLabel.text = thirdPrizeStr
             platformFeeLabel.text = platformStr
             totalAmountLabel.text = totalStr
+            for (index, lbl) in prizeDistributionLbl.enumerated(){
+                lbl.text = "\(prizeDistributionArr[index])%"
+            }
+            
         
         }
     }
@@ -117,15 +122,24 @@ class PrizeAllocationViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? ChangePrizeAllocationVC {
-            vc.enteredAmount = StringHelpers.convertToPriceStr(fromVal: priceTf.text!)
+            vc.enteredAmount = priceTf.text!
+            vc.prizeDtributionArr = prizeDistributionArr
+            vc.delegate = self
         }
+    }
+    
+    //MARK: PrizeAllocationDelegate Methods
+    func setPriceAllocationPercentage(prizeDtributionArr: [Int]) {
+        self.prizeDistributionArr = prizeDtributionArr
+        calculatePrizeAmount(amount: priceTf.text!)
     }
 }
 
 extension PrizeAllocationViewController:UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         //textField.text = StringHelpers.formatToNumberStr(val: textField.text!)
-        calculatePrizeAmount()
+        let updatedString = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? "0"
+        calculatePrizeAmount(amount: updatedString == "" ? "0" : updatedString)
         return true
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
