@@ -81,7 +81,7 @@ class LoginCreatorViewController: UIViewController, UITextFieldDelegate {
             AuthenticationService.authenticate(username: self.emailTf.text!, password: self.passwordTf.text!,role: Role.creator.rawValue)
         }.done { (userModel) in
             //If successful
-            print("Logged In Successfully")
+//            print("Logged In Successfully")
             TokenManager.save(userResModel: userModel)
             self.hideLoading()
             self.performSegue(withIdentifier: "Home", sender: nil)

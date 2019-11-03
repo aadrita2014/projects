@@ -21,7 +21,7 @@ class User: EVObject, Codable{
     var phoneNumber:String = ""
     var role:String = ""
     var createdAt:String = ""
-    
+    var name:String = ""
 //    var description: String {
 //        return "User: { email: \(email), role: \(role) }"
 //    }
@@ -35,7 +35,12 @@ class User: EVObject, Codable{
         
     }
     
-    
+//    func setValue(value: AnyObject!, forUndefinedKey key: String) {
+//           switch key {
+//           default:
+//               print("---> setValue for key '\(key)' should be handled.")
+//           }
+//    }
 }
 
 
