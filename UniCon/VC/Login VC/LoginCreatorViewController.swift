@@ -79,13 +79,13 @@ class LoginCreatorViewController: UIViewController, UITextFieldDelegate {
         firstly {
             //Authenticate with the API
             AuthenticationService.authenticate(username: self.emailTf.text!, password: self.passwordTf.text!,role: Role.creator.rawValue)
-        }.done { (userModel) in
+        }.done { (_) in
             //If successful
 //            print("Logged In Successfully")
-            TokenManager.save(userResModel: userModel)
+//            TokenManager.save(userResModel: userModel)
+          //  Defaults.saveBool(key: StringConsts.isClientSaveKey, value: false)
             self.hideLoading()
             self.performSegue(withIdentifier: "Home", sender: nil)
-            
         }
         .catch { (error) in
             //If generates error

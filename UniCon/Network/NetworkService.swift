@@ -19,10 +19,7 @@ protocol NetworkService
 extension NetworkService
 {
     // MARK: - POST
-    static func POST<T:Codable>(URL: String,
-                                parameters: [String: Any]? = nil,
-                                headers: [String: String]? = nil,
-                                encoding: ParameterEncoding = URLEncoding.default) -> Promise<T>
+    static func POST<T:Codable>(URL: String, parameters: [String: Any]?, headers: [String: String]?, encoding: ParameterEncoding) -> Promise<T>
     {
         let (promise, resolver) = Promise<T>.pending()
         AF.request(URL,method: .post,parameters: parameters).responseDecodable { (response:DataResponse<T,AFError>) in
@@ -49,7 +46,6 @@ extension NetworkService
                     resolver.reject(NetworkError.badJsonResponse)
                 }
             }
-            
         }
         return promise
     }

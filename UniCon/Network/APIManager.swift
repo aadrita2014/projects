@@ -13,11 +13,11 @@ import Alamofire
 
 
 struct AuthenticationService:NetworkService {
-    static func authenticate(username:String, password:String,role:String) -> Promise<UserResponseModel> {
+    static func authenticate(username:String, password:String,role:String) -> Promise<Void> {
         let request = TokenRequest(username: username, password: password, role: role)
-//        return TokenManager.requestToken(request: request)
-        let parameters = request.toDictionary(.DefaultDeserialize) as! [String : AnyObject]
-        return POST(URL:APIRouter.LOGIN, parameters: parameters)
+        return TokenManager.requestToken(request: request)
+//        let parameters = request.toDictionary(.DefaultDeserialize) as! [String : AnyObject]
+//        return POST(URL:APIRouter.LOGIN, parameters: parameters)
     }
     static func registerNewUser(params:[String:String],completion: @escaping  (_ response:RegisterResponseModel?,_ error:String?) -> Void) {
         AF.upload(multipartFormData: { multipartFormData in

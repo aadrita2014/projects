@@ -32,7 +32,7 @@ class RegisterResponseModel:EVObject, Codable {
         
     }
 }
-class UserResponseModel:Codable {
+class UserResponseModel:ResponseModel {
    
     var token = Token()
     var user = User()
@@ -40,7 +40,9 @@ class UserResponseModel:Codable {
     static func instance(token:Token?,user:User?) -> UserResponseModel?{
         guard let user = user else { return nil }
         let model = UserResponseModel()
-//            model.token = token
+        if let token = token {
+            model.token = token
+        }
         model.user = user
         return model
     }

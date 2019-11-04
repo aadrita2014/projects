@@ -3,20 +3,32 @@ PODS:
   - EVReflection (5.10.1):
     - EVReflection/Core (= 5.10.1)
   - EVReflection/Core (5.10.1)
+  - PromiseKit (6.11.0):
+    - PromiseKit/CorePromise (= 6.11.0)
+    - PromiseKit/Foundation (= 6.11.0)
+    - PromiseKit/UIKit (= 6.11.0)
+  - PromiseKit/CorePromise (6.11.0)
+  - PromiseKit/Foundation (6.11.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.11.0):
+    - PromiseKit/CorePromise
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-rc.2)
   - EVReflection
+  - PromiseKit
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - EVReflection
+    - PromiseKit
 
 SPEC CHECKSUMS:
   Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
   EVReflection: 8124de482178d34ccd56473e16cd95990f9a1113
+  PromiseKit: e4863d06976e7dee5e41c04fc7371c16b3600292
 
-PODFILE CHECKSUM: 3caa7a89a55fc0b7a92c9caeabf3ed6e0890003a
+PODFILE CHECKSUM: 84bf7ac2911948d684b5566e52b1be846e6e74c7
 
 COCOAPODS: 1.8.4

@@ -46,8 +46,9 @@ struct TokenManager {
     static func requestToken(request: TokenRequest) -> Promise<Void> {
         return Promise { resolve in
             TokenService.requestToken(request: request).done { (model) in
-                setToken(token: model.token)
-                resolve.fulfill()
+                save(userResModel: model)
+//                setToken(token: model.token)
+                resolve.fulfill(())
             }.catch { (error) in
                 resolve.reject(error)
             }
@@ -78,7 +79,7 @@ struct TokenManager {
         userDefaults.setValue(token.toDictionary(), forKey: tokenKey)
     }
     static func save(userResModel:UserResponseModel) {
-//        setToken(token: userResModel.token)
+        setToken(token: userResModel.token)
         userDefaults.setValue(userResModel.user.toDictionary(), forKey: userModelKey)
     }
     static func deleteToken() {
