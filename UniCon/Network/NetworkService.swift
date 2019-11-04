@@ -40,7 +40,9 @@ extension NetworkService
                     if let responseModel = value as? ResponseModel {
                         resolver.reject(NetworkError.customError(responseModel.message))
                     }
-                    resolver.fulfill(value)
+                    else {
+                        resolver.fulfill(value)
+                    }
                 }
                 catch let exception {
                     print(exception)

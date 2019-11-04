@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9C0E787023320AE600509C19 /* demo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E786F23320AE600509C19 /* demo.mp3 */; };
-		9C146EC0234F587200648C8D /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9C146EBF234F587200648C8D /* PromiseKit */; };
 		9C1A0C9223325B6C005D2CA2 /* SnapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A0C9123325B6C005D2CA2 /* SnapView.swift */; };
 		9C1B4B74232D0965003237DF /* ContestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1B4B73232D0965003237DF /* ContestModel.swift */; };
 		9C1BED99231112F10011F296 /* CustomActionSheetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C1BED98231112F10011F296 /* CustomActionSheetView.xib */; };
@@ -127,6 +126,7 @@
 		9CCF2CDD231A643E0062558A /* ClientRegistrationConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF2CDC231A643E0062558A /* ClientRegistrationConfirmationVC.swift */; };
 		9CCF2CDF231A6EEF0062558A /* ContestRegistrationDepositInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF2CDE231A6EEF0062558A /* ContestRegistrationDepositInfoVC.swift */; };
 		9CCF2CE1231A70590062558A /* FinishedAppointmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF2CE0231A70590062558A /* FinishedAppointmentVC.swift */; };
+		9CD3B9CC236F047C0095C880 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9CD3B9CB236F047C0095C880 /* PromiseKit */; };
 		9CE1066F23508FDE00FF6A75 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE1066E23508FDE00FF6A75 /* Spinner.swift */; };
 		9CE106712350985200FF6A75 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE106702350985200FF6A75 /* APIRouter.swift */; };
 		9CE106732350A7AB00FF6A75 /* Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE106722350A7AB00FF6A75 /* Validations.swift */; };
@@ -320,7 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1880F3AF491E72165C27439 /* Pods_UniCon.framework in Frameworks */,
-				9C146EC0234F587200648C8D /* PromiseKit in Frameworks */,
+				9CD3B9CC236F047C0095C880 /* PromiseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -811,7 +811,7 @@
 			);
 			name = UniCon;
 			packageProductDependencies = (
-				9C146EBF234F587200648C8D /* PromiseKit */,
+				9CD3B9CB236F047C0095C880 /* PromiseKit */,
 			);
 			productName = UniCon;
 			productReference = 9C70644522FEA3AC00E006D7 /* UniCon.app */;
@@ -865,7 +865,7 @@
 			);
 			mainGroup = 9C70643C22FEA3AC00E006D7;
 			packageReferences = (
-				9C146EBE234F587200648C8D /* XCRemoteSwiftPackageReference "PromiseKit" */,
+				9CD3B9CA236F047C0095C880 /* XCRemoteSwiftPackageReference "PromiseKit" */,
 			);
 			productRefGroup = 9C70644622FEA3AC00E006D7 /* Products */;
 			projectDirPath = "";
@@ -1360,7 +1360,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9C146EBE234F587200648C8D /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+		9CD3B9CA236F047C0095C880 /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mxcl/PromiseKit.git";
 			requirement = {
@@ -1371,9 +1371,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9C146EBF234F587200648C8D /* PromiseKit */ = {
+		9CD3B9CB236F047C0095C880 /* PromiseKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9C146EBE234F587200648C8D /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			package = 9CD3B9CA236F047C0095C880 /* XCRemoteSwiftPackageReference "PromiseKit" */;
 			productName = PromiseKit;
 		};
 /* End XCSwiftPackageProductDependency section */
