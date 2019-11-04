@@ -30,6 +30,7 @@ class LoginViewController: UIViewController {
         loginButton.underline()
         signupButton.underline()
         
+        
 //      AuthenticationService.registerNewUser(param: ["email":"asdasd@gmail.com","password":"1234567","role":"creator"])
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +41,9 @@ class LoginViewController: UIViewController {
         facebookButton.imageView?.contentMode = .scaleAspectFit
         googleButton.imageView?.contentMode = .scaleAspectFit
         
+        if TokenManager.tokenExist {
+            self.performSegue(withIdentifier: "Home", sender: nil)
+        }
     }
     //MARK: IBActions Defined
     @IBAction func emailLoginClicked()

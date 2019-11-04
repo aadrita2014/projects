@@ -10,6 +10,7 @@ import UIKit
 import EVReflection
 
 class RegistrationRequest:EVObject {
+    
     var email:String = ""
     var name:String = ""
     var password:String = ""
@@ -17,4 +18,7 @@ class RegistrationRequest:EVObject {
     var phoneNumber:String = ""
     var role:String = ""
     
+    required init() {
+        
+    }
 }

@@ -46,8 +46,9 @@ struct TokenManager {
     static func requestToken(request: TokenRequest) -> Promise<Void> {
         return Promise { resolve in
             TokenService.requestToken(request: request).done { (model) in
-                setToken(token: model.token)
-                resolve.fulfill()
+                save(userResModel: model)
+//                setToken(token: model.token)
+                resolve.fulfill(())
             }.catch { (error) in
                 resolve.reject(error)
             }
@@ -71,17 +72,15 @@ struct TokenManager {
     //            }
     //        }
     
-    static func setToken (token:Token!) {
+    private static func setToken (token:Token!) {
         let today = Date()
         let tomorrow = Calendar.current.date(byAdding: .month, value: 1, to: today)
         userDefaults.setValue(tomorrow, forKey: expiringKey)
         userDefaults.setValue(token.toDictionary(), forKey: tokenKey)
     }
     static func save(userResModel:UserResponseModel) {
-        if let token = userResModel.token, let model = userResModel.user {
-            setToken(token: token)
-            userDefaults.setValue(model.toDictionary(), forKey: userModelKey)
-        }
+        setToken(token: userResModel.token)
+        userDefaults.setValue(userResModel.user.toDictionary(), forKey: userModelKey)
     }
     static func deleteToken() {
         userDefaults.removeObject(forKey: tokenKey)

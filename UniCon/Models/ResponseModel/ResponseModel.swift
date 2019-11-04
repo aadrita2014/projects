@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import EVReflection
+import EVReflection
 
 class ResponseModel:Codable {
     var message:String = ""
@@ -22,21 +22,27 @@ class ResponseModel:Codable {
         return "Response: { message: \(message), code: \(code) }"
     }
 }
-class RegisterResponseModel:Codable {
+class RegisterResponseModel:EVObject, Codable {
     var success:Bool = false
     var user: User?
     var token:Token?
     var message:String = ""
+    
+    required init () {
+        
+    }
 }
-class UserResponseModel:Codable {
+class UserResponseModel:ResponseModel {
    
-    var token:Token?
-    var user:User?
+    var token = Token()
+    var user = User()
     
     static func instance(token:Token?,user:User?) -> UserResponseModel?{
-        guard let token = token, let user = user else { return nil }
+        guard let user = user else { return nil }
         let model = UserResponseModel()
-        model.token = token
+        if let token = token {
+            model.token = token
+        }
         model.user = user
         return model
     }

@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		9C0E787023320AE600509C19 /* demo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E786F23320AE600509C19 /* demo.mp3 */; };
-		9C146EC0234F587200648C8D /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9C146EBF234F587200648C8D /* PromiseKit */; };
 		9C1A0C9223325B6C005D2CA2 /* SnapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A0C9123325B6C005D2CA2 /* SnapView.swift */; };
 		9C1B4B74232D0965003237DF /* ContestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1B4B73232D0965003237DF /* ContestModel.swift */; };
 		9C1BED99231112F10011F296 /* CustomActionSheetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C1BED98231112F10011F296 /* CustomActionSheetView.xib */; };
@@ -320,7 +319,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1880F3AF491E72165C27439 /* Pods_UniCon.framework in Frameworks */,
-				9C146EC0234F587200648C8D /* PromiseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -811,7 +809,6 @@
 			);
 			name = UniCon;
 			packageProductDependencies = (
-				9C146EBF234F587200648C8D /* PromiseKit */,
 			);
 			productName = UniCon;
 			productReference = 9C70644522FEA3AC00E006D7 /* UniCon.app */;
@@ -865,7 +862,6 @@
 			);
 			mainGroup = 9C70643C22FEA3AC00E006D7;
 			packageReferences = (
-				9C146EBE234F587200648C8D /* XCRemoteSwiftPackageReference "PromiseKit" */,
 			);
 			productRefGroup = 9C70644622FEA3AC00E006D7 /* Products */;
 			projectDirPath = "";
@@ -1358,25 +1354,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		9C146EBE234F587200648C8D /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mxcl/PromiseKit.git";
-			requirement = {
-				branch = v7;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		9C146EBF234F587200648C8D /* PromiseKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9C146EBE234F587200648C8D /* XCRemoteSwiftPackageReference "PromiseKit" */;
-			productName = PromiseKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		9C70644F22FEA3AC00E006D7 /* UniCon.xcdatamodeld */ = {

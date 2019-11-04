@@ -62,6 +62,7 @@ struct Defaults {
     static func getBool(key:String) -> Bool {
         return UserDefaults.standard.bool(forKey: key)
     }
+    
 }
 struct StringConsts {
     static let isClientSaveKey = "is_client_save_key"

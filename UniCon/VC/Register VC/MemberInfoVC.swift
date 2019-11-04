@@ -63,7 +63,7 @@ class MemberInfoVC: UIViewController {
                 regRequest?.name = usernameTf.text!
                 regRequest?.password = passwordTf.text!
                 regRequest?.nickName = usernameTf.text!
-                regRequest?.phoneNumber = "1212121212"
+                regRequest?.phoneNumber = "0000000000"
                 regRequest?.role = Role.creator.role
                 register()
             }
@@ -82,43 +82,58 @@ class MemberInfoVC: UIViewController {
     //MARK: API Call
     func register() {
         if let request = regRequest {
-            let modelParam = request.toDictionary() as! [String:Any]
+            let modelParam = request.toDictionary() as! [String:String]
             self.showLoading()
-            firstly {
+            self.moveToVerificationCode()
+//            firstly {
                 //Authenticate with the API
-                AuthenticationService.registerNewUser(param: modelParam)
-            }.done { (model) in
-                //If successful
-                if AppConsts.DEBUG_MODE {
-                    print("Successfully Registered")
-                }
-                if let userResModel = UserResponseModel.instance(token: model.token, user: model.user) {
-                    TokenManager.save(userResModel: userResModel)
+                AuthenticationService.registerNewUser(params: modelParam,completion: { model,error in
                     self.hideLoading()
-                    self.performSegue(withIdentifier: "Home", sender: nil)
-                }
-                else {
-                    self.showAlertMessage(message: "Registration Failed")
-                }
-            }
-                
-            .catch {
-                //If generates error
-                self.hideLoading()
-                if let error = $0 as? NetworkError {
-                    self.showAlertMessage(message: "\(error.localizedDescription)")
-                }
-            }
+                    if let error = error {
+                        self.showAlertMessage(message: error)
+                    }
+                    else {
+                        if let userResModel = UserResponseModel.instance(token: model!.token, user: model!.user) {
+                            TokenManager.save(userResModel: userResModel)
+                            self.moveToVerificationCode()
+                        }
+                        else {
+                            self.showAlertMessage(message: "Registration Failed")
+                        }
+                    }
+                })
+//            }.done { (model) in
+//                //If successful
+//                if AppConsts.DEBUG_MODE {
+//                    print("Successfully Registered")
+//                }
+//                if let userResModel = UserResponseModel.instance(token: model.token, user: model.user) {
+//                    TokenManager.save(userResModel: userResModel)
+//                    self.hideLoading()
+//                    //self.performSegue(withIdentifier: "Home", sender: nil)
+//                }
+//                else {
+//                    self.showAlertMessage(message: "Registration Failed")
+//                }
+//            }
+//            .catch {
+//                //If generates error
+//                self.hideLoading()
+//                if let error = $0 as? NetworkError {
+//                    self.showAlertMessage(message: "\(error.localizedDescription)")
+//                }
+//            }
         }
     }
     //MARK: Navigation
-    func moveToVerificationCode(model:RegistrationRequest) {
-        self.performSegue(withIdentifier: "VerificationCode", sender: model)
+    func moveToVerificationCode() {
+        self.performSegue(withIdentifier: "VerificationCode", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is VerificationCodeVC {
-           // let vc = segue.destination as! VerificationCodeVC
+            let vc = segue.destination as! VerificationCodeVC
+            vc.email = regRequest?.email
 //            vc.regModel = sender as? RegistrationRequest
         }
     }

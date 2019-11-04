@@ -19,10 +19,7 @@ protocol NetworkService
 extension NetworkService
 {
     // MARK: - POST
-    static func POST<T:Codable>(URL: String,
-                                parameters: [String: Any]? = nil,
-                                headers: [String: String]? = nil,
-                                encoding: ParameterEncoding = URLEncoding.default) -> Promise<T>
+    static func POST<T:Codable>(URL: String, parameters: [String: Any]?, headers: [String: String]?, encoding: ParameterEncoding) -> Promise<T>
     {
         let (promise, resolver) = Promise<T>.pending()
         AF.request(URL,method: .post,parameters: parameters).responseDecodable { (response:DataResponse<T,AFError>) in
@@ -40,53 +37,19 @@ extension NetworkService
                     if let responseModel = value as? ResponseModel {
                         resolver.reject(NetworkError.customError(responseModel.message))
                     }
-                    resolver.fulfill(value)
+                    else {
+                        resolver.fulfill(value)
+                    }
                 }
                 catch let exception {
                     print(exception)
                     resolver.reject(NetworkError.badJsonResponse)
                 }
             }
-            
         }
         return promise
     }
-    static func MULTIPART<T:Codable>(URL:String,params:[String:String]) -> Promise<T>{
-        let (promise, resolver) = Promise<T>.pending()
-        AF.upload(multipartFormData: { multipartFormData in
-            for key in params.keys {
-                if let value = params[key] {
-                    multipartFormData.append(Data(value.utf8), withName: key)
-                }
-            }
-        }, to: URL)
-            .responseDecodable { (response:DataResponse<T,AFError>) in
-                if AppConsts.DEBUG_MODE {
-                    print("Response: \(response.debugDescription)")
-                }
-                //If it generates error
-                if let error = response.error {
-                    resolver.reject(error)
-                } else {
-                    do {
-                        //try to convert to models
-                        let value = try response.result.get()
-                        if let secondResponse = value as? RegisterResponseModel {
-                            if secondResponse.success == false,let _ = secondResponse.user,let _ = secondResponse.token {
-                                resolver.fulfill(value)
-                            }
-                            resolver.reject(NetworkError.customError(secondResponse.message))
-                        }
-                        resolver.reject(NetworkError.badJsonResponse)
-                    }
-                    catch let exception {
-                        print(exception)
-                        resolver.reject(NetworkError.badJsonResponse)
-                    }
-                }
-        }
-        return promise
-    }
+   
 }
 enum NetworkError: Error {
     case badJsonResponse

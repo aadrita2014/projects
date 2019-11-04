@@ -55,15 +55,16 @@ class TokenRefresh:EVObject {
 struct TokenService: NetworkService
 {
     static func requestToken (request: TokenRequest) -> Promise<UserResponseModel> {
-        return POST(url:APIRouter.LOGIN, request: request) }
+        return POST(url:APIRouter.LOGIN, request: request)
+    }
 //    static func refreshToken (request: TokenRefresh) -> Promise<Token> {
 //        return POST(url:APIRouter.REFRESH_TOKEN, request: request) }
 
     // MARK: - POST
     private static func POST<T:EVReflectable>(url:String, request: T) -> Promise<UserResponseModel>
     {
-       // let headers = ["Content-Type": "application/x-www-form-urlencoded"]
-        let parameters = request.toDictionary(.DefaultDeserialize) as! [String : AnyObject]
-        return POST(URL: url, parameters: parameters, encoding: URLEncoding.default)
+        let headers = ["Content-Type": "application/x-www-form-urlencoded"]
+        let parameters = request.toDictionary(.DefaultDeserialize) as! [String : Any]
+        return POST(URL: url, parameters: parameters,headers: headers, encoding: URLEncoding.default)
     }
 }

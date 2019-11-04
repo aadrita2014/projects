@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PromiseKit
 
 class LoginClientViewController: UIViewController, UITextFieldDelegate {
     
@@ -39,8 +40,9 @@ class LoginClientViewController: UIViewController, UITextFieldDelegate {
     //MARK: IBActions Defined
     @IBAction func loginClicked() {
         //TODO: Login Functionality
-        Defaults.saveBool(key: StringConsts.isClientSaveKey, value: true) //Temp. to be removed after API implementation
-        self.performSegue(withIdentifier: "Home", sender: nil)
+       // Defaults.saveBool(key: StringConsts.isClientSaveKey, value: true) //Temp. to be removed after API implementation
+//        self.performSegue(withIdentifier: "Home", sender: nil)
+        login()
     }
     @IBAction func forgotPasswordClicked() {
         //TODO: Forgot Password Functionality Required
@@ -49,6 +51,30 @@ class LoginClientViewController: UIViewController, UITextFieldDelegate {
     @IBAction func creatorLogin() {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    //MARK: API Call
+        func login() {
+            //Show Loading
+            self.showLoading()
+            firstly {
+                //Authenticate with the API
+                AuthenticationService.authenticate(username: self.emailTf.text!, password: self.passwordTf.text!,role: Role.client.rawValue)
+            }.done { (_) in
+                //If successful
+    //            print("Logged In Successfully")
+    //            TokenManager.save(userResModel: userModel)
+//                Defaults.saveBool(key: StringConsts.isClientSaveKey, value: true)
+                self.hideLoading()
+                self.performSegue(withIdentifier: "Home", sender: nil)
+                
+            }
+            .catch { (error) in
+                //If generates error
+                self.hideLoading()
+                self.showAlertMessage(title: ValidationError.defaultErrorTitle.rawValue, message: error.localizedDescription)
+            }
+        }
+        
     //Text Field Delegates
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
