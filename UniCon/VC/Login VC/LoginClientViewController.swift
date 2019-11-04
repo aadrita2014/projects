@@ -63,7 +63,7 @@ class LoginClientViewController: UIViewController, UITextFieldDelegate {
                 //If successful
     //            print("Logged In Successfully")
     //            TokenManager.save(userResModel: userModel)
-                Defaults.saveBool(key: StringConsts.isClientSaveKey, value: true)
+//                Defaults.saveBool(key: StringConsts.isClientSaveKey, value: true)
                 self.hideLoading()
                 self.performSegue(withIdentifier: "Home", sender: nil)
                 

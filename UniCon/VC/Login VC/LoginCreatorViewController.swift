@@ -83,7 +83,7 @@ class LoginCreatorViewController: UIViewController, UITextFieldDelegate {
             //If successful
 //            print("Logged In Successfully")
 //            TokenManager.save(userResModel: userModel)
-          //  Defaults.saveBool(key: StringConsts.isClientSaveKey, value: false)
+//            Defaults.saveBool(key: StringConsts.isClientSaveKey, value: false)
             self.hideLoading()
             self.performSegue(withIdentifier: "Home", sender: nil)
         }
@@ -93,7 +93,6 @@ class LoginCreatorViewController: UIViewController, UITextFieldDelegate {
             self.showAlertMessage(title: ValidationError.defaultErrorTitle.rawValue, message: error.localizedDescription)
         }
     }
-    
     //Text Field Delegates
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
@@ -111,7 +110,6 @@ class LoginCreatorViewController: UIViewController, UITextFieldDelegate {
         }
         return false
     }
-    
     //MARK: Scrollview adjust code when keyboard shows/hides
     @objc func hideKeyboard()
     {

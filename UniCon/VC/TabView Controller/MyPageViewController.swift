@@ -10,6 +10,25 @@ import UIKit
 
 class MyPageViewController: UIViewController {
 
+    struct Menu {
+        var title:String
+        var segue:String
+        var showDetail:Bool
+    }
+    @IBOutlet weak var tableView:UITableView!
+      
+    
+    var options:[Menu] {
+        get {
+            if let user =  TokenManager.loggedInUser, user.role == Role.client.rawValue {
+                
+            }
+            else {
+                
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,5 +39,11 @@ class MyPageViewController: UIViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+}
+
+extension MyPageViewController:UITableViewDelegate,UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
     }
 }
