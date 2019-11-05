@@ -148,6 +148,8 @@
 		9CF9324E2316B158002AC77D /* ParticipationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9324C2316B158002AC77D /* ParticipationCell.swift */; };
 		9CF9324F2316B158002AC77D /* ParticipationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CF9324D2316B158002AC77D /* ParticipationCell.xib */; };
 		B1880F3AF491E72165C27439 /* Pods_UniCon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24BE95D0CB60CEF1A87F9880 /* Pods_UniCon.framework */; };
+		D90052FE23703E2B006927B2 /* ClientInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90052FD23703E2B006927B2 /* ClientInfoVC.swift */; };
+		D92BA1BE23705883006C1204 /* ClientContactSignUpInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BA1BD23705883006C1204 /* ClientContactSignUpInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -310,6 +312,8 @@
 		9CF9324A23168EE7002AC77D /* ContestDetailsClientVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestDetailsClientVC.swift; sourceTree = "<group>"; };
 		9CF9324C2316B158002AC77D /* ParticipationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipationCell.swift; sourceTree = "<group>"; };
 		9CF9324D2316B158002AC77D /* ParticipationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParticipationCell.xib; sourceTree = "<group>"; };
+		D90052FD23703E2B006927B2 /* ClientInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientInfoVC.swift; sourceTree = "<group>"; };
+		D92BA1BD23705883006C1204 /* ClientContactSignUpInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientContactSignUpInfo.swift; sourceTree = "<group>"; };
 		ED57F261BDBF84067B6DE163 /* Pods-UniCon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniCon.release.xcconfig"; path = "Target Support Files/Pods-UniCon/Pods-UniCon.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -730,7 +734,9 @@
 				9CF9324A23168EE7002AC77D /* ContestDetailsClientVC.swift */,
 				9CF72FCB23176A7B009D1C60 /* PrizeAllocationViewController.swift */,
 				9C75F0992317C67900E7B3F2 /* ChangePrizeAllocationVC.swift */,
+				D90052FD23703E2B006927B2 /* ClientInfoVC.swift */,
 				9C32120323180049004375D8 /* ClientContestRegBasicInfoVC.swift */,
+				D92BA1BD23705883006C1204 /* ClientContactSignUpInfo.swift */,
 				9C76CCB72319022A003821C8 /* ClientContestRegDetailsViewController.swift */,
 				9CF02C0E2319571000614F6B /* ContestDepostiConfirmationVC.swift */,
 				9CCF2CDC231A643E0062558A /* ClientRegistrationConfirmationVC.swift */,
@@ -1062,6 +1068,7 @@
 				9C2628D523150FE200835446 /* UploadVideoCreatorViewController.swift in Sources */,
 				9C6A91AD235DE5FD00D672B5 /* RegistrationRequest.swift in Sources */,
 				9C357258232BC5280079852D /* ABEndIndicator.swift in Sources */,
+				D90052FE23703E2B006927B2 /* ClientInfoVC.swift in Sources */,
 				9C6E272C231E081E00C197D7 /* FilterPopupView.swift in Sources */,
 				9C7D49F223213F840011FDAF /* AddTextColorCell.swift in Sources */,
 				9C3471802330D4BB00F64B89 /* GradientView.swift in Sources */,
@@ -1073,6 +1080,7 @@
 				9C70647522FECCED00E006D7 /* FeedViewController.swift in Sources */,
 				9C63192623014C4800830385 /* ReferralClientCell.swift in Sources */,
 				9C63192E23014C7A00830385 /* ContestJudgingCell.swift in Sources */,
+				D92BA1BE23705883006C1204 /* ClientContactSignUpInfo.swift in Sources */,
 				9C1BED9B2311130C0011F296 /* CustomActionSheet.swift in Sources */,
 				9C696C5C2332261A00B686BC /* VIWaveformNodeView.swift in Sources */,
 				9C6178F9230FE37C007896F2 /* FeedSharedPopUpPrimary.swift in Sources */,
