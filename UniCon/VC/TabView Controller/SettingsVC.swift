@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyPageViewController: UIViewController {
+class SettingsVC: UIViewController {
 
     struct Menu {
         var title:String
@@ -59,7 +59,7 @@ class MyPageViewController: UIViewController {
     }
 }
 
-extension MyPageViewController:UITableViewDelegate,UITableViewDataSource {
+extension SettingsVC:UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuOptions.count
     }

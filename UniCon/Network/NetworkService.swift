@@ -19,11 +19,18 @@ protocol NetworkService
 extension NetworkService
 {
     // MARK: - POST
-    static func POST<T:Codable>(URL: String, parameters: [String: Any]?, headers: [String: String]?, encoding: ParameterEncoding) -> Promise<T>
+    static var authorizedHeader:HTTPHeaders    {
+        guard let accessToken = TokenManager.token?.accessToken else
+        {
+            return ["Authorization": ""]
+        }
+        return ["Authorization": "Bearer \(accessToken)"]
+    }
+    static func POST<T:Codable>( URL: String, parameters: [String: Any]?, headers: [String: String]?, encoding: ParameterEncoding) -> Promise<T>
     {
         let (promise, resolver) = Promise<T>.pending()
-        AF.request(URL,method: .post,parameters: parameters).responseDecodable { (response:DataResponse<T,AFError>) in
-            
+        
+        AF.request(URL,method: .post,parameters: parameters, headers: authorizedHeader).responseDecodable { (response:DataResponse<T,AFError>) in
             if AppConsts.DEBUG_MODE {
                 print("Response: \(response.debugDescription)")
             }

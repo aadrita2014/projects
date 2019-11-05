@@ -29,6 +29,20 @@ struct AuthorizationService: NetworkService {
 //        return POST(URL: URL, parameters: parameters, headers: authorizedHeader, encoding: encoding)
 //    }
     
+ 
+        
+
+        // MARK: - POST
+
+//        static func POST<T:Codable>(URL: String, parameters: [String: Any]?, headers: [String: String]?, encoding: ParameterEncoding) -> Promise<T>
+//        {
+//            firstly { () -> Promise<T> in
+//                POST(URL: URL, parameters: parameters, headers: authorizedHeader, encoding: encoding)
+//            }.catch { (error) in
+//                print(error)
+//            }
+//        }
+    
 }
 
 
