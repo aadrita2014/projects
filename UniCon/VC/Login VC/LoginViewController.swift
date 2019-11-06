@@ -42,7 +42,8 @@ class LoginViewController: UIViewController {
         googleButton.imageView?.contentMode = .scaleAspectFit
         
         if TokenManager.tokenExist {
-            self.performSegue(withIdentifier: "Home", sender: nil)
+            //from view controller extension
+            moveToHome()
         }
     }
     //MARK: IBActions Defined
@@ -52,8 +53,7 @@ class LoginViewController: UIViewController {
         print("Email Login Clicked")
     }
 
-    @IBAction func kakaoLoginClicked()
-    {
+    @IBAction func kakaoLoginClicked() {
         //TODO: Add Kakao Login Functionality
         print("Kakao Login Clicked")
     }

@@ -57,7 +57,7 @@ class VerificationCodeVC: UIViewController {
             showAlertMessage(title: ValidationError.defaultErrorTitle.rawValue, message: errMsg)
         }
         else {
-            self.performSegue(withIdentifier: "Home", sender: nil)
+            self.moveToHome()
         }
     }
     //MARK: Validations

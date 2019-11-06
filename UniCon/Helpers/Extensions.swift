@@ -119,6 +119,19 @@ extension UIViewController {
     func hideLoading() {
         Spinner.stop()
     }
+    
+    func moveToHome() {
+        
+        if let storyboard = self.storyboard {
+            let vc = storyboard.instantiateViewController(withIdentifier: "HOME_TAB")
+            self.navigationController?.pushViewController(vc, animated: false)
+        }
+        else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "HOME_TAB")
+            self.navigationController?.pushViewController(vc, animated: false)
+        }
+    }
 }
 
 

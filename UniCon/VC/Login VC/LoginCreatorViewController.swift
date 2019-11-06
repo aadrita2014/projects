@@ -85,7 +85,7 @@ class LoginCreatorViewController: UIViewController, UITextFieldDelegate {
 //            TokenManager.save(userResModel: userModel)
 //            Defaults.saveBool(key: StringConsts.isClientSaveKey, value: false)
             self.hideLoading()
-            self.performSegue(withIdentifier: "Home", sender: nil)
+            self.moveToHome()
         }
         .catch { (error) in
             //If generates error
