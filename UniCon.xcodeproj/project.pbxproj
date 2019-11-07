@@ -48,6 +48,10 @@
 		9C357262232BC5280079852D /* EndIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C357255232BC5280079852D /* EndIndicator.png */; };
 		9C357263232BC5280079852D /* ProgressIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C357256232BC5280079852D /* ProgressIndicator.png */; };
 		9C359031231A8783001C72DF /* ContestDetailsSharedDepositVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C359030231A8783001C72DF /* ContestDetailsSharedDepositVC.swift */; };
+		9C3A54AA237411D600E7F172 /* UploadedVideosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3A54A8237411D600E7F172 /* UploadedVideosCell.swift */; };
+		9C3A54AB237411D600E7F172 /* UploadedVideosCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C3A54A9237411D600E7F172 /* UploadedVideosCell.xib */; };
+		9C3A54AE237411F700E7F172 /* BookmarksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3A54AC237411F700E7F172 /* BookmarksCell.swift */; };
+		9C3A54AF237411F700E7F172 /* BookmarksCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C3A54AD237411F700E7F172 /* BookmarksCell.xib */; };
 		9C5C0A102330795F00367B8A /* NanumMyeongjo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C5C0A0F2330795F00367B8A /* NanumMyeongjo-Regular.ttf */; };
 		9C5C0A122330798500367B8A /* Gaegu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C5C0A112330798500367B8A /* Gaegu-Regular.ttf */; };
 		9C5C0A14233079C900367B8A /* DoHyeon-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C5C0A13233079C800367B8A /* DoHyeon-Regular.ttf */; };
@@ -207,6 +211,10 @@
 		9C357255232BC5280079852D /* EndIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EndIndicator.png; sourceTree = "<group>"; };
 		9C357256232BC5280079852D /* ProgressIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ProgressIndicator.png; sourceTree = "<group>"; };
 		9C359030231A8783001C72DF /* ContestDetailsSharedDepositVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestDetailsSharedDepositVC.swift; sourceTree = "<group>"; };
+		9C3A54A8237411D600E7F172 /* UploadedVideosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadedVideosCell.swift; sourceTree = "<group>"; };
+		9C3A54A9237411D600E7F172 /* UploadedVideosCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadedVideosCell.xib; sourceTree = "<group>"; };
+		9C3A54AC237411F700E7F172 /* BookmarksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksCell.swift; sourceTree = "<group>"; };
+		9C3A54AD237411F700E7F172 /* BookmarksCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarksCell.xib; sourceTree = "<group>"; };
 		9C5C0A0F2330795F00367B8A /* NanumMyeongjo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumMyeongjo-Regular.ttf"; sourceTree = "<group>"; };
 		9C5C0A112330798500367B8A /* Gaegu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gaegu-Regular.ttf"; sourceTree = "<group>"; };
 		9C5C0A13233079C800367B8A /* DoHyeon-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DoHyeon-Regular.ttf"; sourceTree = "<group>"; };
@@ -448,6 +456,17 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		9C3A54A72374111B00E7F172 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				9C3A54A8237411D600E7F172 /* UploadedVideosCell.swift */,
+				9C3A54A9237411D600E7F172 /* UploadedVideosCell.xib */,
+				9C3A54AC237411F700E7F172 /* BookmarksCell.swift */,
+				9C3A54AD237411F700E7F172 /* BookmarksCell.xib */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
 		9C3D7D49231A513500A41C50 /* CustomAlertView */ = {
 			isa = PBXGroup;
 			children = (
@@ -500,6 +519,7 @@
 				9CF02C0B2319424700614F6B /* RefImageCell.xib */,
 				9C2FF925231D2D9C004923DE /* MusicCategoryCell.swift */,
 				9C2FF926231D2D9C004923DE /* MusicCategoryCell.xib */,
+				9C3A54A72374111B00E7F172 /* MyPage */,
 			);
 			path = "Custom Coll Cells";
 			sourceTree = "<group>";
@@ -904,6 +924,7 @@
 				9C70646222FEA9C900E006D7 /* NotoSansCJKkr-Bold.otf in Resources */,
 				9C9AC6A82320C05E0091EE77 /* TimerSettingScreen.xib in Resources */,
 				9CF02C0D2319424700614F6B /* RefImageCell.xib in Resources */,
+				9C3A54AF237411F700E7F172 /* BookmarksCell.xib in Resources */,
 				9C2FF92C231D2F67004923DE /* MusicAddInfoCell.xib in Resources */,
 				9C1BED9F231116350011F296 /* CustomActionSheetCell.xib in Resources */,
 				9C70645322FEA3AE00E006D7 /* Assets.xcassets in Resources */,
@@ -913,6 +934,7 @@
 				9C357260232BC5280079852D /* BorderLine.png in Resources */,
 				9C6E272E231E084B00C197D7 /* FilterPopupView.xib in Resources */,
 				9C357262232BC5280079852D /* EndIndicator.png in Resources */,
+				9C3A54AB237411D600E7F172 /* UploadedVideosCell.xib in Resources */,
 				9C357263232BC5280079852D /* ProgressIndicator.png in Resources */,
 				9C63192323014C2400830385 /* FeaturedCreatorCell.xib in Resources */,
 				9C1BED99231112F10011F296 /* CustomActionSheetView.xib in Resources */,
@@ -1021,6 +1043,7 @@
 				9C357259232BC5280079852D /* ABProgressIndicator.swift in Sources */,
 				9CF02C0C2319424700614F6B /* RefImageCell.swift in Sources */,
 				9C2628DC23151B4300835446 /* ContestInfoCell.swift in Sources */,
+				9C3A54AE237411F700E7F172 /* BookmarksCell.swift in Sources */,
 				9C35725F232BC5280079852D /* ABVideoHelper.swift in Sources */,
 				9C7A8A9D2320D65F00A399C2 /* MusicEditingPopupView.swift in Sources */,
 				9C35725C232BC5280079852D /* ABVideoRangeSlider.swift in Sources */,
@@ -1068,6 +1091,7 @@
 				9C9AC4A822FEDB4B00230522 /* ContestViewController.swift in Sources */,
 				9CF9324E2316B158002AC77D /* ParticipationCell.swift in Sources */,
 				9C9AC4AF22FEE04000230522 /* ChannelViewController.swift in Sources */,
+				9C3A54AA237411D600E7F172 /* UploadedVideosCell.swift in Sources */,
 				9C63192223014C2400830385 /* FeaturedCreatorCell.swift in Sources */,
 				9C2628D523150FE200835446 /* UploadVideoCreatorViewController.swift in Sources */,
 				9C6A91AD235DE5FD00D672B5 /* RegistrationRequest.swift in Sources */,
