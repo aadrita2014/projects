@@ -20,6 +20,7 @@ struct APIRouter {
 //MARK: Authentication API Calls
 extension APIRouter {
    static let AUTH_PATH = API_ROOT + "/auth/"
+    static let CONTENT_PATH = API_ROOT + "/contest/"
    static let LOGIN =  AUTH_PATH + "login"
    static let REFRESH_TOKEN = AUTH_PATH + "refresh-token"
    static let REGISTER = AUTH_PATH + "register"

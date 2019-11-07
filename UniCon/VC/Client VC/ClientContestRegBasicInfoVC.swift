@@ -27,7 +27,7 @@ class ClientContestRegBasicInfoVC: UIViewController {
     @IBOutlet weak var pickerToolbar: UIToolbar!
     
     var selectedBtn:UIButton? = nil
-    
+    let formatter = DateFormatter()
     //MARK: Overriden view methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +41,10 @@ class ClientContestRegBasicInfoVC: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
+    @IBAction func backClicked() {
+        dismiss(animated: true, completion: nil)
+//        self.navigationController?.popViewController(animated: true)
+    }
     func setupView() {
         
         //Background view setup
@@ -105,6 +108,23 @@ class ClientContestRegBasicInfoVC: UIViewController {
         }
     }
     
+    @IBAction func nextPageAction(_ sender: UIButton) {
+     
+       
+        if (eventPeriodStartBtn.titleLabel!.text)! != "" && (eventPeriodEndBtn.titleLabel!.text)! != "" && (reviewPeriodStartBtn.titleLabel!.text)! != "" && (reviewPeriodEndBtn.titleLabel!.text)! != "" && (dateOfAnnouncementBtn.titleLabel!.text)! != "" && contactNameTf.text! != "" && contactNo.text! != ""{
+        createContestregRequest.startTime = (eventPeriodStartBtn.titleLabel!.text)!
+        createContestregRequest.endTime = (eventPeriodEndBtn.titleLabel!.text)!
+        createContestregRequest.examinationStartTime =  (reviewPeriodStartBtn.titleLabel!.text)!
+        createContestregRequest.examinationEndTime = (reviewPeriodEndBtn.titleLabel!.text)!
+        createContestregRequest.publicationTime =  (dateOfAnnouncementBtn.titleLabel!.text)!
+        createContestregRequest.contactName = contactNameTf.text!
+        createContestregRequest.contactPhone = contactNo.text!
+         self.performSegue(withIdentifier: "ClientContestRegDetailsViewController", sender: nil)
+        }
+        else {
+             self.showAlertMessage(message: "Please Enter all fields")
+        }
+    }
     @IBAction func moveToPrevButton() {
         
         for (index,btn) in dateBtns.enumerated() {
@@ -120,6 +140,21 @@ class ClientContestRegBasicInfoVC: UIViewController {
         }
     }
     @IBAction func donePressed(_ sender: UIBarButtonItem) {
+        print("datePicker.date",datePicker.date)
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+
+        let myString = formatter.string(from: datePicker.date) // string purpose I add here
+        // convert your string to date
+        let yourDate = formatter.date(from: myString)
+        //then again set the date format whhich type of output you need
+        formatter.dateFormat = "YYYY-MM-dd"
+        // again convert your date to string
+        let myStringafd = formatter.string(from: yourDate!)
+
+        print("hiulkd dayte",myStringafd)
+        selectedBtn?.titleLabel?.text = myStringafd
+        selectedBtn?.setTitle(myStringafd, for: UIControl.State.normal)
+        print("mass data bala",eventPeriodStartBtn?.titleLabel?.text)
         togglePicker(show: false)
     }
 }
