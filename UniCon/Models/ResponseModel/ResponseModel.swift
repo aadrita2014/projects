@@ -32,6 +32,16 @@ class RegisterResponseModel:EVObject, Codable {
         
     }
 }
+class createCcontestResponseModel:EVObject, Codable {
+    var success:Bool = false
+    var user: User?
+    var token:Token?
+    var message:String = ""
+    
+    required init () {
+        
+    }
+}
 class UserResponseModel:ResponseModel {
    
     var token = Token()

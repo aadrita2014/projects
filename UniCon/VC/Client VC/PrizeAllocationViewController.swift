@@ -7,10 +7,13 @@
 //
 
 import UIKit
-
-class PrizeAllocationViewController: UIViewController {
+var createContestregRequest = CreateContestRequest()
+class PrizeAllocationViewController: UIViewController,MyDataSendingDelegateProtocol {
 
     //MARK: IBOutlets
+    @IBOutlet var prize3Percentage: UILabel!
+    @IBOutlet var prize1Percentage: UILabel!
+    @IBOutlet var prize2Percentage: UILabel!
     @IBOutlet weak var topBackgroundView: UIView!
     @IBOutlet weak var bottomBackgroundView: UIView!
     @IBOutlet weak var changePrizeBtn: UIButton!
@@ -30,7 +33,9 @@ class PrizeAllocationViewController: UIViewController {
     //MARK: Overriden view code
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        prize1Percentage.text = String(prizeDistributionArr[0]) + "%"
+        prize2Percentage.text = String(prizeDistributionArr[1]) + "%"
+        prize3Percentage.text = String(prizeDistributionArr[2]) + "%"
         //Add default background color to the view
         self.view.addBlackBackgroundColor()
     
@@ -40,6 +45,13 @@ class PrizeAllocationViewController: UIViewController {
         viewSetup()
     }
     //MARK: View Setup
+    func sendDataToFirstViewController(myData: [Int]) {
+          prizeDistributionArr = myData
+        prize1Percentage.text = String(prizeDistributionArr[0]) + "%"
+    prize2Percentage.text = String(prizeDistributionArr[1]) + "%"
+        prize3Percentage.text = String(prizeDistributionArr[2]) + "%"
+        calculatePrizeAmount()
+       }
     func viewSetup() {
         
         //Background view setup
@@ -65,6 +77,37 @@ class PrizeAllocationViewController: UIViewController {
         self.performSegue(withIdentifier: "ChangePrize", sender: nil)
     }
     @IBAction func nextBtnClicked(_ sender: UIButton) {
+     guard let priceAmout = priceTf.text else {
+                        return
+                    }
+        
+        if priceAmout != "" {
+       var prize1stString =  prize1Percentage.text!
+            prize1stString = String(prize1stString.dropLast())
+            prize1stString = prize1stString.replacingOccurrences(of: ",", with: "")
+            var prize2ndString = prize2Percentage.text!
+            prize2ndString = String(prize2ndString.dropLast())
+            prize2ndString = prize2ndString.replacingOccurrences(of: ",", with: "")
+            var prize3rdString = prize3Percentage.text!
+            prize3rdString = String(prize3rdString.dropLast())
+             prize3rdString = prize3rdString.replacingOccurrences(of: ",", with: "")
+            var totalAmountString = totalAmountLabel.text!
+            totalAmountString = String(totalAmountString.dropLast())
+            totalAmountString = totalAmountString.replacingOccurrences(of: ",", with: "")
+            var platformFeeString = platformFeeLabel.text!
+            platformFeeString = String(platformFeeString.dropLast())
+            platformFeeString = platformFeeString.replacingOccurrences(of: ",", with: "")
+        createContestregRequest.first = prize1stString
+        createContestregRequest.second =  prize2ndString
+        createContestregRequest.third = prize3rdString
+        createContestregRequest.totalPrize = totalAmountString
+        createContestregRequest.platformFee = platformFeeString
+
+        self.performSegue(withIdentifier: "ClientContestRegBasicInfoVC", sender: nil)
+        }
+        else {
+            self.showAlertMessage(message: "Please Enter Prize Allocation Amount")
+        }
         
     }
     
@@ -117,6 +160,8 @@ class PrizeAllocationViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? ChangePrizeAllocationVC {
+            vc.delegate = self
+            vc.prizeDtributionArr = prizeDistributionArr
             vc.enteredAmount = StringHelpers.convertToPriceStr(fromVal: priceTf.text!)
         }
     }

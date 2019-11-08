@@ -114,7 +114,6 @@
 		9C916B63234DE70E00F74F01 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C916B62234DE70E00F74F01 /* APIManager.swift */; };
 		9C9AC4A822FEDB4B00230522 /* ContestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4A722FEDB4B00230522 /* ContestViewController.swift */; };
 		9C9AC4AA22FEDB5D00230522 /* GeneralVideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4A922FEDB5D00230522 /* GeneralVideosViewController.swift */; };
-		9C9AC4AD22FEE03600230522 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4AC22FEE03600230522 /* SettingsVC.swift */; };
 		9C9AC4AF22FEE04000230522 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4AE22FEE04000230522 /* ChannelViewController.swift */; };
 		9C9AC4B322FEE05900230522 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC4B222FEE05900230522 /* AlarmViewController.swift */; };
 		9C9AC6A62320BFF50091EE77 /* TimerSettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9AC6A52320BFF50091EE77 /* TimerSettingScreen.swift */; };
@@ -155,6 +154,9 @@
 		B1880F3AF491E72165C27439 /* Pods_UniCon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24BE95D0CB60CEF1A87F9880 /* Pods_UniCon.framework */; };
 		D90052FE23703E2B006927B2 /* ClientInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90052FD23703E2B006927B2 /* ClientInfoVC.swift */; };
 		D92BA1BE23705883006C1204 /* ClientContactSignUpInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92BA1BD23705883006C1204 /* ClientContactSignUpInfo.swift */; };
+		D95242AF2372AB7500794A78 /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = D95242AE2372AB7400794A78 /* image1.png */; };
+		D9EE57EC237163E400781101 /* CreateContestRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EE57EB237163E400781101 /* CreateContestRequest.swift */; };
+		D9EE57EE237175B600781101 /* priceDistCreateContestRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EE57ED237175B600781101 /* priceDistCreateContestRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -281,7 +283,6 @@
 		9C916B62234DE70E00F74F01 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		9C9AC4A722FEDB4B00230522 /* ContestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestViewController.swift; sourceTree = "<group>"; };
 		9C9AC4A922FEDB5D00230522 /* GeneralVideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralVideosViewController.swift; sourceTree = "<group>"; };
-		9C9AC4AC22FEE03600230522 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		9C9AC4AE22FEE04000230522 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		9C9AC4B222FEE05900230522 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		9C9AC6A52320BFF50091EE77 /* TimerSettingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSettingScreen.swift; sourceTree = "<group>"; };
@@ -324,6 +325,10 @@
 		9CF9324D2316B158002AC77D /* ParticipationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParticipationCell.xib; sourceTree = "<group>"; };
 		D90052FD23703E2B006927B2 /* ClientInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientInfoVC.swift; sourceTree = "<group>"; };
 		D92BA1BD23705883006C1204 /* ClientContactSignUpInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientContactSignUpInfo.swift; sourceTree = "<group>"; };
+		D95242AE2372AB7400794A78 /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1.png; sourceTree = "<group>"; };
+		D95242B02372B1E100794A78 /* SampleVideo_1280x720_1mb.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SampleVideo_1280x720_1mb.mp4; sourceTree = "<group>"; };
+		D9EE57EB237163E400781101 /* CreateContestRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContestRequest.swift; sourceTree = "<group>"; };
+		D9EE57ED237175B600781101 /* priceDistCreateContestRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = priceDistCreateContestRequest.swift; sourceTree = "<group>"; };
 		ED57F261BDBF84067B6DE163 /* Pods-UniCon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniCon.release.xcconfig"; path = "Target Support Files/Pods-UniCon/Pods-UniCon.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -575,6 +580,8 @@
 			isa = PBXGroup;
 			children = (
 				9C6A91AC235DE5FD00D672B5 /* RegistrationRequest.swift */,
+				D9EE57EB237163E400781101 /* CreateContestRequest.swift */,
+				D9EE57ED237175B600781101 /* priceDistCreateContestRequest.swift */,
 			);
 			path = RequestModel;
 			sourceTree = "<group>";
@@ -626,6 +633,8 @@
 				9C70645422FEA3AE00E006D7 /* LaunchScreen.storyboard */,
 				9C70645722FEA3AF00E006D7 /* Info.plist */,
 				9C70644F22FEA3AC00E006D7 /* UniCon.xcdatamodeld */,
+				D95242B02372B1E100794A78 /* SampleVideo_1280x720_1mb.mp4 */,
+				D95242AE2372AB7400794A78 /* image1.png */,
 				9C0E786F23320AE600509C19 /* demo.mp3 */,
 			);
 			path = UniCon;
@@ -708,7 +717,6 @@
 				9C70647422FECCED00E006D7 /* FeedViewController.swift */,
 				9C9AC4A722FEDB4B00230522 /* ContestViewController.swift */,
 				9C9AC4A922FEDB5D00230522 /* GeneralVideosViewController.swift */,
-				9C9AC4AC22FEE03600230522 /* SettingsVC.swift */,
 				9C118F152371A7E100D9044D /* MyProfileVC.swift */,
 				9C9AC4AE22FEE04000230522 /* ChannelViewController.swift */,
 				9CF1EAA42314440D006895F9 /* VideoRecordingVC.swift */,
@@ -929,6 +937,7 @@
 				9C1BED9F231116350011F296 /* CustomActionSheetCell.xib in Resources */,
 				9C70645322FEA3AE00E006D7 /* Assets.xcassets in Resources */,
 				9C7D49EF23213E2A0011FDAF /* AddTextView.xib in Resources */,
+				D95242AF2372AB7500794A78 /* image1.png in Resources */,
 				9C5C0A14233079C900367B8A /* DoHyeon-Regular.ttf in Resources */,
 				9C7D49E4232121640011FDAF /* AddStickersView.xib in Resources */,
 				9C357260232BC5280079852D /* BorderLine.png in Resources */,
@@ -1041,6 +1050,7 @@
 				9C916B63234DE70E00F74F01 /* APIManager.swift in Sources */,
 				9C696C5A2332261A00B686BC /* VIWaveformView.swift in Sources */,
 				9C357259232BC5280079852D /* ABProgressIndicator.swift in Sources */,
+				D9EE57EC237163E400781101 /* CreateContestRequest.swift in Sources */,
 				9CF02C0C2319424700614F6B /* RefImageCell.swift in Sources */,
 				9C2628DC23151B4300835446 /* ContestInfoCell.swift in Sources */,
 				9C3A54AE237411F700E7F172 /* BookmarksCell.swift in Sources */,
@@ -1070,7 +1080,6 @@
 				9C696C5D2332261A00B686BC /* WaveformNodeProvider.swift in Sources */,
 				9CCC584B231BCB180007112A /* Helpers.swift in Sources */,
 				9C70645E22FEA65600E006D7 /* Extensions.swift in Sources */,
-				9C9AC4AD22FEE03600230522 /* SettingsVC.swift in Sources */,
 				9C7D49EA2321287B0011FDAF /* StickerCell.swift in Sources */,
 				9CE5B3F52348CE1700F35AC1 /* NetworkService.swift in Sources */,
 				9C7D49ED23213E200011FDAF /* AddTextView.swift in Sources */,
@@ -1101,6 +1110,7 @@
 				9C7D49F223213F840011FDAF /* AddTextColorCell.swift in Sources */,
 				9C3471802330D4BB00F64B89 /* GradientView.swift in Sources */,
 				9C6A91AB235DDFB100D672B5 /* VerificationCodeVC.swift in Sources */,
+				D9EE57EE237175B600781101 /* priceDistCreateContestRequest.swift in Sources */,
 				9C7D49E22321214E0011FDAF /* AddStickersPopupView.swift in Sources */,
 				9CCF2CDA231A52080062558A /* ImageViewerVC.swift in Sources */,
 				9C617900230FFAA6007896F2 /* ContestDetailListCell.swift in Sources */,
@@ -1280,7 +1290,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3TT3YF37X6;
+				DEVELOPMENT_TEAM = WLS7W444R6;
 				INFOPLIST_FILE = UniCon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1302,7 +1312,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3TT3YF37X6;
+				DEVELOPMENT_TEAM = WLS7W444R6;
 				INFOPLIST_FILE = UniCon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

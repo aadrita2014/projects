@@ -21,9 +21,10 @@ class ClientContestRegDetailsViewController: UIViewController {
     @IBOutlet weak var imageCollView: UICollectionView!
     @IBOutlet weak var videoPlayerThumbnailImageView: UIImageView!
     
+    @IBOutlet var scrollView: UIScrollView!
     @IBOutlet weak var infoDescTv: UITextView!
     var images: [String] = []
-    
+   
     var imgPicker:UIImagePickerController?
     //MARK: Overriden view methods
     override func viewDidLoad() {
@@ -38,9 +39,34 @@ class ClientContestRegDetailsViewController: UIViewController {
         viewSetup()
         
     }
-    //MARK: Other View Setup
-    func viewSetup() {
+    @IBAction func nextButtonAction(_ sender: UIButton) {
+        if  infoDescTv.text != "" && contestTitleTf.text != "" && images.count != 0 {
+        createContestregRequest.content = infoDescTv.text
+        createContestregRequest.title = contestTitleTf.text ?? ""
+        let path1 = Bundle.main.path(forResource: "image1", ofType: "png")!
+                let path2 = Bundle.main.path(forResource: "demo", ofType: "mp3")!
+                let path3 = Bundle.main.path(forResource: "image1", ofType: "png")!
+        createContestregRequest.guideVideUrl = path2
+        createContestregRequest.guideVideThumbnailUrl = path1
+        createContestregRequest.referenceImage = path3
         
+       
+        
+        self.performSegue(withIdentifier: "ClientRegistrationConfirmationVC", sender: nil)
+        }
+        else {
+            self.showAlertMessage(message: "Please Enter all fields")
+        }
+    }
+    @IBAction func backButtonAction(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    //MARK: Other View Setup
+    override func viewWillLayoutSubviews() {
+         self.scrollView.contentSize = CGSize(width: view.bounds.width, height: 680)
+    }
+    func viewSetup() {
+        self.scrollView.contentSize = CGSize(width: view.bounds.width, height: 680)
         //Bakcground views setup
         tfBgView.addCornerRadius()
         tfBgView.addDarkGrayBackgroundColor()
