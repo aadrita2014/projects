@@ -67,30 +67,41 @@ class LoginCreatorViewController: UIViewController, UITextFieldDelegate {
     }
     //MARK: Validations before calling the API
     func validate() -> String? {
-        if self.emailTf.text?.isEmpty == true || self.passwordTf.text?.isEmpty == true {
-            return ValidationError.empty.rawValue
-        }
+//        if self.emailTf.text?.isEmpty == true || self.passwordTf.text?.isEmpty == true {
+//            return ValidationError.empty.rawValue
+//        }
         return nil
     }
     //MARK: API Call
     func login() {
         //Show Loading
+//        firstly {
+//            //Authenticate with the API
+//            AuthenticationService.authenticate(username: self.emailTf.text!, password: self.passwordTf.text!,role: Role.creator.rawValue)
+//        }.done { (_) in
+//            //If successful
+////            print("Logged In Successfully")
+////            TokenManager.save(userResModel: userModel)
+////            Defaults.saveBool(key: StringConsts.isClientSaveKey, value: false)
+//            self.hideLoading()
+//            self.moveToHome()
+//        }
+//        .catch { (error) in
+//            //If generates error
+//            self.hideLoading()
+//            self.showAlertMessage(title: ValidationError.defaultErrorTitle.rawValue, message: error.localizedDescription)
+//        }
+        let loginDataModel = LoginRequestModel.init()
         self.showLoading()
-        firstly {
-            //Authenticate with the API
-            AuthenticationService.authenticate(username: self.emailTf.text!, password: self.passwordTf.text!,role: Role.creator.rawValue)
-        }.done { (_) in
-            //If successful
-//            print("Logged In Successfully")
-//            TokenManager.save(userResModel: userModel)
-//            Defaults.saveBool(key: StringConsts.isClientSaveKey, value: false)
+        loginDataModel.callLoginApi { (success, response, message) in
             self.hideLoading()
+            guard let userModel = response, success == true else {
+                self.showAlertMessage(title: ValidationError.defaultErrorTitle.rawValue, message: message ?? NetworkError.requestFailedError.localizedDescription)
+                return}
+            print("Logged In Successfully")
+            TokenManager.save(userResModel: userModel)
+            Defaults.saveBool(key: StringConsts.isClientSaveKey, value: false)
             self.moveToHome()
-        }
-        .catch { (error) in
-            //If generates error
-            self.hideLoading()
-            self.showAlertMessage(title: ValidationError.defaultErrorTitle.rawValue, message: error.localizedDescription)
         }
     }
     //Text Field Delegates

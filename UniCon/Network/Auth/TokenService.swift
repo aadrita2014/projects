@@ -18,13 +18,37 @@ class Token: EVObject, Codable{
     var expiresIn:String = ""
     var tokenType:String = ""
     
+    enum TokenCodingKeys : String, CodingKey{
+        case accessToken = "accessToken"
+        case refreshToken = "refreshToken"
+        case expiresIn = "expiresIn"
+        case tokenType = "tokenType"
+    }
+    
     static func instance(dictionary: NSDictionary) -> Token{
         let token = Token(dictionary: dictionary)
         return token
     }
-    required init() {
-        
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: TokenCodingKeys.self)
+        accessToken = try (container.decodeIfPresent(String.self, forKey: .accessToken) ?? "")
+        refreshToken = try (container.decodeIfPresent(String.self, forKey: .refreshToken) ?? "")
+        expiresIn = try (container.decodeIfPresent(String.self, forKey: .expiresIn) ?? "")
+        tokenType = try (container.decodeIfPresent(String.self, forKey: .tokenType) ?? "")
     }
+    
+    override required init() {
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = try encoder.container(keyedBy: TokenCodingKeys.self)
+        try container.encodeIfPresent(accessToken, forKey: .accessToken)
+        try container.encodeIfPresent(refreshToken, forKey: .refreshToken)
+        try container.encodeIfPresent(expiresIn, forKey: .expiresIn)
+        try container.encodeIfPresent(tokenType, forKey: .tokenType)
+    }
+    
 }
 class TokenRequest:EVObject {
     var email:String = ""

@@ -12,12 +12,7 @@ import EVReflection
 class ResponseModel:Codable {
     var message:String = ""
     var code:Int = 0
-//    enum CodingKeys: String, CodingKey {
-//        case message
-//        case success
-//        case token
-//    }
-//
+    
     var description: String {
         return "Response: { message: \(message), code: \(code) }"
     }
@@ -42,10 +37,16 @@ class createCcontestResponseModel:EVObject, Codable {
         
     }
 }
-class UserResponseModel:ResponseModel {
-   
+//class UserResponseModel:ResponseModel {
+   class UserResponseModel:NSObject, Codable {
     var token = Token()
     var user = User()
+    
+    enum UserResponseCodingKeys : String, CodingKey {
+        case token = "token"
+        case user = "user"
+    }
+    
     
     static func instance(token:Token?,user:User?) -> UserResponseModel?{
         guard let user = user else { return nil }
@@ -55,6 +56,20 @@ class UserResponseModel:ResponseModel {
         }
         model.user = user
         return model
+    }
+    override init() {
+        super.init()
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: UserResponseCodingKeys.self)
+        token = try (container.decodeIfPresent(Token.self, forKey: .token) ?? Token())
+        user = try (container.decodeIfPresent(User.self, forKey: .user) ?? User())
+    }
+    func encode(to encoder: Encoder) throws {
+        var container = try encoder.container(keyedBy: UserResponseCodingKeys.self)
+        try container.encodeIfPresent(user, forKey: .user)
+        try container.encodeIfPresent(token, forKey: .token)
     }
 }
 
